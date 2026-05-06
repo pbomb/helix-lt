@@ -1,0 +1,78 @@
+{
+  "preset_name": "No Surprises",
+  "artist": "Radiohead",
+  "album": "OK Computer",
+  "tuning": "Standard",
+  "capo": 5,
+  "master_bpm": 75,
+  "notes": "No amp+cab block — running into tube amp. Ed O'Brien used a Rickenbacker 360 with capo at 15th fret — on standard guitar use capo at 5th fret. Teemah! approximates Voodoo Lab Sparkle Drive. Dotted eighth delay exact match at 75 BPM.",
+  "signal_chain": [
+    "Noise Gate",
+    "Teemah!",
+    "Ubiquitous Vibe",
+    "Parametric EQ",
+    "Simple Delay",
+    "Ganymede"
+  ],
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_studio": { "Threshold": -72, "Decay": 30, "Level": 0 },
+        "2_live_atmospheric": { "Threshold": -65, "Decay": 25, "Level": 0 }
+      }
+    },
+    "overdrive": {
+      "model": "Teemah!",
+      "based_on": "Paul Cochrane Timmy Overdrive",
+      "snapshots": {
+        "1_studio": { "active": false, "Gain": 2.5, "Bass Cut": 3.0, "Treble Cut": 3.0, "Level": 6.5 },
+        "2_live_atmospheric": { "active": true, "Gain": 2.5, "Bass Cut": 3.0, "Treble Cut": 3.0, "Level": 6.5 }
+      }
+    },
+    "modulation": {
+      "model": "Ubiquitous Vibe",
+      "based_on": "Shin-ei Uni-Vibe",
+      "snapshots": {
+        "1_studio": { "active": true, "Rate": 0.5, "Intensity": 20, "Mode": "Chorus", "Mix": 20, "Level": 0 },
+        "2_live_atmospheric": { "active": true, "Rate": 0.5, "Intensity": 20, "Mode": "Chorus", "Mix": 20, "Level": 0 }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_studio": { "Low Gain": -1, "Mid Freq": 800, "Mid Gain": 2, "High Gain": 1, "Low Cut": 100, "High Cut": 10000, "Level": 0 },
+        "2_live_atmospheric": { "Low Gain": -1, "Mid Freq": 800, "Mid Gain": 2, "High Gain": 1, "Low Cut": 80, "High Cut": 11000, "Level": 2 }
+      }
+    },
+    "delay": {
+      "model": "Simple Delay",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_studio": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "600ms (d1/8 at 75 BPM — exact match)", "Feedback": 20, "Mix": 28, "Level": 0, "Trails": true },
+        "2_live_atmospheric": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "600ms (d1/8 at 75 BPM — exact match)", "Feedback": 28, "Mix": 35, "Level": 0, "Trails": true }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_studio": { "Decay": 0.8, "Predelay": 10, "Tone": 4.5, "Mix": 18, "Level": 0, "Trails": true },
+        "2_live_atmospheric": { "Decay": 2.0, "Predelay": 15, "Tone": 5.0, "Mix": 32, "Level": 0, "Trails": true }
+      }
+    }
+  },
+  "snapshots": {
+    "1_studio": { "footswitch": "FS1", "description": "Studio-faithful. Teemah! bypassed. Very dry reverb (0.8 sec, 18% mix). Dotted eighth delay at 28% mix.", "pickup_position": "Neck" },
+    "2_live_atmospheric": { "footswitch": "FS2", "description": "Live/atmospheric. Teemah! active. Reverb opens to 2.0 sec at 32% mix.", "pickup_position": "Neck" }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "Bb major (relative to capo 5)",
+    "capo": 5,
+    "technique": "Pick very lightly near soundhole. The tone should feel like a music box.",
+    "snapshot_cues": "Snapshot 1 for studio recreation. Snapshot 2 for live use."
+  }
+}

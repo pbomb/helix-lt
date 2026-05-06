@@ -1,0 +1,175 @@
+{
+  "preset_name": "Creep",
+  "artist": "Radiohead",
+  "album": "Pablo Honey",
+  "tuning": "Standard",
+  "master_bpm": 92,
+  "notes": "No amp+cab block — running into tube amp. Single patch with CTL pedal toggling between clean verse and heavy chorus. Confirmed rig: Thom Yorke used a Fender Telecaster Plus through a Fender Twin Reverb (clean channel) for verse. Jonny Greenwood's famous pre-chorus scrape is a pick rake on strings — for no additional effect needed, pure technique. GUV DS (Guv'nror) approximates the Marshall Guv'nror distortion used for chorus. Four Pedal Assign parameters change simultaneously via CTL pedal toggle.",
+  "signal_chain": [
+    "Noise Gate",
+    "Stupor OD",
+    "Parametric EQ",
+    "Simple Delay",
+    "Ganymede"
+  ],
+  "ctl_pedal_assign": {
+    "function": "Toggle between clean verse and heavy chorus",
+    "note": "CTL pedal toggles OD/DS on/off AND simultaneously adjusts Preamp Gain, Reverb level, and Chorus level via Pedal Assign. On Helix LT this is achieved through snapshot switching — assign FS1 and FS2 to Snapshots 1 and 2.",
+    "assigns": [
+      {
+        "target": "Stupor OD active state",
+        "snapshot_1_clean": "BYPASSED",
+        "snapshot_2_heavy": "ACTIVE"
+      },
+      {
+        "target": "Parametric EQ Level",
+        "snapshot_1_clean": "+1 dB",
+        "snapshot_2_heavy": "+3 dB"
+      },
+      {
+        "target": "Ganymede Mix",
+        "snapshot_1_clean": "38%",
+        "snapshot_2_heavy": "55%"
+      }
+    ]
+  },
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_clean_verse": {
+          "Threshold": -68,
+          "Decay": 35,
+          "Level": 0
+        },
+        "2_heavy_chorus": {
+          "Threshold": -52,
+          "Decay": 25,
+          "Level": 0
+        }
+      }
+    },
+    "distortion": {
+      "model": "Stupor OD",
+      "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Used at high drive to approximate the Marshall Guv'nor character for the chorus. BYPASSED in Snapshot 1 (clean verse). ACTIVE in Snapshot 2 (heavy chorus).",
+      "snapshots": {
+        "1_clean_verse": {
+          "active": false,
+          "Drive": 7.5,
+          "Tone": 5.0,
+          "Level": 6.5
+        },
+        "2_heavy_chorus": {
+          "active": true,
+          "Drive": 7.5,
+          "Tone": 5.0,
+          "Level": 6.5
+        }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_clean_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 2,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 11000,
+          "Level": 1
+        },
+        "2_heavy_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 700,
+          "Mid Q": 2.0,
+          "Mid Gain": 4,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": -1,
+          "Low Cut": 100,
+          "High Cut": 9000,
+          "Level": 3
+        }
+      }
+    },
+    "delay": {
+      "model": "Simple Delay",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_clean_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "326ms (1/8 at 92 BPM)",
+          "Feedback": 15,
+          "Mix": 22,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_heavy_chorus": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "326ms (1/8 at 92 BPM)",
+          "Feedback": 10,
+          "Mix": 15,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_clean_verse": {
+          "Decay": 2.2,
+          "Predelay": 12,
+          "Tone": 5.0,
+          "Modulation": 2.0,
+          "Mix": 38,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_heavy_chorus": {
+          "Decay": 2.5,
+          "Predelay": 10,
+          "Tone": 5.0,
+          "Modulation": 2.0,
+          "Mix": 55,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  },
+  "snapshots": {
+    "1_clean_verse": {
+      "footswitch": "FS1",
+      "description": "Clean verse tone. Stupor OD bypassed. Gentle EQ. Moderate reverb at 38% mix. Short eighth note delay at 22% mix. Gate open at -68dB.",
+      "pickup_position": "Neck"
+    },
+    "2_heavy_chorus": {
+      "footswitch": "FS2",
+      "description": "Heavy chorus tone. Stupor OD active at Drive 7.5. Tighter EQ with mid boost +4dB. Reverb swells to 55% mix for drama. Delay pulls back to 15% mix. Gate tightens to -52dB.",
+      "pickup_position": "Bridge"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "G major",
+    "capo": null,
+    "pickup_notes": "Neck for clean verse (Snapshot 1). Bridge for heavy chorus (Snapshot 2).",
+    "technique": "Jonny's famous pre-chorus scrape is a pick rake across the strings — no additional effect needed, this is pure technique.",
+    "snapshot_cues": "Switch to Snapshot 2 exactly as the chorus hits."
+  }
+}

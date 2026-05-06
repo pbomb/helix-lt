@@ -1,0 +1,77 @@
+{
+  "preset_name": "There There",
+  "artist": "Radiohead",
+  "album": "Hail to the Thief",
+  "tuning": "Standard",
+  "master_bpm": 92,
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB with Boss OD-3 and Boss RE-20 Space Echo. Mid-forward, slightly psychedelic tone with tribal, percussive character.",
+  "signal_chain": [
+    "Noise Gate",
+    "Stupor OD",
+    "Script Mod Phase",
+    "Parametric EQ",
+    "Cosmos Echo",
+    "Ganymede"
+  ],
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Threshold": -58, "Decay": 30, "Level": 0 },
+        "2_chorus": { "Threshold": -52, "Decay": 25, "Level": 0 }
+      }
+    },
+    "overdrive": {
+      "model": "Stupor OD",
+      "based_on": "BOSS SD-1 Super OverDrive",
+      "snapshots": {
+        "1_verse": { "active": true, "Drive": 5.0, "Tone": 5.5, "Level": 6.5 },
+        "2_chorus": { "active": true, "Drive": 6.5, "Tone": 5.5, "Level": 7.0 }
+      }
+    },
+    "modulation": {
+      "model": "Script Mod Phase",
+      "based_on": "MXR Phase 90 Script Mod",
+      "snapshots": {
+        "1_verse": { "active": true, "Rate": 0.8, "Mix": 50, "Level": 0 },
+        "2_chorus": { "active": true, "Rate": 0.8, "Mix": 50, "Level": 0 }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Low Gain": -2, "Mid Freq": 500, "Mid Gain": 4, "High Gain": -1, "Low Cut": 100, "High Cut": 9000, "Level": 2 },
+        "2_chorus": { "Low Gain": -3, "Mid Freq": 500, "Mid Gain": 5, "High Gain": -2, "Low Cut": 110, "High Cut": 8000, "Level": 3 }
+      }
+    },
+    "delay": {
+      "model": "Cosmos Echo",
+      "based_on": "Roland RE-201 Space Echo",
+      "snapshots": {
+        "1_verse": { "TempoSync1": true, "Note Sync": "1/8", "Time": "326ms (1/8 at 92 BPM)", "Feedback": 20, "Mix": 28, "Trails": true },
+        "2_chorus": { "TempoSync1": true, "Note Sync": "1/8", "Time": "326ms (1/8 at 92 BPM)", "Feedback": 15, "Mix": 18, "Trails": true }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Decay": 1.4, "Predelay": 10, "Mix": 35, "Trails": true },
+        "2_chorus": { "Decay": 0.9, "Predelay": 6, "Mix": 22, "Trails": true }
+      }
+    }
+  },
+  "snapshots": {
+    "1_verse": { "footswitch": "FS1", "description": "Verse riff. Stupor OD at Drive 5.0. Script Mod Phase slow and subtle. Mid boost +4dB at 500Hz.", "pickup_position": "Bridge" },
+    "2_chorus": { "footswitch": "FS2", "description": "Heavy chorus. Stupor OD pushed to Drive 6.5. More aggressive mid boost +5dB.", "pickup_position": "Bridge" }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "E minor",
+    "capo": null,
+    "technique": "Very deliberate and percussive strumming.",
+    "snapshot_cues": "Snapshot 1 for verses. Snapshot 2 for chorus sections."
+  }
+}
