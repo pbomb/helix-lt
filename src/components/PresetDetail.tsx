@@ -29,6 +29,7 @@ function BlockCard({ block, snapshotNames }: { block: BlockWithKey; snapshotName
         <span className="block-model">{block.model}</span>
         {block.based_on && <span className="block-based-on">based on {block.based_on}</span>}
       </div>
+      {block.notes && <p className="block-notes">{block.notes}</p>}
       <table className="param-table">
         <thead>
           <tr>
