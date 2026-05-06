@@ -1,0 +1,94 @@
+{
+  "preset_name": "Just",
+  "artist": "Radiohead",
+  "album": "The Bends",
+  "tuning": "Standard",
+  "master_bpm": 102,
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster into Marshall JCM800 with Boss SD-1. DigiTech Whammy WH-1 confirmed for solo — Poly Wham at +12 semitones at 65% mix. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
+  "signal_chain": [
+    "Noise Gate",
+    "Stupor OD",
+    "Ratatouille Dist",
+    "Poly Wham",
+    "Parametric EQ",
+    "Cosmos Echo",
+    "Dynamic Hall"
+  ],
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Threshold": -62, "Decay": 30, "Level": 0 },
+        "2_heavy_riff": { "Threshold": -52, "Decay": 22, "Level": 0 },
+        "3_whammy_solo": { "Threshold": -55, "Decay": 25, "Level": 0 }
+      }
+    },
+    "overdrive": {
+      "model": "Stupor OD",
+      "based_on": "BOSS SD-1 Super OverDrive",
+      "snapshots": {
+        "1_verse": { "active": true, "Drive": 3.0, "Tone": 5.5, "Level": 6.5 },
+        "2_heavy_riff": { "active": true, "Drive": 4.0, "Tone": 5.5, "Level": 7.0 },
+        "3_whammy_solo": { "active": false, "Drive": 3.0, "Tone": 5.5, "Level": 6.5 }
+      }
+    },
+    "distortion": {
+      "model": "Ratatouille Dist",
+      "based_on": "1984 Pro Co RAT",
+      "snapshots": {
+        "1_verse": { "active": false, "Gain": 8.0, "Filter": 5.0, "Level": 6.0 },
+        "2_heavy_riff": { "active": true, "Gain": 8.0, "Filter": 5.0, "Level": 6.0 },
+        "3_whammy_solo": { "active": true, "Gain": 7.0, "Filter": 6.5, "Level": 6.5 }
+      }
+    },
+    "pitch": {
+      "model": "Poly Wham",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "active": false, "Position": 100, "Toe Shift": 12, "Mix": 65, "Level": 0 },
+        "2_heavy_riff": { "active": false, "Position": 100, "Toe Shift": 12, "Mix": 65, "Level": 0 },
+        "3_whammy_solo": { "active": true, "Position": 100, "Toe Shift": 12, "Mix": 65, "Level": 0 }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Low Gain": -1, "Mid Freq": 900, "Mid Gain": 2, "High Gain": 1, "Low Cut": 80, "High Cut": 10000, "Level": 0 },
+        "2_heavy_riff": { "Low Gain": -2, "Mid Freq": 800, "Mid Gain": 3, "High Gain": -1, "Low Cut": 90, "High Cut": 9000, "Level": 2 },
+        "3_whammy_solo": { "Low Gain": -2, "Mid Freq": 1000, "Mid Q": 1.5, "Mid Gain": 2, "High Gain": 0, "Low Cut": 80, "High Cut": 8000, "Level": 2 }
+      }
+    },
+    "delay": {
+      "model": "Cosmos Echo",
+      "based_on": "Roland RE-201 Space Echo",
+      "snapshots": {
+        "1_verse": { "TempoSync1": true, "Note Sync": "1/8", "Time": "294ms (1/8 at 102 BPM)", "Feedback": 22, "Mix": 30, "Trails": true },
+        "2_heavy_riff": { "TempoSync1": true, "Note Sync": "1/16", "Time": "147ms (1/16 at 102 BPM)", "Feedback": 8, "Mix": 12, "Trails": true },
+        "3_whammy_solo": { "TempoSync1": true, "Note Sync": "1/8", "Time": "294ms (1/8 at 102 BPM)", "Feedback": 25, "Mix": 35, "Trails": true }
+      }
+    },
+    "reverb": {
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Decay": 1.8, "Predelay": 12, "Mix": 30, "Trails": true },
+        "2_heavy_riff": { "Decay": 0.6, "Predelay": 4, "Mix": 10, "Trails": true },
+        "3_whammy_solo": { "Decay": 1.5, "Predelay": 10, "Mix": 28, "Trails": true }
+      }
+    }
+  },
+  "snapshots": {
+    "1_verse": { "footswitch": "FS1", "description": "Verse / semi-clean. SD-1 only — no Ratatouille. Poly Wham bypassed.", "pickup_position": "Bridge" },
+    "2_heavy_riff": { "footswitch": "FS2", "description": "Heavy riff. SD-1 boosting into Ratatouille. Very short sixteenth note delay.", "pickup_position": "Bridge" },
+    "3_whammy_solo": { "footswitch": "FS3", "description": "Whammy solo. SD-1 bypassed. Poly Wham active at Mix 65%.", "pickup_position": "Bridge" }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "E major",
+    "capo": null,
+    "technique": "Very deliberate full-commitment downstrokes on the riff.",
+    "snapshot_cues": "Snapshot 3 at 2:17 in live arrangement when Whammy engages."
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "preset_name": "Weird Fishes (Arpeggi)",
+  "artist": "Radiohead",
+  "album": "In Rainbows",
+  "tuning": "Standard",
+  "master_bpm": 87,
+  "notes": "No amp+cab block — running into tube amp. Two delays approximate the dual-delay/looper setup. Teemah! approximates Sparkle Drive. Primary dotted eighth delay is exact match at 87 BPM (517ms).",
+  "signal_chain": [
+    "Noise Gate",
+    "Teemah!",
+    "Chorus",
+    "Parametric EQ",
+    "Simple Delay (primary)",
+    "Simple Delay (secondary)",
+    "Ganymede"
+  ],
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Threshold": -75, "Decay": 25, "Level": 0 },
+        "2_intense": { "Threshold": -65, "Decay": 20, "Level": 0 }
+      }
+    },
+    "overdrive": {
+      "model": "Teemah!",
+      "based_on": "Paul Cochrane Timmy Overdrive",
+      "snapshots": {
+        "1_verse": { "active": false, "Gain": 2.0, "Bass Cut": 3.0, "Treble Cut": 4.0, "Level": 6.0 },
+        "2_intense": { "active": true, "Gain": 2.0, "Bass Cut": 3.0, "Treble Cut": 4.0, "Level": 6.0 }
+      }
+    },
+    "modulation": {
+      "model": "Chorus",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "active": true, "Speed": 3.5, "Depth": 30, "Mix": 25, "Level": 0 },
+        "2_intense": { "active": true, "Speed": 4.0, "Depth": 35, "Mix": 32, "Level": 0 }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Low Gain": -1, "Mid Freq": 800, "Mid Gain": 2, "High Gain": 1, "Low Cut": 80, "High Cut": 12000, "Level": 0 },
+        "2_intense": { "Low Gain": -1, "Mid Freq": 700, "Mid Gain": 3, "High Gain": 0, "Low Cut": 80, "High Cut": 10000, "Level": 2 }
+      }
+    },
+    "delay_primary": {
+      "model": "Simple Delay (primary)",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "517ms (d1/8 at 87 BPM — near exact match)", "Feedback": 35, "Mix": 45, "Level": 0, "Trails": true },
+        "2_intense": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "517ms (d1/8 at 87 BPM)", "Feedback": 40, "Mix": 50, "Level": 0, "Trails": true }
+      }
+    },
+    "delay_secondary": {
+      "model": "Simple Delay (secondary)",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "TempoSync1": true, "Note Sync": "1/16 dot", "Time": "259ms (d1/16 at 87 BPM)", "Feedback": 18, "Mix": 22, "Level": 0, "Trails": true },
+        "2_intense": { "TempoSync1": true, "Note Sync": "1/16 dot", "Time": "259ms (d1/16 at 87 BPM)", "Feedback": 22, "Mix": 28, "Level": 0, "Trails": true }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_verse": { "Decay": 3.5, "Predelay": 20, "Mix": 38, "Trails": true },
+        "2_intense": { "Decay": 2.8, "Predelay": 15, "Mix": 32, "Trails": true }
+      }
+    }
+  },
+  "snapshots": {
+    "1_verse": { "footswitch": "FS1", "description": "Clean shimmering arpeggio. Teemah! bypassed. Two interlocking delays at 45% and 22% mix.", "pickup_position": "Neck" },
+    "2_intense": { "footswitch": "FS2", "description": "Late-song intense version. Teemah! active. Primary delay opens to 50% mix.", "pickup_position": "Neck" }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "E minor",
+    "capo": null,
+    "technique": "Pick very lightly. Allow notes to ring into each other. Timing is critical with two delays.",
+    "snapshot_cues": "Snapshot 2 around the 2:30 mark when arrangement thickens."
+  }
+}

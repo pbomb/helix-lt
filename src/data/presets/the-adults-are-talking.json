@@ -1,0 +1,77 @@
+{
+  "preset_name": "Adults Are Talking",
+  "artist": "The Strokes",
+  "album": "The New Abnormal",
+  "tuning": "Standard",
+  "master_bpm": 112,
+  "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 112 BPM. Nick Valensi Minotaur (Klon Centaur) confirmed notable user.",
+  "signal_chain": [
+    "Noise Gate",
+    "Stupor OD",
+    "Minotaur",
+    "Parametric EQ",
+    "Adriatic Delay",
+    "Ganymede"
+  ],
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_rhythm": { "Threshold": -60, "Decay": 25, "Level": 0 },
+        "2_lead": { "Threshold": -58, "Decay": 22, "Level": 0 }
+      }
+    },
+    "overdrive": {
+      "model": "Stupor OD",
+      "based_on": "BOSS SD-1 Super OverDrive",
+      "snapshots": {
+        "1_rhythm": { "Drive": 6.5, "Tone": 5.5, "Level": 7.0 },
+        "2_lead": { "Drive": 3.5, "Tone": 6.0, "Level": 5.0 }
+      }
+    },
+    "boost": {
+      "model": "Minotaur",
+      "based_on": "Klon Centaur",
+      "snapshots": {
+        "1_rhythm": { "active": false, "Gain": 2.0, "Tone": 5.0, "Level": 8.0 },
+        "2_lead": { "active": true, "Gain": 2.0, "Tone": 5.0, "Level": 8.0 }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_rhythm": { "Low Gain": -3, "Mid Freq": 700, "Mid Gain": 5, "High Gain": -3, "Low Cut": 100, "High Cut": 8000, "Level": 3 },
+        "2_lead": { "Low Gain": -2, "Mid Freq": 800, "Mid Gain": 4, "High Gain": -2, "Low Cut": 80, "High Cut": 9000, "Level": 3 }
+      }
+    },
+    "delay": {
+      "model": "Adriatic Delay",
+      "based_on": "BOSS DM-2 w/ Adrian Mod",
+      "snapshots": {
+        "1_rhythm": { "TempoSync1": true, "Note Sync": "1/8", "Time": "268ms (1/8 at 112 BPM)", "Feedback": 18, "Mix": 22, "Trails": true },
+        "2_lead": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "402ms (d1/8 at 112 BPM)", "Feedback": 35, "Mix": 48, "Trails": true }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_rhythm": { "Decay": 1.2, "Predelay": 8, "Mix": 18, "Trails": true },
+        "2_lead": { "Decay": 1.8, "Predelay": 12, "Mix": 28, "Trails": true }
+      }
+    }
+  },
+  "snapshots": {
+    "1_rhythm": { "footswitch": "FS1", "description": "Main rhythm tone. Stupor OD at Drive 6.5. Minotaur bypassed. Telephone filter EQ. Eighth note delay.", "pickup_position": "Neck or middle" },
+    "2_lead": { "footswitch": "FS2", "description": "Echo-soaked lead tone. Minotaur active. Dotted eighth delay at 48% mix.", "pickup_position": "Bridge" }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "F major",
+    "capo": null,
+    "technique": "Single-note picked chord fragments rather than full strummed chords.",
+    "snapshot_cues": "Switch to Snapshot 2 for Valensi intertwining lead lines after first chorus."
+  }
+}
