@@ -4,7 +4,7 @@
   "album": "The Bends",
   "tuning": "Standard",
   "master_bpm": 102,
-  "notes": "No amp+cab block \u2014 running into tube amp. Confirmed rig: Marshall ShredMaster into Marshall JCM800 with Boss SD-1. DigiTech Whammy WH-1 confirmed for solo \u2014 Poly Wham at +12 semitones at 65% mix. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 (Brit 2203 — removed per amp+cab policy) with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). DigiTech Whammy WH-1 confirmed for solo — Poly Wham at +12 semitones (octave up) at 65% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -39,6 +39,7 @@
     "overdrive": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Confirmed Boss SD-1 used on The Bends era. Pre-distortion boost and tone shaper — pushes Ratatouille and adds mid-forward character. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 — solo tone uses Ratatouille alone for clearer, more defined character.",
       "snapshots": {
         "1_verse": {
           "active": true,
@@ -63,6 +64,7 @@
     "distortion": {
       "model": "Ratatouille Dist",
       "based_on": "1984 Pro Co RAT",
+      "notes": "ShredMaster approximation — both use op-amp gain stages with diode clipping. ShredMaster Contour control (mid scoop) approximated by Filter parameter. BYPASSED in Snapshot 1 (verse). ACTIVE in Snapshots 2 and 3. Note: Thom Yorke is a confirmed notable user of the RAT per YAML. Filter at 5.0 is neutral in S2; raised to 6.5 in S3 to give solo more sustaining character.",
       "snapshots": {
         "1_verse": {
           "active": false,
@@ -87,25 +89,35 @@
     "pitch": {
       "model": "Poly Wham",
       "based_on": "Line 6 Original",
+      "notes": "Approximates DigiTech Whammy WH-1 — CONFIRMED Jonny kicks Whammy on at 2:17 in live performance for squealing solo sustain, octave up setting. Automatically assigned to EXP 1. Position 100 = full toe-down = constant octave up. Mix at 65% makes octave-up voice prominently audible. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only. Tracking set to Fast for responsive pitch detection.",
       "snapshots": {
         "1_verse": {
           "active": false,
           "Position": 100,
+          "Heel Shift": 0,
           "Toe Shift": 12,
+          "Tracking": "Fast",
+          "Auto EQ": true,
           "Mix": 65,
           "Level": 0
         },
         "2_heavy_riff": {
           "active": false,
           "Position": 100,
+          "Heel Shift": 0,
           "Toe Shift": 12,
+          "Tracking": "Fast",
+          "Auto EQ": true,
           "Mix": 65,
           "Level": 0
         },
         "3_whammy_solo": {
           "active": true,
           "Position": 100,
+          "Heel Shift": 0,
           "Toe Shift": 12,
+          "Tracking": "Fast",
+          "Auto EQ": true,
           "Mix": 65,
           "Level": 0
         }
@@ -114,30 +126,45 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "S1 gentle and open — verse not heavily sculpted. S2 tightens high cut to control JCM800 brightness under heavy distortion. S3 raises mid frequency to 1.0kHz with wider Q — broader boost supports Poly Wham octave-up voice. High Cut at 8kHz in S3 tames potential harshness of octave-up voice.",
       "snapshots": {
         "1_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -1,
           "Mid Freq": 900,
+          "Mid Q": 2.0,
           "Mid Gain": 2,
+          "High Freq": 4000,
+          "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 80,
           "High Cut": 10000,
           "Level": 0
         },
         "2_heavy_riff": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 800,
+          "Mid Q": 2.0,
           "Mid Gain": 3,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": -1,
           "Low Cut": 90,
           "High Cut": 9000,
           "Level": 2
         },
         "3_whammy_solo": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 1000,
           "Mid Q": 1.5,
           "Mid Gain": 2,
+          "High Freq": 5000,
+          "High Q": 0.7,
           "High Gain": 0,
           "Low Cut": 80,
           "High Cut": 8000,
@@ -148,29 +175,60 @@
     "delay": {
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
+      "notes": "Confirmed Jonny used RE-201 since 1995, confirmed for The Bends era. Tempo-synced to 102 BPM. S1: eighth note = 294ms (original 320ms, 26ms off — using synced eighth). S2: sixteenth note = 147ms (original 160ms, 13ms off — synced). S3: eighth note = 294ms (original 280ms, 14ms off — synced). Treble rolled off in all snapshots to keep repeats dark.",
       "snapshots": {
         "1_verse": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "294ms (1/8 at 102 BPM)",
+          "Ramp": 0,
           "Feedback": 22,
+          "Wow/Flutter": 2.0,
           "Mix": 30,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
           "Trails": true
         },
         "2_heavy_riff": {
           "TempoSync1": true,
           "Note Sync": "1/16",
           "Time": "147ms (1/16 at 102 BPM)",
+          "Ramp": 0,
           "Feedback": 8,
+          "Wow/Flutter": 1.5,
           "Mix": 12,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.0,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
           "Trails": true
         },
         "3_whammy_solo": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "294ms (1/8 at 102 BPM)",
+          "Ramp": 0,
           "Feedback": 25,
+          "Wow/Flutter": 2.5,
           "Mix": 35,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.0,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
           "Trails": true
         }
       }
@@ -178,23 +236,49 @@
     "reverb": {
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
+      "notes": "Dynamic Hall chosen for Radiohead presets — has Low Cut and High Cut parameters for better frequency control than Ganymede. NOTE: Room Size should NOT be assigned to snapshots — it changes the algorithm and causes an audible bump. Set Room Size as a fixed value.",
+      "room_size_fixed": 20,
       "snapshots": {
         "1_verse": {
           "Decay": 1.8,
           "Predelay": 12,
+          "Diffusion": 6.0,
+          "Damping": 6000,
           "Mix": 30,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 6500,
+          "Level": 0,
           "Trails": true
         },
         "2_heavy_riff": {
           "Decay": 0.6,
           "Predelay": 4,
+          "Diffusion": 5.0,
+          "Damping": 4000,
           "Mix": 10,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 4500,
+          "Level": 0,
           "Trails": true
         },
         "3_whammy_solo": {
           "Decay": 1.5,
           "Predelay": 10,
+          "Diffusion": 6.0,
+          "Damping": 5000,
           "Mix": 28,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 5500,
+          "Level": 0,
           "Trails": true
         }
       }
@@ -203,17 +287,17 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Verse / semi-clean. SD-1 only \u2014 no Ratatouille. Poly Wham bypassed.",
+      "description": "Verse / semi-clean. SD-1 only — no Ratatouille. Poly Wham bypassed. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
       "pickup_position": "Bridge"
     },
     "2_heavy_riff": {
       "footswitch": "FS2",
-      "description": "Heavy riff. SD-1 boosting into Ratatouille. Very short sixteenth note delay.",
+      "description": "Heavy riff. SD-1 boosting into Ratatouille — stacked ShredMaster approximation. Poly Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
       "pickup_position": "Bridge"
     },
     "3_whammy_solo": {
       "footswitch": "FS3",
-      "description": "Whammy solo. SD-1 bypassed. Poly Wham active at Mix 65%.",
+      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5. Poly Wham active — Position 100, Toe Shift +12, Mix 65%. Octave-up voice prominent. EQ mid at 1.0kHz wider Q. Eighth note delay at 35% mix. High Cut at 8kHz to tame octave harshness.",
       "pickup_position": "Bridge"
     }
   },
@@ -221,7 +305,10 @@
     "tuning": "Standard",
     "key": "E major",
     "capo": null,
-    "technique": "Very deliberate full-commitment downstrokes on the riff.",
-    "snapshot_cues": "Snapshot 3 at 2:17 in live arrangement when Whammy engages."
+    "pickup_notes": "Bridge pickup throughout all three snapshots",
+    "technique": "Verse requires firm deliberate picking — after recording The Bends Jonny developed arm pain requiring a brace, which tells you how hard he was playing. Full commitment to downstrokes on the riff.",
+    "snapshot_cues": "Snapshot 1 for verse sections. Snapshot 2 for heavy riff sections. Snapshot 3 at exactly 2:17 in the live arrangement when Whammy engages — switch at this moment for maximum dramatic effect.",
+    "whammy_technique": "Play solo as single notes only — Poly Wham tracks monophonically. Hold notes and let Whammy octave-up and Cosmos Echo sustain and bloom. Space and sustain are the tools — resist playing busily.",
+    "pre_chorus_technique": "Verse sections (Snapshot 1) are not completely clean — there is a controlled mid-forward OD. Match this by picking with moderate force rather than trying to play softly into a clean tone."
   }
 }

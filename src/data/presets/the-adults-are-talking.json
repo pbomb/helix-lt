@@ -4,7 +4,7 @@
   "album": "The New Abnormal",
   "tuning": "Standard",
   "master_bpm": 112,
-  "notes": "No amp+cab block \u2014 running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 112 BPM. Nick Valensi Minotaur (Klon Centaur) confirmed notable user.",
+  "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 112 BPM. Nick Valensi Minotaur (Klon Centaur) confirmed notable user.",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -33,6 +33,8 @@
     "overdrive": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
+      "active": "both snapshots",
+      "notes": "Approximates Jekyll & Hyde overdrive side. Mid-forward asymmetric clipping.",
       "snapshots": {
         "1_rhythm": {
           "Drive": 6.5,
@@ -49,6 +51,7 @@
     "boost": {
       "model": "Minotaur",
       "based_on": "Klon Centaur",
+      "notes": "Nick Valensi confirmed Klon user per YAML. Approximates MXR Micro Amp clean boost for lead passages. BYPASSED in Snapshot 1, ACTIVE in Snapshot 2.",
       "snapshots": {
         "1_rhythm": {
           "active": false,
@@ -67,20 +70,31 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "Telephone filter EQ is the defining Strokes character — aggressive low and high cut with boosted mids. Also compensates for removed amp voicing. Single mid band only.",
       "snapshots": {
         "1_rhythm": {
+          "Low Freq": 120,
+          "Low Q": 0.7,
           "Low Gain": -3,
           "Mid Freq": 700,
+          "Mid Q": 2.0,
           "Mid Gain": 5,
+          "High Freq": 4000,
+          "High Q": 0.7,
           "High Gain": -3,
           "Low Cut": 100,
           "High Cut": 8000,
           "Level": 3
         },
         "2_lead": {
+          "Low Freq": 100,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 800,
+          "Mid Q": 2.0,
           "Mid Gain": 4,
+          "High Freq": 4500,
+          "High Q": 0.7,
           "High Gain": -2,
           "Low Cut": 80,
           "High Cut": 9000,
@@ -91,13 +105,20 @@
     "delay": {
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
+      "notes": "Delays are tempo-synced to 112 BPM. Snapshot 1: eighth note (268ms). Snapshot 2: dotted eighth (402ms) — the prominent echo-soaked lead tone central to this song.",
       "snapshots": {
         "1_rhythm": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "268ms (1/8 at 112 BPM)",
           "Feedback": 18,
+          "Noise": 3.0,
+          "BBD Size": 2048,
           "Mix": 22,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "2_lead": {
@@ -105,7 +126,13 @@
           "Note Sync": "1/8 dot",
           "Time": "402ms (d1/8 at 112 BPM)",
           "Feedback": 35,
+          "Noise": 3.0,
+          "BBD Size": 2048,
           "Mix": 48,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         }
       }
@@ -117,13 +144,19 @@
         "1_rhythm": {
           "Decay": 1.2,
           "Predelay": 8,
+          "Tone": 5.0,
+          "Modulation": 2.0,
           "Mix": 18,
+          "Level": 0,
           "Trails": true
         },
         "2_lead": {
           "Decay": 1.8,
           "Predelay": 12,
+          "Tone": 5.5,
+          "Modulation": 2.0,
           "Mix": 28,
+          "Level": 0,
           "Trails": true
         }
       }
@@ -132,12 +165,12 @@
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",
-      "description": "Main rhythm tone. Stupor OD at Drive 6.5. Minotaur bypassed. Telephone filter EQ. Eighth note delay.",
+      "description": "Main rhythm tone. Stupor OD at Drive 6.5. Minotaur bypassed. Telephone filter EQ with Mid +5dB at 700Hz. Eighth note delay at low mix.",
       "pickup_position": "Neck or middle"
     },
     "2_lead": {
       "footswitch": "FS2",
-      "description": "Echo-soaked lead tone. Minotaur active. Dotted eighth delay at 48% mix.",
+      "description": "Echo-soaked lead tone for intertwining guitar lines after first chorus. Minotaur active for level boost. Dotted eighth delay at 48% mix — prominent and defining. Slightly less driven OD.",
       "pickup_position": "Bridge"
     }
   },
@@ -145,7 +178,8 @@
     "tuning": "Standard",
     "key": "F major",
     "capo": null,
-    "technique": "Single-note picked chord fragments rather than full strummed chords.",
-    "snapshot_cues": "Switch to Snapshot 2 for Valensi intertwining lead lines after first chorus."
+    "pickup_notes": "Neck or middle for rhythm (Snapshot 1), bridge for lead lines (Snapshot 2)",
+    "technique": "Single-note picked chord fragments rather than full strummed chords. Pick deliberately and let compression do sustain work.",
+    "snapshot_cues": "Switch to Snapshot 2 for Valensi intertwining lead lines after first chorus. Delay at 48% mix does the braiding — play with space and let notes sustain into each other."
   }
 }

@@ -2,9 +2,9 @@
   "preset_name": "Bodysnatchers",
   "artist": "Radiohead",
   "album": "In Rainbows",
-  "tuning": "See snapshot notes \u2014 Snapshots 1+2 standard tuning (Jonny), Snapshots 3+4 Drop D (Thom)",
+  "tuning": "See snapshot notes — Snapshots 1+2 standard tuning (Jonny), Snapshots 3+4 Drop D (Thom)",
   "master_bpm": 166,
-  "notes": "Combined Jonny Greenwood and Thom Yorke parts in a single preset with four snapshots. Snapshots 1+2 cover Jonny's lead/riff part (standard tuning, Stupor OD). Snapshots 3+4 cover Thom's rhythm guitar part (Drop D, Top Secret OD).",
+  "notes": "Combined Jonny Greenwood and Thom Yorke parts in a single preset with four snapshots. Snapshots 1+2 cover Jonny's lead/riff part (standard tuning, Boss OD-3 via Stupor OD, Boss RE-20 slapback). Snapshots 3+4 cover Thom's rhythm guitar part (Drop D, MXR Distortion+ via Top Secret OD, minimal slapback). Signal chain uses only 5 blocks — Stupor OD and Top Secret OD alternate active/bypassed states across snapshot pairs, sharing the same Noise Gate, EQ, and Transistor Tape blocks. If playing both parts in the same session, tune to Drop D and use a capo at the 2nd fret for Snapshots 1+2 (Jonny part) to restore effective standard pitch — or retune between snapshots. Confirmed sources: Jools Holland January 2008 for Thom; From The Basement for Jonny.",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -12,10 +12,16 @@
     "Parametric EQ",
     "Transistor Tape"
   ],
+  "tuning_strategy": {
+    "option_1": "Retune between Jonny (S1+S2) and Thom (S3+S4) snapshots — most accurate",
+    "option_2": "Stay in Drop D throughout, use capo at 2nd fret for Snapshots 1+2 to restore effective standard pitch on Jonny riff (approximate — Jonny plays standard tuning)",
+    "option_3": "Play only one part per session — use S1+S2 for Jonny or S3+S4 for Thom"
+  },
   "blocks": {
     "noise_gate": {
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
+      "notes": "Shared across all snapshots. Thom snapshots (S3+S4) are slightly tighter — Top Secret OD at high Gain generates more noise than Stupor OD.",
       "snapshots": {
         "1_jonny_verse": {
           "Threshold": -60,
@@ -42,6 +48,7 @@
     "overdrive_jonny": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Jonny's Boss OD-3 approximation. ACTIVE in Snapshots 1+2 only. BYPASSED in Snapshots 3+4 (Thom's part uses Top Secret OD instead). Confirmed: Jonny does not adjust pedals during the song — Drive stays constant, only dynamics from picking hand change the intensity.",
       "snapshots": {
         "1_jonny_verse": {
           "active": true,
@@ -72,6 +79,7 @@
     "overdrive_thom": {
       "model": "Top Secret OD",
       "based_on": "DOD OD-250",
+      "notes": "Thom's MXR Distortion+ approximation — both use the same LM741 op-amp clipping circuit. Only two parameters: Gain and Level. BYPASSED in Snapshots 1+2 (Jonny's part). ACTIVE in Snapshots 3+4 only. Confirmed via Jools Holland January 2008 performance.",
       "snapshots": {
         "1_jonny_verse": {
           "active": false,
@@ -98,38 +106,59 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "CRITICAL DIFFERENCE between Jonny and Thom snapshots: Thom's part is in Drop D — Low Cut must be raised to 120-140Hz to prevent open D string from becoming muddy under distortion. Jonny's part (standard tuning) uses a lower Low Cut of 100Hz. Both share a mid-forward character compensating for removed Essex A30 voicing but at different frequencies. Thom's mid boost is more aggressive and lower in frequency (600-650Hz) matching the confrontational chorus character.",
       "snapshots": {
         "1_jonny_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 700,
+          "Mid Q": 2.0,
           "Mid Gain": 3,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": 2,
           "Low Cut": 100,
           "High Cut": 9500,
           "Level": 2
         },
         "2_jonny_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -3,
           "Mid Freq": 650,
+          "Mid Q": 2.0,
           "Mid Gain": 4,
+          "High Freq": 3200,
+          "High Q": 0.7,
           "High Gain": 2,
           "Low Cut": 120,
           "High Cut": 8500,
           "Level": 3
         },
         "3_thom_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -3,
           "Mid Freq": 650,
+          "Mid Q": 2.0,
           "Mid Gain": 3,
+          "High Freq": 3200,
+          "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 120,
           "High Cut": 9500,
           "Level": 2
         },
         "4_thom_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -4,
           "Mid Freq": 600,
+          "Mid Q": 2.0,
           "Mid Gain": 5,
+          "High Freq": 3000,
+          "High Q": 0.7,
           "High Gain": 0,
           "Low Cut": 140,
           "High Cut": 8500,
@@ -140,13 +169,18 @@
     "delay": {
       "model": "Transistor Tape",
       "based_on": "Maestro Echoplex EP-3",
+      "notes": "Shared slapback block. Confirmed: Jonny used Boss RE-20 Space Echo for slapback (one repeat, fast delay time). Thom's confirmed rig has NO delay — very low Mix on Thom snapshots (S3: 18%, S4: 12%) approximates the slightly larger-than-life studio quality when Godrich ran Thom's guitar direct into console. Transistor Tape optional for Thom snapshots — can be bypassed in S3+S4 if desired. Tempo-synced to 166 BPM. Sixteenth note = 90ms (original targets: Jonny 95ms, Thom 85ms — both within 5ms of synced value, use synced).",
+      "optional_for_thom": "Transistor Tape can be bypassed in Snapshots 3+4 since Thom's confirmed rig has no delay",
       "snapshots": {
         "1_jonny_verse": {
           "TempoSync1": true,
           "Note Sync": "1/16",
           "Time": "90ms (1/16 at 166 BPM)",
           "Feedback": 8,
+          "Wow Flutter": 2.0,
           "Mix": 22,
+          "Level": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "2_jonny_chorus": {
@@ -154,7 +188,10 @@
           "Note Sync": "1/16",
           "Time": "90ms (1/16 at 166 BPM)",
           "Feedback": 8,
+          "Wow Flutter": 2.0,
           "Mix": 18,
+          "Level": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "3_thom_verse": {
@@ -162,7 +199,10 @@
           "Note Sync": "1/16",
           "Time": "90ms (1/16 at 166 BPM)",
           "Feedback": 5,
+          "Wow Flutter": 1.5,
           "Mix": 18,
+          "Level": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "4_thom_chorus": {
@@ -170,7 +210,10 @@
           "Note Sync": "1/16",
           "Time": "90ms (1/16 at 166 BPM)",
           "Feedback": 5,
+          "Wow Flutter": 1.5,
           "Mix": 12,
+          "Level": 0,
+          "Headroom": 0,
           "Trails": true
         }
       }
@@ -179,30 +222,43 @@
   "snapshots": {
     "1_jonny_verse": {
       "footswitch": "FS1",
-      "description": "Jonny verse \u2014 standard tuning, Stupor OD at Drive 5.5.",
-      "pickup_position": "Bridge"
+      "description": "Jonny — verse/main riff. Standard tuning. Stupor OD at Drive 5.5. Top Secret OD bypassed. Low Cut 100Hz. Mid +3dB at 700Hz. Slapback 22% mix.",
+      "tuning": "Standard",
+      "pickup_position": "Bridge",
+      "confirmed_source": "From The Basement performance"
     },
     "2_jonny_chorus": {
       "footswitch": "FS2",
-      "description": "Jonny chorus \u2014 standard tuning, Stupor OD pushed to Drive 7.0.",
-      "pickup_position": "Bridge"
+      "description": "Jonny — chorus/bridge. Standard tuning. Stupor OD pushed to Drive 7.0. Tighter Low Cut 120Hz. More aggressive mid +4dB at 650Hz. Slapback drops to 18% mix.",
+      "tuning": "Standard",
+      "pickup_position": "Bridge",
+      "confirmed_source": "From The Basement performance"
     },
     "3_thom_verse": {
       "footswitch": "FS3",
-      "description": "Thom verse \u2014 Drop D, Top Secret OD at Gain 6.5.",
-      "pickup_position": "Bridge"
+      "description": "Thom — verse/main riff. DROP D. Stupor OD bypassed. Top Secret OD at Gain 6.5. Low Cut raised to 120Hz for Drop D. Mid +3dB at 650Hz. Slapback at 18% mix (optional — Thom's confirmed rig has no delay).",
+      "tuning": "Drop D",
+      "pickup_position": "Bridge",
+      "confirmed_source": "Jools Holland January 2008"
     },
     "4_thom_chorus": {
       "footswitch": "FS4",
-      "description": "Thom chorus \u2014 Drop D, Top Secret OD pushed to Gain 8.0.",
-      "pickup_position": "Bridge"
+      "description": "Thom — chorus/bridge. DROP D. Top Secret OD pushed to Gain 8.0. Low Cut tightened to 140Hz. Aggressive mid +5dB at 600Hz. Slapback minimal at 12% mix. Most confrontational tone in the preset.",
+      "tuning": "Drop D",
+      "pickup_position": "Bridge",
+      "confirmed_source": "Jools Holland January 2008"
     }
   },
   "playing_notes": {
-    "tuning": "Standard for Jonny (S1+S2), Drop D for Thom (S3+S4)",
-    "key": "E major",
-    "capo": null,
-    "technique": "Fast aggressive single-note riff for Jonny. Power chords on low D for Thom.",
-    "snapshot_cues": "Use S1+S2 for Jonny's part or S3+S4 for Thom's part."
+    "song_key": "E major",
+    "tuning_per_part": {
+      "jonny_snapshots_1_2": "Standard tuning",
+      "thom_snapshots_3_4": "Drop D — tune low E string down to D"
+    },
+    "jonny_technique": "Fast aggressive single-note riff pattern. Killswitch stutter effect approximated by quick palm mutes. Confirmed: Jonny does not touch pedals during the song. Bridge pickup.",
+    "thom_technique": "Power chords and open string riffs using low D string as pedal tone. Physically aggressive playing — the recording was a 12-hour hyperactive session. Bridge pickup.",
+    "comparison": "Jonny uses Stupor OD (SD-1/OD-3 character — smoother, transparent overdrive). Thom uses Top Secret OD (Distortion+/OD-250 character — darker, more compressed). Together in a band context these create complementary distortion layers.",
+    "snapshot_cues": "Verse sections: FS1 (Jonny) or FS3 (Thom). Chorus sections: FS2 (Jonny) or FS4 (Thom). If playing alone covering one part, ignore the unused snapshot pair.",
+    "blocks_saved": "Consolidation reduced from 8 blocks across 2 presets to 5 blocks in 1 preset — 3 blocks saved by sharing Noise Gate, Parametric EQ, and Transistor Tape across both parts."
   }
 }

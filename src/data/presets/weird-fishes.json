@@ -4,7 +4,7 @@
   "album": "In Rainbows",
   "tuning": "Standard",
   "master_bpm": 87,
-  "notes": "No amp+cab block \u2014 running into tube amp. Two delays approximate the dual-delay/looper setup. Teemah! approximates Sparkle Drive. Primary dotted eighth delay is exact match at 87 BPM (517ms).",
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Ed O'Brien used a 1964 Gibson ES-335, Voodoo Lab Sparkle Drive, Boss DD5 delay, and Akai Headrush E2 looper through a Mesa Boogie Trem-O-Verb and Vox AC30. Thom Yorke used a 1964 Gibson SG. Jonny played totally clean with just a Gretsch Tennessee Rose, Akai Headrush E1 looper, and small vintage Orpheum amplifier. Two delays approximate the dual-delay/looper setup — Delay 1 is the primary dotted eighth (exact match at 87 BPM), Delay 2 is a secondary dotted sixteenth creating rhythmic interlocking shimmer. Teemah! approximates Sparkle Drive — BYPASSED in S1, ACTIVE in S2 as song intensifies.",
   "signal_chain": [
     "Noise Gate",
     "Teemah!",
@@ -14,10 +14,12 @@
     "Simple Delay (secondary)",
     "Ganymede"
   ],
+  "note_on_block_limit": "Seven blocks — at the eight-block limit. Two Simple Delay blocks used for the dual-delay texture. If Helix LT does not allow two instances of the same delay model, substitute the secondary Simple Delay with an Adriatic Delay or Cosmos Echo.",
   "blocks": {
     "noise_gate": {
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
+      "notes": "Very open gate — delicate arpeggio tone. Natural decay essential.",
       "snapshots": {
         "1_verse": {
           "Threshold": -75,
@@ -34,12 +36,14 @@
     "overdrive": {
       "model": "Teemah!",
       "based_on": "Paul Cochrane Timmy Overdrive",
+      "notes": "Approximates Voodoo Lab Sparkle Drive. BYPASSED in Snapshot 1 (clean arpeggios). ACTIVE in Snapshot 2 as song intensifies around the 2:30 mark — very low gain, just warmth and slight compression. NOTE: Bass Cut and Treble Cut are CUT controls — higher values remove more frequency.",
       "snapshots": {
         "1_verse": {
           "active": false,
           "Gain": 2.0,
           "Bass Cut": 3.0,
           "Treble Cut": 4.0,
+          "Clipping": "Up",
           "Level": 6.0
         },
         "2_intense": {
@@ -47,6 +51,7 @@
           "Gain": 2.0,
           "Bass Cut": 3.0,
           "Treble Cut": 4.0,
+          "Clipping": "Up",
           "Level": 6.0
         }
       }
@@ -54,11 +59,15 @@
     "modulation": {
       "model": "Chorus",
       "based_on": "Line 6 Original",
+      "notes": "Very subtle chorus adds slight width and shimmer — the three-dimensional bloom of the arpeggio tone. Speed very slow, Depth low — should feel like natural animation not obvious chorus. ACTIVE in both snapshots, slightly more prominent in Snapshot 2.",
       "snapshots": {
         "1_verse": {
           "active": true,
           "Speed": 3.5,
           "Depth": 30,
+          "Predelay": 5,
+          "Wave Shape": "Sine",
+          "Tone": 5.0,
           "Mix": 25,
           "Level": 0
         },
@@ -66,6 +75,9 @@
           "active": true,
           "Speed": 4.0,
           "Depth": 35,
+          "Predelay": 5,
+          "Wave Shape": "Sine",
+          "Tone": 5.0,
           "Mix": 32,
           "Level": 0
         }
@@ -74,20 +86,31 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "Gentle EQ shaping. Slight mid boost adds body and presence to arpeggiated notes so they cut through the dual-delay wash. Snapshot 2 slightly warms high mid to compensate for Teemah! coloring.",
       "snapshots": {
         "1_verse": {
+          "Low Freq": 200,
+          "Low Q": 0.7,
           "Low Gain": -1,
           "Mid Freq": 800,
+          "Mid Q": 2.0,
           "Mid Gain": 2,
+          "High Freq": 4000,
+          "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 80,
           "High Cut": 12000,
           "Level": 0
         },
         "2_intense": {
+          "Low Freq": 200,
+          "Low Q": 0.7,
           "Low Gain": -1,
           "Mid Freq": 700,
+          "Mid Q": 2.0,
           "Mid Gain": 3,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": 0,
           "Low Cut": 80,
           "High Cut": 10000,
@@ -96,13 +119,14 @@
       }
     },
     "delay_primary": {
-      "model": "Simple Delay (primary)",
+      "model": "Simple Delay",
       "based_on": "Line 6 Original",
+      "notes": "PRIMARY DELAY — approximates Boss DD5 set to dotted eighth. Tempo-synced to 87 BPM. Dotted eighth = 517ms — exact match (0.2ms off). This is the defining effect of the song — Mix at 45-50% makes delay structural, not supportive. High Mix is intentional. Feedback increases in S2 as song densifies.",
       "snapshots": {
         "1_verse": {
           "TempoSync1": true,
           "Note Sync": "1/8 dot",
-          "Time": "517ms (d1/8 at 87 BPM \u2014 near exact match)",
+          "Time": "517ms (d1/8 at 87 BPM — near exact match)",
           "Feedback": 35,
           "Mix": 45,
           "Level": 0,
@@ -120,8 +144,9 @@
       }
     },
     "delay_secondary": {
-      "model": "Simple Delay (secondary)",
+      "model": "Simple Delay",
       "based_on": "Line 6 Original",
+      "notes": "SECONDARY DELAY — approximates Akai Headrush E2 looper used for additional texture. Tempo-synced to 87 BPM. Dotted sixteenth = 259ms (original target 276ms, 17ms off — synced value preferred). The two delays (517ms d1/8 + 259ms d1/16) create rhythmically interlocking repeat pattern filling gaps between primary repeats — this is the shimmer making the song sound like multiple guitars.",
       "snapshots": {
         "1_verse": {
           "TempoSync1": true,
@@ -146,17 +171,24 @@
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
+      "notes": "Long, lush reverb — this song lives in space. Snapshot 1 more reverberant and atmospheric. Snapshot 2 pulls slightly tighter as song intensifies to prevent dual-delay texture from becoming too washy.",
       "snapshots": {
         "1_verse": {
           "Decay": 3.5,
           "Predelay": 20,
+          "Tone": 5.0,
+          "Modulation": 2.0,
           "Mix": 38,
+          "Level": 0,
           "Trails": true
         },
         "2_intense": {
           "Decay": 2.8,
           "Predelay": 15,
+          "Tone": 5.0,
+          "Modulation": 2.0,
           "Mix": 32,
+          "Level": 0,
           "Trails": true
         }
       }
@@ -165,12 +197,12 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Clean shimmering arpeggio. Teemah! bypassed. Two interlocking delays at 45% and 22% mix.",
+      "description": "Clean shimmering arpeggio tone. Teemah! bypassed. Two interlocking delays at 45% and 22% mix create illusion of multiple guitar parts. Long reverb at 38% mix.",
       "pickup_position": "Neck"
     },
     "2_intense": {
       "footswitch": "FS2",
-      "description": "Late-song intense version. Teemah! active. Primary delay opens to 50% mix.",
+      "description": "Late-song intense version (approx 2:30 mark). Teemah! active for warmth on longer sustained notes. Primary delay opens to 50% mix. Reverb tightens slightly to maintain definition.",
       "pickup_position": "Neck"
     }
   },
@@ -178,7 +210,9 @@
     "tuning": "Standard",
     "key": "E minor",
     "capo": null,
-    "technique": "Pick very lightly. Allow notes to ring into each other. Timing is critical with two delays.",
-    "snapshot_cues": "Snapshot 2 around the 2:30 mark when arrangement thickens."
+    "pickup_notes": "Neck pickup throughout — warm and glassy",
+    "technique": "Pick very lightly near soundhole. Allow notes to ring into each other rather than keeping them cleanly separated. Two delays together mean TIMING IS EVERYTHING — practice the arpeggio pattern at 87 BPM before engaging delays.",
+    "snapshot_cues": "Snapshot 1 for main arpeggiated sections. Switch to Snapshot 2 around the 2:30 mark when arrangement thickens and O'Brien moves to longer sustained notes.",
+    "timing_critical": "Primary delay at 45-50% Mix means any rhythmic inconsistency in picking is audible in repeats and compounds through the secondary delay. Metronomic precision is required."
   }
 }

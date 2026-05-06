@@ -5,7 +5,7 @@
   "tuning": "Standard",
   "capo": 5,
   "master_bpm": 75,
-  "notes": "No amp+cab block \u2014 running into tube amp. Ed O'Brien used a Rickenbacker 360 with capo at 15th fret \u2014 on standard guitar use capo at 5th fret. Teemah! approximates Voodoo Lab Sparkle Drive. Dotted eighth delay exact match at 75 BPM.",
+  "notes": "No amp+cab block — running into tube amp. Ed O'Brien used a Rickenbacker 360 with capo at 15th fret — on standard guitar use capo at 5th fret. Confirmed rig for OK Computer era: Vox AC30 (Essex A30 — removed per amp+cab policy), minimal effects. Recording is intentionally dry and intimate — recorded at Canned Applause rehearsal room. Teemah! approximates Voodoo Lab Sparkle Drive transparent overdrive character. Ubiquitous Vibe adds subtle organic modulation. Dotted eighth delay exact match at 75 BPM.",
   "signal_chain": [
     "Noise Gate",
     "Teemah!",
@@ -18,6 +18,7 @@
     "noise_gate": {
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
+      "notes": "Very open gate — pristine clean tone. Notes must decay naturally.",
       "snapshots": {
         "1_studio": {
           "Threshold": -72,
@@ -34,12 +35,14 @@
     "overdrive": {
       "model": "Teemah!",
       "based_on": "Paul Cochrane Timmy Overdrive",
+      "notes": "Approximates Voodoo Lab Sparkle Drive — transparent overdrive with clean blend character. BYPASSED in Snapshot 1 (studio faithful). ACTIVE in Snapshot 2 (live atmospheric). Very low gain — just warmth and slight compression, not obvious overdrive. NOTE: Bass Cut and Treble Cut are CUT controls — higher values cut more of that frequency.",
       "snapshots": {
         "1_studio": {
           "active": false,
           "Gain": 2.5,
           "Bass Cut": 3.0,
           "Treble Cut": 3.0,
+          "Clipping": "Up",
           "Level": 6.5
         },
         "2_live_atmospheric": {
@@ -47,6 +50,7 @@
           "Gain": 2.5,
           "Bass Cut": 3.0,
           "Treble Cut": 3.0,
+          "Clipping": "Up",
           "Level": 6.5
         }
       }
@@ -54,12 +58,14 @@
     "modulation": {
       "model": "Ubiquitous Vibe",
       "based_on": "Shin-ei Uni-Vibe",
+      "notes": "Very subtle — adds organic breathing quality without obvious modulation. Mode set to Chorus to keep dry signal. Intensity at low value — barely perceptible movement. ACTIVE in both snapshots.",
       "snapshots": {
         "1_studio": {
           "active": true,
           "Rate": 0.5,
           "Intensity": 20,
           "Mode": "Chorus",
+          "Lamp Bias": 5.0,
           "Mix": 20,
           "Level": 0
         },
@@ -68,6 +74,7 @@
           "Rate": 0.5,
           "Intensity": 20,
           "Mode": "Chorus",
+          "Lamp Bias": 5.0,
           "Mix": 20,
           "Level": 0
         }
@@ -76,20 +83,31 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "Gentle shaping compensating for removed Essex A30 amp voicing. Low cut at 100Hz removes muddiness from open chord voicings. Mild mid boosts give Lace Sensors body through the tube amp. Snapshot 2 opens slightly for more atmospheric character.",
       "snapshots": {
         "1_studio": {
+          "Low Freq": 200,
+          "Low Q": 0.7,
           "Low Gain": -1,
           "Mid Freq": 800,
+          "Mid Q": 2.0,
           "Mid Gain": 2,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 100,
           "High Cut": 10000,
           "Level": 0
         },
         "2_live_atmospheric": {
+          "Low Freq": 200,
+          "Low Q": 0.7,
           "Low Gain": -1,
           "Mid Freq": 800,
+          "Mid Q": 2.0,
           "Mid Gain": 2,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 80,
           "High Cut": 11000,
@@ -100,11 +118,12 @@
     "delay": {
       "model": "Simple Delay",
       "based_on": "Line 6 Original",
+      "notes": "Tempo-synced to 75 BPM. Dotted eighth = 600ms — exact match. Studio snapshot uses modest mix matching the dry, intimate recording character. Live snapshot opens up. Simple Delay chosen over Cosmos Echo for this song — cleaner, more transparent repeats suit the pristine clean tone.",
       "snapshots": {
         "1_studio": {
           "TempoSync1": true,
           "Note Sync": "1/8 dot",
-          "Time": "600ms (d1/8 at 75 BPM \u2014 exact match)",
+          "Time": "600ms (d1/8 at 75 BPM — exact match)",
           "Feedback": 20,
           "Mix": 28,
           "Level": 0,
@@ -113,7 +132,7 @@
         "2_live_atmospheric": {
           "TempoSync1": true,
           "Note Sync": "1/8 dot",
-          "Time": "600ms (d1/8 at 75 BPM \u2014 exact match)",
+          "Time": "600ms (d1/8 at 75 BPM — exact match)",
           "Feedback": 28,
           "Mix": 35,
           "Level": 0,
@@ -124,11 +143,13 @@
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
+      "notes": "CRITICAL CORRECTION from GT-6 version: recording is intentionally dry and intimate — Studio snapshot uses very short Room-like decay at low mix. Live snapshot opens up moderately. Previous GT-6 version used Hall reverb at 2.8 seconds which was incorrect.",
       "snapshots": {
         "1_studio": {
           "Decay": 0.8,
           "Predelay": 10,
           "Tone": 4.5,
+          "Modulation": 1.5,
           "Mix": 18,
           "Level": 0,
           "Trails": true
@@ -137,6 +158,7 @@
           "Decay": 2.0,
           "Predelay": 15,
           "Tone": 5.0,
+          "Modulation": 2.0,
           "Mix": 32,
           "Level": 0,
           "Trails": true
@@ -147,20 +169,22 @@
   "snapshots": {
     "1_studio": {
       "footswitch": "FS1",
-      "description": "Studio-faithful. Teemah! bypassed. Very dry reverb (0.8 sec, 18% mix). Dotted eighth delay at 28% mix.",
+      "description": "Studio-faithful version. Teemah! bypassed — purely clean. Very dry reverb (0.8 sec, 18% mix) matching the intimate Canned Applause rehearsal room recording. Dotted eighth delay at 28% mix. Ubiquitous Vibe at low intensity adds barely perceptible organic movement.",
       "pickup_position": "Neck"
     },
     "2_live_atmospheric": {
       "footswitch": "FS2",
-      "description": "Live/atmospheric. Teemah! active. Reverb opens to 2.0 sec at 32% mix.",
+      "description": "Live/atmospheric version. Teemah! active for slight warmth on sustained notes. Reverb opens to 2.0 sec at 32% mix. Delay feedback increases. More spacious feel appropriate for live performance.",
       "pickup_position": "Neck"
     }
   },
   "playing_notes": {
     "tuning": "Standard",
-    "key": "Bb major (relative to capo 5)",
+    "key": "Bb major (relative to capo 5 — open position chords sound as Bb, Eb, F, Ab)",
     "capo": 5,
-    "technique": "Pick very lightly near soundhole. The tone should feel like a music box.",
-    "snapshot_cues": "Snapshot 1 for studio recreation. Snapshot 2 for live use."
+    "pickup_notes": "Neck pickup throughout — Lace Sensor neck pickup gives the warm glassy character needed",
+    "technique": "Pick very lightly near soundhole. The tone should feel like a music box. Let every note in the arpeggio ring into the next — overlapping sustain feeds into the delay.",
+    "snapshot_cues": "Snapshot 1 for faithful studio recreation. Snapshot 2 for live use or when a more spacious, atmospheric feel is wanted — switch during the final verse for a more immersive close.",
+    "timing_note": "Delay is locked to 75 BPM dotted eighth. Rhythmic consistency in picking is critical — delay repeats at 28-35% mix will amplify any timing drift."
   }
 }

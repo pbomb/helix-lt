@@ -4,7 +4,7 @@
   "album": "The New Abnormal",
   "tuning": "Standard",
   "master_bpm": 118,
-  "notes": "No amp+cab block \u2014 running into tube amp. Hedgehog D9 (Maxon SD9) replaces Stupor OD \u2014 harder clipping, more aggressive character. 70s Chorus (Boss CE-2 approximation) active on rhythm and chorus snapshots \u2014 gives the New Order-adjacent character noted by reviewers.",
+  "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 118 BPM. Three snapshots: rhythm, chorus, and bridge solo. Key tonal difference from other Strokes presets: Hedgehog D9 (Maxon SD9) replaces Stupor OD — harder clipping, more aggressive character matching the song's upbeat, energetic character. 70s Chorus (Boss CE-2 approximation) active on rhythm and chorus snapshots — gives the New Order-adjacent character noted by reviewers.",
   "signal_chain": [
     "Noise Gate",
     "Hedgehog D9",
@@ -18,6 +18,7 @@
     "noise_gate": {
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
+      "notes": "Tighter gate than Selfless — Hedgehog D9 is harder-clipping than Stupor OD and generates more noise between notes.",
       "snapshots": {
         "1_rhythm": {
           "Threshold": -55,
@@ -39,6 +40,7 @@
     "distortion": {
       "model": "Hedgehog D9",
       "based_on": "MAXON SD9 Sonic Distortion",
+      "notes": "Valensi's confirmed Maxon DS830 Distortion Master is closely related to the SD9 circuit. Harder clipping than the Stupor OD used in other Strokes presets — gives Bad Decisions its more energetic, driving character. ACTIVE in all three snapshots.",
       "snapshots": {
         "1_rhythm": {
           "active": true,
@@ -63,6 +65,7 @@
     "boost": {
       "model": "Minotaur",
       "based_on": "Klon Centaur",
+      "notes": "Nick Valensi confirmed Klon user per YAML. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only for bridge solo — Bright switched On for the glam rock character of the solo.",
       "snapshots": {
         "1_rhythm": {
           "active": false,
@@ -87,6 +90,7 @@
     "chorus": {
       "model": "70s Chorus",
       "based_on": "BOSS CE-1",
+      "notes": "Boss CE-2 confirmed on Valensi's board — CE-1 is the closest Helix model. Gives the New Order-adjacent character noted by reviewers. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 — bridge solo should be direct and unmodulated. Note: 70s Chorus has separate Chorus and Vibrato rate parameters. Mode set to Chorus to keep dry signal intact.",
       "snapshots": {
         "1_rhythm": {
           "active": true,
@@ -114,30 +118,45 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "Snapshots 1 and 2 use telephone filter character — low and high cuts with boosted mids. Snapshot 3 opens up significantly for the bridge solo: wider mid Q, higher mid frequency, open high end. This is the key EQ difference separating solo from rhythm tones.",
       "snapshots": {
         "1_rhythm": {
+          "Low Freq": 120,
+          "Low Q": 0.7,
           "Low Gain": -3,
           "Mid Freq": 750,
+          "Mid Q": 2.0,
           "Mid Gain": 4,
+          "High Freq": 4000,
+          "High Q": 0.7,
           "High Gain": -2,
           "Low Cut": 100,
           "High Cut": 8500,
           "Level": 3
         },
         "2_chorus": {
+          "Low Freq": 120,
+          "Low Q": 0.7,
           "Low Gain": -4,
           "Mid Freq": 750,
+          "Mid Q": 2.0,
           "Mid Gain": 5,
+          "High Freq": 4000,
+          "High Q": 0.7,
           "High Gain": -3,
           "Low Cut": 110,
           "High Cut": 8000,
           "Level": 3
         },
         "3_bridge_solo": {
+          "Low Freq": 100,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 1200,
           "Mid Q": 1.5,
           "Mid Gain": 3,
+          "High Freq": 5000,
+          "High Q": 0.7,
           "High Gain": 0,
           "Low Cut": 80,
           "High Cut": 10000,
@@ -148,13 +167,20 @@
     "delay": {
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
+      "notes": "Delays are tempo-synced to 118 BPM. Snapshots 1 and 2: eighth note (254ms) — tight, driving, matches energetic rhythm character. Snapshot 3: dotted eighth (381ms) — more spacious for bridge solo. Snapshot 3 uses BBD Size 4096 and slight modulation (Rate 2.0Hz, Depth 15%) for a slightly organic vintage delay character appropriate for the glam rock bridge.",
       "snapshots": {
         "1_rhythm": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "254ms (1/8 at 118 BPM)",
           "Feedback": 15,
+          "Noise": 3.0,
+          "BBD Size": 2048,
           "Mix": 20,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "2_chorus": {
@@ -162,7 +188,13 @@
           "Note Sync": "1/8",
           "Time": "254ms (1/8 at 118 BPM)",
           "Feedback": 12,
+          "Noise": 3.0,
+          "BBD Size": 2048,
           "Mix": 15,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "3_bridge_solo": {
@@ -170,7 +202,13 @@
           "Note Sync": "1/8 dot",
           "Time": "381ms (d1/8 at 118 BPM)",
           "Feedback": 28,
+          "Noise": 3.0,
+          "BBD Size": 4096,
           "Mix": 40,
+          "Level": 0,
+          "Rate": 2.0,
+          "Depth": 15,
+          "Headroom": 0,
           "Trails": true
         }
       }
@@ -178,23 +216,33 @@
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
+      "notes": "Rhythm snapshots are relatively dry — Bad Decisions has a tight, punchy character. Snapshot 3 opens up for the sustaining bridge solo notes.",
       "snapshots": {
         "1_rhythm": {
           "Decay": 1.0,
           "Predelay": 8,
+          "Tone": 5.5,
+          "Modulation": 2.0,
           "Mix": 15,
+          "Level": 0,
           "Trails": true
         },
         "2_chorus": {
           "Decay": 0.8,
           "Predelay": 5,
+          "Tone": 5.5,
+          "Modulation": 2.0,
           "Mix": 12,
+          "Level": 0,
           "Trails": true
         },
         "3_bridge_solo": {
           "Decay": 1.8,
           "Predelay": 12,
+          "Tone": 5.5,
+          "Modulation": 3.0,
           "Mix": 30,
+          "Level": 0,
           "Trails": true
         }
       }
@@ -203,17 +251,17 @@
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",
-      "description": "Main rhythm. Hedgehog D9 at Gain 6.0. 70s Chorus at Mix 35%.",
+      "description": "Main rhythm/verse tone. Hedgehog D9 at Gain 6.0. Minotaur bypassed. 70s Chorus active at Mix 35% — the New Order-adjacent chorus character. Telephone filter EQ. Tight eighth note delay.",
       "pickup_position": "Bridge"
     },
     "2_chorus": {
       "footswitch": "FS2",
-      "description": "Chorus sections. Hedgehog D9 at Gain 7.0. 70s Chorus at Mix 30%.",
+      "description": "Chorus sections. Hedgehog D9 pushed to Gain 7.0, Level 7.0. 70s Chorus still active but Mix pulled to 30%. Tighter delay mix, driest reverb — very punchy and driving.",
       "pickup_position": "Bridge"
     },
     "3_bridge_solo": {
       "footswitch": "FS3",
-      "description": "Bridge solo. Hedgehog D9 at Gain 8.5. Minotaur active. 70s Chorus bypassed.",
+      "description": "Bridge solo. Hedgehog D9 at maximum Gain 8.5 for high sustain. Minotaur active — Gain 3.0, Tone 5.5, Level 8.5. 70s Chorus bypassed. EQ opens up — Mid at 1.2kHz, High Cut 10kHz, High Gain 0dB. Dotted eighth delay with slight modulation. More reverb for sustaining notes.",
       "pickup_position": "Bridge"
     }
   },
@@ -221,8 +269,10 @@
     "tuning": "Standard",
     "key": "E major",
     "capo": null,
-    "technique": "More aggressively strummed than Selfless.",
-    "snapshot_cues": "Snapshot 3 for bridge solo only \u2014 Hedgehog at max gain plus Minotaur boost.",
-    "reference": "Reviewers described the main riff as worthy of peak-era New Order \u2014 the 70s Chorus at Mix 35% is the primary contributor."
+    "pickup_notes": "Bridge pickup throughout all three snapshots — this song calls for maximum brightness and attack.",
+    "technique": "More aggressively strummed than Selfless. Pick firmly and let the Hedgehog D9's harder clipping character compress the strums naturally.",
+    "snapshot_cues": "Snapshot 1 for verse rhythm. Snapshot 2 for chorus sections. Snapshot 3 for the bridge solo — Hedgehog at max gain plus Minotaur boost gives the high sustain needed for the glam rock solo character described by reviewers.",
+    "tone_control": "The chorus (Snapshot 2) is the most driving section — resist switching to Snapshot 3 until you reach the bridge solo specifically.",
+    "reference": "Reviewers described the main guitar riff as worthy of peak-era New Order — the 70s Chorus at Mix 35% in Snapshot 1 is the primary contributor to this character."
   }
 }

@@ -4,7 +4,7 @@
   "album": "Hail to the Thief",
   "tuning": "Standard",
   "master_bpm": 92,
-  "notes": "No amp+cab block \u2014 running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB with Boss OD-3 and Boss RE-20 Space Echo. Mid-forward, slightly psychedelic tone with tribal, percussive character.",
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB (Essex A30 — removed per amp+cab policy) with Boss OD-3 (Stupor OD approximation) and Boss RE-20 Space Echo (Cosmos Echo). Mid-forward, slightly psychedelic tone with tribal, percussive character. 4-stage phaser adds swirling quality. Two snapshots: verse riff and heavy chorus.",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -33,6 +33,7 @@
     "overdrive": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Approximates Boss OD-3 — mid-forward overdrive. ACTIVE in both snapshots. Chorus snapshot pushes Drive harder for more intensity.",
       "snapshots": {
         "1_verse": {
           "active": true,
@@ -51,6 +52,7 @@
     "modulation": {
       "model": "Script Mod Phase",
       "based_on": "MXR Phase 90 Script Mod",
+      "notes": "Slow, subtle phaser adds the swirling, slightly psychedelic quality underneath the rhythm guitar. Keep understated — should feel like movement rather than an obvious effect. ACTIVE in both snapshots.",
       "snapshots": {
         "1_verse": {
           "active": true,
@@ -69,20 +71,31 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "This song lives in the mids. Low cut at 100Hz removes bass muddiness. Mid boost at 500Hz adds the thick low-mid body. Chorus snapshot gets more aggressive mid boost and tighter high cut.",
       "snapshots": {
         "1_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 500,
+          "Mid Q": 2.0,
           "Mid Gain": 4,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": -1,
           "Low Cut": 100,
           "High Cut": 9000,
           "Level": 2
         },
         "2_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
           "Low Gain": -3,
           "Mid Freq": 500,
+          "Mid Q": 2.0,
           "Mid Gain": 5,
+          "High Freq": 3200,
+          "High Q": 0.7,
           "High Gain": -2,
           "Low Cut": 110,
           "High Cut": 8000,
@@ -93,21 +106,42 @@
     "delay": {
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
+      "notes": "Confirmed Jonny Greenwood used RE-201 Space Echo from 1995. Tempo-synced to 92 BPM. Eighth note (326ms) — 6ms off target, synced value preferred. Short, dark delay at low level adds depth without cluttering rhythm. Treble rolled off to keep repeats dark.",
       "snapshots": {
         "1_verse": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "326ms (1/8 at 92 BPM)",
+          "Ramp": 0,
           "Feedback": 20,
+          "Wow/Flutter": 2.0,
           "Mix": 28,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
           "Trails": true
         },
         "2_chorus": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "326ms (1/8 at 92 BPM)",
+          "Ramp": 0,
           "Feedback": 15,
+          "Wow/Flutter": 2.0,
           "Mix": 18,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.0,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
           "Trails": true
         }
       }
@@ -115,17 +149,24 @@
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
+      "notes": "Room 1-style character — contained, immediate reverb not a large hall. Short decay keeps the percussive attack from getting washy.",
       "snapshots": {
         "1_verse": {
           "Decay": 1.4,
           "Predelay": 10,
+          "Tone": 5.0,
+          "Modulation": 2.0,
           "Mix": 35,
+          "Level": 0,
           "Trails": true
         },
         "2_chorus": {
           "Decay": 0.9,
           "Predelay": 6,
+          "Tone": 5.0,
+          "Modulation": 2.0,
           "Mix": 22,
+          "Level": 0,
           "Trails": true
         }
       }
@@ -134,12 +175,12 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Verse riff. Stupor OD at Drive 5.0. Script Mod Phase slow and subtle. Mid boost +4dB at 500Hz.",
+      "description": "Verse riff tone. Stupor OD at Drive 5.0. Script Mod Phase slow and subtle. Mid boost +4dB at 500Hz. Cosmos Echo at 28% mix. Moderate reverb.",
       "pickup_position": "Bridge"
     },
     "2_chorus": {
       "footswitch": "FS2",
-      "description": "Heavy chorus. Stupor OD pushed to Drive 6.5. More aggressive mid boost +5dB.",
+      "description": "Heavy chorus tone. Stupor OD pushed to Drive 6.5. More aggressive mid boost +5dB. Tighter high cut. Delay pulls back to 18% mix so it doesn't clutter the heavier texture. Shorter, drier reverb keeps punch.",
       "pickup_position": "Bridge"
     }
   },
@@ -147,7 +188,8 @@
     "tuning": "Standard",
     "key": "E minor",
     "capo": null,
-    "technique": "Very deliberate and percussive strumming.",
-    "snapshot_cues": "Snapshot 1 for verses. Snapshot 2 for chorus sections."
+    "pickup_notes": "Bridge pickup throughout — maximum attack and definition",
+    "technique": "Very deliberate and percussive strumming. Let the compressor and OD do the work, don't over-pick.",
+    "snapshot_cues": "Snapshot 1 for verses. Snapshot 2 for chorus sections where the arrangement thickens."
   }
 }

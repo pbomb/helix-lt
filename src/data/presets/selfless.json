@@ -4,7 +4,7 @@
   "album": "The New Abnormal",
   "tuning": "Standard",
   "master_bpm": 97,
-  "notes": "No amp+cab block \u2014 running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 97 BPM. Three snapshots: rhythm, lead shimmer (Poly Pitch octave-up), and fuzz solo (Wringer Fuzz).",
+  "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 97 BPM. Three snapshots: rhythm, lead shimmer (Poly Pitch octave-up), and fuzz solo (Wringer Fuzz).",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -39,6 +39,7 @@
     "overdrive": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Very low drive throughout — Selfless runs almost clean. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 where Wringer Fuzz handles all distortion.",
       "snapshots": {
         "1_rhythm": {
           "active": true,
@@ -63,6 +64,7 @@
     "fuzz": {
       "model": "Wringer Fuzz",
       "based_on": "Garbage's modded BOSS FZ-2",
+      "notes": "Approximates fuzz character heard in Selfless solo. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only.",
       "snapshots": {
         "1_rhythm": {
           "active": false,
@@ -93,12 +95,15 @@
     "pitch": {
       "model": "Poly Pitch",
       "based_on": "Line 6 Original",
+      "notes": "Approximates EHX POG2 octave-up shimmer confirmed as key effect for Valensi's Selfless guitar sound. ACTIVE in Snapshots 1 and 2 at different Mix levels. BYPASSED in Snapshot 3 — fuzz solo stands alone.",
       "snapshots": {
         "1_rhythm": {
           "active": true,
           "Interval": 12,
           "Cents": 0,
+          "TempoSync1": false,
           "Tracking": "Medium",
+          "Auto EQ": true,
           "Mix": 12,
           "Level": 0
         },
@@ -106,7 +111,9 @@
           "active": true,
           "Interval": 12,
           "Cents": 0,
+          "TempoSync1": false,
           "Tracking": "Medium",
+          "Auto EQ": true,
           "Mix": 22,
           "Level": 0
         },
@@ -114,7 +121,9 @@
           "active": false,
           "Interval": 12,
           "Cents": 0,
+          "TempoSync1": false,
           "Tracking": "Medium",
+          "Auto EQ": true,
           "Mix": 22,
           "Level": 0
         }
@@ -123,30 +132,45 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "Gentler telephone filtering than The Adults Are Talking — Selfless is warmer and less confrontational. Snapshot 3 uses wider mid Q and raised frequency to suit sustaining fuzz solo notes.",
       "snapshots": {
         "1_rhythm": {
+          "Low Freq": 100,
+          "Low Q": 0.7,
           "Low Gain": -2,
           "Mid Freq": 600,
+          "Mid Q": 2.0,
           "Mid Gain": 3,
+          "High Freq": 3500,
+          "High Q": 0.7,
           "High Gain": -2,
           "Low Cut": 80,
           "High Cut": 7500,
           "Level": 3
         },
         "2_lead_shimmer": {
+          "Low Freq": 80,
+          "Low Q": 0.7,
           "Low Gain": -1,
           "Mid Freq": 700,
+          "Mid Q": 2.0,
           "Mid Gain": 3,
+          "High Freq": 4000,
+          "High Q": 0.7,
           "High Gain": -1,
           "Low Cut": 60,
           "High Cut": 8500,
           "Level": 3
         },
         "3_fuzz_solo": {
+          "Low Freq": 100,
+          "Low Q": 0.7,
           "Low Gain": -3,
           "Mid Freq": 1000,
           "Mid Q": 1.5,
           "Mid Gain": 3,
+          "High Freq": 4500,
+          "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 90,
           "High Cut": 9000,
@@ -157,13 +181,20 @@
     "delay": {
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
+      "notes": "Delays are tempo-synced to 97 BPM. All snapshots use triplet quarter note (412ms) — gives Selfless its slightly dreamy, off-kilter rhythmic feel. Mix and Feedback increase with each snapshot.",
       "snapshots": {
         "1_rhythm": {
           "TempoSync1": true,
           "Note Sync": "1/4 trip",
           "Time": "412ms (1/4 triplet at 97 BPM)",
           "Feedback": 22,
+          "Noise": 3.0,
+          "BBD Size": 2048,
           "Mix": 28,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "2_lead_shimmer": {
@@ -171,7 +202,13 @@
           "Note Sync": "1/4 trip",
           "Time": "412ms (1/4 triplet at 97 BPM)",
           "Feedback": 32,
+          "Noise": 3.0,
+          "BBD Size": 2048,
           "Mix": 40,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         },
         "3_fuzz_solo": {
@@ -179,7 +216,13 @@
           "Note Sync": "1/4 trip",
           "Time": "412ms (1/4 triplet at 97 BPM)",
           "Feedback": 25,
+          "Noise": 3.5,
+          "BBD Size": 4096,
           "Mix": 35,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
           "Trails": true
         }
       }
@@ -187,26 +230,33 @@
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
+      "notes": "More reverb than The Adults Are Talking throughout — Selfless has a noticeably spacious, dreamy quality.",
       "snapshots": {
         "1_rhythm": {
           "Decay": 1.8,
           "Predelay": 12,
           "Tone": 4.5,
+          "Modulation": 2.0,
           "Mix": 28,
+          "Level": 0,
           "Trails": true
         },
         "2_lead_shimmer": {
           "Decay": 2.2,
           "Predelay": 15,
           "Tone": 5.0,
+          "Modulation": 2.5,
           "Mix": 38,
+          "Level": 0,
           "Trails": true
         },
         "3_fuzz_solo": {
           "Decay": 2.0,
           "Predelay": 14,
           "Tone": 5.5,
+          "Modulation": 2.5,
           "Mix": 35,
+          "Level": 0,
           "Trails": true
         }
       }
@@ -215,17 +265,17 @@
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",
-      "description": "Warm rhythm tone. Poly Pitch octave-up at 12% mix.",
+      "description": "Warm, barely overdriven rhythm tone. Subtle Poly Pitch octave-up shimmer at 12% mix — barely audible, adds gentle organic movement. Triplet quarter delay at moderate mix.",
       "pickup_position": "Neck"
     },
     "2_lead_shimmer": {
       "footswitch": "FS2",
-      "description": "Lead shimmer with Poly Pitch at 22% mix.",
+      "description": "Lead shimmer tone with more prominent Poly Pitch octave-up at 22% mix. Approximates EHX POG2 shimmery, slightly synth-like quality. Very clean — OD barely on.",
       "pickup_position": "Neck"
     },
     "3_fuzz_solo": {
       "footswitch": "FS3",
-      "description": "Fuzz solo. Wringer Fuzz active at Gain 7.5. OD and Poly Pitch bypassed.",
+      "description": "Fuzz solo tone. Stupor OD and Poly Pitch both bypassed. Wringer Fuzz active at Gain 7.5. EQ opens up — wider mid Q at 1.0kHz, High Gain +1dB, High Cut 9kHz. BBD Size 4096 for warmer solo delay.",
       "pickup_position": "Bridge"
     }
   },
@@ -233,8 +283,9 @@
     "tuning": "Standard",
     "key": "B minor",
     "capo": null,
-    "technique": "Delicate single-note figures picked rather than strummed.",
-    "snapshot_cues": "Snapshot 3 for fuzz solo \u2014 switch to bridge pickup simultaneously.",
-    "tone_control": "Roll guitar tone knob back to around 7 for Snapshot 3 \u2014 Wringer Fuzz can get bright."
+    "pickup_notes": "Neck pickup for Snapshots 1 and 2. Bridge pickup for Snapshot 3 fuzz solo.",
+    "technique": "Delicate single-note figures and open chord voicings picked rather than strummed. Pick lightly for Snapshots 1 and 2. Dig in more for Snapshot 3.",
+    "snapshot_cues": "Snapshot 1 for main rhythm and intro. Snapshot 2 for lead shimmer passages where the POG-like octave shimmer becomes more audible. Snapshot 3 for the fuzz solo — switch to bridge pickup simultaneously.",
+    "tone_control": "Roll guitar tone knob back slightly to around 7 for Snapshot 3 — Wringer Fuzz can get bright through Lace Sensors."
   }
 }

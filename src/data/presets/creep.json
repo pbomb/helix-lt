@@ -4,7 +4,7 @@
   "album": "Pablo Honey",
   "tuning": "Standard",
   "master_bpm": 92,
-  "notes": "No amp+cab block \u2014 running into tube amp. Single patch with CTL pedal toggling between clean verse and heavy chorus. Confirmed rig: Thom Yorke used a Fender Telecaster Plus through a Fender Twin Reverb (clean channel) for verse. Jonny Greenwood's famous pre-chorus scrape is a pick rake on strings \u2014 for no additional effect needed, pure technique. GUV DS (Guv'nror) approximates the Marshall Guv'nror distortion used for chorus. Four Pedal Assign parameters change simultaneously via CTL pedal toggle.",
+  "notes": "No amp+cab block — running into tube amp. Single patch with CTL pedal toggling between clean verse and heavy chorus. Confirmed rig: Thom Yorke used a Fender Telecaster Plus through a Fender Twin Reverb (clean channel) for verse. Jonny Greenwood's famous pre-chorus scrape is a pick rake on strings — no additional effect needed, pure technique. GUV DS (Guv'nor) approximates the Marshall Guv'nor distortion used for chorus. Four Pedal Assign parameters change simultaneously via CTL pedal toggle.",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -14,7 +14,7 @@
   ],
   "ctl_pedal_assign": {
     "function": "Toggle between clean verse and heavy chorus",
-    "note": "CTL pedal toggles OD/DS on/off AND simultaneously adjusts Preamp Gain, Reverb level, and Chorus level via Pedal Assign. On Helix LT this is achieved through snapshot switching \u2014 assign FS1 and FS2 to Snapshots 1 and 2.",
+    "note": "CTL pedal toggles OD/DS on/off AND simultaneously adjusts Preamp Gain, Reverb level, and Chorus level via Pedal Assign. On Helix LT this is achieved through snapshot switching — assign FS1 and FS2 to Snapshots 1 and 2.",
     "assigns": [
       {
         "target": "Stupor OD active state",
@@ -72,6 +72,7 @@
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
+      "notes": "Clean verse uses gentle EQ — just mild body and presence boost. Heavy chorus tightens low cut and boosts mids more aggressively. Level raised in chorus snapshot to match expected volume increase.",
       "snapshots": {
         "1_clean_verse": {
           "Low Freq": 150,
@@ -106,6 +107,7 @@
     "delay": {
       "model": "Simple Delay",
       "based_on": "Line 6 Original",
+      "notes": "Tempo-synced to 92 BPM. Eighth note = 326ms — original target was 360ms (34ms off), using synced eighth note instead. Low mix in both snapshots — delay is supportive depth, not a feature. Slightly lower mix in heavy chorus so delay doesn't clutter the distortion.",
       "snapshots": {
         "1_clean_verse": {
           "TempoSync1": true,
@@ -130,6 +132,7 @@
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
+      "notes": "Clean verse uses moderate hall reverb. Heavy chorus swells reverb for extra drama — this was a Pedal Assign target in the original design.",
       "snapshots": {
         "1_clean_verse": {
           "Decay": 2.2,
@@ -169,7 +172,8 @@
     "key": "G major",
     "capo": null,
     "pickup_notes": "Neck for clean verse (Snapshot 1). Bridge for heavy chorus (Snapshot 2).",
-    "technique": "Jonny's famous pre-chorus scrape is a pick rake across the strings \u2014 no additional effect needed, this is pure technique.",
-    "snapshot_cues": "Switch to Snapshot 2 exactly as the chorus hits."
+    "technique": "Jonny's famous pre-chorus scrape is a pick rake across the strings — no additional effect needed, this is pure technique. The string scrape occurs just before you stomp to Snapshot 2.",
+    "snapshot_cues": "Switch to Snapshot 2 exactly as the chorus hits. The string scrape happens in Snapshot 1 (clean) — the heavy distortion kicks in on the first chord of the chorus proper.",
+    "capo_note": "Song is in G major. Can be played with open position G chord shapes, no capo needed."
   }
 }
