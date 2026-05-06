@@ -4,7 +4,7 @@
   "album": "The New Abnormal",
   "tuning": "Standard",
   "master_bpm": 97,
-  "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 97 BPM. Three snapshots: rhythm, lead shimmer (Poly Pitch octave-up), and fuzz solo (Wringer Fuzz).",
+  "notes": "No amp+cab block \u2014 running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 97 BPM. Three snapshots: rhythm, lead shimmer (Poly Pitch octave-up), and fuzz solo (Wringer Fuzz).",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
@@ -19,77 +19,222 @@
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
-        "1_rhythm": { "Threshold": -62, "Decay": 28, "Level": 0 },
-        "2_lead_shimmer": { "Threshold": -60, "Decay": 25, "Level": 0 },
-        "3_fuzz_solo": { "Threshold": -55, "Decay": 22, "Level": 0 }
+        "1_rhythm": {
+          "Threshold": -62,
+          "Decay": 28,
+          "Level": 0
+        },
+        "2_lead_shimmer": {
+          "Threshold": -60,
+          "Decay": 25,
+          "Level": 0
+        },
+        "3_fuzz_solo": {
+          "Threshold": -55,
+          "Decay": 22,
+          "Level": 0
+        }
       }
     },
     "overdrive": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "snapshots": {
-        "1_rhythm": { "active": true, "Drive": 3.5, "Tone": 5.0, "Level": 7.0 },
-        "2_lead_shimmer": { "active": true, "Drive": 2.5, "Tone": 5.5, "Level": 7.0 },
-        "3_fuzz_solo": { "active": false, "Drive": 3.5, "Tone": 5.0, "Level": 7.0 }
+        "1_rhythm": {
+          "active": true,
+          "Drive": 3.5,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "2_lead_shimmer": {
+          "active": true,
+          "Drive": 2.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "3_fuzz_solo": {
+          "active": false,
+          "Drive": 3.5,
+          "Tone": 5.0,
+          "Level": 7.0
+        }
       }
     },
     "fuzz": {
       "model": "Wringer Fuzz",
       "based_on": "Garbage's modded BOSS FZ-2",
       "snapshots": {
-        "1_rhythm": { "active": false, "Gain": 7.5, "Treble": 5.5, "Bass": 4.0, "Level": 6.5, "Fuzz Type": "Fuzz" },
-        "2_lead_shimmer": { "active": false, "Gain": 7.5, "Treble": 5.5, "Bass": 4.0, "Level": 6.5, "Fuzz Type": "Fuzz" },
-        "3_fuzz_solo": { "active": true, "Gain": 7.5, "Treble": 5.5, "Bass": 4.0, "Level": 6.5, "Fuzz Type": "Fuzz" }
+        "1_rhythm": {
+          "active": false,
+          "Gain": 7.5,
+          "Treble": 5.5,
+          "Bass": 4.0,
+          "Level": 6.5,
+          "Fuzz Type": "Fuzz"
+        },
+        "2_lead_shimmer": {
+          "active": false,
+          "Gain": 7.5,
+          "Treble": 5.5,
+          "Bass": 4.0,
+          "Level": 6.5,
+          "Fuzz Type": "Fuzz"
+        },
+        "3_fuzz_solo": {
+          "active": true,
+          "Gain": 7.5,
+          "Treble": 5.5,
+          "Bass": 4.0,
+          "Level": 6.5,
+          "Fuzz Type": "Fuzz"
+        }
       }
     },
     "pitch": {
       "model": "Poly Pitch",
       "based_on": "Line 6 Original",
       "snapshots": {
-        "1_rhythm": { "active": true, "Interval": 12, "Cents": 0, "Tracking": "Medium", "Mix": 12, "Level": 0 },
-        "2_lead_shimmer": { "active": true, "Interval": 12, "Cents": 0, "Tracking": "Medium", "Mix": 22, "Level": 0 },
-        "3_fuzz_solo": { "active": false, "Interval": 12, "Cents": 0, "Tracking": "Medium", "Mix": 22, "Level": 0 }
+        "1_rhythm": {
+          "active": true,
+          "Interval": 12,
+          "Cents": 0,
+          "Tracking": "Medium",
+          "Mix": 12,
+          "Level": 0
+        },
+        "2_lead_shimmer": {
+          "active": true,
+          "Interval": 12,
+          "Cents": 0,
+          "Tracking": "Medium",
+          "Mix": 22,
+          "Level": 0
+        },
+        "3_fuzz_solo": {
+          "active": false,
+          "Interval": 12,
+          "Cents": 0,
+          "Tracking": "Medium",
+          "Mix": 22,
+          "Level": 0
+        }
       }
     },
     "eq": {
-      "model": "Parametric",
+      "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "snapshots": {
-        "1_rhythm": { "Low Gain": -2, "Mid Freq": 600, "Mid Gain": 3, "High Gain": -2, "Low Cut": 80, "High Cut": 7500, "Level": 3 },
-        "2_lead_shimmer": { "Low Gain": -1, "Mid Freq": 700, "Mid Gain": 3, "High Gain": -1, "Low Cut": 60, "High Cut": 8500, "Level": 3 },
-        "3_fuzz_solo": { "Low Gain": -3, "Mid Freq": 1000, "Mid Q": 1.5, "Mid Gain": 3, "High Gain": 1, "Low Cut": 90, "High Cut": 9000, "Level": 3 }
+        "1_rhythm": {
+          "Low Gain": -2,
+          "Mid Freq": 600,
+          "Mid Gain": 3,
+          "High Gain": -2,
+          "Low Cut": 80,
+          "High Cut": 7500,
+          "Level": 3
+        },
+        "2_lead_shimmer": {
+          "Low Gain": -1,
+          "Mid Freq": 700,
+          "Mid Gain": 3,
+          "High Gain": -1,
+          "Low Cut": 60,
+          "High Cut": 8500,
+          "Level": 3
+        },
+        "3_fuzz_solo": {
+          "Low Gain": -3,
+          "Mid Freq": 1000,
+          "Mid Q": 1.5,
+          "Mid Gain": 3,
+          "High Gain": 1,
+          "Low Cut": 90,
+          "High Cut": 9000,
+          "Level": 3
+        }
       }
     },
     "delay": {
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
       "snapshots": {
-        "1_rhythm": { "TempoSync1": true, "Note Sync": "1/4 trip", "Time": "412ms (1/4 triplet at 97 BPM)", "Feedback": 22, "Mix": 28, "Trails": true },
-        "2_lead_shimmer": { "TempoSync1": true, "Note Sync": "1/4 trip", "Time": "412ms (1/4 triplet at 97 BPM)", "Feedback": 32, "Mix": 40, "Trails": true },
-        "3_fuzz_solo": { "TempoSync1": true, "Note Sync": "1/4 trip", "Time": "412ms (1/4 triplet at 97 BPM)", "Feedback": 25, "Mix": 35, "Trails": true }
+        "1_rhythm": {
+          "TempoSync1": true,
+          "Note Sync": "1/4 trip",
+          "Time": "412ms (1/4 triplet at 97 BPM)",
+          "Feedback": 22,
+          "Mix": 28,
+          "Trails": true
+        },
+        "2_lead_shimmer": {
+          "TempoSync1": true,
+          "Note Sync": "1/4 trip",
+          "Time": "412ms (1/4 triplet at 97 BPM)",
+          "Feedback": 32,
+          "Mix": 40,
+          "Trails": true
+        },
+        "3_fuzz_solo": {
+          "TempoSync1": true,
+          "Note Sync": "1/4 trip",
+          "Time": "412ms (1/4 triplet at 97 BPM)",
+          "Feedback": 25,
+          "Mix": 35,
+          "Trails": true
+        }
       }
     },
     "reverb": {
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "snapshots": {
-        "1_rhythm": { "Decay": 1.8, "Predelay": 12, "Tone": 4.5, "Mix": 28, "Trails": true },
-        "2_lead_shimmer": { "Decay": 2.2, "Predelay": 15, "Tone": 5.0, "Mix": 38, "Trails": true },
-        "3_fuzz_solo": { "Decay": 2.0, "Predelay": 14, "Tone": 5.5, "Mix": 35, "Trails": true }
+        "1_rhythm": {
+          "Decay": 1.8,
+          "Predelay": 12,
+          "Tone": 4.5,
+          "Mix": 28,
+          "Trails": true
+        },
+        "2_lead_shimmer": {
+          "Decay": 2.2,
+          "Predelay": 15,
+          "Tone": 5.0,
+          "Mix": 38,
+          "Trails": true
+        },
+        "3_fuzz_solo": {
+          "Decay": 2.0,
+          "Predelay": 14,
+          "Tone": 5.5,
+          "Mix": 35,
+          "Trails": true
+        }
       }
     }
   },
   "snapshots": {
-    "1_rhythm": { "footswitch": "FS1", "description": "Warm rhythm tone. Poly Pitch octave-up at 12% mix.", "pickup_position": "Neck" },
-    "2_lead_shimmer": { "footswitch": "FS2", "description": "Lead shimmer with Poly Pitch at 22% mix.", "pickup_position": "Neck" },
-    "3_fuzz_solo": { "footswitch": "FS3", "description": "Fuzz solo. Wringer Fuzz active at Gain 7.5. OD and Poly Pitch bypassed.", "pickup_position": "Bridge" }
+    "1_rhythm": {
+      "footswitch": "FS1",
+      "description": "Warm rhythm tone. Poly Pitch octave-up at 12% mix.",
+      "pickup_position": "Neck"
+    },
+    "2_lead_shimmer": {
+      "footswitch": "FS2",
+      "description": "Lead shimmer with Poly Pitch at 22% mix.",
+      "pickup_position": "Neck"
+    },
+    "3_fuzz_solo": {
+      "footswitch": "FS3",
+      "description": "Fuzz solo. Wringer Fuzz active at Gain 7.5. OD and Poly Pitch bypassed.",
+      "pickup_position": "Bridge"
+    }
   },
   "playing_notes": {
     "tuning": "Standard",
     "key": "B minor",
     "capo": null,
     "technique": "Delicate single-note figures picked rather than strummed.",
-    "snapshot_cues": "Snapshot 3 for fuzz solo — switch to bridge pickup simultaneously.",
-    "tone_control": "Roll guitar tone knob back to around 7 for Snapshot 3 — Wringer Fuzz can get bright."
+    "snapshot_cues": "Snapshot 3 for fuzz solo \u2014 switch to bridge pickup simultaneously.",
+    "tone_control": "Roll guitar tone knob back to around 7 for Snapshot 3 \u2014 Wringer Fuzz can get bright."
   }
 }

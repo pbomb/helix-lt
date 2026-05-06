@@ -2,7 +2,7 @@
   "preset_name": "Bodysnatchers",
   "artist": "Radiohead",
   "album": "In Rainbows",
-  "tuning": "See snapshot notes — Snapshots 1+2 standard tuning (Jonny), Snapshots 3+4 Drop D (Thom)",
+  "tuning": "See snapshot notes \u2014 Snapshots 1+2 standard tuning (Jonny), Snapshots 3+4 Drop D (Thom)",
   "master_bpm": 166,
   "notes": "Combined Jonny Greenwood and Thom Yorke parts in a single preset with four snapshots. Snapshots 1+2 cover Jonny's lead/riff part (standard tuning, Stupor OD). Snapshots 3+4 cover Thom's rhythm guitar part (Drop D, Top Secret OD).",
   "signal_chain": [
@@ -17,58 +17,186 @@
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
-        "1_jonny_verse": { "Threshold": -60, "Decay": 25, "Level": 0 },
-        "2_jonny_chorus": { "Threshold": -55, "Decay": 20, "Level": 0 },
-        "3_thom_verse": { "Threshold": -58, "Decay": 25, "Level": 0 },
-        "4_thom_chorus": { "Threshold": -52, "Decay": 20, "Level": 0 }
+        "1_jonny_verse": {
+          "Threshold": -60,
+          "Decay": 25,
+          "Level": 0
+        },
+        "2_jonny_chorus": {
+          "Threshold": -55,
+          "Decay": 20,
+          "Level": 0
+        },
+        "3_thom_verse": {
+          "Threshold": -58,
+          "Decay": 25,
+          "Level": 0
+        },
+        "4_thom_chorus": {
+          "Threshold": -52,
+          "Decay": 20,
+          "Level": 0
+        }
       }
     },
     "overdrive_jonny": {
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "snapshots": {
-        "1_jonny_verse": { "active": true, "Drive": 5.5, "Tone": 5.5, "Level": 6.5 },
-        "2_jonny_chorus": { "active": true, "Drive": 7.0, "Tone": 5.5, "Level": 7.0 },
-        "3_thom_verse": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 6.5 },
-        "4_thom_chorus": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 6.5 }
+        "1_jonny_verse": {
+          "active": true,
+          "Drive": 5.5,
+          "Tone": 5.5,
+          "Level": 6.5
+        },
+        "2_jonny_chorus": {
+          "active": true,
+          "Drive": 7.0,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "3_thom_verse": {
+          "active": false,
+          "Drive": 5.5,
+          "Tone": 5.5,
+          "Level": 6.5
+        },
+        "4_thom_chorus": {
+          "active": false,
+          "Drive": 5.5,
+          "Tone": 5.5,
+          "Level": 6.5
+        }
       }
     },
     "overdrive_thom": {
       "model": "Top Secret OD",
       "based_on": "DOD OD-250",
       "snapshots": {
-        "1_jonny_verse": { "active": false, "Gain": 6.5, "Level": 6.0 },
-        "2_jonny_chorus": { "active": false, "Gain": 6.5, "Level": 6.0 },
-        "3_thom_verse": { "active": true, "Gain": 6.5, "Level": 6.0 },
-        "4_thom_chorus": { "active": true, "Gain": 8.0, "Level": 6.5 }
+        "1_jonny_verse": {
+          "active": false,
+          "Gain": 6.5,
+          "Level": 6.0
+        },
+        "2_jonny_chorus": {
+          "active": false,
+          "Gain": 6.5,
+          "Level": 6.0
+        },
+        "3_thom_verse": {
+          "active": true,
+          "Gain": 6.5,
+          "Level": 6.0
+        },
+        "4_thom_chorus": {
+          "active": true,
+          "Gain": 8.0,
+          "Level": 6.5
+        }
       }
     },
     "eq": {
-      "model": "Parametric",
+      "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "snapshots": {
-        "1_jonny_verse": { "Low Gain": -2, "Mid Freq": 700, "Mid Gain": 3, "High Gain": 2, "Low Cut": 100, "High Cut": 9500, "Level": 2 },
-        "2_jonny_chorus": { "Low Gain": -3, "Mid Freq": 650, "Mid Gain": 4, "High Gain": 2, "Low Cut": 120, "High Cut": 8500, "Level": 3 },
-        "3_thom_verse": { "Low Gain": -3, "Mid Freq": 650, "Mid Gain": 3, "High Gain": 1, "Low Cut": 120, "High Cut": 9500, "Level": 2 },
-        "4_thom_chorus": { "Low Gain": -4, "Mid Freq": 600, "Mid Gain": 5, "High Gain": 0, "Low Cut": 140, "High Cut": 8500, "Level": 3 }
+        "1_jonny_verse": {
+          "Low Gain": -2,
+          "Mid Freq": 700,
+          "Mid Gain": 3,
+          "High Gain": 2,
+          "Low Cut": 100,
+          "High Cut": 9500,
+          "Level": 2
+        },
+        "2_jonny_chorus": {
+          "Low Gain": -3,
+          "Mid Freq": 650,
+          "Mid Gain": 4,
+          "High Gain": 2,
+          "Low Cut": 120,
+          "High Cut": 8500,
+          "Level": 3
+        },
+        "3_thom_verse": {
+          "Low Gain": -3,
+          "Mid Freq": 650,
+          "Mid Gain": 3,
+          "High Gain": 1,
+          "Low Cut": 120,
+          "High Cut": 9500,
+          "Level": 2
+        },
+        "4_thom_chorus": {
+          "Low Gain": -4,
+          "Mid Freq": 600,
+          "Mid Gain": 5,
+          "High Gain": 0,
+          "Low Cut": 140,
+          "High Cut": 8500,
+          "Level": 3
+        }
       }
     },
     "delay": {
       "model": "Transistor Tape",
       "based_on": "Maestro Echoplex EP-3",
       "snapshots": {
-        "1_jonny_verse": { "TempoSync1": true, "Note Sync": "1/16", "Time": "90ms (1/16 at 166 BPM)", "Feedback": 8, "Mix": 22, "Trails": true },
-        "2_jonny_chorus": { "TempoSync1": true, "Note Sync": "1/16", "Time": "90ms (1/16 at 166 BPM)", "Feedback": 8, "Mix": 18, "Trails": true },
-        "3_thom_verse": { "TempoSync1": true, "Note Sync": "1/16", "Time": "90ms (1/16 at 166 BPM)", "Feedback": 5, "Mix": 18, "Trails": true },
-        "4_thom_chorus": { "TempoSync1": true, "Note Sync": "1/16", "Time": "90ms (1/16 at 166 BPM)", "Feedback": 5, "Mix": 12, "Trails": true }
+        "1_jonny_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/16",
+          "Time": "90ms (1/16 at 166 BPM)",
+          "Feedback": 8,
+          "Mix": 22,
+          "Trails": true
+        },
+        "2_jonny_chorus": {
+          "TempoSync1": true,
+          "Note Sync": "1/16",
+          "Time": "90ms (1/16 at 166 BPM)",
+          "Feedback": 8,
+          "Mix": 18,
+          "Trails": true
+        },
+        "3_thom_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/16",
+          "Time": "90ms (1/16 at 166 BPM)",
+          "Feedback": 5,
+          "Mix": 18,
+          "Trails": true
+        },
+        "4_thom_chorus": {
+          "TempoSync1": true,
+          "Note Sync": "1/16",
+          "Time": "90ms (1/16 at 166 BPM)",
+          "Feedback": 5,
+          "Mix": 12,
+          "Trails": true
+        }
       }
     }
   },
   "snapshots": {
-    "1_jonny_verse": { "footswitch": "FS1", "description": "Jonny verse — standard tuning, Stupor OD at Drive 5.5.", "pickup_position": "Bridge" },
-    "2_jonny_chorus": { "footswitch": "FS2", "description": "Jonny chorus — standard tuning, Stupor OD pushed to Drive 7.0.", "pickup_position": "Bridge" },
-    "3_thom_verse": { "footswitch": "FS3", "description": "Thom verse — Drop D, Top Secret OD at Gain 6.5.", "pickup_position": "Bridge" },
-    "4_thom_chorus": { "footswitch": "FS4", "description": "Thom chorus — Drop D, Top Secret OD pushed to Gain 8.0.", "pickup_position": "Bridge" }
+    "1_jonny_verse": {
+      "footswitch": "FS1",
+      "description": "Jonny verse \u2014 standard tuning, Stupor OD at Drive 5.5.",
+      "pickup_position": "Bridge"
+    },
+    "2_jonny_chorus": {
+      "footswitch": "FS2",
+      "description": "Jonny chorus \u2014 standard tuning, Stupor OD pushed to Drive 7.0.",
+      "pickup_position": "Bridge"
+    },
+    "3_thom_verse": {
+      "footswitch": "FS3",
+      "description": "Thom verse \u2014 Drop D, Top Secret OD at Gain 6.5.",
+      "pickup_position": "Bridge"
+    },
+    "4_thom_chorus": {
+      "footswitch": "FS4",
+      "description": "Thom chorus \u2014 Drop D, Top Secret OD pushed to Gain 8.0.",
+      "pickup_position": "Bridge"
+    }
   },
   "playing_notes": {
     "tuning": "Standard for Jonny (S1+S2), Drop D for Thom (S3+S4)",
