@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import type { Block, Preset } from '../types'
+import { useParams, useNavigate } from 'react-router-dom'
+import type { Block } from '../types'
+import { presetBySlug } from '../data/index'
 
 interface BlockWithKey extends Block {
   key: string
@@ -68,13 +70,21 @@ function BlockCard({ block, snapshotNames }: { block: BlockWithKey; snapshotName
   )
 }
 
-interface PresetDetailProps {
-  preset: Preset
-  onBack: () => void
-}
-
-export default function PresetDetail({ preset, onBack }: PresetDetailProps) {
+export default function PresetDetail() {
+  const { slug } = useParams<{ slug: string }>()
+  const navigate = useNavigate()
   const [playingNotesOpen, setPlayingNotesOpen] = useState(false)
+
+  const preset = presetBySlug[slug ?? '']
+
+  if (!preset) {
+    return (
+      <div className="preset-detail">
+        <button className="back-button" onClick={() => navigate('/')}>← Back to catalog</button>
+        <p>Preset not found.</p>
+      </div>
+    )
+  }
 
   const snapshotNames = Object.keys(preset.snapshots)
 
@@ -89,7 +99,7 @@ export default function PresetDetail({ preset, onBack }: PresetDetailProps) {
 
   return (
     <div className="preset-detail">
-      <button className="back-button" onClick={onBack}>← Back to catalog</button>
+      <button className="back-button" onClick={() => navigate('/')}>← Back to catalog</button>
 
       <header className="detail-header">
         <h1>{preset.preset_name}</h1>

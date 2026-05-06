@@ -1,4 +1,12 @@
 import type { Preset } from '../types'
+
+export function toSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+}
 import creep from './presets/creep.json'
 import just from './presets/just.json'
 import noSurprises from './presets/no-surprises.json'
@@ -31,3 +39,7 @@ export const presetsByArtist: Record<string, Preset[]> = allPresets.reduce<Recor
 Object.keys(presetsByArtist).forEach(artist => {
   presetsByArtist[artist].sort((a, b) => a.preset_name.localeCompare(b.preset_name))
 })
+
+export const presetBySlug: Record<string, Preset> = Object.fromEntries(
+  allPresets.map(p => [toSlug(p.preset_name), p])
+)

@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import type { Preset } from './types'
+import { Routes, Route } from 'react-router-dom'
 import Catalog from './components/Catalog'
 import PresetDetail from './components/PresetDetail'
 
 export default function App() {
-  const [selectedPreset, setSelectedPreset] = useState<Preset | null>(null)
-
   return (
     <div className="app">
-      {selectedPreset ? (
-        <PresetDetail preset={selectedPreset} onBack={() => setSelectedPreset(null)} />
-      ) : (
-        <Catalog onSelectPreset={setSelectedPreset} />
-      )}
+      <Routes>
+        <Route path="/" element={<Catalog />} />
+        <Route path="/presets/:slug" element={<PresetDetail />} />
+      </Routes>
     </div>
   )
 }
