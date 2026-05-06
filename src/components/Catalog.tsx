@@ -1,12 +1,8 @@
 import { useState } from 'react'
-import type { Preset } from '../types'
-import { presetsByArtist } from '../data/index'
+import { Link } from 'react-router-dom'
+import { presetsByArtist, toSlug } from '../data/index'
 
-interface CatalogProps {
-  onSelectPreset: (preset: Preset) => void
-}
-
-export default function Catalog({ onSelectPreset }: CatalogProps) {
+export default function Catalog() {
   const artists = Object.keys(presetsByArtist).sort()
   const [expandedArtists, setExpandedArtists] = useState<Record<string, boolean>>(() => {
     const init: Record<string, boolean> = {}
@@ -39,13 +35,13 @@ export default function Catalog({ onSelectPreset }: CatalogProps) {
               <ul className="song-list">
                 {presetsByArtist[artist].map(preset => (
                   <li key={preset.preset_name}>
-                    <button
+                    <Link
                       className="song-button"
-                      onClick={() => onSelectPreset(preset)}
+                      to={`/presets/${toSlug(preset.preset_name)}`}
                     >
                       <span className="song-name">{preset.preset_name}</span>
                       <span className="song-meta">{preset.album} · {preset.master_bpm} BPM</span>
-                    </button>
+                    </Link>
                   </li>
                 ))}
               </ul>
