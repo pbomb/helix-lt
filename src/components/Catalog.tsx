@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { presetsByArtist, toSlug } from '../data/index'
+import AlbumArt from './AlbumArt'
 
 export default function Catalog() {
   const artists = Object.keys(presetsByArtist).sort()
@@ -39,6 +40,7 @@ export default function Catalog() {
                       className="song-button"
                       to={`/presets/${toSlug(preset.preset_name)}`}
                     >
+                      <AlbumArt artist={preset.artist} album={preset.album} size={36} />
                       <span className="song-name">{preset.preset_name}</span>
                       <span className="song-meta">{preset.album} · {preset.master_bpm} BPM</span>
                     </Link>
