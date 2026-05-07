@@ -34,6 +34,7 @@ export interface Preset {
   preset_name: string
   artist: string
   album: string
+  thumbnail: string
   tuning: string
   master_bpm?: number
   capo?: number
