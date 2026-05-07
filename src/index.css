@@ -1,24 +1,24 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0f0f0f;
-  --surface: #1a1a1a;
-  --surface2: #222;
-  --border: #2e2e2e;
-  --accent: #e03030;
-  --accent-dim: #9b1f1f;
-  --text: #e8e8e8;
-  --text-muted: #888;
-  --text-dim: #555;
-  --green: #3d9970;
-  --red: #b03030;
+  --bg: #111827;
+  --surface: #1f2937;
+  --surface2: #28364a;
+  --border: #3b4f65;
+  --accent: #f97316;
+  --accent-dim: #c2410c;
+  --text: #f1f5f9;
+  --text-muted: #94b4cc;
+  --text-dim: #6b8097;
+  --green: #34d399;
+  --red: #f87171;
 }
 
 body {
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -60,11 +60,11 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 
 .artist-toggle:hover { background: var(--surface2); }
 
-.artist-chevron { color: var(--text-muted); font-size: 0.85rem; width: 0.8rem; }
+.artist-chevron { color: var(--text-muted); font-size: 0.9rem; width: 0.8rem; }
 
-.artist-name { font-weight: 600; font-size: 1rem; flex: 1; }
+.artist-name { font-weight: 600; font-size: 1.05rem; flex: 1; }
 
-.artist-count { font-size: 0.75rem; color: var(--text-muted); }
+.artist-count { font-size: 0.85rem; color: var(--text-muted); }
 
 .song-list {
   list-style: none;
@@ -100,7 +100,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 
 .song-name { flex: 1; }
 
-.song-meta { font-size: 0.75rem; color: var(--text-muted); white-space: nowrap; }
+.song-meta { font-size: 0.85rem; color: var(--text-muted); white-space: nowrap; }
 
 /* ── Preset Detail ── */
 .preset-detail {
@@ -111,7 +111,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 
 .back-button {
   color: var(--accent);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   padding: 0.4rem 0;
   margin-bottom: 1.5rem;
   opacity: 0.85;
@@ -130,14 +130,14 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
   gap: 0.3rem;
   margin-top: 0.4rem;
   color: var(--text-muted);
-  font-size: 0.875rem;
+  font-size: 0.95rem;
 }
 
 .meta-sep { color: var(--text-dim); }
 
 .detail-notes {
   margin-top: 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.6;
   border-left: 3px solid var(--border);
@@ -150,7 +150,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 .signal-chain-section h2,
 .blocks-section h2,
 .snapshots-section h2 {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -172,11 +172,11 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 0.3rem 0.75rem;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   white-space: nowrap;
 }
 
-.chain-arrow { color: var(--text-dim); font-size: 0.8rem; }
+.chain-arrow { color: var(--text-dim); font-size: 0.875rem; }
 
 /* ── Block Cards ── */
 .blocks-section { margin-bottom: 2rem; }
@@ -201,14 +201,14 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
   border-bottom: 1px solid var(--border);
 }
 
-.block-model { font-weight: 600; font-size: 0.95rem; }
+.block-model { font-weight: 600; font-size: 1rem; }
 
-.block-based-on { font-size: 0.75rem; color: var(--text-muted); }
+.block-based-on { font-size: 0.85rem; color: var(--text-muted); }
 
 .block-notes {
   margin: 0;
   padding: 0.5rem 0.75rem;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   color: var(--text-muted);
   line-height: 1.5;
   border-bottom: 1px solid var(--border);
@@ -217,13 +217,13 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 .param-table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
 }
 
 .param-table th {
   text-align: left;
   padding: 0.35rem 0.75rem;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -235,7 +235,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 .param-table th.snapshot-col {
   text-transform: none;
   letter-spacing: 0;
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   color: var(--accent);
   text-align: center;
 }
@@ -249,7 +249,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 .param-table td.param-name {
   text-align: left;
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: 0.85rem;
 }
 
 .param-table tr:last-child td { border-bottom: none; }
@@ -297,19 +297,19 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 
 .snapshot-name {
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   text-transform: capitalize;
 }
 
 .snapshot-desc {
-  font-size: 0.78rem;
+  font-size: 0.875rem;
   color: var(--text-muted);
   line-height: 1.5;
   margin-bottom: 0.4rem;
 }
 
 .snapshot-pickup {
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   color: var(--text-dim);
 }
 
@@ -317,7 +317,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 .playing-notes-section { margin-bottom: 2rem; }
 
 .collapsible-toggle {
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -332,7 +332,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   border-left: 3px solid var(--border);
   padding-left: 0.75rem;
