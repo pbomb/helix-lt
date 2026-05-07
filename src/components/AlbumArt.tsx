@@ -9,7 +9,7 @@ export default function AlbumArt({ artist, album, size = 40 }: { artist: string;
   useEffect(() => {
     if (cache.has(key)) return
     const query = encodeURIComponent(`${artist} ${album}`)
-    fetch(`https://itunes.apple.com/search?term=${query}&entity=album&limit=5`)
+    fetch(`https://itunes.apple.com/search?media=music&entity=album&artistTerm=${encodeURIComponent(artist)}&albumTerm=${encodeURIComponent(album)}&limit=5`)
       .then(r => r.json())
       .then(data => {
         const results: any[] = data.results ?? []
