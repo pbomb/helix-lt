@@ -7,10 +7,21 @@ interface BlockWithKey extends Block {
   key: string
 }
 
-function formatValue(val: string | number | boolean | null | undefined): string {
+const HZ_PARAMS = new Set(['Low Freq', 'Mid Freq', 'High Freq', 'Low Cut', 'High Cut'])
+
+function formatHz(val: number): string {
+  if (val >= 1000) {
+    const khz = val / 1000
+    return `${+khz.toFixed(3).replace(/\.?0+$/, '')} kHz`
+  }
+  return `${val} Hz`
+}
+
+function formatValue(val: string | number | boolean | null | undefined, param?: string): string {
   if (val === true) return 'on'
   if (val === false) return 'off'
   if (val === null || val === undefined) return '—'
+  if (param && HZ_PARAMS.has(param) && typeof val === 'number') return formatHz(val)
   return String(val)
 }
 
@@ -60,7 +71,7 @@ function BlockCard({ block, snapshotNames }: { block: BlockWithKey; snapshotName
               <tr key={param} className={varies ? 'row-varies' : ''}>
                 <td className="param-name">{param}</td>
                 {snapshotNames.map(s => (
-                  <td key={s}>{formatValue(block.snapshots[s]?.[param])}</td>
+                  <td key={s}>{formatValue(block.snapshots[s]?.[param], param)}</td>
                 ))}
               </tr>
             )
