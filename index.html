@@ -11,7 +11,7 @@
         var params = new URLSearchParams(window.location.search);
         var p = params.get('p');
         if (p !== null) {
-          var rest = p ? '/' + decodeURIComponent(p) : '';
+          var rest = p ? decodeURIComponent(p) : '';
           var q = params.get('q');
           var qs = q ? '?' + decodeURIComponent(q) : '';
           window.history.replaceState(
