@@ -1,0 +1,247 @@
+{
+  "preset_name": "Plug In Baby",
+  "artist": "Muse",
+  "album": "Origin of Symmetry",
+  "tuning": "Standard",
+  "master_bpm": 120,
+  "notes": "No amp+cab block — running into tube amp. Three snapshots plus expression pedal assignment. Confirmed effect: ZVex Fuzz Factory (Industrial Fuzz — exact model available in Helix). Confirmed amp: Marshall Super Lead / Vox AC30 combination for Origin of Symmetry era (Brit Plexi Jump — removed per amp+cab policy). Expression pedal assigned to Industrial Fuzz Stability parameter — sweeps from oscillating chaos (heel, Stability ~2) to stable fuzz (toe, Stability ~8). This recreates the famous intro sweep where Bellamy tames the Fuzz Factory oscillation. IMPORTANT NOTE: Industrial Fuzz Stability parameter — lower values = more oscillation/instability (chaos), higher values = stable fuzz. The intro starts at LOW stability (chaotic oscillation) and sweeps TO high stability (controlled fuzz) as the riff begins.",
+  "signal_chain": ["Noise Gate", "Industrial Fuzz", "Parametric EQ", "Cosmos Echo", "Ganymede"],
+  "expression_pedal": {
+    "assigned_to": "Industrial Fuzz — Stability parameter",
+    "heel_value": 2.0,
+    "toe_value": 8.0,
+    "usage": "Snapshot 1 ONLY — start at heel (Stability 2.0 = oscillating chaos), sweep to toe as intro progresses. Switch to Snapshot 2 as first riff note lands. In Snapshots 2+3 the Stability is fixed at 9.5 via snapshot parameter — EXP pedal has no meaningful effect.",
+    "note": "Industrial Fuzz auto-assigns to EXP 1 — verify this or manually assign Stability to EXP 1"
+  },
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "S1 nearly open — Fuzz Factory oscillation and noise is intentional, must not be gated. S2+S3 tighten.",
+      "snapshots": {
+        "1_oscillating_intro": {
+          "Threshold": -80,
+          "Decay": 20,
+          "Level": 0
+        },
+        "2_main_riff": {
+          "Threshold": -55,
+          "Decay": 30,
+          "Level": 0
+        },
+        "3_chorus": {
+          "Threshold": -52,
+          "Decay": 28,
+          "Level": 0
+        }
+      }
+    },
+    "fuzz": {
+      "model": "Industrial Fuzz",
+      "based_on": "Z.Vex Fuzz Factory",
+      "notes": "Exact confirmed model — ZVex Fuzz Factory is the confirmed Bellamy pedal for Plug In Baby. ACTIVE in all three snapshots. Stability is the key snapshot-variable parameter: S1 uses Stability 2.0 as starting point (EXP pedal sweeps from 2.0 to 8.0 during intro). S2+S3 use fixed Stability 9.5 (fully stable fuzz). Compress, Gate, Drive, Oscillator, Level are fixed across all snapshots. NOTE: Stability values — lower = more unstable/oscillating, higher = more stable fuzz.",
+      "snapshots": {
+        "1_oscillating_intro": {
+          "active": true,
+          "Compress": 3.5,
+          "Gate": 1.5,
+          "Drive": 10.0,
+          "Stability": 2.0,
+          "Oscillator": 5.0,
+          "Level": 6.5
+        },
+        "2_main_riff": {
+          "active": true,
+          "Compress": 4.0,
+          "Gate": 5.5,
+          "Drive": 9.0,
+          "Stability": 9.5,
+          "Oscillator": 5.0,
+          "Level": 7.0
+        },
+        "3_chorus": {
+          "active": true,
+          "Compress": 5.0,
+          "Gate": 6.0,
+          "Drive": 8.5,
+          "Stability": 9.5,
+          "Oscillator": 5.0,
+          "Level": 7.5
+        }
+      }
+    },
+    "eq": {
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Compensates for removed Brit Plexi Jump and 4x12 Greenback 25 cab voicing. S1 gentle — oscillation fills sonic space without additional EQ shaping. S2+S3 push mids for the cutting, aggressive character of the Fuzz Factory into Plexi tone. High Cut rolled back in S2+S3 to control top-end harshness from fuzz.",
+      "snapshots": {
+        "1_oscillating_intro": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 900,
+          "Mid Q": 2.0,
+          "Mid Gain": 1,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 9000,
+          "Level": 0
+        },
+        "2_main_riff": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -3,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 4,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": -2,
+          "Low Cut": 100,
+          "High Cut": 8000,
+          "Level": 2
+        },
+        "3_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -3,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 5,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": -1,
+          "Low Cut": 100,
+          "High Cut": 8500,
+          "Level": 3
+        }
+      }
+    },
+    "delay": {
+      "model": "Cosmos Echo",
+      "based_on": "Roland RE-201 Space Echo",
+      "notes": "No delay in Snapshot 1 (Mix 0%) — oscillation fills all sonic space. Tempo-synced to 120 BPM. S2: d1/16 (188ms, exact match to 187.5ms). S3: 1/8 (250ms, exact match) — slightly more spacious for chorus. Treble rolled back to keep repeats dark and not competing with the bright fuzz character.",
+      "snapshots": {
+        "1_oscillating_intro": {
+          "TempoSync1": true,
+          "Note Sync": "1/8 dot",
+          "Time": "375ms (d1/8 at 120 BPM — set but Mix at 0%)",
+          "Ramp": 0,
+          "Feedback": 20,
+          "Wow/Flutter": 2.0,
+          "Mix": 0,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "2_main_riff": {
+          "TempoSync1": true,
+          "Note Sync": "1/16 dot",
+          "Time": "188ms (d1/16 at 120 BPM — near exact match)",
+          "Ramp": 0,
+          "Feedback": 15,
+          "Wow/Flutter": 2.0,
+          "Mix": 18,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.0,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "3_chorus": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "250ms (1/8 at 120 BPM — exact match)",
+          "Ramp": 0,
+          "Feedback": 20,
+          "Wow/Flutter": 2.0,
+          "Mix": 25,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.0,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
+          "Trails": true
+        }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "notes": "Ganymede chosen over Dynamic Hall for Plug In Baby — Origin of Symmetry era tone benefits from the smoother, less controlled reverb character. Tone parameter shapes overall brightness. S1 moderate reverb around the oscillation. S2 relatively dry — riff is aggressive and doesn't benefit from reverb wash. S3 opens up slightly for chorus.",
+      "snapshots": {
+        "1_oscillating_intro": {
+          "Decay": 1.5,
+          "Predelay": 10,
+          "Tone": 5.0,
+          "Modulation": 2.0,
+          "Mix": 28,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_main_riff": {
+          "Decay": 0.8,
+          "Predelay": 5,
+          "Tone": 5.0,
+          "Modulation": 2.0,
+          "Mix": 15,
+          "Level": 0,
+          "Trails": true
+        },
+        "3_chorus": {
+          "Decay": 1.2,
+          "Predelay": 8,
+          "Tone": 5.5,
+          "Modulation": 2.0,
+          "Mix": 22,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  },
+  "snapshots": {
+    "1_oscillating_intro": {
+      "footswitch": "FS1",
+      "description": "Oscillating intro. Industrial Fuzz at Gate 1.5 (nearly open), Drive 10.0, Stability 2.0 — full chaotic oscillation. EXP pedal sweeps Stability from 2.0 (heel, chaos) to 8.0 (toe, stable). Gate open at -80dB. Cosmos Echo Mix 0% — no delay. Moderate reverb. Start with pedal at heel before picking any note.",
+      "tuning": "Standard",
+      "pickup_position": "Bridge"
+    },
+    "2_main_riff": {
+      "footswitch": "FS2",
+      "description": "Main riff/verse. Industrial Fuzz Gate 5.5, Drive 9.0, Stability 9.5 (fully stable). EQ mid +4dB at 800Hz. d1/16 delay (188ms) at 18% mix. Relatively dry reverb (0.8 sec, 15% mix).",
+      "tuning": "Standard",
+      "pickup_position": "Bridge"
+    },
+    "3_chorus": {
+      "footswitch": "FS3",
+      "description": "Chorus sections. Industrial Fuzz Compress 5.0, Drive 8.5, Level 7.5 — slightly more compression and output. EQ mid +5dB, Level +3dB. 1/8 delay (250ms) at 25% mix. More reverb (1.2 sec, 22% mix).",
+      "tuning": "Standard",
+      "pickup_position": "Bridge"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard tuning — no Drop D",
+    "key": "B minor",
+    "pickup_notes": "Bridge pickup throughout all snapshots",
+    "technique": "Main intro riff played on high E and B strings starting at 12th fret. Practice the riff cleanly at speed BEFORE engaging the Industrial Fuzz — with oscillation active it's hard to hear individual notes clearly.",
+    "expression_pedal_performance": "The EXP pedal sweep in Snapshot 1 is the most demanding performance element. Practice timing the sweep so toe position is reached exactly as the first main riff note lands. Switch to Snapshot 2 simultaneously. This requires coordination between the foot sweep and the footswitch press.",
+    "snapshot_cues": "Snapshot 1: start with EXP at heel, sweep to toe across intro. Snapshot 2: main riff and verse. Snapshot 3: chorus sections.",
+    "fuzz_factory_note": "Industrial Fuzz Stability behavior: lower values = oscillation and chaos, higher values = stable fuzz. This is counterintuitive — sweep from LOW to HIGH to go from chaos to controlled. The Stability parameter may self-oscillate differently from the real Fuzz Factory depending on your guitar output and tube amp input impedance — adjust Gate and Compress to dial in the intro oscillation character."
+  }
+}

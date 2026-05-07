@@ -1,0 +1,234 @@
+{
+  "preset_name": "Unnatural Selection",
+  "artist": "Muse",
+  "album": "The Resistance",
+  "tuning": "Drop D",
+  "master_bpm": 138,
+  "notes": "No amp+cab block — running into tube amp. Two snapshots: clean intro/verse and heavy riff. Confirmed effect: MXR Blue Box sub-octave fuzz. IMPORTANT: 'Sub Octave Fuzz' model referenced in earlier preset research does not exist in the YAML. Best available approximation uses TWO blocks: Wringer Fuzz (fuzz character) + Boctaver (Boss OC-2, sub-octave). These work together to approximate the Blue Box's integrated fuzz-plus-sub-octave circuit — Wringer Fuzz provides the aggressive fuzz saturation, Boctaver adds the octave-down voice. This is less integrated than a dedicated sub-octave fuzz model but achieves the core tonal elements. Scream 808 as additional boost/tightener in S2. Confirmed amp: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy).",
+  "signal_chain": [
+    "Noise Gate",
+    "Wringer Fuzz",
+    "Boctaver",
+    "Scream 808",
+    "Parametric EQ",
+    "Cosmos Echo",
+    "Dynamic Hall"
+  ],
+  "note_on_blue_box_approximation": "The MXR Blue Box generates fuzz with signals one AND two octaves below. Boctaver (-1 Oct and -2 Oct level controls) matches this architecture exactly — set -1 Oct prominently and -2 Oct subtly. Wringer Fuzz feeds into Boctaver so the octave tracking receives a fuzz-saturated signal, which more closely matches the Blue Box's integrated circuit behavior than placing them in reverse order.",
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "snapshots": {
+        "1_clean": {
+          "Threshold": -70,
+          "Decay": 35,
+          "Level": 0
+        },
+        "2_heavy": {
+          "Threshold": -55,
+          "Decay": 30,
+          "Level": 0
+        }
+      }
+    },
+    "fuzz": {
+      "model": "Wringer Fuzz",
+      "based_on": "Garbage's modded BOSS FZ-2",
+      "notes": "Provides the fuzz saturation component of the Blue Box approximation. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Fuzz Type set to Fuzz for most direct hard-clipping character. Bass rolled back to prevent muddiness through Boctaver and into Drop D tube amp.",
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "Gain": 7.5,
+          "Treble": 5.0,
+          "Bass": 3.5,
+          "Level": 6.5,
+          "Fuzz Type": "Fuzz"
+        },
+        "2_heavy": {
+          "active": true,
+          "Gain": 7.5,
+          "Treble": 5.0,
+          "Bass": 3.5,
+          "Level": 6.5,
+          "Fuzz Type": "Fuzz"
+        }
+      }
+    },
+    "octave": {
+      "model": "Boctaver",
+      "based_on": "BOSS OC-2 Octaver",
+      "notes": "Provides the sub-octave component of the Blue Box approximation. Parameters: -1 Oct level, -2 Oct level, Dry Level. -1 Oct prominent (matching Blue Box's primary sub-octave voice). -2 Oct subtle (matching Blue Box's secondary sub-octave voice). Dry Level at 100 preserves dry signal alongside octave voices. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Boctaver tracks single notes best — play riff with clean separated notes.",
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "-1 Oct": 60,
+          "-2 Oct": 25,
+          "Dry Level": 100
+        },
+        "2_heavy": {
+          "active": true,
+          "-1 Oct": 60,
+          "-2 Oct": 25,
+          "Dry Level": 100
+        }
+      }
+    },
+    "boost": {
+      "model": "Scream 808",
+      "based_on": "Ibanez TS808 Tube Screamer",
+      "notes": "Clean boost and low-end tightener into tube amp. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Minimal Gain — this is a clean level boost, not additional overdrive.",
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "Gain": 1.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "2_heavy": {
+          "active": true,
+          "Gain": 1.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        }
+      }
+    },
+    "eq": {
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Compensates for removed Das Benzin Lead and 4x12 Brit V30 cab voicing. S2 requires very aggressive Low Cut (100Hz) — Wringer Fuzz + Boctaver octave-down + Drop D generates significant low-frequency content that will become muddy without firm management. Dual low cut approach (EQ Low Cut at 100-120Hz) replaces the removed cab's Low Cut. Mid boost at 700Hz gives Bellamy's Resistance-era mid-forward cutting heavy tone.",
+      "snapshots": {
+        "1_clean": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 2,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 10000,
+          "Level": 0
+        },
+        "2_heavy": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -4,
+          "Mid Freq": 700,
+          "Mid Q": 2.5,
+          "Mid Gain": 5,
+          "High Freq": 3200,
+          "High Q": 0.7,
+          "High Gain": -3,
+          "Low Cut": 120,
+          "High Cut": 7500,
+          "Level": 2
+        }
+      }
+    },
+    "delay": {
+      "model": "Cosmos Echo",
+      "based_on": "Roland RE-201 Space Echo",
+      "notes": "Tempo-synced to 138 BPM. S1: 1/4 quarter note (435ms, 35ms off original 400ms — original too far from any division, quarter note preferred for spacious atmospheric clean). S2: d1/16 dotted sixteenth (163ms, 17ms off original 180ms — synced). S2 very short and dark to avoid cluttering Wringer Fuzz + Boctaver texture.",
+      "snapshots": {
+        "1_clean": {
+          "TempoSync1": true,
+          "Note Sync": "1/4",
+          "Time": "435ms (1/4 at 138 BPM)",
+          "Ramp": 0,
+          "Feedback": 30,
+          "Wow/Flutter": 2.0,
+          "Mix": 40,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "2_heavy": {
+          "TempoSync1": true,
+          "Note Sync": "1/16 dot",
+          "Time": "163ms (d1/16 at 138 BPM)",
+          "Ramp": 0,
+          "Feedback": 10,
+          "Wow/Flutter": 1.5,
+          "Mix": 15,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.0,
+          "FBTone": 5.0,
+          "Splice": false,
+          "Dry Thru": true,
+          "Trails": true
+        }
+      }
+    },
+    "reverb": {
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 20m — do NOT make snapshot-variable. S1 long and spacious for atmospheric clean intro. S2 very tight and dry — heavy riff must punch through.",
+      "room_size_fixed": 20,
+      "snapshots": {
+        "1_clean": {
+          "Decay": 2.8,
+          "Predelay": 15,
+          "Diffusion": 6.0,
+          "Damping": 6500,
+          "Mix": 42,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 6500,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_heavy": {
+          "Decay": 0.7,
+          "Predelay": 5,
+          "Diffusion": 5.0,
+          "Damping": 4000,
+          "Mix": 15,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 120,
+          "High Cut": 4000,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  },
+  "snapshots": {
+    "1_clean": {
+      "footswitch": "FS1",
+      "description": "Clean intro/verse. Wringer Fuzz, Boctaver, and Scream 808 all bypassed. Open gate (-70dB). Gentle EQ. Quarter note delay (435ms) at 40% mix. Long reverb (2.8 sec, 42% mix). Atmospheric and spacious.",
+      "tuning": "Drop D",
+      "pickup_position": "Neck"
+    },
+    "2_heavy": {
+      "footswitch": "FS2",
+      "description": "Heavy riff. Wringer Fuzz active (Gain 7.5), Boctaver active (-1 Oct 60, -2 Oct 25), Scream 808 active (clean boost). Combined approximation of MXR Blue Box sub-octave fuzz. Aggressive EQ — Low Cut 120Hz, Mid +5dB at 700Hz. Very short d1/16 delay (163ms, 15% mix). Tight reverb (0.7 sec, 15% mix).",
+      "tuning": "Drop D",
+      "pickup_position": "Bridge"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Drop D throughout",
+    "key": "E minor",
+    "pickup_notes": "Neck for Snapshot 1. Bridge for Snapshot 2.",
+    "technique": "Heavy riff uses open D string as pedal tone — play single notes only in Snapshot 2. Both Boctaver and Wringer Fuzz track best with clean separated single notes. Overlapping notes or chords will cause octave tracking artifacts.",
+    "snapshot_cues": "Snapshot 1 for clean arpeggiated sections at start. Switch to Snapshot 2 for main riff. Song alternates between these sections multiple times — store on consecutive patches for quick access.",
+    "blue_box_note": "The Wringer Fuzz + Boctaver combination is an approximation — the real Blue Box integrates fuzz and sub-octave in one circuit with unique character. The Boctaver may be harder to dial in at high Wringer Fuzz settings. If Boctaver tracking breaks up, try reducing Wringer Fuzz Gain or moving Boctaver before the fuzz in the chain.",
+    "guitar_tone_control": "Roll guitar tone to 7 for Snapshot 2 — helps Boctaver octave tracking"
+  }
+}
