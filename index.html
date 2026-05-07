@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
     <title>Helix LT Presets</title>
+    <script>
+      // Restore path redirected through 404.html for GitHub Pages SPA support.
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        var p = params.get('p');
+        if (p !== null) {
+          var rest = p ? '/' + decodeURIComponent(p) : '';
+          var q = params.get('q');
+          var qs = q ? '?' + decodeURIComponent(q) : '';
+          window.history.replaceState(
+            null, null,
+            window.location.pathname + rest + qs + window.location.hash
+          );
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
