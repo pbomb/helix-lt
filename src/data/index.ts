@@ -7,33 +7,10 @@ export function toSlug(name: string): string {
     .trim()
     .replace(/\s+/g, '-')
 }
-import creep from './presets/creep.json'
-import just from './presets/just.json'
-import noSurprises from './presets/no-surprises.json'
-import thereThere from './presets/there-there.json'
-import weirdFishes from './presets/weird-fishes.json'
-import bodysnatchers from './presets/bodysnatchers.json'
-import theAdultsAreTalking from './presets/the-adults-are-talking.json'
-import selfless from './presets/selfless.json'
-import badDecisions from './presets/bad-decisions.json'
-import mkUltra from './presets/mk-ultra.json'
-import plugInBaby from './presets/plug-in-baby.json'
-import unnaturalSelection from './presets/unnatural-selection.json'
 
-export const allPresets: Preset[] = [
-  creep as Preset,
-  just as Preset,
-  noSurprises as Preset,
-  thereThere as Preset,
-  weirdFishes as Preset,
-  bodysnatchers as Preset,
-  theAdultsAreTalking as Preset,
-  selfless as Preset,
-  badDecisions as Preset,
-  mkUltra as Preset,
-  plugInBaby as Preset,
-  unnaturalSelection as Preset,
-]
+const presetModules = import.meta.glob('./presets/*.json', { eager: true })
+
+export const allPresets: Preset[] = Object.values(presetModules) as Preset[]
 
 export const presetsByArtist: Record<string, Preset[]> = allPresets.reduce<Record<string, Preset[]>>((acc, preset) => {
   const artist = preset.artist
