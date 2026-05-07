@@ -1,0 +1,198 @@
+{
+  "preset_name": "Is This It",
+  "artist": "The Strokes",
+  "album": "Is This It",
+  "thumbnail": "https://i.scdn.co/image/ab67616d0000485113f2466b83507515291acce4",
+  "tuning": "Standard",
+  "master_bpm": 114,
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig for Is This It era: Visual Sound Jekyll & Hyde Ultimate Overdrive/Distortion pedal + Pro Co RAT + MXR Micro Amp, both guitarists through Fender Hot Rod DeVille 2x12 (US Double Nrm — removed per amp+cab policy). Title track is described as the album's ballad — one of the slowest tempos on the record. Tone is intentionally restrained compared to more aggressive Is This It era tracks. Jekyll & Hyde overdrive side (Stupor OD) at low drive is the correct voice for this song — the RAT (Ratatouille Dist) is more appropriate for heavier tracks on the album. Minotaur (Klon Centaur — Nick Valensi confirmed notable user per YAML) approximates MXR Micro Amp boost for lead passages. No chorus, no modulation — this is one of the most stripped-back presets in the collection, honoring the album's bare-bones ethos. Studio recording had no EQ applied after the preamp — the engineer ran guitar directly into preamp with no post EQ. EQ block is kept gentle to honor this.",
+  "signal_chain": [
+    "Noise Gate",
+    "Stupor OD",
+    "Minotaur",
+    "Parametric EQ",
+    "Adriatic Delay",
+    "Ganymede"
+  ],
+  "confirmed_sources": [
+    "Sweetwater InSync: Is This It Making the Most of What You Have",
+    "Guitar.com: The Genius Of Is This It by The Strokes",
+    "Happy Mag: Engineering The Sound - The Strokes Is This It",
+    "Mixdown Magazine: Gear Rundown - The Strokes"
+  ],
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "Very open gate — this is the album's ballad, clean and intimate. Natural decay essential. Both snapshots use conservative settings.",
+      "snapshots": {
+        "1_verse": {
+          "Threshold": -65,
+          "Decay": 30,
+          "Level": 0
+        },
+        "2_chorus_lead": {
+          "Threshold": -60,
+          "Decay": 25,
+          "Level": 0
+        }
+      }
+    },
+    "overdrive": {
+      "model": "Stupor OD",
+      "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Approximates Jekyll & Hyde overdrive side. Low Drive throughout — Is This It the title track is the album's most restrained song. The RAT (Ratatouille Dist) was also confirmed for the Is This It era but is more appropriate for heavier album tracks — the Jekyll & Hyde OD at low setting is correct for this specific song's gentle, intimate character. ACTIVE in both snapshots but Drive increases slightly for chorus.",
+      "snapshots": {
+        "1_verse": {
+          "active": true,
+          "Drive": 4.0,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "2_chorus_lead": {
+          "active": true,
+          "Drive": 5.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        }
+      }
+    },
+    "boost": {
+      "model": "Minotaur",
+      "based_on": "Klon Centaur",
+      "notes": "Nick Valensi confirmed notable user per YAML. Approximates MXR Micro Amp clean boost for lead passages and chorus. BYPASSED in Snapshot 1 (verse). ACTIVE in Snapshot 2 (chorus/lead) — lifts level for lead melody lines and chorus guitar without adding drive.",
+      "snapshots": {
+        "1_verse": {
+          "active": false,
+          "Gain": 2.0,
+          "Tone": 5.0,
+          "Level": 7.5
+        },
+        "2_chorus_lead": {
+          "active": true,
+          "Gain": 2.0,
+          "Tone": 5.0,
+          "Level": 7.5
+        }
+      }
+    },
+    "eq": {
+      "model": "Parametric",
+      "based_on": "Line 6 Original",
+      "notes": "Kept deliberately gentle — honoring the recording philosophy of no post-EQ applied after preamp. Telephone filter character is present but less aggressive than the New Abnormal era presets. Low cut removes muddiness. Mid boost at 600Hz gives the compressed, mid-forward Strokes rhythm character. High cut rolled to 9kHz matching the slightly lo-fi, rolled-off top end of the album's recording aesthetic.",
+      "snapshots": {
+        "1_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 600,
+          "Mid Q": 2.0,
+          "Mid Gain": 3,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": -2,
+          "Low Cut": 100,
+          "High Cut": 9000,
+          "Level": 2
+        },
+        "2_chorus_lead": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 700,
+          "Mid Q": 2.0,
+          "Mid Gain": 3,
+          "High Freq": 4500,
+          "High Q": 0.7,
+          "High Gain": -1,
+          "Low Cut": 100,
+          "High Cut": 9500,
+          "Level": 3
+        }
+      }
+    },
+    "delay": {
+      "model": "Adriatic Delay",
+      "based_on": "BOSS DM-2 w/ Adrian Mod",
+      "notes": "Tempo-synced to 114 BPM. S1 verse: triplet quarter note (351ms) — original target 315ms (36ms off), no division lands cleanly, triplet quarter gives a slightly languid off-kilter feel appropriate for this song's ballad character. S2 chorus/lead: dotted eighth (395ms) — near exact match to original 395ms target (0.3ms off). Both at modest Mix — the album's no-EQ, lo-fi aesthetic means delay is supportive depth not a feature. BBD Size 2048 throughout. Rate 0.1Hz, Depth 0 to disable modulation.",
+      "snapshots": {
+        "1_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/4 trip",
+          "Time": "351ms (1/4 triplet at 114 BPM)",
+          "Feedback": 18,
+          "Noise": 3.5,
+          "BBD Size": 2048,
+          "Mix": 20,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
+          "Trails": true
+        },
+        "2_chorus_lead": {
+          "TempoSync1": true,
+          "Note Sync": "1/8 dot",
+          "Time": "395ms (d1/8 at 114 BPM — near exact match)",
+          "Feedback": 25,
+          "Noise": 3.5,
+          "BBD Size": 2048,
+          "Mix": 30,
+          "Level": 0,
+          "Rate": 0.1,
+          "Depth": 0,
+          "Headroom": 0,
+          "Trails": true
+        }
+      }
+    },
+    "reverb": {
+      "model": "Ganymede",
+      "based_on": "Line 6 Original",
+      "notes": "Short, intimate reverb matching the small studio recording environment. This is not a spacious reverb — the album was recorded in a cramped New York studio and has an intimate, close-mic'd quality. Both snapshots use modest Decay and low Mix. Chorus/lead snapshot opens slightly. Tone at 4.5 is darker than neutral — matching the album's rolled-off, lo-fi top end aesthetic.",
+      "snapshots": {
+        "1_verse": {
+          "Decay": 1.0,
+          "Predelay": 8,
+          "Tone": 4.5,
+          "Modulation": 1.5,
+          "Mix": 18,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_chorus_lead": {
+          "Decay": 1.4,
+          "Predelay": 10,
+          "Tone": 5.0,
+          "Modulation": 1.5,
+          "Mix": 25,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  },
+  "snapshots": {
+    "1_verse": {
+      "footswitch": "FS1",
+      "description": "Verse tone. Stupor OD at Drive 4.0 — lightly driven, restrained. Minotaur bypassed. Gentle EQ — mid +3dB at 600Hz, High Cut 9kHz. Triplet quarter delay (351ms) at modest 20% mix. Short intimate reverb (1.0 sec, 18% mix). Open gate at -65dB.",
+      "pickup_position": "Bridge or middle"
+    },
+    "2_chorus_lead": {
+      "footswitch": "FS2",
+      "description": "Chorus and lead melody passages. Stupor OD pushed slightly to Drive 5.5. Minotaur active — Gain 2.0, Level 7.5 (MXR Micro Amp lift). EQ opens slightly — High Cut 9.5kHz, Level +3dB. Dotted eighth delay (395ms) at 30% mix. Reverb opens to 1.4 sec at 25% mix.",
+      "pickup_position": "Bridge"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard",
+    "key": "F major",
+    "capo": null,
+    "bpm_note": "114 BPM — one of the slowest tempos on the Is This It album, described as the band's attempt at a ballad",
+    "pickup_notes": "Bridge or middle for verse (Snapshot 1) — the verse melody has a round, slightly warm quality. Bridge for chorus and lead (Snapshot 2).",
+    "technique": "Pick lightly for the verse — the song's intimate character comes from restrained playing. The two-guitar arrangement has Hammond on rhythm chords and Valensi on the lead melody that opens the song. As a single player, the lead melody is the most identifiable element to prioritize.",
+    "snapshot_cues": "Snapshot 1 for verse sections. Switch to Snapshot 2 for chorus and the lead melody passages. The song's structure is verse-chorus with a simple lead element — the transition between snapshots should be smooth and unobtrusive.",
+    "era_note": "This is the Is This It era rig — Jekyll & Hyde OD + RAT + MXR Micro Amp into Hot Rod DeVille. The Stupor OD at low Drive approximates the Jekyll & Hyde OD side for this song. The RAT (Ratatouille Dist) is confirmed for the era but omitted from this specific preset — it suits the heavier tracks on the album (Hard to Explain, New York City Cops) more than this restrained title track.",
+    "lo_fi_character": "The album was recorded with no EQ after the preamp — a deliberate lo-fi aesthetic. The Ganymede reverb Tone at 4.5 and the Adriatic Delay Noise at 3.5 both add a small amount of analog warmth that approximates the slightly lo-fi, non-pristine character of the recording."
+  }
+}
