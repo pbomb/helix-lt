@@ -40,7 +40,7 @@ export default function Catalog() {
                       className="song-button"
                       to={`/presets/${toSlug(preset.preset_name)}`}
                     >
-                      <AlbumArt artist={preset.artist} album={preset.album} size={36} />
+                      <AlbumArt thumbnail={preset.thumbnail} album={preset.album} size={36} />
                       <span className="song-name">{preset.preset_name}</span>
                       <span className="song-meta">{preset.album} · {preset.master_bpm} BPM</span>
                     </Link>

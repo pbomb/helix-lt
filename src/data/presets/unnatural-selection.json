@@ -2,6 +2,7 @@
   "preset_name": "Unnatural Selection",
   "artist": "Muse",
   "album": "The Resistance",
+  "thumbnail": "https://i.scdn.co/image/ab67616d00004851b6d4566db0d12894a1a3b7a2",
   "tuning": "Drop D",
   "master_bpm": 138,
   "notes": "No amp+cab block — running into tube amp. Two snapshots: clean intro/verse and heavy riff. Confirmed effect: MXR Blue Box sub-octave fuzz. IMPORTANT: 'Sub Octave Fuzz' model referenced in earlier preset research does not exist in the YAML. Best available approximation uses TWO blocks: Wringer Fuzz (fuzz character) + Boctaver (Boss OC-2, sub-octave). These work together to approximate the Blue Box's integrated fuzz-plus-sub-octave circuit — Wringer Fuzz provides the aggressive fuzz saturation, Boctaver adds the octave-down voice. This is less integrated than a dedicated sub-octave fuzz model but achieves the core tonal elements. Scream 808 as additional boost/tightener in S2. Confirmed amp: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy).",

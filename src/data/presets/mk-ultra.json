@@ -2,6 +2,7 @@
   "preset_name": "MK Ultra",
   "artist": "Muse",
   "album": "The Resistance",
+  "thumbnail": "https://i.scdn.co/image/ab67616d00004851b6d4566db0d12894a1a3b7a2",
   "tuning": "Drop D",
   "master_bpm": 128,
   "notes": "No amp+cab block — running into tube amp. Three snapshots: verse/clean, heavy riff, bridge/breakdown. Confirmed rig: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy). Scream 808 (TS808) confirmed as clean boost into amp for heavy sections. Pitch Wham (DigiTech Whammy) confirmed for octave-down harmony — Bellamy uses Whammy set to Harmony -1 octave, blending dry with octave-down signal. Poly Wham (Helix version) auto-assigns to EXP 1. EQ compensates for removed Das Benzin Lead and 4x12 V30 cab voicing — aggressive mid boost at 700Hz is the defining characteristic of Bellamy's Resistance-era tone. IMPORTANT: Dynamic Hall Room Size must NOT be snapshot-variable — set as fixed value to avoid audible algorithm bump.",

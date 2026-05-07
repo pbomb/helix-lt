@@ -16,6 +16,9 @@ import bodysnatchers from './presets/bodysnatchers.json'
 import theAdultsAreTalking from './presets/the-adults-are-talking.json'
 import selfless from './presets/selfless.json'
 import badDecisions from './presets/bad-decisions.json'
+import mkUltra from './presets/mk-ultra.json'
+import plugInBaby from './presets/plug-in-baby.json'
+import unnaturalSelection from './presets/unnatural-selection.json'
 
 export const allPresets: Preset[] = [
   creep as Preset,
@@ -27,6 +30,9 @@ export const allPresets: Preset[] = [
   theAdultsAreTalking as Preset,
   selfless as Preset,
   badDecisions as Preset,
+  mkUltra as Preset,
+  plugInBaby as Preset,
+  unnaturalSelection as Preset,
 ]
 
 export const presetsByArtist: Record<string, Preset[]> = allPresets.reduce<Record<string, Preset[]>>((acc, preset) => {

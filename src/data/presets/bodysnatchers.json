@@ -2,6 +2,7 @@
   "preset_name": "Bodysnatchers",
   "artist": "Radiohead",
   "album": "In Rainbows",
+  "thumbnail": "https://i.scdn.co/image/ab67616d00004851de3c04b5fc750b68899b20a9",
   "tuning": "See snapshot notes — Snapshots 1+2 standard tuning (Jonny), Snapshots 3+4 Drop D (Thom)",
   "master_bpm": 166,
   "notes": "Combined Jonny Greenwood and Thom Yorke parts in a single preset with four snapshots. Snapshots 1+2 cover Jonny's lead/riff part (standard tuning, Boss OD-3 via Stupor OD, Boss RE-20 slapback). Snapshots 3+4 cover Thom's rhythm guitar part (Drop D, MXR Distortion+ via Top Secret OD, minimal slapback). Signal chain uses only 5 blocks — Stupor OD and Top Secret OD alternate active/bypassed states across snapshot pairs, sharing the same Noise Gate, EQ, and Transistor Tape blocks. If playing both parts in the same session, tune to Drop D and use a capo at the 2nd fret for Snapshots 1+2 (Jonny part) to restore effective standard pitch — or retune between snapshots. Confirmed sources: Jools Holland January 2008 for Thom; From The Basement for Jonny.",
