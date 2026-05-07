@@ -73,7 +73,7 @@
           "Treble": 5.5,
           "Bass": 4.0,
           "Level": 6.5,
-          "Fuzz Type": "Fuzz"
+          "Fuzz Type": 0
         },
         "2_lead_shimmer": {
           "active": false,
@@ -81,7 +81,7 @@
           "Treble": 5.5,
           "Bass": 4.0,
           "Level": 6.5,
-          "Fuzz Type": "Fuzz"
+          "Fuzz Type": 0
         },
         "3_fuzz_solo": {
           "active": true,
@@ -89,7 +89,7 @@
           "Treble": 5.5,
           "Bass": 4.0,
           "Level": 6.5,
-          "Fuzz Type": "Fuzz"
+          "Fuzz Type": 0
         }
       }
     },

@@ -44,7 +44,7 @@
           "Treble": 5.0,
           "Bass": 3.5,
           "Level": 6.5,
-          "Fuzz Type": "Fuzz"
+          "Fuzz Type": 1
         },
         "2_heavy": {
           "active": true,
@@ -52,7 +52,7 @@
           "Treble": 5.0,
           "Bass": 3.5,
           "Level": 6.5,
-          "Fuzz Type": "Fuzz"
+          "Fuzz Type": 1
         }
       }
     },
