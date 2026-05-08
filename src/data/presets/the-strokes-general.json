@@ -1,5 +1,5 @@
 {
-  "preset_name": "The Strokes — General",
+  "preset_name": "General Tones",
   "artist": "The Strokes",
   "album": "Cross-album general preset",
   "tuning": "Standard",
@@ -162,7 +162,7 @@
       }
     },
     "eq": {
-      "model": "Parametric",
+      "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "The telephone filter EQ is the single most defining characteristic of the Strokes' tone across all albums. All three snapshots share this fundamental voicing: aggressive low bass cut, boosted mids, rolled-off highs. The specific mid frequency and gain vary per snapshot — clean uses a lower, warmer mid boost; dirty pushes it harder and lower for telephone character; solo opens the high end slightly for lead clarity and raises the mid frequency for more cut.",
       "snapshots": {
