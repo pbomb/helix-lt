@@ -2,6 +2,7 @@
   "preset_name": "General Tones",
   "artist": "The Strokes",
   "album": "Cross-album general preset",
+  "thumbnail": "https://images.seeklogo.com/logo-png/13/2/the-strokes-logo-png_seeklogo-139195.png",
   "tuning": "Standard",
   "master_bpm": 100,
   "notes": "No amp+cab block — running into tube amp. General-purpose Strokes preset with three snapshots covering clean, dirty, and solo tones drawn from the overall cross-album tonal signature. Not specific to any one song — designed to cover the mood of the most popular tracks across Is This It, Room on Fire, and The New Abnormal. BPM set to 100 as a neutral default — use tap tempo to lock to the specific song being played. Confirmed cross-album rig constants: Visual Sound Jekyll & Hyde OD (Stupor OD), Pro Co RAT (Ratatouille Dist), MXR Micro Amp (Minotaur), Fender Hot Rod DeVille (US Double Nrm — removed per amp+cab policy). Compression (Red Squeeze / MXR Dyna Comp) confirmed on Hammond's board. The telephone filter EQ — aggressive low and high cuts with boosted mids — is the single most defining characteristic of the Strokes' tone across all albums and must be present in all three snapshots.",
