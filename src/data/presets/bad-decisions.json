@@ -8,6 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 118 BPM. Three snapshots: rhythm, chorus, and bridge solo. Key tonal difference from other Strokes presets: Hedgehog D9 (Maxon SD9) replaces Stupor OD — harder clipping, more aggressive character matching the song's upbeat, energetic character. 70s Chorus (Boss CE-2 approximation) active on rhythm and chorus snapshots — gives the New Order-adjacent character noted by reviewers.",
   "signal_chain": [
     "Noise Gate",
+    "Red Squeeze",
     "Hedgehog D9",
     "Minotaur",
     "70s Chorus",
@@ -35,6 +36,31 @@
           "Threshold": -50,
           "Decay": 20,
           "Level": 0
+        }
+      }
+    },
+    "compressor": {
+      "model": "Red Squeeze",
+      "based_on": "MXR Dyna Comp",
+      "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in all three snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
+      "snapshots": {
+        "1_rhythm": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "2_chorus": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "3_bridge_solo": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
         }
       }
     },

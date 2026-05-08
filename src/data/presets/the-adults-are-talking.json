@@ -8,6 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 112 BPM. Nick Valensi Minotaur (Klon Centaur) confirmed notable user.",
   "signal_chain": [
     "Noise Gate",
+    "Red Squeeze",
     "Stupor OD",
     "Minotaur",
     "Parametric EQ",
@@ -28,6 +29,25 @@
           "Threshold": -58,
           "Decay": 22,
           "Level": 0
+        }
+      }
+    },
+    "compressor": {
+      "model": "Red Squeeze",
+      "based_on": "MXR Dyna Comp",
+      "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in both snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
+      "snapshots": {
+        "1_rhythm": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "2_lead": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
         }
       }
     },
