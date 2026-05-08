@@ -8,6 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Confirmed rig for Is This It era: Visual Sound Jekyll & Hyde Ultimate Overdrive/Distortion pedal + Pro Co RAT + MXR Micro Amp, both guitarists through Fender Hot Rod DeVille 2x12 (US Double Nrm — removed per amp+cab policy). Title track is described as the album's ballad — one of the slowest tempos on the record. Tone is intentionally restrained compared to more aggressive Is This It era tracks. Jekyll & Hyde overdrive side (Stupor OD) at low drive is the correct voice for this song — the RAT (Ratatouille Dist) is more appropriate for heavier tracks on the album. Minotaur (Klon Centaur — Nick Valensi confirmed notable user per YAML) approximates MXR Micro Amp boost for lead passages. No chorus, no modulation — this is one of the most stripped-back presets in the collection, honoring the album's bare-bones ethos. Studio recording had no EQ applied after the preamp — the engineer ran guitar directly into preamp with no post EQ. EQ block is kept gentle to honor this.",
   "signal_chain": [
     "Noise Gate",
+    "Red Squeeze",
     "Stupor OD",
     "Minotaur",
     "Parametric EQ",
@@ -35,6 +36,25 @@
           "Threshold": -60,
           "Decay": 25,
           "Level": 0
+        }
+      }
+    },
+    "compressor": {
+      "model": "Red Squeeze",
+      "based_on": "MXR Dyna Comp",
+      "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in both snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
+      "snapshots": {
+        "1_verse": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "2_chorus_lead": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
         }
       }
     },
