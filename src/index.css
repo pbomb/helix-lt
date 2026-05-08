@@ -168,12 +168,22 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 .chain-wrap { display: flex; align-items: center; gap: 0.3rem; }
 
 .chain-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   background: var(--surface2);
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 0.3rem 0.75rem;
   font-size: 0.875rem;
   white-space: nowrap;
+}
+
+.chain-pill-icon {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
 }
 
 .chain-arrow { color: var(--text-dim); font-size: 0.875rem; }
@@ -194,12 +204,29 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 
 .block-card-header {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.6rem;
   padding: 0.6rem 0.75rem;
   background: var(--surface2);
   border-bottom: 1px solid var(--border);
 }
+
+.block-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Category-based icon colors */
+.block-icon--multi      { color: #94a3b8; }
+.block-icon--distortion { color: #f97316; }
+.block-icon--dynamics   { color: #a78bfa; }
+.block-icon--eq         { color: #34d399; }
+.block-icon--modulation { color: #60a5fa; }
+.block-icon--delay      { color: #fbbf24; }
+.block-icon--reverb     { color: #67e8f9; }
+.block-icon--pitch      { color: #f472b6; }
 
 .block-model { font-weight: 600; font-size: 1rem; }
 

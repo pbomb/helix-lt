@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import type { Block } from '../types'
 import { presetBySlug } from '../data/index'
+import { getBlockIcon, getBlockCategory } from './BlockIcon'
 
 interface BlockWithKey extends Block {
   key: string
@@ -34,9 +35,15 @@ function BlockCard({ block, snapshotNames }: { block: BlockWithKey; snapshotName
   const hasActiveField = activeValues.some(v => v !== undefined)
   const activeVaries = hasActiveField && new Set(activeValues.map(String)).size > 1
 
+  const icon = getBlockIcon(block.model)
+  const category = getBlockCategory(block.model)
+
   return (
     <div className="block-card">
       <div className="block-card-header">
+        {icon && (
+          <span className={`block-icon block-icon--${category}`}>{icon}</span>
+        )}
         <span className="block-model">{block.model}</span>
         {block.based_on && <span className="block-based-on">based on {block.based_on}</span>}
       </div>
@@ -129,12 +136,21 @@ export default function PresetDetail() {
       <section className="signal-chain-section">
         <h2>Signal Chain</h2>
         <div className="signal-chain">
-          {preset.signal_chain.map((model, i) => (
-            <div key={i} className="chain-wrap">
-              <div className="chain-pill">{model}</div>
-              {i < preset.signal_chain.length - 1 && <span className="chain-arrow">→</span>}
-            </div>
-          ))}
+          {preset.signal_chain.map((model, i) => {
+            const chainIcon = getBlockIcon(model)
+            const chainCat = getBlockCategory(model)
+            return (
+              <div key={i} className="chain-wrap">
+                <div className="chain-pill">
+                  {chainIcon && (
+                    <span className={`chain-pill-icon block-icon--${chainCat}`}>{chainIcon}</span>
+                  )}
+                  {model}
+                </div>
+                {i < preset.signal_chain.length - 1 && <span className="chain-arrow">→</span>}
+              </div>
+            )
+          })}
         </div>
       </section>
 
