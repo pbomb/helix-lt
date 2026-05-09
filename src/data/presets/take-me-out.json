@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d00004851a5d1c06a8172d4861367953c",
   "tuning": "Standard",
   "master_bpm": 133,
-  "notes": "No amp+cab block — running into tube amp. CONFIRMED STUDIO RIG from Sound on Sound production article: nearly all guitar parts recorded using Kapranos's battered old Selmer valve combo amp and Hardy's Fender Bassman 100. No amp+cab model available for Selmer on Helix — the Selmer is a vintage British valve amp with EL84 power tubes, similar in character to a Vox AC30. EQ compensates for removed amp voicing. CRITICAL SONG NOTE: Take Me Out has a famous and deliberate tempo change — the angular intro riff is at approximately 104 BPM, and the main driving section kicks in at 133 BPM. Master BPM set to 133 (dominant section). Intro snapshot delay is set as a fixed ms value (345ms) since no note division lands cleanly at 104 BPM. Main riff and lead snapshot delays are tempo-synced to 133 BPM. Three snapshots: angular intro, driving main riff, and lead/solo. Deranged Master (Dallas Rangemaster Treble Booster) approximates Kapranos's confirmed Telenordia Treble Booster for main riff. Elephant Man (EHX Deluxe Memory Man) chosen for delay — its modulation approximates the wobbly character of Kapranos's confirmed Gurus Echosex 2 (Binson Echorec-style).",
+  "notes": "No amp+cab block — running into tube amp. CONFIRMED STUDIO RIG from Sound on Sound production article: nearly all guitar parts recorded using Kapranos's battered old Selmer valve combo amp and Hardy's Fender Bassman 100. No amp+cab model available for Selmer on Helix — the Selmer is a vintage British valve amp with EL84 power tubes, similar in character to a Vox AC30. EQ compensates for removed amp voicing. CRITICAL SONG NOTE: Take Me Out has a famous and deliberate tempo change — the angular intro riff is at approximately 104 BPM, and the main driving section kicks in at 133 BPM. Master BPM set to 133 (dominant section). Intro snapshot delay is set as a fixed ms value (345ms) since no note division lands cleanly at 104 BPM. Main riff and lead snapshot delays are tempo-synced to 133 BPM. Three snapshots: angular intro, driving main riff, and lead/solo. Deranged Master (Dallas Rangemaster Treble Booster) approximates Kapranos's confirmed Telenordia Treble Booster for main riff. Elephant Man (EHX Deluxe Memory Man) chosen for delay — its modulation approximates the wobbly character of Kapranos's confirmed Gurus Echosex 2 (Binson Echorec-style). RIG COMPENSATION UPDATE: Stupor OD added before Deranged Master to compensate for Lace Sensor lower output (vs Kapranos's hotter Creamery pickups) and Fender Super Champ XD higher clean headroom (vs Selmer valve combo natural breakup). Deranged Master Drive and Level increased for same reason. Parametric EQ Level raised to push tube amp input stage harder.",
   "confirmed_sources": [
     "Sound on Sound — Recording Franz Ferdinand (Selmer amp + Fender Bassman 100)",
     "Equipboard — Alex Kapranos gear (Telenordia Treble Booster, Gurus Echosex 2, Fender Hot Rod Deluxe live 2004)",
@@ -15,6 +15,7 @@
   "tempo_change_note": "Take Me Out has a famous deliberate tempo change at approximately 0:53. The intro (Snapshot 1) is at ~104 BPM. The main section (Snapshots 2+3) is at ~133 BPM. Use tap tempo on the Helix to lock to each section. Master BPM is set to 133 for the main section — tap before Snapshot 1 to adjust intro delay if needed, or leave it as a fixed ms value.",
   "signal_chain": [
     "Noise Gate",
+    "Stupor OD",
     "Deranged Master",
     "Parametric EQ",
     "Elephant Man",
@@ -24,57 +25,82 @@
     "noise_gate": {
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
-      "notes": "Intro snapshot most open — angular clean riff must decay naturally. Main riff tightens as Deranged Master adds noise. Lead snapshot tightens further.",
+      "notes": "Intro snapshot most open — angular riff must decay naturally. Main riff and lead tighten as Stupor OD and Deranged Master generate more noise.",
       "snapshots": {
         "1_angular_intro": {
-          "Threshold": -68,
+          "Threshold": -65,
           "Decay": 35,
           "Level": 0
         },
         "2_main_riff": {
-          "Threshold": -58,
+          "Threshold": -55,
           "Decay": 25,
           "Level": 0
         },
         "3_lead": {
-          "Threshold": -55,
+          "Threshold": -52,
           "Decay": 22,
           "Level": 0
+        }
+      }
+    },
+    "overdrive": {
+      "model": "Stupor OD",
+      "based_on": "BOSS SD-1 Super OverDrive",
+      "notes": "Added to compensate for Lace Sensor lower output and Super Champ XD higher clean headroom vs Kapranos's confirmed rig. Simulates the natural valve breakup the Selmer combo would have provided at volume. Drive kept low in all snapshots — this is not an obvious overdrive effect, just a foundation of saturation. ACTIVE in all three snapshots with progressively increasing Drive.",
+      "snapshots": {
+        "1_angular_intro": {
+          "active": true,
+          "Drive": 3.0,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "2_main_riff": {
+          "active": true,
+          "Drive": 4.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "3_lead": {
+          "active": true,
+          "Drive": 5.5,
+          "Tone": 6.0,
+          "Level": 7.5
         }
       }
     },
     "treble_booster": {
       "model": "Deranged Master",
       "based_on": "Dallas Rangemaster Treble Booster",
-      "notes": "Confirmed: Kapranos uses a Telenordia Treble Booster on his 2022 live rig. Deranged Master (Dallas Rangemaster) is the closest available model — treble boosters were the original British tone-shaping pedal, cutting low end and boosting high-mid frequencies before a valve amp. WARNING from YAML: 'Like the real thing, this model can take your head off! Works best before a distorted amp.' BYPASSED in Snapshot 1 (angular intro — clean and angular, no boost needed). ACTIVE in Snapshots 2 and 3. Drive kept conservative — the Rangemaster into a valve amp should add presence and bite, not fuzz.",
+      "notes": "Confirmed: Kapranos uses a Telenordia Treble Booster on his 2022 live rig. Deranged Master (Dallas Rangemaster) is the closest available model. WARNING from YAML: 'Like the real thing, this model can take your head off! Works best before a distorted amp.' BYPASSED in Snapshot 1 (intro riff is cleaner and more angular). ACTIVE in Snapshots 2 and 3. Drive and Level pushed harder than initial version to compensate for Lace Sensor lower output and Super Champ XD clean headroom.",
       "snapshots": {
         "1_angular_intro": {
           "active": false,
-          "Drive": 4.0,
+          "Drive": 6.5,
           "Bass": 3.0,
-          "Treble": 7.0,
-          "Level": 5.5
+          "Treble": 7.5,
+          "Level": 6.5
         },
         "2_main_riff": {
           "active": true,
-          "Drive": 4.0,
+          "Drive": 6.5,
           "Bass": 3.0,
-          "Treble": 7.0,
-          "Level": 5.5
+          "Treble": 7.5,
+          "Level": 6.5
         },
         "3_lead": {
           "active": true,
-          "Drive": 5.0,
+          "Drive": 7.5,
           "Bass": 3.0,
-          "Treble": 7.5,
-          "Level": 6.0
+          "Treble": 8.0,
+          "Level": 7.0
         }
       }
     },
     "eq": {
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Compensates for removed Selmer valve amp voicing. The Selmer is a British EL84-powered amp with a bright, slightly spiky midrange character — similar to a Vox AC30 but more raw and unrefined. Mid boost at 800-900Hz adds the angular, percussive mid presence of the Selmer character. High Cut kept relatively open — the Selmer and Rangemaster combination has a naturally bright top end that should not be over-tamed. Intro snapshot uses a slightly different voicing — more open and jangly for the clean angular riff character.",
+      "notes": "Compensates for removed Selmer valve amp voicing. Level raised significantly from initial version to push Super Champ XD input stage harder, encouraging natural preamp breakup. Mid boost at 800-900Hz adds the angular, percussive Selmer midrange character. Intro uses more open voicing — brighter and more jangly.",
       "snapshots": {
         "1_angular_intro": {
           "Low Freq": 150,
@@ -82,13 +108,13 @@
           "Low Gain": -1,
           "Mid Freq": 900,
           "Mid Q": 2.0,
-          "Mid Gain": 2,
+          "Mid Gain": 3,
           "High Freq": 4500,
           "High Q": 0.7,
           "High Gain": 1,
           "Low Cut": 80,
           "High Cut": 11000,
-          "Level": 0
+          "Level": 2
         },
         "2_main_riff": {
           "Low Freq": 150,
@@ -96,13 +122,13 @@
           "Low Gain": -2,
           "Mid Freq": 800,
           "Mid Q": 2.0,
-          "Mid Gain": 3,
+          "Mid Gain": 4,
           "High Freq": 4000,
           "High Q": 0.7,
           "High Gain": 2,
           "Low Cut": 90,
           "High Cut": 10000,
-          "Level": 2
+          "Level": 4
         },
         "3_lead": {
           "Low Freq": 150,
@@ -110,20 +136,20 @@
           "Low Gain": -2,
           "Mid Freq": 800,
           "Mid Q": 2.0,
-          "Mid Gain": 3,
+          "Mid Gain": 4,
           "High Freq": 4500,
           "High Q": 0.7,
           "High Gain": 2,
           "Low Cut": 90,
           "High Cut": 10500,
-          "Level": 3
+          "Level": 4
         }
       }
     },
     "delay": {
       "model": "Elephant Man",
       "based_on": "Electro-Harmonix Deluxe Memory Man",
-      "notes": "Chosen over Cosmos Echo and Adriatic Delay specifically for the Mode and Depth parameters which approximate the Gurus Echosex 2 / Binson Echorec's characteristic wobble. Kapranos described the Echosex as having 'a bit of wobble in it as if like you've got a wonky wheel on the original.' Mode set to Chorus, Depth at low value adds subtle pitch modulation to repeats — this is the Echorec character. S1 intro: FIXED ms value of 345ms — no note division lands cleanly at 104 BPM within 20ms tolerance. S2 main riff: tempo-synced to 133 BPM, eighth note (225ms — near exact match 0.6ms off). S3 lead: tempo-synced to 133 BPM, dotted eighth (338ms — near exact match 0.3ms off).",
+      "notes": "Chosen for Mode and Depth parameters which approximate the Gurus Echosex 2 / Binson Echorec wobbly character. Kapranos described the Echosex as having 'a bit of wobble in it as if like you've got a wonky wheel on the original.' Mode Chorus, Depth at low values adds subtle pitch modulation to repeats. S1: FIXED 345ms — no note division lands cleanly at 104 BPM. S2: 1/8 synced to 133 BPM (226ms, 0.6ms off). S3: d1/8 synced to 133 BPM (338ms, 0.3ms off). Unchanged from initial version.",
       "snapshots": {
         "1_angular_intro": {
           "TempoSync1": false,
@@ -168,7 +194,7 @@
     "reverb": {
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
-      "notes": "Room Size FIXED at 15m — do NOT make snapshot-variable, causes audible algorithm bump. The recording has a tight, slightly live room quality — not a large hall. Intro uses moderate reverb for the angular riff's space. Main riff is relatively dry and punchy — the driving rhythm section needs to cut through. Lead opens up for melodic passages.",
+      "notes": "Room Size FIXED at 15m — do NOT make snapshot-variable, causes audible algorithm bump. Unchanged from initial version — reverb settings were correct.",
       "room_size_fixed": 15,
       "snapshots": {
         "1_angular_intro": {
@@ -219,21 +245,21 @@
   "snapshots": {
     "1_angular_intro": {
       "footswitch": "FS1",
-      "description": "Angular intro riff at ~104 BPM. Deranged Master bypassed — clean and angular, no treble boost. Gate open at -68dB. Moderate EQ — bright and jangly. Fixed 345ms delay (no division lands cleanly at 104 BPM) with Chorus modulation at Depth 15. Moderate reverb (1.5 sec, 28% mix). Switch to FS2 at the famous tempo change around 0:53.",
+      "description": "Angular intro at ~104 BPM. Stupor OD at Drive 3.0. Deranged Master bypassed. Gate -65dB. EQ Level +2dB. Fixed 345ms delay, Depth 15. Reverb 1.5 sec, 28% mix. Switch to FS2 at tempo change around 0:53.",
       "tuning": "Standard",
       "pickup_position": "Bridge",
       "bpm": 104
     },
     "2_main_riff": {
       "footswitch": "FS2",
-      "description": "Main driving section at 133 BPM. Deranged Master active — treble boost into tube amp adds presence and bite. Tempo-synced eighth note delay (226ms, 22% mix). Dry, punchy reverb (0.7 sec, 12% mix). Tighter gate. The angular, percussive post-punk rhythm character.",
+      "description": "Main section at 133 BPM. Stupor OD Drive 4.5. Deranged Master active at Drive 6.5, Treble 7.5, Level 6.5 — pushed hard to drive Super Champ XD into natural breakup. EQ Level +4dB. Eighth note delay (226ms, 22% mix). Tight reverb (0.7 sec, 12% mix).",
       "tuning": "Standard",
       "pickup_position": "Bridge",
       "bpm": 133
     },
     "3_lead": {
       "footswitch": "FS3",
-      "description": "Lead passages and post-chorus sections. Deranged Master active with slightly higher Drive and Level. Tempo-synced dotted eighth delay (338ms, 38% mix) — more prominent for lead lines to bloom. Elephant Man Depth 18 — more wobble on lead repeats. More reverb (1.8 sec, 32% mix) for melodic passages to breathe.",
+      "description": "Lead passages. Stupor OD Drive 5.5. Deranged Master Drive 7.5, Treble 8.0, Level 7.0. EQ Level +4dB. Dotted eighth delay (338ms, 38% mix), Depth 18. Reverb 1.8 sec, 32% mix.",
       "tuning": "Standard",
       "pickup_position": "Bridge or neck",
       "bpm": 133
@@ -247,10 +273,11 @@
       "intro": "~104 BPM — angular, slightly stop-start feel",
       "main_section": "~133 BPM — driving, relentless post-punk rhythm"
     },
-    "tempo_change_technique": "The shift from intro to main section at around 0:53 is one of the most recognizable moments in 2000s indie rock. It should feel like the song suddenly locks into a gear and accelerates. Switch from Snapshot 1 to Snapshot 2 exactly on the first downbeat of the main riff. The Deranged Master engaging simultaneously with the tempo change reinforces the dramatic shift.",
-    "pickup_notes": "Bridge pickup throughout Snapshots 1 and 2 — the angular, cutting tone demands maximum attack and presence. Bridge or neck for Snapshot 3 depending on the specific lead passage.",
-    "deranged_master_note": "The Deranged Master (Rangemaster treble booster) works best before a valve tube amp — its Bass at 3.0 rolls off the low end while Treble at 7.0 emphasizes the high-mid attack. This gives the main riff its characteristic percussive, slightly spiky quality that the Selmer valve amp and EL84 power tubes would naturally reinforce.",
-    "elephant_man_wobble": "The Elephant Man's Depth parameter at 12-18 in Chorus mode adds a barely perceptible pitch fluctuation to the delay repeats — this is the Echorec character Kapranos described as the 'wonky wheel' wobble. At these low Depth values it should feel like an organic, slightly imperfect analog quality rather than an obvious modulation effect.",
-    "guitar_note": "Kapranos used his battered old Selmer amp in the studio with presumably his guitars of the period — a Fender Telecaster Deluxe '72 style guitar is consistent with the bright, cutting attack of the recording. Your Strat Plus Deluxe's Lace Sensor bridge pickup will give a similar single-coil attack character. Use bridge pickup for all rhythm and main riff work."
+    "tempo_change_technique": "Switch from Snapshot 1 to Snapshot 2 exactly on the first downbeat of the main riff at 0:53. The Stupor OD increasing plus Deranged Master engaging simultaneously reinforces the dramatic tonal and rhythmic shift.",
+    "pickup_notes": "Bridge pickup throughout Snapshots 1 and 2. Bridge or neck for Snapshot 3.",
+    "rig_compensation": "The Stupor OD at Drive 3.0-5.5 and the higher Deranged Master settings compensate for two rig-specific factors: Lace Sensor lower output vs Kapranos's Creamery custom pickups, and Super Champ XD higher clean headroom vs the Selmer valve combo's natural breakup. If still too clean, raise amp physical volume — the Deranged Master responds best when power tubes are working moderately hard.",
+    "further_adjustments": "If still too clean after this version: (1) raise amp physical volume, (2) raise Stupor OD Drive by 1.0 per snapshot, (3) raise Parametric EQ Level by a further +2dB. If it becomes too harsh or spiky: pull Deranged Master Treble back toward 7.0 and reduce Stupor OD Drive by 0.5.",
+    "elephant_man_wobble": "Elephant Man Depth at 12-18 in Chorus mode adds barely perceptible pitch fluctuation — the Echorec wonky-wheel character. Should feel organic rather than obvious.",
+    "deranged_master_warning": "YAML notes: 'Like the real thing, this model can take your head off!' At Drive 6.5-7.5 it will be aggressive. The Bass at 3.0 is critical — it rolls off low end that would otherwise become muddy. If the tone is too bright or spiky, reduce Treble before reducing Drive."
   }
 }
