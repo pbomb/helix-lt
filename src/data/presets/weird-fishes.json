@@ -65,7 +65,7 @@
         "1_verse": {
           "active": true,
           "Speed": 3.5,
-          "Depth": 30,
+          "Depth": 3.0,
           "Predelay": 5,
           "Wave Shape": "Sine",
           "Tone": 5.0,
@@ -75,7 +75,7 @@
         "2_intense": {
           "active": true,
           "Speed": 4.0,
-          "Depth": 35,
+          "Depth": 3.5,
           "Predelay": 5,
           "Wave Shape": "Sine",
           "Tone": 5.0,

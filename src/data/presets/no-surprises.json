@@ -64,7 +64,7 @@
         "1_studio": {
           "active": true,
           "Rate": 0.5,
-          "Intensity": 20,
+          "Intensity": 2.0,
           "Mode": "Chorus",
           "Lamp Bias": 5.0,
           "Mix": 20,
@@ -73,7 +73,7 @@
         "2_live_atmospheric": {
           "active": true,
           "Rate": 0.5,
-          "Intensity": 20,
+          "Intensity": 2.0,
           "Mode": "Chorus",
           "Lamp Bias": 5.0,
           "Mix": 20,

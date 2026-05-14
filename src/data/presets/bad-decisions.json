@@ -194,7 +194,7 @@
     "delay": {
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
-      "notes": "Delays are tempo-synced to 118 BPM. Snapshots 1 and 2: eighth note (254ms) — tight, driving, matches energetic rhythm character. Snapshot 3: dotted eighth (381ms) — more spacious for bridge solo. Snapshot 3 uses BBD Size 4096 and slight modulation (Rate 2.0Hz, Depth 15%) for a slightly organic vintage delay character appropriate for the glam rock bridge.",
+      "notes": "Delays are tempo-synced to 118 BPM. Snapshots 1 and 2: eighth note (254ms) — tight, driving, matches energetic rhythm character. Snapshot 3: dotted eighth (381ms) — more spacious for bridge solo. Snapshot 3 uses BBD Size 4096 and slight modulation (Rate 2.0Hz, Depth 1.5) for a slightly organic vintage delay character appropriate for the glam rock bridge.",
       "snapshots": {
         "1_rhythm": {
           "TempoSync1": true,
@@ -234,7 +234,7 @@
           "Mix": 40,
           "Level": 0,
           "Rate": 2.0,
-          "Depth": 15,
+          "Depth": 1.5,
           "Headroom": 0,
           "Trails": true
         }

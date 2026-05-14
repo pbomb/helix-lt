@@ -156,7 +156,7 @@
           "Time": 345,
           "Feedback": 20,
           "Mode": "Chorus",
-          "Depth": 15,
+          "Depth": 1.5,
           "Mix": 30,
           "Level": 0,
           "Noise": 3.0,
@@ -169,7 +169,7 @@
           "Time": "226ms (1/8 at 133 BPM — near exact match)",
           "Feedback": 15,
           "Mode": "Chorus",
-          "Depth": 12,
+          "Depth": 1.2,
           "Mix": 22,
           "Level": 0,
           "Noise": 3.0,
@@ -182,7 +182,7 @@
           "Time": "338ms (d1/8 at 133 BPM — near exact match)",
           "Feedback": 28,
           "Mode": "Chorus",
-          "Depth": 18,
+          "Depth": 1.8,
           "Mix": 38,
           "Level": 0,
           "Noise": 3.0,
@@ -245,7 +245,7 @@
   "snapshots": {
     "1_angular_intro": {
       "footswitch": "FS1",
-      "description": "Angular intro at ~104 BPM. Stupor OD at Drive 3.0. Deranged Master bypassed. Gate -65dB. EQ Level +2dB. Fixed 345ms delay, Depth 15. Reverb 1.5 sec, 28% mix. Switch to FS2 at tempo change around 0:53.",
+      "description": "Angular intro at ~104 BPM. Stupor OD at Drive 3.0. Deranged Master bypassed. Gate -65dB. EQ Level +2dB. Fixed 345ms delay, Depth 1.5. Reverb 1.5 sec, 28% mix. Switch to FS2 at tempo change around 0:53.",
       "tuning": "Standard",
       "pickup_position": "Bridge",
       "bpm": 104
@@ -259,7 +259,7 @@
     },
     "3_lead": {
       "footswitch": "FS3",
-      "description": "Lead passages. Stupor OD Drive 5.5. Deranged Master Drive 7.5, Treble 8.0, Level 7.0. EQ Level +4dB. Dotted eighth delay (338ms, 38% mix), Depth 18. Reverb 1.8 sec, 32% mix.",
+      "description": "Lead passages. Stupor OD Drive 5.5. Deranged Master Drive 7.5, Treble 8.0, Level 7.0. EQ Level +4dB. Dotted eighth delay (338ms, 38% mix), Depth 1.8. Reverb 1.8 sec, 32% mix.",
       "tuning": "Standard",
       "pickup_position": "Bridge or neck",
       "bpm": 133
@@ -277,7 +277,7 @@
     "pickup_notes": "Bridge pickup throughout Snapshots 1 and 2. Bridge or neck for Snapshot 3.",
     "rig_compensation": "The Stupor OD at Drive 3.0-5.5 and the higher Deranged Master settings compensate for two rig-specific factors: Lace Sensor lower output vs Kapranos's Creamery custom pickups, and Super Champ XD higher clean headroom vs the Selmer valve combo's natural breakup. If still too clean, raise amp physical volume — the Deranged Master responds best when power tubes are working moderately hard.",
     "further_adjustments": "If still too clean after this version: (1) raise amp physical volume, (2) raise Stupor OD Drive by 1.0 per snapshot, (3) raise Parametric EQ Level by a further +2dB. If it becomes too harsh or spiky: pull Deranged Master Treble back toward 7.0 and reduce Stupor OD Drive by 0.5.",
-    "elephant_man_wobble": "Elephant Man Depth at 12-18 in Chorus mode adds barely perceptible pitch fluctuation — the Echorec wonky-wheel character. Should feel organic rather than obvious.",
+    "elephant_man_wobble": "Elephant Man Depth at 1.2-1.8 in Chorus mode adds barely perceptible pitch fluctuation — the Echorec wonky-wheel character. Should feel organic rather than obvious.",
     "deranged_master_warning": "YAML notes: 'Like the real thing, this model can take your head off!' At Drive 6.5-7.5 it will be aggressive. The Bass at 3.0 is critical — it rolls off low end that would otherwise become muddy. If the tone is too bright or spiky, reduce Treble before reducing Drive."
   }
 }
