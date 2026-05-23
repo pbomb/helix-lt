@@ -1,0 +1,332 @@
+modulation_effects:
+- name: Optical Trem
+  based_on: Fender® optical tremolo circuit
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Intensity
+  - Level
+- name: 60s Bias Trem
+  based_on: 'Vox® AC-15 Tremolo Based on: Vox® AC-15 Tremolo'
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Intensity
+  - Mode
+  - Level
+- name: Tremolo
+  based_on: BOSS® PN-2
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Intensity
+  - Wave Shape
+  - Duty Cycle
+  - Level
+- name: Harmonic Tremolo
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Intensity
+  - Wave Shape
+  - Duty Cycle
+  - Bass Freq
+  - Treb Freq
+  - Level
+  - Mix
+- name: Bleat Chop Trem
+  based_on: Lightfoot Labs© Goatkeeper
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Wave Shape
+  - Step 1
+  - Step 2
+  - Step 3
+  - Step 4
+  - Depth
+  - Level
+- name: Script Mod Phase
+  based_on: MXR® Phase 90
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Mix
+  - Level
+- name: Pebble Phaser
+  based_on: Electro-Harmonix® Small Stone phaser
+  firmware_version: '2.90'
+  available_parameters:
+  - TempoSync1
+  - Rate
+  - Color
+  - Level
+- name: Ubiquitous Vibe
+  based_on: Shin-ei Uni-Vibe®
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Intensity
+  - Mode
+  - Lamp Bias
+  - Mix
+  - Level
+- name: FlexoVibe
+  based_on: Line 6 Original
+  firmware_version: '3.50'
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Intensity
+  - Warp
+  - Mix
+  - Level
+- name: Deluxe Phaser
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Depth
+  - Offset
+  - Feedback
+  - Wave Shape
+  - Mix
+  - Stages
+  - Level
+- name: Gray Flanger
+  based_on: MXR® 117 Flanger
+  firmware_version: null
+  available_parameters:
+    text: Rate
+    items:
+    - TempoSync1
+    - Note Sync
+    - Rate
+    - Width
+    - Manual
+    - Regen
+    - Mix
+    - Level
+    - Headroom
+- name: Harmonic Flanger
+  based_on: A/DA Flanger
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Width
+  - Manual
+  - Enhance
+  - Harmonic
+  - Mix
+  - Level
+  - Headroom
+- name: Courtesan Flange
+  based_on: 'Electro-Harmonix® Deluxe EM Based on: Electro-Harmonix® Deluxe EM'
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Range
+  - Color
+  - Freeze LFO
+  - Mix
+  - Level
+  - Headroom
+- name: Dynamix Flanger
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Control Select
+  - Depth
+  - Manual
+  - Mix
+  - Phasing
+  - Recycle
+  - CV Dynamics
+  - Max Delay
+  - CV Tracking
+  - Env Lag
+  - Env Input
+  - CV Decay
+- name: Chorus
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Speed
+  - Depth
+  - Predelay
+  - Wave Shape
+  - Tone
+  - Mix
+  - Level
+- name: 70s Chorus
+  based_on: BOSS® CE-1
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync (Chorus)
+  - Chorus Rate
+  - Mode
+  - TempoSync2
+  - Note Sync (Vibrato)
+  - Vibrato Rate
+  - Vibrato Depth
+  - Mix
+  - Level
+  - Headroom
+- name: PlastiChorus
+  based_on: Modded Arion SCH-Z Chorus
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Depth
+  - Mode
+  - Tone
+  - Mix
+  - Level
+  - Headroom
+- name: Ampeg Liquifier
+  based_on: Ampeg Liquifier
+  firmware_version: '3.15'
+  synopsis:
+    text: slow to fast. heard; when set to 100%, no dry signal is heard you'd prefer
+      it to behave more like a traditional chorus pedal, choose "Single" especially
+      when placed after a high-gain amp block. Negative values increase the perceived
+      amount of grit; positive values clean things up a bit. At 0dB, the model behaves
+      like the original pedal
+    items:
+    - Rate—Adjusts the speed of the chorus' low-frequency oscillator (LFO) from
+    - Depth—Adjusts the amplitude of the modulation, from mild to deep.
+    - Mix—Controls the wet/dry mix of the chorus. When set to 0%, no chorus is
+    - Type—Liquifier is actually two choruses in one, hence the "Dual" default. If
+    - Headroom—Some mod pedals' internal signal paths exhibit a bit of grit,
+    - Level—Sets the overall level of the block
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Depth
+  - Mix
+  - Level
+  - Headroom
+  - Type
+- name: 4-Voice Chorus
+  based_on: Line 6 Original
+  firmware_version: '3.50'
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Depth
+  - NumVoices
+  - Low Cut
+  - High Shelf
+  - Mix
+  - Level
+- name: Bubble Vibrato
+  based_on: BOSS® VB-2 Vibrato
+  firmware_version: null
+  available_parameters:
+    text: Note Sync
+    items:
+    - TempoSync1
+    - Note Sync
+    - Speed
+    - Depth
+    - Rise Time
+    - Mix
+    - Level
+    - Headroom
+- name: Retro Reel
+  based_on: Line 6 Original
+  firmware_version: '3.10'
+  synopsis:
+    text: 'Line 6 Original effect that simulates playing a signal back from an analog
+      tape machine. This signal can be distorted, filtered to sound older or more
+      lo-fi, and modulated with a Wow/Flutter control distortion. At lower settings,
+      it''s great for simply warming up a tone settings, can provide a lo-fi effect
+      settings, can provide the natural high-end roll-off of old tape Fluttr control
+      and the filtering response of the analog tape emulation Tip: Helix Native users
+      should definitely try Retro Reel on all sorts of tracks—vocals, Tip: Helix Native
+      users should definitely try Retro Reel on all sorts of tracks—vocals, drums,
+      keyboards, strings, busses, effects returns, you name it. Anything that needs
+      a bit more punch or vibe.'
+    items:
+    - 'Wow Fluttr: Determines how much warbly tape sound is heard'
+    - 'Saturation: Adds an analog tape saturation and at high enough settings,'
+    - 'Low Cut: Determines the frequency of the Low Cut (High Pass) filter. At higher'
+    - 'High Cut: Determines the frequency of the High Cut (Low Pass) filter. At lower'
+    - 'Tape Speed: Changes both the rate of the modulation applied by the Wow'
+    - 'Level: Sets the overall level of the block'
+  available_parameters:
+  - Wow Fluttr
+  - Saturation
+  - Low Cut
+  - High Cut
+  - Tape Speed
+  - Level
+  - Texture
+- name: Double Take
+  based_on: Line 6 Original Doubler
+  firmware_version: null
+  synopsis: Check out this great resource for this effect on After Audio.
+  available_parameters:
+    text: Poly Detune
+    items:
+    - Doubles
+    - Slop
+    - Sensitivity
+    - Dry Level
+    - Wet Level
+- name: Poly Detune
+  based_on: Line 6 Original
+  firmware_version: '3.00'
+  synopsis: Great for those who avoid traditional chorus pedals.
+  available_parameters:
+  - Blend
+  - Detune
+  - Low Cut
+  - High Cut
+  - Level
+- name: AM Ring Mod
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Frequency
+  - AM
+  - AM Freq
+  - LFO
+  - TempoSync1
+  - Note Sync
+  - LFO Rate
+  - LFO Shape
+  - Mix
+  - Level

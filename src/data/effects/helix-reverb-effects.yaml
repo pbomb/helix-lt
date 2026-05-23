@@ -1,0 +1,396 @@
+reverb_effects:
+- name: Dynamic Hall
+  based_on: Line 6 Original
+  firmware_version: '3.10'
+  synopsis:
+    text: 'Here is a description of each parameter: a second stomp switch to toggle
+      between a lower Decay value and Infinity. Label it "ForEVER ever?" hall. Can
+      sometimes result in more definition between the dry and effected signals parameter
+      actually changes the algorithm so you''ll hear a small bump when changing it.
+      Therefore, we don''t recommend assigning Room Size to snapshots or other controllers
+      resulting in a softer effected signal For example, if your hall is full of people
+      wearing fake ocelot jumpsuits, more high frequencies would be absorbed than
+      if the room were empty heard; when set to 100%, no dry signal is heard any metallic
+      artifacts common in static reverbs. At higher values, can impart a bit of modulation
+      to the effected signal Values below 0.0dB mean the bass frequencies decay faster
+      than the treble frequencies; values above 0.0dB mean the bass frequencies decay
+      slower than the treble frequencies remove the effected signal below a certain
+      frequency remove the effected signal above a certain frequency'
+    items:
+    - 'Decay: Sets the decay of the reverb (0.1 sec ~ 45.0 sec, or Infinity) TIP:
+      Assign'
+    - 'Predelay: Determines the amount of delay heard before the signal enters the'
+    - 'Room Size: Sets the size of the hall (10, 20, or 30 meters). NOTE: This'
+    - 'Diffusion: Sets the amount of smearing between discrete echoes, sometimes'
+    - 'Damping: Determines the frequency above which the reverb will be absorbed.'
+    - 'Mix: Controls the wet/dry mix of the reverb. When set to 0%, no reverb is'
+    - 'Motion: Sets the amount of randomization, which can be helpful to minimize'
+    - 'Low Freq: Sets the frequency below which the Low Gain parameter is applied'
+    - 'Low Gain: Sets the reverb time for frequencies below the Low Freq value.'
+    - 'Low Cut: Applies a low cut (or high pass) filter to the reverb, letting you'
+    - 'High Cut: Applies a high cut (or low pass) filter to the reverb, letting you'
+    - 'Level: Controls the overall output level of the block'
+    - 'Trails: When on, reverb decay continues to ring out after the block is bypassed'
+  available_parameters:
+  - Decay
+  - Predelay
+  - Room Size
+  - Diffusion
+  - Damping
+  - Mix
+  - Motion
+  - Low Freq
+  - Low Gain
+  - Low Cut
+  - High Cut
+  - Level
+  - Trails
+- name: Dynamic Plate
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: A plate reverb typically found in high-end studio rack reverbs. plate. Can
+      sometimes result in more definition between the dry and effected signals For
+      example, if your hall is full of people wearing fake ocelot jumpsuits, more
+      high frequencies would be absorbed than if the room were empty changes in plate
+      tension or temperature modulation control on older tank reverbs heard; when
+      set to 100%, no dry signal is heard Values below 0.0dB mean the bass frequencies
+      decay faster than the treble frequencies; values above 0.0dB mean the bass frequencies
+      decay slower than the treble frequencies remove the effected signal below a
+      certain frequency remove the effected signal above a certain frequency bypassed.
+      When set to "On," the reverb continues to decay naturally when the block is
+      bypassed or a different snapshot is selected
+    items:
+    - Decay—Sets the decay of the reverb (0.1 sec ~ 45.0 sec, or Infinity)
+    - Predelay—Determines the amount of delay heard before the signal enters the
+    - Damping—Determines the frequency above which the reverb will be absorbed.
+    - MotRate—Motion Rate, or how fast the echoes' intensity changes, due to
+    - MotRng—Motion Range, or how much the internal delays change. Similar to the
+    - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
+    - Low Freq—Sets the frequency below which the Low Gain parameter is applied
+    - Low Gain—Sets the reverb time for frequencies below the Low Freq value.
+    - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
+    - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
+    - Level—Controls the overall output level of the block
+    - Trails—When set to "Off," the reverb decay is instantly muted when the block
+      is
+  available_parameters:
+  - Decay
+  - Predelay
+  - Damping
+  - Mot Rate
+  - MotRange
+  - Mix
+  - Low Freq
+  - Low Gain
+  - Low Cut
+  - High Cut
+  - Level
+  - Trails
+- name: Dynamic Room
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: A room reverb typically found in high-end studio rack reverbs. room. Can
+      sometimes result in more definition between the dry and effected signals For
+      example, if your room is full of people wearing foam high school mascot costumes,
+      more high frequencies would be absorbed than if the room were empty resulting
+      in a softer effected signal to people moving, doors opening or closing, etc.
+      heard; when set to 100%, no dry signal is heard Values below 0.0dB mean the
+      bass frequencies decay faster than the treble frequencies; values above 0.0dB
+      mean the bass frequencies decay slower than the treble frequencies remove the
+      effected signal below a certain frequency remove the effected signal below a
+      certain frequency remove the effected signal above a certain frequency bypassed.
+      When set to "On," the reverb continues to decay naturally when the block is
+      bypassed or a different snapshot is selected
+    items:
+    - Decay—Sets the decay of the reverb (0.1 sec ~ 3.0 sec)
+    - Predelay—Determines the amount of delay heard before the signal enters the
+    - Damping—Determines the frequency above which the reverb will be absorbed.
+    - Diffusion—Sets the amount of smearing between discrete echoes, sometimes
+    - MotRate—Motion Rate, or how quickly the room's shape may be changing, due
+    - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
+    - Low Freq—Sets the frequency below which the Low Gain parameter is applied
+    - Low Gain—Sets the reverb time for frequencies below the Low Freq value.
+    - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
+    - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
+    - EarlyReflc—
+    - Level—Controls the overall output level of the block
+    - Trails—When set to "Off," the reverb decay is instantly muted when the block
+      is
+  available_parameters:
+  - Decay
+  - Predelay
+  - Damping
+  - Diffusion
+  - Mot Rate
+  - Mix
+  - Low Freq
+  - Low Gain
+  - Low Cut
+  - High Cut
+  - EarlyReflc
+  - Level
+  - Trails
+- name: Dynamic Ambience
+  based_on: Line 6 Original
+  firmware_version: '3.50'
+  available_parameters:
+  - Room Size
+  - Predelay
+  - Damping
+  - Diffusion
+  - Shape
+  - Mix
+  - Low Cut
+  - High Cut
+  - Level
+  - Trails
+- name: Dynamic Bloom
+  based_on: Line 6 Original
+  firmware_version: '3.70'
+  synopsis:
+    text: For example, if your hall is full of people wearing fake ocelot jumpsuits,
+      more high frequencies would be absorbed than if the room were empty. changes
+      in plate tension or temperature. Medium (default), or Long. heard; when set
+      to 100%, no dry signal is heard. heard; when set to 100%, no dry signal is heard.
+      Values below 0.0dB mean the bass frequencies decay faster than the treble frequencies;
+      values above 0.0dB mean the bass frequencies decay slower than the treble frequencies.
+      remove the effected signal below a certain frequency. remove the effected signal
+      above a certain frequency. while the signal is active. Higher values drop the
+      reverb level more while you play. bypassed. When set to "On," the reverb continues
+      to decay naturally when the block is bypassed or a different snapshot is selected.
+    items:
+    - Decay—Sets the decay of the reverb (0.1 sec ~ 45.0 sec, or Infinity).
+    - Damping—Determines the frequency above which the reverb will be absorbed.
+    - Mot Rate—Motion Rate, or how fast the echoes' intensity changes, due to
+    - Rise Time—Sets how long it takes for the reverb to bloom. Choose Short,
+    - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
+    - Low Freq—Sets the frequency below which the Low Gain parameter is applied.
+    - Low Gain—Sets the reverb time for frequencies below the Low Freq value.
+    - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
+    - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
+    - Ducking—Controls how much of the reverb is dropped in volume (or "ducked")
+    - Level—Sets the overall level of the block.
+    - Trails—When set to "Off," reverb decay is instantly muted when the block is
+  available_parameters:
+  - Decay
+  - Damping
+  - Mot Rate
+  - Rise Time
+  - Mix
+  - Low Freq
+  - Low Gain
+  - Low Cut
+  - High Cut
+  - Ducking
+  - Level
+  - Trails
+- name: Shimmer
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: A shimmer reverb. We originally planned to release Shimmer as two distinctly
+      different reverbs—Luster and Sheen—but combining them into a single model and
+      letting you seamlessly switch back and forth via a footswitch or snapshots seemed
+      cooler. footswitch (or snapshots) to try both within the same preset definition
+      in the lustery bits massive, sheeny bloom traditional shimmer sounds; set to
+      "Oct Down" for something a bit creepier. Note that Pitch 1 and Pitch 2 have
+      0.1 semitone resolution between -1and +1 by default) heard; when set to 100%,
+      no dry signal is heard room. Can sometimes result in more definition between
+      the dry and effected signals resulting in a softer effected signal any metallic
+      artifacts common in static reverbs. At higher values, can impart a bit of modulation
+      to the effected signal remove the effected signal below a certain frequency
+      remove the effected signal above a certain frequency bypassed. When set to "On,"
+      the reverb continues to decay naturally when the block is bypassed or a different
+      snapshot is selected
+    items:
+    - 'Type—Determines the type of shimmer effect applied. TIP: Assign Type to a'
+    - '"Luster"—More of a traditional, reverb pedal-type shimmer effect with tighter'
+    - '"Sheen" (default)—More of a lush, studio plugin-type shimmer effect with a'
+    - Pitch 1—Sets the interval of the first pitchshifter. Set to "Oct Up" for more
+    - Pitch 2—Sets the interval of the second pitchshifter
+    - Intensity—Controls the mix between the pitchshifted and non-pitchshifted
+    - Feedback—Numbers of times the pitchshifting recirculates through the reverb
+    - Pitch Blend—Controls how much of Pitch 1 is heard vs. Pitch 2 (set to "Even"
+    - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
+    - Decay—Sets the decay of the reverb (0.1 sec ~ 45.0 sec or Infinity)
+    - Predelay—Determines the amount of delay heard before the signal enters the
+    - Room Size—Sets the size of the room (10, 20, or 30 meters)
+    - Damping—Determines the frequency above which the reverb will be absorbed
+    - Diffusion—Sets the amount of smearing between discrete echoes, sometimes
+    - Motion—Sets the amount of randomization, which can be helpful to minimize
+    - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
+    - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
+    - Level—Controls the overall output level of the block
+    - Trails—When set to "Off," the reverb decay is instantly muted when the block
+      is
+  available_parameters:
+  - Type
+  - Pitch 1
+  - Pitch 2
+  - Intensity
+  - Feedback
+  - Mix
+  - Pitch Blend
+  - Decay
+  - Predelay
+  - Room Size
+  - Damping
+  - Diffusion
+  - Motion
+  - Low Cut
+  - High Cut
+  - Level
+  - Trails
+- name: Hot Springs
+  based_on: Line 6 Original
+  firmware_version: '3.10'
+  synopsis:
+    text: 'Here is a description of each parameter: values result in a longer decay
+      values in between) might hear remove the effected signal below a certain frequency
+      remove the effected signal above a certain frequency remove the effected signal
+      above a certain frequency heard; when set to 100%, no dry signal is heard'
+    items:
+    - 'Dwell: Adjusts the strength of the signal sent into the spring tank. Higher'
+    - 'Spring Count: Sets how many springs are in the tank (1, 2, or 3, and numerous'
+    - 'Drip: Adjusts the intensity of the spring reverb, or how much "ploink" you'
+    - 'Low Cut: Applies a low cut (or high pass) filter to the reverb, letting you'
+    - 'High Cut: Applies a high cut (or low pass) filter to the reverb, letting you'
+    - 'Mix: Controls the wet/dry mix of the reverb. When set to 0%, no reverb is'
+    - 'Level: Controls the overall output level of the block'
+    - 'Trails: When on, reverb decay continues to ring out after the block is bypassed'
+  available_parameters:
+  - Dwell
+  - Spring Count
+  - Drip
+  - Low Cut
+  - High Cut
+  - Mix
+  - Level
+  - Trails
+- name: Nonlinear
+  based_on: Line 6 Original
+  firmware_version: '3.70'
+  synopsis:
+    text: 'toggle between ms/sec and note values. TIP: When set to note values, playing
+      a note/chord 4 beats (Decay set to "1/1") or 2 beats (Decay set to "1/2") before
+      a song transition can cause the reverb to stop right on the downbeat. reverb.
+      Shape—Determines the shape of the reverb''s decay: stops after the decay length.
+      toward the decay''s end. up quickly. and then abruptly stops after the decay
+      length. heard; when set to 100%, no dry signal is heard. resulting in a softer
+      effected signal. remove the effected signal below a certain frequency. remove
+      the effected signal above a certain frequency. effected signal. bypassed. When
+      set to "On," the reverb continues to decay naturally when the block is bypassed
+      or a different snapshot is selected.'
+    items:
+    - Decay—Sets the decay of the reverb (1.0 ms ~ 2.000 sec). Press the knob to
+    - Predelay—Determines the amount of delay heard before the signal enters the
+    - Linear—Traditional reverse reverb with an even, linear slope; abruptly
+    - Log—Reverse reverb with a logarithmic curve so it starts low and ramps up
+    - Inverse Log—Reverse reverb with an inverse logarithmic curve so it ramps
+    - Gauss—Ramps up and then down in a gaussian curve shape.
+    - Inverse Gauss—Ramps down and then up in a gaussian curve shape.
+    - Triangle—Ramps up and then down in a triangle shape.
+    - Inverse Triangle—Ramps up and then down in a triangle shape.
+    - Full—No ramp at all; the reverb is on full blast for the duration of the decay
+    - Late Dry—
+    - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
+    - Level—Sets the overall level of the block.
+    - Diffusion—Sets the amount of smearing between discrete echoes, sometimes
+    - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
+    - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
+    - Mod—Controls the amount of modulation applied to the reverb.
+    - Rate—Controls the rate or speed of modulation applied to the reverb.
+    - Spread (Stereo version only)—Determines the stereo width or spread of the
+    - Trails—When set to "Off," reverb decay is instantly muted when the block is
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Decay
+  - Predelay
+  - Shape
+  - Late Dry
+  - Mix
+  - Level
+  - Diffusion
+  - Low Cut
+  - High Cut
+  - Mod
+  - Rate
+  - Spread
+  - Trails
+- name: Glitz
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+    text: High Cut
+    items:
+    - Decay
+    - Predelay
+    - Low Cut
+    - High Cut
+    - Mix
+    - Level
+    - Delay
+    - TempoSync1
+    - Note Sync
+    - Rate
+    - Depth
+    - Xover
+    - Mod Mix
+    - Trails
+- name: Ganymede
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Decay
+  - Predelay
+  - Tone
+  - Modulation
+  - Mix
+  - Level
+  - Trails
+- name: Searchlights
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Decay
+  - Predelay
+  - Low Cut
+  - High Cut
+  - Mix
+  - Level
+  - Modulation
+  - Speed
+  - Intensity
+  - Trails
+- name: Plateaux
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Decay
+  - Predelay
+  - Tone
+  - Modulation
+  - Mix
+  - Level
+  - Pitch 1
+  - Cents 1
+  - Pitch 2
+  - Cents 2
+  - Pitch Mix
+  - Trails
+- name: Double Tank
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Decay
+  - Predelay
+  - Rate
+  - Modulation
+  - Mix
+  - Level
+  - Low Cut
+  - High Cut
+  - Trails

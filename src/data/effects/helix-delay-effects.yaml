@@ -1,0 +1,599 @@
+delay_effects:
+- name: Simple Delay
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Mix
+  - Level
+  - Trails
+- name: Mod/Chorus Echo
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Low Cut
+  - High Cut
+  - Mix
+  - Level
+  - Speed
+  - Depth
+  - Modulation Mode
+  - Trails
+- name: Sweep Echo
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Low Cut
+  - High Cut
+  - Mix
+  - Level
+  - Filter
+  - Shape
+  - Rate
+  - Start Frequency
+  - Range
+  - Resonance
+  - Duty Cycle
+  - Headroom
+  - Trails
+- name: Ducked Delay
+  based_on: TC Electronic® 2290
+  firmware_version: null
+  available_parameters:
+    text: Mix
+    items:
+    - TempoSync1
+    - Note Sync
+    - Time
+    - Feedback
+    - Low Cut
+    - High Cut
+    - Mix
+    - Level
+    - Threshold
+    - Ducking
+    - Dynamic Attack
+    - Dynamic Release
+    - Dynamic Type
+    - Trails
+- name: Reverse Delay
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Low Cut
+  - High Cut
+  - Mix
+  - Level
+  - Modulation Mode
+  - Speed
+  - Depth
+  - Trails
+- name: Vintage Digital
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Bit Depth
+  - Sample Rate
+  - Mix
+  - Level
+  - Rate
+  - Depth
+  - Headroom
+  - Trails
+- name: Vintage Swell
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Bit Depth
+  - Sample Rate
+  - Mix
+  - Level
+  - Rate
+  - Depth
+  - Headroom
+  - Threshold
+  - Attack
+  - Trails
+- name: Pitch Echo
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Interval
+  - Cents
+  - Mix
+  - Level
+  - Low Cut
+  - High Cut
+  - Trails
+- name: Transistor Tape
+  based_on: Maestro® Echoplex EP-3
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Wow Flutter
+  - Mix
+  - Level
+  - Headroom
+  - Trails
+- name: Cosmos Echo
+  based_on: Roland® RE-201 Space Echo
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Ramp
+  - Feedback
+  - Wow/Flutter
+  - Mix
+  - Level
+  - Headroom
+  - Mode
+  - Bass
+  - Treble
+  - FBTone
+  - Splice
+  - Dry Thru
+  - Trails
+- name: Bucket Brigade
+  based_on: BOSS® DM-2
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Noise
+  - Mix
+  - Level
+  - Headroom
+  - Trails
+- name: Adriatic Delay
+  based_on: BOSS® DM-2 w/ Adrian Mod
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Noise
+  - BBD Size
+  - Mix
+  - Level
+  - Rate
+  - Depth
+  - Headroom
+  - Trails
+- name: Adriatic Swell
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Noise
+  - BBD Size
+  - Mix
+  - Level
+  - Rate
+  - Depth
+  - Headroom
+  - Threshold
+  - Attack
+  - Trails
+- name: Elephant Man
+  based_on: Electro-Harmonix® Deluxe Memory Man
+  firmware_version: null
+  synopsis: 'Mix: Allows you to vary the mix of direct and delayed signals; it is
+    set to the center position equal levels of both. Feedback: Provides delay repeats,
+    or multiple echoes. If set very high, runaway oscillation will occur. Fairly high
+    feedback with short delay settings produces a reverb effect. Time: Determines
+    the time between direct and delayed signals, and between the repeats when feedback
+    is used. Strange, eerie and unusual pitch-shift effects can be produced by changing
+    the delay while playing, especially while using feedback. Mode: Allows you to
+    choose between Chorus or Vibrato mode. The Vibrato mode produces a "Doppler" pitch
+    shifting effect in the delayed signal. A rich, vibrant chorus effect is produced
+    with the switch set to CHORUS, delay fairly short, blend at the center, chorus
+    set high, and feedback fairly high. Depth: The DEPTH control sets the amount of
+    modulation in the delay time. The modulation rate is slow for chorus and faster
+    for vibrato.'
+  notable_users: 'The Foo Fighters make extensive use of the Memory Man alongside
+    a Pro Co Rat into a Vox AC-30 on their third album, There''s Nothing Left to Lose.
+    See the following excerpts: What was the fundamental guitar-sound recipe for the
+    new album? We focused on not using too many distortion pedals, and went for a
+    cleaner, fatter, more natural overdrive. We used a Vox AC30 for pretty much everything
+    on the record, tweaking the sound so that it broke up nicely when played loud.
+    Sometimes we''d double a track using an old Pro Co Rat, and then hard-pan the
+    parts so that a super-distorted guitar was in the left channel and a grindy guitar
+    was in the right. Then we''d sprinkle in lots of clean guitar overdubs. How did
+    you get the undulating tone on "Breakout"? That''s the Memory Man through the
+    Vox. We tried to set the wave of the phase so that it was in sync with the rhythm
+    of the song. Note: It is believed Mr. Grohl mispoke here and actually meant the
+    MXR Phase 90 (Script Mod Phase) with its speed knob set around 11 o''clock. "Headwires"
+    is filled up with so many guitar parts, yet the mix doesn''t sound "Headwires"
+    is filled up with so many guitar parts, yet the mix doesn''t sound cluttered.
+    Oh yeah -- Adam''s good with that stuff. The main riff is an Explorer playing
+    through the Memory Man and the Vox, and the harmonics were done with the same
+    setup. The choruses are the Duo Jet running through a Rat and the Vox. The high,
+    picking part in the middle eight is an SG through the Memory Man. Check out the
+    rest of this fantastic interview with Dave Grohl from a 1999 issue of Guitar Player
+    Magazine for more details.'
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Mode
+  - Depth
+  - Mix
+  - Level
+  - Noise
+  - Headroom
+  - Trails
+- name: Multi Pass
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Feedback
+  - Pattern
+  - Mode
+  - Mix
+  - Level
+  - Trails
+- name: Heliosphere
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: values to 0% when set to 100%, no dry signal is heard side's time is always
+      some percentage of the left's time, and is determined by the Scale parameter.
+      For example, if Time is set to 500ms, and Scale is set to 70%, the left delay
+      is 500ms and the right delay is 350ms (or 70% of 500ms). When scale is set to
+      100%, left and right delays are the same loop. When set to 0%, no reverb is
+      heard especially when placed after a high-gain amp block. Negative values increase
+      the perceived amount of grit; positive values clean things up a bit. At 0dB,
+      the model behaves like the original pedal bypassed. When set to "On," delay
+      repeats continue to decay naturally when the block is bypassed or a different
+      snapshot is selected
+    items:
+    - Time—Sets the delay time. Press the knob to toggle between ms/Sec and note
+    - Feedback—Controls the overall number of repeats. To hear only one repeat, set
+    - Rate—Controls the rate or speed of modulation
+    - Depth—Controls the depth or amount of modulation
+    - Mix—Controls the wet/dry mix of the delay. When set to 0%, no delay is heard;
+    - Level—Sets the overall level of the block
+    - Scale—For stereo delays, the Time parameter sets the left side. The right
+    - Rev Mix—Controls the wet/dry mix of the reverb inside the delay's feedback
+    - Rev Decay—Sets the decay of the reverb
+    - Headroom—Some delay pedals' internal signal paths exhibit a bit of grit,
+    - Trails—When set to "Off," delay repeats are instantly muted when the block is
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - Delay Div
+  - Mix
+  - Feedback
+  - SliceFdbk
+  - Shuffle
+  - Pitch
+  - Reverse
+  - Seq Drift
+  - Smoothing
+  - Interval 1
+  - Interval 2
+  - Low Cut
+  - High Cut
+  - Level
+  - Trails
+- name: Euclidean Delay
+  based_on: Line 6 Original
+  firmware_version: '3.10'
+  synopsis:
+    text: 'Line 6 Original delay based on Euclidean rhythm algorithms. Settle in because
+      this one''ll require diagrams and charts and whatnot. values Feedback: Controls
+      the overall number of repeats heard for the entire sequence. If you want to
+      hear all fills in the sequence only once, set to "0%" below) (1-16; see diagram
+      below) below). Used If you like the sound of a repeat pattern but want the fills
+      and gaps shifted forward when set to 100%, no dry signal is heard the effected
+      signal below a certain frequency the effected signal above a certain frequency
+      Tip: Add two Euclidean Delays in parallel for interesting polyrhythm patterns.
+      When using a stereo playback system, try panning Paths A and B in the mixer
+      to L100 and R100. If you''d like to read more about Euclidean rhythms, check
+      this out: https:// en.wikipedia.org/wiki/Euclidean_rhythm'
+    items:
+    - 'Time: Sets the delay time; press the knob to toggle between ms/sec and note'
+    - 'Feedback: Controls the overall number of repeats heard for the entire'
+    - 'Steps: Determines the number of steps in the sequence (1-16; see diagram'
+    - 'Fill: Using Euclidean math, evenly distributes fills in the sequence with repeats'
+    - 'Rotate: Rotates all fills forward by the same amount (0-15; see diagram'
+    - 'Mix: Controls the wet/dry mix of the delay. When set to 0%, no delay is heard;'
+    - 'Low Cut: Applies a low cut (or high pass) filter to the fills, letting you
+      remove'
+    - 'High Cut: Applies a high cut (or low pass) filter to the fills, letting you
+      remove'
+    - 'Level: Controls the overall output level of the block'
+    - 'Trails: When on, delay repeats continue to ring out after the block is bypassed'
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Step Time
+  - Feedback
+  - Steps
+  - Fill
+  - Rotate
+  - Mix
+  - Low Cut
+  - High Cut
+  - Level
+  - Trails
+- name: ADT
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: and Delay 2 can go up to 200ms each deck settings, distortion. At lower
+      settings, it's great for simply warming up a tone bit lower than Deck 1 by default
+      control and the filtering response of the analog tape emulation When Saturation
+      is set to 0.0, the texture is invisible. When Saturation is turned up, the texture
+      will affect the tightness (or looseness) of the distortion the effected signal
+      below a certain frequency the effected signal above a certain frequency picking
+      harder can impart very slight pitch fluctuations by tweaking Deck 2's delay.
+      Subtle, but fun bypassed. When set to "On," delay repeats continue to decay
+      naturally when the block is bypassed or a different snapshot is selected
+    items:
+    - Delay 1, Delay 2—Sets the delay time for each deck. Delay 1 can go up to 20ms
+    - WowFlutr1, WowFlutr2—Determines how much warbly tape sound is heard for
+    - Saturate1, Saturate2— Adds analog tape saturation and at high enough
+    - Deck 1 Vol, Deck 2 Vol—Sets the level of each deck independently. Deck 2 is
+      a
+    - Deck 2 Pol—Flips the polarity of deck 2
+    - Mod Rate—Controls the rate or speed of modulation applied to Deck 2
+    - ModDepth—Controls the depth or amount of modulation applied to Deck 2
+    - Level—Sets the overall level of the block
+    - TapeSpeed—Changes both the rate of the modulation applied by the WowFluttr
+    - Texture— Adjusts the amount of the NAB tape EQ in the simulated tape path.
+    - Low Cut—Applies a low cut (high pass) filter to the decks, letting you remove
+    - High Cut—Applies a high cut (low pass) filter to the decks, letting you remove
+    - Deck 1 Pan, Deck 2 Pan—Pans each deck left and right
+    - EnvThresh—Sets the level above which engages the envelope. When on,
+    - Trails—When set to "Off," delay repeats are instantly muted when the block is
+  available_parameters:
+  - Delay 1
+  - Delay 2
+  - WowFlutr1
+  - WowFlutr2
+  - Saturate1
+  - Saturate2
+  - Deck 1 Vol
+  - Deck 2 Vol
+  - Deck 2 Pol
+  - Mod Rate
+  - Mod Depth
+  - Level
+  - TapeSpeed
+  - Texture
+  - Low Cut
+  - High Cut
+  - EnvThresh
+  - Trails
+- name: Crisscross
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: knob to toggle between ms/Sec and note values hear only one repeat, set
+      to 0% to R100 Mix—Controls the wet/dry mix of the delay. When set to 0%, no
+      delay is heard; when set to 100%, no dry signal is heard line and vice versa
+      especially when placed after a high-gain amp block. Negative values increase
+      the perceived amount of grit; positive values clean things up a bit. At 0dB,
+      the model behaves like the original pedal lines. At 0°, the delay lines modulate
+      together; at 180°, modulation is inverted from one another more transparent
+      results, set to "24 bits" sound. For more transparent results, set to "48kHz"
+      the effected signal below a certain frequency the effected signal above a certain
+      frequency bypassed. When set to "On," delay repeats continue to decay naturally
+      when the block is bypassed or a different snapshot is selected
+    items:
+    - Time A, Time B—Sets the delay time for each of the two delay lines. Press the
+    - Feedbk A, Feedback B—Controls the number of repeats for each delay line. To
+    - Pan A, Pan B—To achieve the widest stereo field, set Pan A to L100 and Pan B
+    - Mix—Controls the wet/dry mix of the delay. When set to 0%, no delay is heard;
+    - Level—Sets the overall level of the block
+    - Crossfeed—Controls the amount of the A delay line fed back into the B delay
+    - Headroom—Some delay pedals' internal signal paths exhibit a bit of grit,
+    - Mod Rate—Controls the rate or speed of modulation
+    - Mod Depth—Controls the depth or amount of modulation
+    - Shape—Sets the modulation's wave shape (Sine or Triangle)
+    - Phase—Determines the modulation's phase relationship between the two delay
+    - Bit Depth—Lowers the bit depth of the delay repeats for a grungier sound. For
+    - Sample Rate—Lowers the sample rate of the delay repeats for a grungier
+    - Low Cut—Applies a low cut (high pass) filter to the repeats, letting you remove
+    - High Cut—Applies a high cut (low pass) filter to the repeats, letting you remove
+    - Trails—When set to "Off," delay repeats are instantly muted when the block is
+  available_parameters:
+  - TempoSync1
+  - Note Sync A
+  - Time A
+  - TempoSync2
+  - Note Sync B
+  - Time B
+  - Feedback A
+  - Feedback B
+  - Mix
+  - Level
+  - Crossfeed
+  - Headroom
+  - Mod Rate
+  - ModDepth
+  - Shape
+  - Phase
+  - Bit Depth
+  - Sample Rate
+  - Low Cut
+  - High Cut
+  - Trails
+- name: Tesselator
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: 'Tesselator is part morphing delay, part loop sampler, part drone machine...
+      it''s stellar for creating rhythmic pads, textures, or pitch/filter ramp effects
+      to play over and has been placed in the Delay category so you can run multiple
+      instances at once. Once audio is captured and repeating, you can effectively
+      transition/morph between two states—First and Last, each with its own time,
+      speed/pitch, HP filter, and LP filter—by applying increasing amounts to each
+      repeat until the target settings are reached. 1. Assign Tesselator to a stomp
+      footswitch. It''s bypassed by default. 2. Play a chord and while it''s ringing,
+      press the Tesselator switch. Audio captured BEFORE the switch press is repeated
+      and manipulated by the following parameters: length of repeated audio when first
+      engaged. Press the knob to toggle between ms and note values the First step''s
+      time, the sequence will get shorter; if longer than the First step''s time,
+      the sequence will get longer. If First and Last are the same time, the sequence
+      length remains constant (Ex. 1 below). Press the knob to toggle between ms and
+      note values example, if your first step is 100ms and your last step is 500ms,
+      each successive step in the sequence will lengthen from 100ms to 500ms. The
+      more steps you have, the longer it takes to reach the last step and therefore,
+      the longer it takes to alter the sequence''s characteristics on, all steps play
+      forward, then backward, then forward again, etc. (Ex. 3a below) on (remember,
+      it''s bypassed by default) With Tesselator on a parallel path, assign a second
+      stomp switch to toggle between Mute All and Dry Kill. This lets you leave the
+      block enabled and bring the effected signal in and out by switching between
+      the two values signals are heard reference a static or semitone value parameter
+      to set the specific value (0.0x speed ~ 2.0x speed) set the value (-12 ~ +12
+      semitones; see Ex. 3c below) the last step will be twice as fast as the first
+      step and if set to "0.0x," the last step will appear to stop completely. Disabled
+      unless Type is set to "Speed" last step will be an octave lower than the first
+      step. Disabled unless Type is set to "Pitch" (see Ex. 3c below) Sets the high-pass
+      (low cut) filter target for the last step. For example, if set to a higher value,
+      each successive step will filter out more bass until the last step of the sequence
+      Sets the low-pass (high cut) filter target for the last step. For example, if
+      set to a higher value, each successive step will filter out more treble until
+      the last step of the sequence (Ex. 3b below) Woohoo! More charts and diagrams!
+      Tesselator is capable of hundreds of unique sounds, and it''s impossible to
+      illustrate them all, but here are a few examples: Example 1: If Knob 1 (First)
+      and Knob 2 (Last) are set to the same value (say, 1/4 note), the same length
+      of audio repeats until Tesselator is bypassed. In this case, it acts very much
+      like Delay > Ratchet, except the audio is captured BEFORE the stomp press, not
+      after. Example 2: If Knob 2 (Last) is set to a shorter time than Knob 1 (First),
+      steps in the sequence progressively get shorter (Ex. 2a). If Last is set to
+      a longer time than First, steps in the sequence progressively get longer. The
+      last step is repeated indefinitely until Tesselator is bypassed. Setting Direction
+      to "Reverse" (Ex. 2b) reverses all steps; setting Direction to "Fwd/Rev" (Ex.
+      2c) alternates between forward and reversed steps. Example 3: Turning Boomerang
+      to "On" plays the entire step sequence forward, then backward, then forward
+      again, etc. (Ex. 3a) Increasing LP Filter to a higher value progressively darkens
+      each step in the sequence (Ex. 3b). Increasing HP Filter to a higher value progressively
+      thins out each step in the sequence. Setting Type to "Pitch" and Pitch to a
+      value other than "0" will change the pitch of each step until it lands on the
+      target pitch at the last step. For example, if Pitch is set to "+5" and you
+      play an E note, the last note in the sequence will be an A, or 5 steps higher
+      (Ex. 3c). If you want the last A note to repeat indefinitely instead of stepping
+      back down to E, turn Boomerang back to "Off." TIP: You can change all of these
+      parameters while Tesselator is... tessellating, to create evolving, engaging
+      soundscapes. Run it into Pitch > Dual Pitch and Reverb > Shimmer and prepare
+      to waste hours in drone land.'
+    items:
+    - First—Determines the length of the first step in the sequence, that is, the
+    - Last—Determines the length of the last step in the sequence. If shorter than
+    - Steps—Determines how many steps there are in the sequence (1 ~ 50). For
+    - 'Direction—Determines the direction of the steps:'
+    - 'Forward: Each step plays back normally (Ex. 2a below)'
+    - 'Reverse: Each step plays back in reverse (Ex. 2b below)'
+    - 'Fwd/Rev: Steps alternate between forward and reverse (Ex. 2c below)'
+    - Boomerang—When off, the last step in the sequence repeats indefinitely. When
+    - Operation—Determines what happens to your signal when Tesselator is turned
+    - '"Mute All"—When Tesselator is on, THE ENTIRE PATH IS MUTED'
+    - '"Dry Kill"—When Tesselator is on, only the effected signal is heard. TIP:'
+    - '"Normal" (default)—When Tesselator is on, both the dry and effected'
+    - Type—Determines whether any speed/pitch changes across the sequence
+    - '"Speed" (default)—Sets the target speed of the last step. Use the Speed'
+    - '"Pitch"—Sets the target pitch of the last step. Use the Pitch parameter to'
+    - Speed—Sets the target speed for the last step. For example, if set to "2.0x,"
+    - Pitch—Sets the target pitch for the last step. For example, if set to "-12",
+      the
+    - HP Filter—Very different from Helix's traditional Low Cut and High Cut filters.
+    - LP Filter—Very different from Helix's traditional Low Cut and High Cut filters.
+    - FX Level—Controls the level of the effected signal
+    - Level—Controls the overall output level of the block
+  available_parameters:
+  - TempoSync1
+  - Note Sync 1
+  - First
+  - TempoSync2
+  - Note Sync 2
+  - Last
+  - Steps
+  - Direction
+  - Boomerang
+  - Operation
+  - Ramp
+  - Speed
+  - Pitch
+  - HP Filter
+  - LP Filter
+  - FX Level
+  - Level
+- name: Ratchet
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: A buffer sampler/delay. Used to capture and loop a short snippet of audio
+      (whose length is determined by the Time parameter) while the block is enabled.
+      Great for rhythmic stutter effects. You could almost consider Ratchet a simplified
+      version of Tesselator, where the audio is captured AFTER the footswitch press,
+      not before. 1. Assign Ratchet to a stomp footswitch. It's bypassed by default.
+      2. While playing, press the Ratchet switch. Audio captured AFTER the switch
+      press is repeated for as long as the block is enabled. For this reason, it may
+      be best to make the switch momentary, and only step on the Ratchet switch when
+      you change chords, almost like a really messed up (and by messed up, we mean
+      awesome) sustain pedal. loop an entire 4/4 bar, choose "1/1"; to stutter your
+      playing, start with "1/16" or "1/32" (remember, it's bypassed by default) Ratchet
+      on a parallel path, assign a second stomp switch to toggle between Mute All
+      and Dry Kill. This lets you leave the block enabled and bring the effected signal
+      in and out by switching between the two values are heard
+    items:
+    - Time—Predetermines the length of the audio to be recorded and looped. To
+    - Operation—Determines what happens to your signal when Ratchet is turned on
+    - '"Mute All"—When Ratchet is on, THE ENTIRE PATH IS MUTED'
+    - '"Dry Kill"—When Ratchet is on, only the effected signal is heard. TIP: With'
+    - '"Normal" (default)—When Ratchet is on, both the dry and effected signals'
+    - FX Level—Controls the level of the looped audio
+    - Level—Controls the overall output level of the block
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Time
+  - FX Level
+  - Level
+  - Operation

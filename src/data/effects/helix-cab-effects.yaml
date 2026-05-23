@@ -1,0 +1,517 @@
+cab_effects:
+- name: Soup Pro Ellipse
+  based_on: 1x6x9" Supro S6616
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x8 Small Tweed
+  based_on: 1x8" Fender Champ
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x10 US Princess
+  based_on: 1x10" Fender Princeton Eminence Copperhead
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Fullerton
+  based_on: 1x12" Fender 5C3 Tweed Deluxe
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Grammatico
+  based_on: 1x12" Grammatico LaGrange P12Q
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 US Deluxe
+  based_on: 1x12" Fender® Deluxe Oxford
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Open Cast
+  based_on: Custom 1x12" open-back cab EVM12L
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Open Cream
+  based_on: Custom 1x12" open-back cab G12M-65
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Cali EXT
+  based_on: 1x12" Mesa Boogie Extension Cab
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Cali IV
+  based_on: 1x12" Mesa Boogie Mk IV Combo
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Blue Bell
+  based_on: 1x12" Vox AC-15 Blue Alnico
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Blue Bell
+  based_on: 2x12" Vox® AC-30 Fawn Blue
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Silver Bell
+  based_on: 2x12" Vox AC-30TB Silver Alnico
+  firmware_version: '3.60'
+  available_parameters:
+    text: Angle
+    items:
+    - Mic
+    - Position
+    - Distance
+    - Angle
+    - Low Cut
+    - High Cut
+    - Level
+- name: 2x12 Match H30
+  based_on: 2x12" Matchless DC-30 custom G12H-30
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Match G25
+  based_on: 2x12" Matchless DC-30 custom G12M-25
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Double C12N
+  based_on: 2x12" Fender Twin C12N
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Interstate
+  based_on: 2x12" Dr Z Z Best V30
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Jazz Rivet
+  based_on: 2x12" Roland® JC-120
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x12 Mail C12Q
+  based_on: 2x12" Silvertone® 1484
+  firmware_version: '3.50'
+  available_parameters:
+    text: Position
+    items:
+    - Mic
+    - Position
+    - Distance
+    - Angle
+    - Low Cut
+    - High Cut
+    - Level
+- name: 2x12 Mandarin 30
+  based_on: 2x12" Orange PPC212 V30
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x10 Tweed P10R
+  based_on: 4x12" Fender® Bassman® P10R
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x10 US Super
+  based_on: Fender Super Reverb
+  firmware_version: '3.80'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 WhoWatt 100
+  based_on: 4x12" Hiwatt AP Fane
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Greenback 20
+  based_on: 4x12" Marshall "basketweave" G12M-20
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Greenback 25
+  based_on: 4x12" Marshall® Basketweave G12 M25
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Greenback 30
+  based_on: 4x12" Marshall Basketweave G12H-30
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 1960A T75
+  based_on: 4x12" Marshall® 1960A T75
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Blackback 30
+  based_on: 4x12" Park® 75 G12 H30
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Brit V30
+  based_on: 4x12" Marshall® 1960AV V30
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Cali V30
+  based_on: 4x12" MESA/Boogie® 4FB V30
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Mandarin EM
+  based_on: 4x12" Orange® Eminence
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 MOO)))N T75
+  based_on: 4x12" Sunn Cab w/G75T
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Cartog Guv
+  based_on: Ben Adrian's Cartographer cabinet (Modified Lee Jackson 4x12 with Eminence
+    Governor speakers)
+  firmware_version: '3.80'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Cartog C90
+  based_on: Ben Adrian's Cartographer cabinet (Modified Lee Jackson 4x12 with Mesa
+    C90 speakers)
+  firmware_version: '3.80'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Uber T75
+  based_on: 4x12" Bogner® Uberkab T75
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 Uber V30
+  based_on: 4x12" Bogner® Uberkab V30
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 XXL V30
+  based_on: 4x12" ENGL® XXL V30
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x12 SoloLead EM
+  based_on: Soldano SLO 4x12 cabinet
+  firmware_version: '3.80'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x12 Epicenter
+  based_on: 1x12" Epifani Ultralight series
+  firmware_version: '3.60'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 1x15 Ampeg B-15
+  based_on: 1x15" Ampeg® B-15
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x15 Brute
+  based_on: 2x15" MESA/Boogie® 2x15 EV
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 2x15 US Dripman
+  based_on: 2x15" Fender Bassman JBL D130
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x10 Garden
+  based_on: 4x10" Eden D410XLT
+  firmware_version: '3.50'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 4x10 Ampeg Pro
+  based_on: 4x10" Ampeg PR-410HLF
+  firmware_version: '3.60'
+  available_parameters:
+    text: Low Cut
+    items:
+    - Mic
+    - Position
+    - Distance
+    - Angle
+    - Low Cut
+    - High Cut
+    - Level
+- name: 6x10 Cali Power
+  based_on: 6x10" MESA/Boogie Power House
+  firmware_version: '3.70'
+  available_parameters:
+  - Mic
+  - Position
+  - Distance
+  - Angle
+  - Low Cut
+  - High Cut
+  - Level
+- name: 8x10 SVT AV
+  based_on: 8x10" Ampeg® SVT® (SVT-810AV Heritage Edition)
+  firmware_version: '3.50'
+  available_parameters:
+    text: Angle
+    items:
+    - Mic
+    - Position
+    - Distance
+    - Angle
+    - Low Cut
+    - High Cut
+    - Level

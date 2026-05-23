@@ -1,0 +1,64 @@
+filter_effects:
+- name: Mutant Filter
+  based_on: Musitronics® Mu-Tron® III
+  firmware_version: null
+  available_parameters:
+  - Mode
+  - Peak
+  - Gain
+  - Range
+  - Drive
+  - Mix
+  - Level
+- name: Mystery Filter
+  based_on: Korg® A3
+  firmware_version: null
+  available_parameters:
+  - Sensitivity
+  - Frequency
+  - Resonance
+  - Attack
+  - Release
+  - Mix
+  - Level
+- name: Autofilter
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Mode
+  - Filter Gain
+  - Filter Q
+  - Sensitivity
+  - Attack
+  - Decay
+  - Frequency
+  - Freq Depth
+  - Direction
+  - Mix
+  - Level
+- name: Asheville Pattrn
+  based_on: Moog Moogerfooger Murf Filter
+  firmware_version: '2.80'
+  available_parameters:
+  - TempoSync1
+  - Note Sync
+  - Rate
+  - Pattern
+  - Envelope
+  - Voice
+  - Mix
+  - Output
+  - Drive
+  - Direction
+  - TempoSync2
+  - Note Sync
+  - LFO
+  - Spread
+  - Level 1
+  - Level 2
+  - Level 3
+  - Level 4
+  - Level 5
+  - Level 6
+  - Level 7
+  - Level 8

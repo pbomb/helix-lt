@@ -1,0 +1,148 @@
+pitch_synth_effects:
+- name: Pitch Wham
+  based_on: Digitech Whammy®
+  firmware_version: null
+  available_parameters:
+    text: Twin Harmony
+    items:
+    - Position
+    - Heel Pitch
+    - Toe Pitch
+    - Mix
+    - Level
+- name: Twin Harmony
+  based_on: Eventide® H3000
+  firmware_version: null
+  available_parameters:
+  - Voice 1 Key
+  - Voice 1 Scale
+  - Voice 1 Shift
+  - Voice 1 Level
+  - Mix
+  - Level
+  - Voice 2 Key
+  - Voice 2 Scale
+  - Voice 2 Shift
+  - Voice 2 Level
+- name: Simple Pitch
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+    text: Dry Pan
+    items:
+    - Interval
+    - Cents
+    - Delay
+    - Shift Level
+    - Mix
+    - Level
+    - Dry Pan
+- name: Dual Pitch
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Interval 1
+  - Cents 1
+  - Delay 1
+  - V1 Level
+  - Interval 2
+  - Cents 2
+  - Delay 2
+  - V2 Level
+  - Mix
+  - Level
+- name: Boctaver
+  based_on: BOSS® OC-2 Octaver
+  firmware_version: '3.50'
+  synopsis: The OC-2 Octave pedal lets users fatten up their sound by adding two additional
+    tones--one and two octaves below the original note. Each tone has a separate volume
+    control and plays back with outstanding clarity.
+  available_parameters:
+  - -1 Oct
+  - -2 Oct
+  - Dry Level
+- name: Poly Pitch
+  based_on: Line 6 Original
+  firmware_version: '3.00'
+  available_parameters:
+  - Interval
+  - Cents
+  - TempoSync1
+  - Note Sync
+  - Shift Time
+  - ShiftCurve
+  - TempoSync2
+  - Note Sync
+  - ReturnTime
+  - ReturnCurv
+  - Tracking
+  - Auto EQ
+  - Mix
+  - Level
+- name: Poly Wham
+  based_on: Line 6 Original
+  firmware_version: '3.00'
+  synopsis: Automatically assigned to EXP 1 and the toe switch toggles it on and off.
+  available_parameters:
+  - Position
+  - Heel Shift
+  - Toe Shift
+  - Tracking
+  - Auto EQ
+  - Mix
+  - Level
+- name: Poly Capo
+  based_on: Line 6 Original
+  firmware_version: '3.00'
+  synopsis: A Simpler version of Poly Pitch when you just want to transpose your playing.
+  available_parameters:
+  - Blend
+  - Bass
+  - Treble
+  - Level
+  - PluckType
+- name: 3 Note Generator
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Osc1 Shape
+  - Osc1 Oct
+  - Osc1 Note
+  - Osc1 Level
+  - Osc1 Glide
+  - Osc2 Shape
+  - Osc2 Oct
+  - Osc2 Note
+  - Osc2 Level
+  - Osc2 Glide
+  - Osc3 Shape
+  - Osc3 Oct
+  - Osc3 Note
+  - Osc3 Level
+  - Osc3 Glide
+  - Attack
+  - Decay
+  - Dry Level
+  - Level
+- name: 4 OSC Generator
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+    text: Osc3 Level
+    items:
+    - Osc1 Shape
+    - Osc1 Freq
+    - Osc1 Level
+    - Osc2 Shape
+    - Osc2 Freq
+    - Osc2 Level
+    - Osc3 Shape
+    - Osc3 Freq
+    - Osc3 Level
+    - Osc4 Shape
+    - Osc4 Freq
+    - Osc4 Level
+    - Attack
+    - Decay
+    - Dry Level
+    - Level

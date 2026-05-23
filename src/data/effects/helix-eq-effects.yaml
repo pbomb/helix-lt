@@ -1,0 +1,92 @@
+eq_effects:
+- name: Simple EQ
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Low Gain
+  - Mid Freq
+  - Mid Gain
+  - High Gain
+  - Level
+- name: Low and High Cut
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Low Cut
+  - High Cut
+  - Level
+- name: Low/High Shelf
+  based_on: Line 6 Original
+  firmware_version: '2.80'
+  available_parameters:
+  - Low Gain
+  - Low Freq
+  - High Gain
+  - High Freq
+  - Level
+- name: Parametric
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: High shelf, low shelf, and a fully parametric band.
+  available_parameters:
+  - Low Freq
+  - Low Q
+  - Low Gain
+  - Mid Freq
+  - Mid Q
+  - Mid Gain
+  - High Freq
+  - High Q
+  - High Gain
+  - Low Cut
+  - High Cut
+  - Level
+- name: Tilt
+  based_on: Line 6 Original
+  firmware_version: '2.80'
+  synopsis: Tilt is a subtle 6dB EQ that boosts high frequencies while simultaneously
+    attenuating low frequencies (or vice versa). Great for quickly making tones a
+    bit brighter or darker. The Center Freq parameter sets the frequency around which
+    the boost and cut pivot.
+  available_parameters:
+  - Tilt
+  - Center Freq
+  - Level
+- name: 10 Band Graphic
+  based_on: MXR® 10-Band Graphic EQ
+  firmware_version: null
+  available_parameters:
+  - 31.25 Hz
+  - 62.5 Hz
+  - 125 Hz
+  - 250 Hz
+  - 500 Hz
+  - 1 kHz
+  - 2 kHz
+  - 4 kHz
+  - 8 kHz
+  - 16 kHz
+  - Level
+- name: Cali Q Graphic
+  based_on: MESA/Boogie® Mark IV Graphic EQ
+  firmware_version: null
+  available_parameters:
+  - 80 Hz
+  - 240 Hz
+  - 750 Hz
+  - 2200 Hz
+  - 6600 Hz
+  - Level
+- name: Acoustic Sim
+  based_on: BOSS® AC-2 Acoustic Simulator
+  firmware_version: '3.00'
+  synopsis: Includes an extra Shimmer parameter that imparts some motion to the harmonics,
+    reminiscent of how a string's vibration tends to affect the other strings. Just
+    like the original, works best with single-coil pickups. Can be used alone or in
+    conjunction with an acoustic IR.
+  available_parameters:
+  - Mode
+  - Body
+  - Top
+  - Shimmer
+  - Level

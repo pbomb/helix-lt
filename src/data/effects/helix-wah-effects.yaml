@@ -1,0 +1,121 @@
+wah_effects:
+- name: UK Wah 846
+  based_on: Vox® V846
+  firmware_version: null
+  available_parameters:
+  - Position
+  - Mix
+  - Level
+- name: Teardrop 310
+  based_on: Dunlop® Crybaby® Fasel model 310
+  firmware_version: null
+  available_parameters:
+  - Position
+  - Mix
+  - Level
+- name: Fassel
+  based_on: Dunlop® Cry Baby® Super
+  firmware_version: null
+  synopsis: Coveted for the mojo of it's Fasel inductor.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Weeper
+  based_on: Arbiter® Cry Baby
+  firmware_version: null
+  synopsis: Another variation of the original wah with a different inductor and other
+    component choices.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Chrome
+  based_on: Vox® V847
+  firmware_version: null
+  synopsis: A successor to the original Clyde McCoy wah. Clyde is a trumpet player
+    but guitarists everywhere thank him for suggesting Vox® create this effect.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Chrome Custom
+  based_on: Modded Vox® V847
+  firmware_version: null
+  synopsis: Based on a modded Vox® V847 that has the gain staging on the first transistor
+    stage tweaked, and aftermarket inductor, the Q widened, and replaced with a 470k
+    pot.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Throaty
+  based_on: RMC Real McCoy 1
+  firmware_version: null
+  synopsis: Geoffrey Teese meticulously crafts the clones of the original and rare
+    Vox® Clyd McCoy “Picture” wah.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Vetta Wah
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: Taken from Line 6's guitar amplifier - Vetta II. This is our sound designers'
+    take on a classic effect.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Colorful
+  based_on: Colorsound® Wah-fuzz
+  firmware_version: null
+  synopsis: We only modeled the wah section of course. This pedal is different in
+    that it was an inductor-less design. It uses a different circuit to get its frequency
+    resonance.
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Conductor
+  based_on: Maestro® Boomerang
+  firmware_version: null
+  synopsis: According to original advertising material, this was not a 'wah-wah' pedal
+    but a 'wow-wow' pedal. Po-tay-to or Po-tah-to?
+  available_parameters:
+  - Position
+  - Fc Low
+  - Fc High
+  - Mix
+  - Level
+- name: Teardrop Bass Q
+  based_on: Dunlop 105Q
+  firmware_version: '3.80'
+  synopsis: The Dunlop 105Q Cry Baby bass wah pedal is a specialized effect that enhances
+    bass guitar tone without compromising low-end power. It focuses on midrange and
+    high frequencies, allowing expressive wah effects while maintaining a thick sound.
+    The pedal features a Q control for adjusting the wah effect's focus, custom circuitry
+    optimized for bass, and auto-return switching for ease of use. This design offers
+    bassists new creative possibilities while preserving their fundamental tone.
+  notable_users: The Dunlop 105Q Cry Baby bass wah is favored by renowned bassists
+    such as Flea, Doug Wimbish, and Robert Trujillo.
+  available_parameters:
+  - Position
+  - Q Trim
+  - Volume Trim
+  - Mix
+  - Level

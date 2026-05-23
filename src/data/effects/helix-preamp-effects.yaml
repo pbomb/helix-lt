@@ -1,0 +1,1953 @@
+preamp_effects:
+- name: WhoWatt 100
+  based_on: Hiwatt® DR-103 Brill
+  firmware_version: null
+  synopsis: Amp with a brilliant chime and unique tone-stack. If you need more gain,
+    crank the drive and master. This amp has a special Master, an additional gain
+    stage between the master volume and the phase inverter, then the model matches
+    this trait.
+  notable_users: Pete Townshend's Live at Leeds-era tone with The Who in the late
+    '60s, as well as David Gilmour's soaring lead work with Pink Floyd in the '70s.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Soup Pro
+  based_on: Supro® S6616
+  firmware_version: null
+  synopsis: Wind it up, and the S6616 offers juicy, brown overdrive that can sound
+    like a raging stack when mixed with the track, yet with a character all its own.
+    Reined in to clean volumes, it has a beautifully crisp spank. And at all levels
+    the 6"x9" speaker yields nodes and peaks that contribute to an unusual and distinctive
+    sonic voice that has come to be known as the Supro sound.
+  notable_users: Jimmy Page has admitted to using a Supro amp to record most of the
+    first two Led Zeppelin albums.
+  available_parameters:
+  - Drive
+  - Bass
+  - Tone
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Stone Age 185
+  based_on: Gibson® EH-185
+  firmware_version: null
+  synopsis: The EH-185 makes a surprisingly versatile voice for sculpting anything
+    from vintage jazz tones to raw rock 'n roll when cranked up, and sits beautifully
+    in a full-band mix, both live and in the studio.
+  notable_users: Seminal jazzer Charlie Christian is believed to have moved up to
+    an EH-185 combo before his death, about the same time that he stepped up from
+    his original Gibson ES-150 guitar to an ES-250. In a more modern setting, it has
+    shared the stage with Queen Of The Stone Age's Josh Homme.
+  available_parameters:
+    text: Ch Vol
+    items:
+    - Drive
+    - Bass
+    - Mid
+    - Treble
+    - Master
+    - Ch Vol
+    - Sag
+    - Hum
+- name: Voltage Queen
+  based_on: Victoria® Electro King
+  firmware_version: null
+  synopsis: The Electro King is an idealized recreation of the classic McCarty era
+    GA-40. Its circa 1957 circuit features two cathode biased 6V6s for 15watts of
+    recording and small club power. The heart and soul of the Electro King is its
+    5879 preamp circuit; a single NOS 5879 input pentode for each of the normal and
+    tremolo channels provides rich distortion and natural tube compression at any
+    volume setting. Notes seem to be 'blown' out of the amp with overdriven tones
+    that are saturated, dynamic and musical.
+  notable_users: Jeff Tweedy of the band Wilco uses one.
+  available_parameters:
+    text: Master
+    items:
+    - Drive 1
+    - Drive 2
+    - Tone
+    - Bass
+    - Treble
+    - Ch Vol
+    - Master
+    - Sag
+    - Hum
+- name: Tweed Blues Nrm
+  based_on: Fender® Bassman
+  firmware_version: null
+  synopsis: An amp with the fat bottom end you'd expect from a bass amp, but also
+    has the Fender® twang on the top. Try a Drive setting of about 4 or 5 — it's guaranteed
+    to dredge up the best R & B licks you know. Sounds great with a Booster Drive
+    (Treble) in front. The normal channel is the mellower of the two, with less brightness
+    and gain than the Bright channel. The bright channel utilizes the second half
+    of the first preamp tube for a different voicing. High frequencies are increased
+    due to the addition of a bright cap across the volume knob.
+  notable_users: The Bassman doesn't have a master volume, so like all amps of this
+    era, you had to crank this mutha up to get that dirty tone revered by all Bassman
+    enthusiasts! As Buddy Guy, Bruce Springsteen, Jimmy Vaughan, and so many others
+    would tell you, when you're talking vintage amps, the Bassman really is ground-zero
+    for big- combo tone.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Tweed Blues Brt
+  based_on: Fender® Bassman
+  firmware_version: null
+  synopsis: An amp with the fat bottom end you'd expect from a bass amp, but also
+    has the Fender® twang on the top. Try a Drive setting of about 4 or 5 — it's guaranteed
+    to dredge up the best R & B licks you know. Sounds great with a Booster Drive
+    (Treble) in front. The normal channel is the mellower of the two, with less brightness
+    and gain than the Bright channel. The bright channel utilizes the second half
+    of the first preamp tube for a different voicing. High frequencies are increased
+    due to the addition of a bright cap across the volume knob.
+  notable_users: The Bassman doesn't have a master volume, so like all amps of this
+    era, you had to crank this mutha up to get that dirty tone revered by all Bassman
+    enthusiasts! As Buddy Guy, Bruce Springsteen, Jimmy Vaughan, and so many others
+    would tell you, when you're talking vintage amps, the Bassman really is ground-zero
+    for big- combo tone.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Fullerton Nrm
+  based_on: 1958 Fender® 5C3 Tweed Deluxe
+  firmware_version: '2.80'
+  synopsis: 'Watch this video for a great overview of this amp: Uncle Doug'
+  available_parameters:
+  - Drive Norm
+  - Drive Bright
+  - Bass
+  - Tone
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Fullerton Brt
+  based_on: 1958 Fender® 5C3 Tweed Deluxe
+  firmware_version: '2.80'
+  synopsis: 'Watch this video for a great overview of this amp: Uncle Doug'
+  available_parameters:
+  - Drive Norm
+  - Drive Bright
+  - Bass
+  - Tone
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Fullerton Jump
+  based_on: 1958 Fender® 5C3 Tweed Deluxe
+  firmware_version: '2.80'
+  synopsis: 'Watch this video for a great overview of this amp: Uncle Doug'
+  available_parameters:
+  - Drive Norm
+  - Drive Bright
+  - Bass
+  - Tone
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: GrammaticoLG Nrm
+  based_on: 2016 Grammatico® LaGrange
+  firmware_version: '2.80'
+  synopsis: Based on a Tweed Deluxe and designed to capture the tones of early ZZ
+    Top, Neil Young, Keith Richards, Tom Petty, George Thorogood, Kenny Burrell, T-Bone
+    Walker, and many other classic rock tones when plugged straight into the amp.
+    It accepts either single coils or humbuckers equally well. The tone is very woody,
+    warm, round, and fat with throaty mids and sweet rounded highs with just enough
+    zing to make it exciting and cutting. It's very organic, transparent, three dimensional
+    with lots of bloom and harmonic richness.
+  available_parameters:
+  - Drive Norm
+  - Drive Bright
+  - Bass
+  - Tone
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: GrammaticoLG Brt
+  based_on: 2016 Grammatico® LaGrange
+  firmware_version: '2.80'
+  synopsis: Based on a Tweed Deluxe and designed to capture the tones of early ZZ
+    Top, Neil Young, Keith Richards, Tom Petty, George Thorogood, Kenny Burrell, T-Bone
+    Walker, and many other classic rock tones when plugged straight into the amp.
+    It accepts either single coils or humbuckers equally well. The tone is very woody,
+    warm, round, and fat with throaty mids and sweet rounded highs with just enough
+    zing to make it exciting and cutting. It's very organic, transparent, three dimensional
+    with lots of bloom and harmonic richness.
+  available_parameters:
+  - Drive Norm
+  - Drive Bright
+  - Bass
+  - Tone
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: GrammaticoLG Jump
+  based_on: 2016 Grammatico® LaGrange
+  firmware_version: '2.80'
+  synopsis: Based on a Tweed Deluxe and designed to capture the tones of early ZZ
+    Top, Neil Young, Keith Richards, Tom Petty, George Thorogood, Kenny Burrell, T-Bone
+    Walker, and many other classic rock tones when plugged straight into the amp.
+    It accepts either single coils or humbuckers equally well. The tone is very woody,
+    warm, round, and fat with throaty mids and sweet rounded highs with just enough
+    zing to make it exciting and cutting. It's very organic, transparent, three dimensional
+    with lots of bloom and harmonic richness.
+  available_parameters:
+  - Drive Norm
+  - Drive Bright
+  - Bass
+  - Tone
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: US Small Tweed
+  based_on: Fender® Champ®
+  firmware_version: null
+  synopsis: In the tweed champ, the bass and treble are after the amp modeling, but
+    the midrange control is between the two preamp gain stages. The midrange knob
+    can become a cool drive feature. Tweed amplifiers typically break up earlier than
+    later "cleaner" models and are known for their warm-sounding overdrive.
+  notable_users: Eric Clapton used the Champ almost exclusively for Derek and the
+    Dominos. Other notable users are Joe Perry and Brad Whitford of Aerosmith as well
+    as Joe Walsh and Slash.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: US Princess
+  based_on: Fender® Princeton Reverb
+  firmware_version: '3.00'
+  synopsis: A historically significant amp used on countless hit songs for decades.
+    Today, the Princeton Reverb is as phenomenal looking, sounding and performing
+    as ever, and is easily versatile enough to go from the living room to the recording
+    studio to the gig with the great sound, style, reliability and authentic vintage
+    vibe that Fender players know and love. One of the coolest amps around, it's ideal
+    for anyone who demands top-notch tube tone, naturally dynamic clean and overdriven
+    sound, and unmistakable long-spring Fender reverb and tube vibrato. This was one
+    of the most popular additions to the Helix with firmware 3.0. Massimo Di Tanna
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: US Super Nrm
+  based_on: Fender Super Reverb normal channel
+  firmware_version: '3.80'
+  synopsis: The Fender Super Reverb guitar amplifier is a renowned model that has
+    been a staple for guitarists since its introduction in the mid-1960s. Known for
+    its rich, clean tones and powerful reverb, the Super Reverb features a 4x10 speaker
+    configuration with Jensen P10R speakers, providing a distinctive, chimey sound.
+    The amp offers two channels (normal and vibrato) with controls for volume, treble,
+    bass, and additional reverb and tremolo effects on the vibrato channel. The modern
+    Tone Master Super Reverb replicates this classic tube amp's sound using advanced
+    modeling technology, making it lighter and more versatile for contemporary use,
+    including selectable output power and direct line-out for recording or live performance.
+  notable_users: Notable users include Stevie Ray Vaughan, Jimmie Vaughan, Johnny
+    Marr, Lee Ranaldo, and Freddie King, among others.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+  - Bright
+- name: US Super Vib
+  based_on: Fender Super Reverb vibrato channel
+  firmware_version: '3.80'
+  synopsis: The Fender Super Reverb guitar amplifier is a renowned model that has
+    been a staple for guitarists since its introduction in the mid-1960s. Known for
+    its rich, clean tones and powerful reverb, the Super Reverb features a 4x10 speaker
+    configuration with Jensen P10R speakers, providing a distinctive, chimey sound.
+    The amp offers two channels (normal and vibrato) with controls for volume, treble,
+    bass, and additional reverb and tremolo effects on the vibrato channel. The modern
+    Tone Master Super Reverb replicates this classic tube amp's sound using advanced
+    modeling technology, making it lighter and more versatile for contemporary use,
+    including selectable output power and direct line-out for recording or live performance.
+  notable_users: Notable users include Stevie Ray Vaughan, Jimmie Vaughan, Johnny
+    Marr, Lee Ranaldo, and Freddie King, among others.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+  - Bright
+- name: US Deluxe Nrm
+  based_on: Fender® Deluxe Reverb®
+  firmware_version: null
+  synopsis: 'The Normal channel is the mellower of the two, with less brightness and
+    gain than the Vibrato channel. The Vibrato channel is a separate preamp circuit
+    with tone and clipping characteristics that are different than the Normal channel
+    due to an additional 12Ax7 tube stage. High frequencies are increased due to the
+    addition of a bright cap across the volume knob. Most players love a Deluxe Reverb®
+    when it''s turned up to about 7 for a nice gritty sound that cleans up when you
+    back off your guitar''s volume knob just a little. Notice how the tone control
+    response changes as this Amp Model''s Drive is changed: clean settings are crisp
+    and present, while more driven settings will mellow the high end. This is typical
+    of what you get from a Deluxe Reverb® and is nicely captured here.'
+  notable_users: Muddy Waters, Mike Campbell, Jackson Brown, Vince Gill, Elvis Costello,
+    Pete Townshend, Buddy Guy. Honestly, this list could go on and on.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: US Deluxe Vib
+  based_on: Fender® Deluxe Reverb®
+  firmware_version: null
+  synopsis: 'The Normal channel is the mellower of the two, with less brightness and
+    gain than the Vibrato channel. The Vibrato channel is a separate preamp circuit
+    with tone and clipping characteristics that are different than the Normal channel
+    due to an additional 12Ax7 tube stage. High frequencies are increased due to the
+    addition of a bright cap across the volume knob. Most players love a Deluxe Reverb®
+    when it''s turned up to about 7 for a nice gritty sound that cleans up when you
+    back off your guitar''s volume knob just a little. Notice how the tone control
+    response changes as this Amp Model''s Drive is changed: clean settings are crisp
+    and present, while more driven settings will mellow the high end. This is typical
+    of what you get from a Deluxe Reverb® and is nicely captured here.'
+  notable_users: Muddy Waters, Mike Campbell, Jackson Brown, Vince Gill, Elvis Costello,
+    Pete Townshend, Buddy Guy. Honestly, this list could go on and on.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: US Double Nrm
+  based_on: Fender® Twin Reverb®
+  firmware_version: null
+  synopsis: An all-time classic of biting twang and shimmering clean tones, the Fender
+    Twin Reverb first hit the scene in 1964 and quickly became the standard for large,
+    fully featured touring combos. The Normal channel is the mellower of the two,
+    with less gain than the Vibrato channel. The Vibrato channel is a separate preamp
+    circuit with clipping characteristics that are different than the Normal channel
+    due to an additional 12Ax7 tube stage.
+  notable_users: Played clean but singing with a Telecaster, this is the sound of
+    Roy Buchanan; Played clean but singing with a Telecaster, this is the sound of
+    Roy Buchanan; cranked with a Les Paul, it's pure Michael Bloomfield. It never
+    gets extremely overdriven and dirty, mostly just louder-a lot louder.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: US Double Vib
+  based_on: Fender® Twin Reverb®
+  firmware_version: null
+  synopsis: An all-time classic of biting twang and shimmering clean tones, the Fender
+    Twin Reverb first hit the scene in 1964 and quickly became the standard for large,
+    fully featured touring combos. The Normal channel is the mellower of the two,
+    with less gain than the Vibrato channel. The Vibrato channel is a separate preamp
+    circuit with clipping characteristics that are different than the Normal channel
+    due to an additional 12Ax7 tube stage.
+  notable_users: Played clean but singing with a Telecaster, this is the sound of
+    Roy Buchanan; cranked with a Les Paul, it's pure Michael Bloomfield. It never
+    gets extremely overdriven and dirty, mostly just louder-a lot louder.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Mail Order Twin
+  based_on: Silvertone® 1484
+  firmware_version: null
+  synopsis: These amps are famous for their nice smooth overdrive but they've also
+    got a sweet clean tone at lower volumes.
+  notable_users: Some notable users of this amp are Jack White, Beck, and Coldplay.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Divided Duo
+  based_on: ÷13 JRT 9/15
+  firmware_version: null
+  synopsis: Divided by 13 creates two differently voiced but blendable channels for
+    a simple yet incredibly versatile front end. The result is a palette of tones
+    that remind you of the best American "tweed" and classic British amps, while somehow
+    sounding entirely unique throughout their range. Each volume controls the two
+    5879 tubes. One is voiced with more gain and darker, the other is brighter with
+    less gain. Video Examples Massimo Di Tanna
+  notable_users: Famous Divided By 13 Users include Lyle Workman of Beck, Rusty Anderson,
+    Jackson Browne, and Ronnie Wood.
+  available_parameters:
+  - Drive 1
+  - Drive 2
+  - Tone
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Interstate Zed
+  based_on: Dr Z® Route 66
+  firmware_version: null
+  synopsis: This amp achieves an extremely touch sensitive, full-bodied "milkshake
+    thick" overdrive when pushed, without ever losing its impressive clarity and definition.
+    Treble and bass operate regularly until 50%, and dial in gain once turned past
+    50%. To put this amp into overdrive, crank all three controls (Drive, Treble,
+    Bass), use humbuckers and possibly an overdrive pedal.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Derailed Ingrid
+  based_on: Trainwreck Circuits® Express
+  firmware_version: null
+  synopsis: This model is used for the guitar tracks in this video. For complete details,
+    read the videos description on YouTube. Around 1984, Ken Fischer designed the
+    Trainwreck Express. This design was born out of a collaboration with a client
+    who was constantly seeking modifications for his 1959 Marshall Super Lead to emulate
+    Eddie Van Halen's tone. He tweaked the Plexi's preamp circuit to drastically increase
+    the gain and harmonics, but the amp was then far too loud for of practical use.
+    To make the amp quieter, Fischer reduced the output by switching out the four
+    EL34 tubes for 6V6s. The client preferred the EL34 tone, however, so Fischer decided
+    to reduce the output stage to two EL34s.
+  notable_users: Brad Paisley, Mark Knopfler of Dire Straits, and Matt O'Ree (touring
+    musician with Bon Jovi)
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+  - Bright
+- name: Grammatico GSG
+  based_on: Grammatico GSG100
+  firmware_version: '3.60'
+  synopsis:
+    text: 'The GSG100 is an authentic recreation of a Dumble Overdrive Special using
+      the same vintage components acquired over decades as used in the late 70''s
+      - early 80''s era Dumble amps. Painstaking and meticulously studied to learn
+      and capture the tone as verified in side by side tests. — Per Ben Adrian, Sound
+      Design Manager: The Grammatico GSG100 is an amp based on the study of Dumble
+      amps made around 1980. This model aims to capture all the unique details of
+      this amplifier circuit, many of which are quite different than popular guitar
+      amps from the major companies. The GSG100 is a feature-rich and complicated
+      amp. There are many amazing sounds in the amp; however, the controls allow for
+      such a wide range of adjustment that it''s possible to get unpleasant sounds
+      from it as well. To best use the amp, it really helps to know exactly what each
+      of these features is doing to the guitar signal. Let''s go through the parameters
+      as they are found in the Helix model: model to fit the pattern of all the Helix
+      models. On the real amp is says "Volume." by amp nerds), located between the
+      first and second gain stages in the preamp. These have different ranges than
+      traditional guitar amp tone controls. Also, the whole voicing of the tone stack
+      can be changed with the "Rock/Jazz" switch, which will be explained later. the
+      amount of high frequency in the power amp by modifying the EQ filtering in the
+      power amp''s negative feedback loop. tone or distortion of the amp model between
+      the preamp and power amp and can be used to get more or less power amp distortion.
+      This amp is VERY loud, and most players would probably run the master volume
+      on the lower side. If the master volume is cranked, the power amp distortion
+      can be pushed into unpleasant territory. Most players would never crank the
+      master in real life as the actual output would be way too loud for most musical
+      settings. stack. When it is off, the amp has more of a scooped sound. When it
+      is on, there is a noticeable upper-mid boost. for two totally separate tonal
+      voices. Jazz is quieter with a lower center frequency for the mids. Rock is
+      louder with a more traditional mid frequency center. Tone controls rarely translate
+      well between the Jazz and Rock settings. If a good sound is achieved in one
+      mode, it is not guaranteed that the same settings in the opposite mode will
+      still sound pleasing. This circuit is located AFTER the tone controls and Drive
+      knob. When the overdrive is turned on it''s as if a third and fourth gain stage
+      is added to the preamp. Generally, it''s best to set up the base tone of the
+      amp with the Drive and tone controls first, and then adjust the overdrive circuit
+      to work with the desired base tone. circuit. Since the whole overdrive circuit
+      is after the amp''s regular drive and tone controls, the range of OD Drive knob
+      will change based on those earlier knob settings. values of bright capacitor.
+      This bright capacitor works with the Drive (volume) knob earlier in the circuit,
+      and is similar to other amps that have bright switches. When the Bright switch
+      is engaged, the effect is more pronounced with lower Drive settings. The bright
+      becomes less effective at higher Drive settings. When the Drive is at 10, the
+      switch is effectively removed from the amp circuit, and changing the switch
+      settings has no audible effect. circuit at the very beginning of the amp circuit.
+      It is akin to placing a FET Boost pedal before the amp. On the physical unit
+      there are two input jacks, but on the model it is placed on a switch and can
+      even be made foot-switchable. The FET Boost has a fixed boost amount of about
+      7 to 9 dB and also gives a slight EQ change. change. controls from the circuit.
+      Tone controls work by removing frequencies and signal level. Engaging the PAB
+      circuit returns all of this lost signal level, but the side effect is that tone
+      controls no longer work. It truth, the treble knob does work slightly, and the
+      mid switch will change how much lows and mids comes through the circuit. In
+      general, though, the PAB trades tone control functionality for a full blast
+      level between tube gain stages 1 and 2. some amount of power supply sag, which
+      feels like compression, squish, and sustain to the player. This control makes
+      the sag amount user-adjustable. heaters in tube amps will leak a little bit
+      of 60 cycle hum into the audio signal. When this hum mixes with the distorted
+      audio signal, a non-musical distortion is created at low levels. To some players,
+      this low-level, non-harmonic distortion adds a bit of realism to the amp model.
+      The best way to put it is that sometimes the model sounds more "wrong" without
+      the hum. However, if you don''t like it, you can just turn it down. circuits
+      will sometimes let a little bit of rectified 120Hz hum (that the power supply
+      filter caps can''t quite fully remove) into the audio signal. When the power
+      supply is being pushed hard, more of this ripple can get through the audio path.
+      Much like the hum, this provides a bit of non-musical distortion to the power
+      amp at distorted settings. To some people, this sounds like harmonic complexity
+      that is enjoyable and realistic. Other players just don''t like it and turn
+      it off. the power amp, causing a change in tonality and the distortion characteristic.
+      hang on. All tube amps need to bias the power amp tubes. This is usually achieved
+      by applying a negative voltage to the input audio signal. (Cathode bias works
+      differently, but that''s a story for a different time.) However, when the power
+      tubes are distorting, free electrons can form around the input grid and cause
+      a shift in the bias voltage. This shift only happens during the moments when
+      distortion is occurring. This shift causes a tonal and texture change much like
+      adjusting the bias control. However, once the tubes leave the distorted state,
+      the free electrons dissipate and the bias returns to normal. Another way to
+      put it (less accurately) is that this is a level/envelope controlled bias shift.
+      This behavior is modeled in all Helix amps, and the Bias X control allows users
+      to control the amount of bias shift that is happening. It is a very subtle change,
+      so please don''t expect high drama from this knob.'
+    items:
+    - Drive—This is the first volume control on the amp. It's called "drive" on the
+    - Bass, Mid, Treble—The normal tone controls on the amp (called a tone stack
+    - Presence—This is like the presence controls on other guitar amps. It changes
+    - Ch Vol—This controls the output level of the amp model. It has no effect on
+      the
+    - Master—This is the master volume on the front panel of the amp. It is located
+    - Mid Switch—This switch changes the value of the treble capacitor in the tone
+    - Jazz/Rock—This switch changes the wiring of the tone stack circuit. It allows
+    - OD Switch—This turns the two-gain-stage tube overdrive circuit on and off.
+    - OD Drive—This controls the amount of drive or saturation in the overdrive
+    - OD Level—This controls the output level of the overdrive circuit.
+    - Bright—This is a three position switch. The settings are "off" and two different
+    - FET Boost—The GSG100 has a solid state, FET (Field Effect Transistor) boost
+    - PAB—This stands for "Preamp Boost." The PAB works by removing the tone
+    - Sag—This is a control that is added to all the Helix models. Every tube amp
+      has
+    - Hum—This is a control that is added to most of the Helix models. Preamp tube
+    - Ripple—This is a control that is added to most of the Helix models. Power amp
+    - Bias—This control is in most Helix models. It adjusts the bias of the tubes
+      in
+    - Bias X—This is the most difficult parameter to describe in Helix models, so
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Mid Switch
+  - Jazz Rock
+  - OD Switch
+  - OD Drive
+  - OD Level
+  - Bright
+  - FET Boost
+  - PAB
+  - Sag
+  - Hum
+- name: Jazz Rivet 120
+  based_on: Roland® JC-120 Jazz Chorus
+  firmware_version: null
+  synopsis: Roland Jazz Chorus is a solid-state instrument amplifiers produced in
+    Japan since 1975. Its name comes from its built-in analog chorus effect. The Jazz
+    Chorus series became increasingly popular in the late 1970s and early 1980s new
+    wave and post- punk scenes because of its clean yet powerful sound.
+  notable_users: Its earliest users included Albert King, Andy Summers (The Police),
+    Robert Smith of The Cure and Siouxsie and the Banshees, and Pat Metheny. James
+    Hetfield and Kirk Hammett of Metallica use it for their clean tones as well.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Bright
+  - Ch Vol
+  - Master
+- name: Essex A15
+  based_on: Vox® AC-15
+  firmware_version: null
+  synopsis: For the AC-15, the master volume is post-phase-inverter in the full amp
+    model. This allow the user to use the Drive knob to hit just the Phase Inverter
+    tubes harder. However, in this amp the power tubes can distort a LOT. When this
+    is combined with the fact that the preamp doesn't distort a whole lot on its own,
+    it can produce a situation where turning the preamp up and the master volume down
+    will clean up the sound quite a bit. The preamp barely distorts and the power
+    amp distorts a TON. This is the opposite of many amps where the preamp is designed
+    to distort and, while the power amp can distort as well, most of the crunch comes
+    from smashing the preamp.
+  notable_users: Early Beatles recordings and the James Bond theme from Dr. No feature
+    the Vox AC-15.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Essex A30
+  based_on: Vox® AC-30 with top boost
+  firmware_version: null
+  synopsis: 'The Vox AC-30 with Top Boost was the amp made famous by many British
+    invasion bands. Much of the unique character of the Vox® sound can be attributed
+    to the fact that Class A amps overdrive in a very different way than Class AB.
+    Although usually played fairly clean, a cranked AC 30 has a great saturated lead
+    tone. Tips: Starting Point: Master 10, set Drive to taste, Mid 5 (50%), Instead
+    of turning up Drive, try boosting the input signal before the amp. Cabinet suggestion:
+    Alinco Silver Or use (or combine with) Marshall greenbacks (4x12 20w or 25w).
+    Alternative: Red Wirez Vox and Marshall greenbacks, Ownhammer Blue and greenbacks.'
+  notable_users: The Beatles, The Shadows, Tom Petty & The Heartbreakers, Brian May
+    of Queen, Peter Buck of R.E.M., and Foo Fighters have all used classic AC-30s
+    to make their music.
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Master
+  - Sag
+  - Ch Vol
+  - Hum
+- name: A30 Fawn Nrm
+  based_on: Vox® AC-30 Fawn
+  firmware_version: null
+  synopsis: The Vox AC-30 Fawn contains two channels. Both the bright channel and
+    the normal channel only hit one preamp stage before going to the phase inverter
+    in the power amp. All of the saturation of this amp comes from the power amp,
+    and it can get pretty dirty. The bright channel is pretty bright when run clean,
+    but that brightness when driving the power amp results in a wonderfully rich and
+    harmonically complex overdrive. It's quite responsive to saturation with picking
+    dynamics and volume knob control. Turning up the Bias knob reduces crossover distortion
+    the best, but there are no wrong knob settings. If you like the sound coming out,
+    the knobs are set right for you.
+  notable_users: The Beatles first recordings in the Abbey Road studio used a fawn.
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Master
+  - Sag
+  - Ch Vol
+  - Hum
+- name: A30 Fawn Brt
+  based_on: Vox® AC-30 Fawn
+  firmware_version: null
+  synopsis: The Vox AC-30 Fawn contains two channels. Both the bright channel and
+    the normal channel only hit one preamp stage before going to the phase inverter
+    in the power amp. All of the saturation of this amp comes from the power amp,
+    and it can get pretty dirty. The bright channel is pretty bright when run clean,
+    but that brightness when driving the power amp results in a wonderfully rich and
+    harmonically complex overdrive. It's quite responsive to saturation with picking
+    dynamics and volume knob control. Turning up the Bias knob reduces crossover distortion
+    the best, but there are no wrong knob settings. If you like the sound coming out,
+    the knobs are set right for you.
+  notable_users: The Beatles first recordings in the Abbey Road studio used a fawn.
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Master
+  - Sag
+  - Ch Vol
+  - Hum
+- name: Matchstick Ch1
+  based_on: Matchless® DC30
+  firmware_version: null
+  synopsis: Pure "Class A" configuration gives rich, complex harmonics whether played
+    clean, mildly overdriven, or with all out power tube saturation. This means you
+    should sound great in any situation, in any music style. Similar to AC30 without
+    breaking, sound great in any situation, in any music style. Similar to AC30 without
+    breaking, Channel 2 similar to AC15.
+  notable_users: Paul Jackson Jr., Chris Collingwood of Fountains of Wayne, Mike McCready
+    of Pearl Jam, Neil Young, Coy Bowles of The Zac Brown Band, James Valentine of
+    Maroon 5, Ben McKee of Imagine Dragons, Bob Dylan, and many more.
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Treble
+  - Master
+  - Sag
+  - Ch Vol
+  - Hum
+- name: Matchstick Ch2
+  based_on: Matchless® DC30
+  firmware_version: null
+  synopsis: Pure "Class A" configuration gives rich, complex harmonics whether played
+    clean, mildly overdriven, or with all out power tube saturation. This means you
+    should sound great in any situation, in any music style. Similar to AC30 without
+    breaking, Channel 2 similar to AC15.
+  notable_users: Paul Jackson Jr., Chris Collingwood of Fountains of Wayne, Mike McCready
+    of Pearl Jam, Neil Young, Coy Bowles of The Zac Brown Band, James Valentine of
+    Maroon Jam, Neil Young, Coy Bowles of The Zac Brown Band, James Valentine of Maroon
+    5, Ben McKee of Imagine Dragons, Bob Dylan, and many more.
+  available_parameters:
+  - Ch2 Drive
+  - Tone
+  - Master
+  - Sag
+  - Hum
+  - Ch Vol
+- name: Matchstick Jump
+  based_on: Matchless® DC30
+  firmware_version: null
+  synopsis: Pure "Class A" configuration gives rich, complex harmonics whether played
+    clean, mildly overdriven, or with all out power tube saturation. This means you
+    should sound great in any situation, in any music style. Similar to AC30 without
+    breaking, Channel 2 similar to AC15.
+  notable_users: Paul Jackson Jr., Chris Collingwood of Fountains of Wayne, Mike McCready
+    of Pearl Jam, Neil Young, Coy Bowles of The Zac Brown Band, James Valentine of
+    Maroon 5, Ben McKee of Imagine Dragons, Bob Dylan, and many more.
+  available_parameters:
+    text: Treble
+    items:
+    - Ch1 Drive
+    - Bass
+    - Treble
+    - Ch2 Drive
+    - Tone
+    - Ch Vol
+    - Master
+    - Sag
+    - Hum
+- name: Mandarin 80
+  based_on: Orange® OR80
+  firmware_version: null
+  synopsis: The F.A.C. control stands for Frequency Analysing Control. It is a mid-range
+    sweep that offers many variations on the Orange sound. Experiment with different
+    settings for a variety of sounds. It is basically EQ settings from bassy all the
+    way to the left and getting progressively thinner as you go to the right. Most
+    people, set it all the way to the left or one click to the right from that.The
+    FAC control switches between different interstage coupling capacitors which will
+    change the low frequency cutoff/ rolloff point of the preamp. In other words,
+    it cuts bass increasingly with each click clockwise. The HF drive is a presence
+    control, that boost/attenuate very high frequencies, comparing to other amplifiers.
+    It's in between gain stages (2 to 3), so it does effect drive. You can call it
+    a drive control, like the Eq, that is between stage 1 and 2.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - FAC
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Mandarin Rocker
+  based_on: Orange® Rockerverb 100 MKIII (Dirty Channel)
+  firmware_version: '3.10'
+  synopsis: 'The original Rockerverb gained a cult following on account of its iconic
+    high gain tones. The MKIII continue this tradition, but this amps is immensely
+    flexible. The Dirty channel goes anywhere from clean to crunch to the very heaviest
+    modern saturation, and always maintains outstanding clarity. The non-master volume
+    Clean channel has been engineered to take on a more “sparkly” “chimey”, and "crisp"
+    response but with greater control through a two band EQ section. Differences from
+    actual amp: The amp model has a touch less low end than the unit that was actually
+    modeled. One other difference is that when gain is below 5 (i.e. switching to
+    gain stage 1 from 2), the level is not rolled off nearly as fast as the actual
+    amp. This for the sake of usability since it drops extremely fast once you get
+    down there on the physical unit. Orange Amps'
+  available_parameters:
+  - Brt Drive
+  - Nrm Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Presence
+  - Master
+  - Sag
+  - Hum
+- name: Brit J45 Nrm
+  based_on: Marshall® JTM-45
+  firmware_version: null
+  synopsis: 'The Normal channel is the mellower of the two, with less (as you''d expect)
+    brightness and gain than the Bright channel. The Bright channel utilizes the second
+    half of the first preamp tube (the Normal channel uses the first half only) for
+    a different voicing. High frequencies are increased due to an inter-stage high
+    shelving filter. Tips: It''s a bass-heavy amp -> Decreasing Bass could be a good
+    tip. Great for clean tones as well as rock tones.'
+  notable_users: This is the exact same amplifier as the Marshall® "Bluesbreaker"
+    that Eric Clapton made famous, but in head form, rather than housed in a 2x12"
+    combo. This is your starting if you're looking for that 'beano' tone.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit J45 Brt
+  based_on: Marshall® JTM-45
+  firmware_version: null
+  synopsis: 'The Normal channel is the mellower of the two, with less (as you''d expect)
+    brightness and gain than the Bright channel. The Bright channel utilizes the second
+    half of the first preamp tube (the Normal channel uses the first half only) for
+    a different voicing. High frequencies are increased due to an inter-stage high
+    shelving filter. Tips: It''s a bass-heavy amp -> Decreasing Bass could be a good
+    tip. Great for clean tones as well as rock tones.'
+  notable_users: This is the exact same amplifier as the Marshall® "Bluesbreaker"
+    that Eric Clapton made famous, but in head form, rather than housed in a 2x12"
+    combo. This is your starting if you're looking for that 'beano' tone.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit Trem Nrm
+  based_on: Marshall® Plexi Tremolo 50
+  firmware_version: null
+  synopsis: Video Examples
+  available_parameters:
+  - Normal Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit Trem Brt
+  based_on: Marshall® Plexi Tremolo 50
+  firmware_version: null
+  synopsis: Video Examples
+  available_parameters:
+  - Bright Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit Trem Jump
+  based_on: Marshall® Plexi Tremolo 50
+  firmware_version: null
+  synopsis: Video Examples
+  available_parameters:
+  - Bright Drive
+  - Normal Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Brit Plexi Nrm
+  based_on: Marshall® Super Lead 100
+  firmware_version: null
+  synopsis: 'A Plexi is supposed to sound fizzy (it''s helps to cut through in a mix).
+    Don''t be afraid to turn the bass all the way down or the treble all the way up.
+    Just like with the actual amp. For example, on the normal channel of a Plexi most
+    people turn the bass way down. Otherwise it''s too flubby." Settings for a "typical"
+    Plexi tone could be aprox. Bass: 2, Mid: 8, Treble 7.5. Presence adjust to taste.'
+  notable_users: Users include Pete Towsend, Eric Clapton, Angus Young of AC/DC, and
+    most famously, by Jimi Hendrix at his Woodstock performance.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit Plexi Brt
+  based_on: Marshall® Super Lead 100
+  firmware_version: null
+  synopsis: 'A Plexi is supposed to sound fizzy (it''s helps to cut through in a mix).
+    Don''t be afraid to turn the bass all the way down or the treble all the way up.
+    Just like with the actual amp. For example, on the normal channel of a Plexi most
+    people turn the bass way down. Otherwise it''s too flubby." Settings for a "typical"
+    Plexi tone could be aprox. Bass: 2, Mid: 8, Treble 7.5. Presence adjust to taste.'
+  notable_users: Users include Pete Towsend, Eric Clapton, Angus Young of AC/DC, and
+    most famously, by Jimi Hendrix at his Woodstock performance. famously, by Jimi
+    Hendrix at his Woodstock performance.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit Plexi Jump
+  based_on: Marshall® Super Lead 100
+  firmware_version: null
+  synopsis: 'A Plexi is supposed to sound fizzy (it''s helps to cut through in a mix).
+    Don''t be afraid to turn the bass all the way down or the treble all the way up.
+    Just like with the actual amp. For example, on the normal channel of a Plexi most
+    people turn the bass way down. Otherwise it''s too flubby." Settings for a "typical"
+    Plexi tone could be aprox. Bass: 2, Mid: 8, Treble 7.5. Presence adjust to taste.'
+  notable_users: Users include Pete Towsend, Eric Clapton, Angus Young of AC/DC, and
+    most famously, by Jimi Hendrix at his Woodstock performance.
+  available_parameters:
+  - Bright Drive
+  - Normal Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Brit P75 Nrm
+  based_on: Park® 75
+  firmware_version: null
+  synopsis: Although they were usually based loosely on circuits used in classic Marshall
+    amps, Park models were often given clever new twists, such as the increased front-end
+    gain in the 75 and the use of military-grade KT88 output tubes rather than the
+    traditional EL34s. Add it all up, and it's a sizzling, crunchy plexi-style tone
+    like nothing you've ever heard before, equally adept at classic British blues-rock
+    and contemporary grind. The Normal channel is the mellower of the two, with less
+    brightness and gain than the Bright channel. The Bright channel utilizes the second
+    half of the first preamp tube for a different voicing. High frequencies are increased
+    due to an inter-stage high-shelving filter.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit P75 Brt
+  based_on: Park® 75
+  firmware_version: null
+  synopsis: Although they were usually based loosely on circuits used in classic Marshall
+    amps, Park models were often given clever new twists, such as the increased front-end
+    gain in the 75 and the use of military-grade KT88 output tubes rather than the
+    traditional EL34s. Add it all up, and it's a sizzling, crunchy plexi-style tone
+    like nothing you've ever heard before, equally adept at classic British blues-rock
+    and contemporary grind. The Normal channel is the mellower of the two, with less
+    brightness and gain than the Bright channel. The Bright channel utilizes the second
+    half of the first preamp tube for a different voicing. High frequencies are increased
+    due to an inter-stage high-shelving filter.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Brit 2203
+  based_on: 100W Marshall JCM-800 Stock 2203
+  firmware_version: '3.70'
+  synopsis: Nothing embodies the essence of Marshall's legendary tone than the JCM800
+    2203 guitar amplifier head. With just one channel, a 3-band EQ for tone shaping,
+    and 100-watts of power, you've got everything you need to pound out classic tones
+    from crunchy blues to screaming leads and beyond.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+  - Input
+- name: Brit 2204
+  based_on: Marshall® JCM-800
+  firmware_version: null
+  synopsis: 'Turn to this Amp Model to conjure up tones of the coveted JCM 800, one
+    of Marshall''s most universally acclaimed modern amps. This updated version of
+    the Plexi continued Marshall''s heritage with added gain and edge for a new generation
+    of rock guitarists. One of the biggest differences here is that the tone controls
+    are located after the preamp tubes. Tips: Turn up Master Volume. Try with a low-gain
+    TS808 or Tube Drive. The real amp is too bright, you can adjust the various tone
+    controls and parameters to reduce the brightness to your tastes with presence
+    normally way down. They are designed to be run loud and the brightness decreases
+    as the Master Volume is increased. If you don''t push the power amp all you are
+    hearing is the preamp which is voiced to be trebly. The power amp then compresses
+    the highs and the sound gets fatter, but set Master Volume too high and it will
+    get muddy. The sound of 80''s hair metal, treble boosting amplifies the upper
+    frequencies, however, that treble boosting helps the sound cut.'
+  available_parameters:
+    text: Placater Clean
+    items:
+    - Drive
+    - Bass
+    - Mid
+    - Treble
+    - Master
+    - Ch Vol
+    - Sag
+    - Hum
+- name: Placater Clean
+  based_on: Friedman® BE-100
+  firmware_version: null
+  synopsis: 'Dave Friedman''s "BE" circuit has been hailed as the epitome of British
+    tone. In recent years, this tonal infusion has made the BE-100 one the most popular
+    and sought after 100 Watt boutique amps. Friedman''s BE drive channels have earned
+    their reputation for high-gain crunch, clarity and nuance. The clean channel has
+    a crisp plexi tone. See this video for an example: Friedman Ampli-cation'
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Bright
+  - Master
+  - Ch Vol
+  - Sag
+- name: Placater Dirty
+  based_on: Friedman® BE-100
+  firmware_version: null
+  synopsis: 'Dave Friedman''s "BE" circuit has been hailed as the epitome of British
+    tone. In recent years, this tonal infusion has made the BE-100 one the most popular
+    and sought after 100 Watt boutique amps. Friedman''s BE drive channels have earned
+    their reputation for high-gain crunch, clarity and nuance. The clean channel has
+    a crisp plexi tone. See this video for an example: Friedman Ampli-cation'
+  available_parameters:
+    text: Mid
+    items:
+    - Drive
+    - Bass
+    - Mid
+    - Treble
+    - Master
+    - Ch Vol
+    - Sag
+    - HBE
+    - Fat
+    - C45
+    - Saturation
+- name: Cartographer
+  based_on: Ben Adrian Cartographer
+  firmware_version: null
+  synopsis: A highly-modded, 50 watt Traynor head, the Cartographer was built by Ben
+    Adrian for his band of the same name. Read more about it on Ben Adrian's blog
+    linked above.
+  available_parameters:
+    text: Bright 1
+    items:
+    - Drive
+    - Drive 2
+    - Bass
+    - Mid
+    - Treble
+    - Ch Vol
+    - Master
+    - Bright 1
+    - Bright 2
+    - Sag
+    - Hum
+- name: German Xtra Blue
+  based_on: Bogner Ecstasy 101B Blue channel
+  firmware_version: '3.80'
+  synopsis: The Bogner Ecstasy 101B guitar amplifier is a versatile, high-performance
+    amp head known for its exceptional tonal range and flexibility. This 100-watt
+    tube amp features three channels, each with three gain levels, allowing guitarists
+    to switch between clean, overdrive, and high-gain tones effortlessly. It includes
+    EL34 power tubes and 12AX7 preamp tubes, providing a rich, dynamic sound. The
+    Ecstasy 101B offers a Class A/AB switch, a half-power switch, and a Plexi mode,
+    enabling users to achieve both vintage and modern tones. Additional features include
+    dual presence controls, a tube-driven effects loop, and a comprehensive footswitch
+    for easy control. This amp is highly regarded by professional musicians for its
+    ability to deliver a wide array of sounds, making it suitable for various musical
+    styles.
+  notable_users: The Bogner Ecstasy 101B amplifier is favored by renowned guitarists
+    across diverse genres. Notable users include Steve Vai, Steve Lukather, Matt Pike,
+    Dan Donegan, Mami Sasazaki, and Neil Westfall.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Bright
+  - Ch Vol
+  - Boost
+  - Structure
+  - Master
+- name: German Xtra Red
+  based_on: Bogner Ecstasy 101B Red channel
+  firmware_version: '3.80'
+  synopsis: The Bogner Ecstasy 101B guitar amplifier is a versatile, high-performance
+    amp head known for its exceptional tonal range and flexibility. This 100-watt
+    tube amp features three channels, each with three gain levels, allowing guitarists
+    to switch between clean, overdrive, and high-gain tones effortlessly. It includes
+    EL34 power tubes and 12AX7 preamp tubes, providing a rich, dynamic sound. The
+    Ecstasy 101B offers a Class A/AB switch, a half-power switch, and a Plexi mode,
+    enabling users to achieve both vintage and modern tones. Additional features include
+    dual presence controls, a tube-driven effects loop, and a comprehensive footswitch
+    for easy control. This amp is highly regarded by professional musicians for its
+    ability to deliver a wide array of sounds, making it suitable for various musical
+    styles.
+  notable_users: The Bogner Ecstasy 101B amplifier is favored by renowned guitarists
+    across diverse genres. Notable users include Steve Vai, Steve Lukather, Matt Pike,
+    Dan Donegan, Mami Sasazaki, and Neil Westfall.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Bright
+  - Ch Vol
+  - Boost
+  - Structure
+  - Master
+- name: German Mahadeva
+  based_on: Bogner® Shiva
+  firmware_version: null
+  synopsis: 'The beauty of the Shiva is that it takes what Marshall did in the ''70s
+    and ''80s and adds some modern appointments so that the user can achieve tones
+    ranging from classic rock to heavy metal (the utilization of the boost feature
+    works wonders here). One thing is constant, though: Swirling notes. It is hard
+    to describe, but the Shiva has a midrange character that results in what sounds
+    like a light swirling of each note and chord that creates a very harmonically
+    rich tone. Tips: Bogner around noon (50%) are dark, it''s like turning the treble
+    way down on a Marshall. The treble knob at 50% on a Bogner is equivalent to the
+    treble knob at 10% on a Marshall. If you turned the treble up to 8 or 9 it would
+    sound a lot like a Plexi.'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: German Ubersonic
+  based_on: Bogner® Überschall®
+  firmware_version: null
+  synopsis: 'This model is reminiscent of an 800, modded for heavier, grinding lows
+    and what some call insane gain. The presence knob on the Bogner Ubserschall is
+    more like a contour, affects most of the midrange as well. Tips: Heavy grinding
+    lows and insane gain, it could be too boomy (low cut). From Real Amp manual: starting
+    point control values, gain 60%, bass 60%, mid 60%, Treble 60%, Presence 60%. Keep
+    the Master volume low (5 or less). Turn up Presence, add Mids'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Master
+  - Sag
+- name: Cali Texas Ch 1
+  based_on: MESA/Boogie® Lonestar
+  firmware_version: null
+  synopsis: 'CHANNEL 1 epitomizes the best of Black Face: a punchy, shimmering twang
+    that gives way to furry smoothness. It''s based on a traditional vintage/boutique
+    gain structure to produce angelic and warm clean sounds in its low to medium gain
+    ranges. Like most great tube amps, this channel can be driven to clip and produces
+    incredible solo possibilities for blues or root chording styles. CHANNEL 2 has
+    a split personality. At the flick of a switch, it can clone the clean magic of
+    Channel 1 (with an added touch of blues-roots gain) or kick in an additional high-gain
+    amplifier with its own dedicated control. With stunning performance inspired by
+    the pivotal Mark I, the interaction of three cascading gain controls unlocks the
+    historic vault of ground-breaking lead sounds. Video Examples Massimo Di Tanna'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Master
+- name: Cali Texas Ch 2
+  based_on: MESA/Boogie® Lonestar
+  firmware_version: null
+  synopsis: 'CHANNEL 1 epitomizes the best of Black Face: a punchy, shimmering twang
+    that gives way to furry smoothness. It''s based on a traditional vintage/boutique
+    gain structure to produce angelic and warm clean sounds in its low to medium gain
+    ranges. Like most great tube amps, this channel can be driven to clip and produces
+    incredible solo possibilities for blues or root chording styles. CHANNEL 2 has
+    a split personality. At the flick of a switch, it can clone the clean magic of
+    Channel 1 (with an added touch of blues-roots gain) or kick in an additional high-gain
+    amplifier with its own dedicated control. With stunning performance inspired by
+    the pivotal Mark I, the interaction of three cascading gain controls unlocks the
+    historic vault of ground-breaking lead sounds. Video Examples Massimo Di Tanna'
+  available_parameters:
+  - Drive 1
+  - Drive 2
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Shape
+  - Presence
+  - Master
+- name: Cali IV Rhythm 1
+  based_on: MESA/Boogie® Mark IV
+  firmware_version: null
+  synopsis: In 1984, Mesa / Boogie released the first "Tri-modal" amplifier, the Mark
+    III. Tri modal, because it has separate modes for Clean sound, Crunch sound and
+    Lead modal, because it has separate modes for Clean sound, Crunch sound and Lead
+    sound. The Mark IV, which came out six years later, significantly improved the
+    ability to control each channel separately by introducing two controller knobs
+    on the front panel, thus optimizing available space without increasing the Mark
+    III's comfortable and versatile size. It is a complete amplifier, has all ranges,
+    from blues, jazz, rock, heavy, even metal, has immense possibilities and just
+    so make it especially complicated.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Master
+  - Sag
+  - 80 Hz
+  - 240 Hz
+  - 750 Hz
+  - 2200 Hz
+  - 6600 Hz
+- name: Cali IV Rhythm 2
+  based_on: MESA/Boogie® Mark IV
+  firmware_version: null
+  synopsis: In 1984, Mesa / Boogie released the first "Tri-modal" amplifier, the Mark
+    III. Tri In 1984, Mesa / Boogie released the first "Tri-modal" amplifier, the
+    Mark III. Tri modal, because it has separate modes for Clean sound, Crunch sound
+    and Lead sound. The Mark IV, which came out six years later, significantly improved
+    the ability to control each channel separately by introducing two controller knobs
+    on the front panel, thus optimizing available space without increasing the Mark
+    III's comfortable and versatile size. It is a complete amplifier, has all ranges,
+    from blues, jazz, rock, heavy, even metal, has immense possibilities and just
+    so make it especially complicated.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Master
+  - Sag
+  - 80 Hz
+  - 240 Hz
+  - 750 Hz
+  - 2200 Hz
+  - 6600 Hz
+- name: Cali IV Lead
+  based_on: MESA/Boogie® Mark IV
+  firmware_version: null
+  synopsis: In 1984, Mesa / Boogie released the first "Tri-modal" amplifier, the Mark
+    III. Tri modal, because it has separate modes for Clean sound, Crunch sound and
+    Lead sound. The Mark IV, which came out six years later, significantly improved
+    the ability to control each channel separately by introducing two controller knobs
+    on the front panel, thus optimizing available space without increasing the Mark
+    III's comfortable and versatile size. It is a complete amplifier, has all ranges,
+    from blues, jazz, rock, heavy, even metal, has immense possibilities and just
+    so make it especially complicated.
+  available_parameters:
+  - Lead Gain
+  - Lead Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Presence
+  - Master
+  - Sag
+  - 80 Hz
+  - 240 Hz
+  - 750 Hz
+  - 2200 Hz
+  - 6600 Hz
+- name: Cali Rectifire
+  based_on: MESA/Boogie® Dual Rectifier®
+  firmware_version: null
+  synopsis: 'Based on a 2001, 3 Channel Mesa/Boogie® Dual Rectifier® Solo Head. The
+    Dual Rectifier® was part of Boogie''s more modern, high gain approach for that
+    "big hair" sound. In contrast to the earlier Boogies, the Dual Rectifier''s tone
+    controls have more influence at high gain settings, so you can scoop the mids
+    and increase the bottom end. We used Channel 3 on the Modern setting for this
+    one with the rear switches set to Bold and Tube Rectifier®, respectively. Tips:
+    Real Rectos are bassy/fizzy beasts but that tone works great for certain genres.
+    This is based on the Modern mode, so be very careful with the Master parameter.
+    If you turn it up too high it will flub out really quick. If in doubt reduce the
+    MV (because there is no negative feedback, the power amp has a lot more gain and
+    a huge bass boost).'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Archetype Clean
+  based_on: Paul Reed Smith® Archon®
+  firmware_version: null
+  synopsis: The Clean channel is rich a dimensional and stays clean to almost full
+    volume. Reminiscent of the mesa and soldano cleans. The versatility of the three-band
+    EQ lets you dial in tones from across the decades and across genres. The Lead
+    channel starts out in hot-rodded Marshall territory and quickly works its way
+    up into modern high gain tones. As long as you keep the Lead volume below noon,
+    you can always clean things up with the volume knob on your guitar. If you crank
+    the Lead volume beyond noon, totally higain.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+  - Bright
+- name: Archetype Lead
+  based_on: Paul Reed Smith® Archon®
+  firmware_version: null
+  synopsis: The Clean channel is rich a dimensional and stays clean to almost full
+    volume. Reminiscent of the mesa and soldano cleans. The versatility of the three-band
+    EQ Reminiscent of the mesa and soldano cleans. The versatility of the three-band
+    EQ lets you dial in tones from across the decades and across genres. The Lead
+    channel starts out in hot-rodded Marshall territory and quickly works its way
+    up into modern high gain tones. As long as you keep the Lead volume below noon,
+    you can always clean things up with the volume knob on your guitar. If you crank
+    the Lead volume beyond noon, totally higain.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: ANGL Meteor
+  based_on: ENGL® Fireball 100
+  firmware_version: null
+  synopsis: 'Great for aggressive, drop-tuned riff work, Based on* 2009 ENGL® Fireball
+    100 (German) Designed to redefine the stereotypical "shred" sound and dial in
+    a more musical lower-midrange and bass response, the ENGL Fireball 100 has become
+    one of the new standards of contemporary rock and metal. Tips: Since the Treble
+    and Presence control knobs sweep through different frequency ranges and influence
+    the signal at different places in the amp''s internal signal chain, you can dial
+    in different combinations of treble and presence settings to come up with many
+    interesting sonic variations. to come up with many interesting sonic variations.'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Mid Boost
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Solo Lead Clean
+  based_on: Soldano SLO-100
+  firmware_version: null
+  synopsis: 'Much of the love for the SLO-100 is due to not only its juicy high gain
+    tones, but also its clean and crunchy capabilities. The SLO-100 features two channels,
+    Normal and Overdrive, with a Clean / Crunch gain switch on the Normal channel.
+    Solo Lead Clean: This model of the Normal channel switched to Clean provides the
+    most headroom and a variety of warm to shimmery clean tones. Solo Lead Crunch:
+    Here we''ve modeled the Normal channel switched to Crunch, which is superb for
+    a range of distorted textures from polite to aggressive. Solo Lead Overdrive:
+    A model of the Overdrive channel with some seriously tight bottom chunk to liquid,
+    screaming lead capabilities.'
+  notable_users: The SLO-100 was made an instant hit by early adopters Eric Clapton
+    and Mark Knopfler, and used by a range of players, including Warren DeMartini,
+    Warren Haynes, Lou Reed, and Eddie Van Halen.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Solo Lead Crunch
+  based_on: Soldano SLO-100
+  firmware_version: null
+  synopsis: 'Much of the love for the SLO-100 is due to not only its juicy high gain
+    tones, but also its clean and crunchy capabilities. The SLO-100 features two channels,
+    Normal and Overdrive, with a Clean / Crunch gain switch on the Normal channel.
+    Solo Lead Clean: This model of the Normal channel switched to Clean provides the
+    most headroom and a variety of warm to shimmery clean tones. Solo Lead Crunch:
+    Here we''ve modeled the Normal channel switched to Crunch, which is superb for
+    a range of distorted textures from polite to aggressive. Solo Lead Overdrive:
+    A model of the Overdrive channel with some seriously tight bottom chunk to liquid,
+    screaming lead capabilities.'
+  notable_users: The SLO-100 was made an instant hit by early adopters Eric Clapton
+    and Mark Knopfler, and used by a range of players, including Warren DeMartini,
+    Warren Haynes, Lou Reed, and Eddie Van Halen.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Solo Lead OD
+  based_on: Soldano SLO-100
+  firmware_version: null
+  synopsis: 'Much of the love for the SLO-100 is due to not only its juicy high gain
+    tones, but also its clean and crunchy capabilities. The SLO-100 features two channels,
+    Normal and Overdrive, with a Clean / Crunch gain switch on the Normal channel.
+    Solo Lead Clean: This model of the Normal channel switched to Clean provides the
+    most headroom and a variety of warm to shimmery clean tones. Solo Lead Crunch:
+    Here we''ve modeled the Normal channel switched to Crunch, which is superb for
+    a range of distorted textures from polite to aggressive. Solo Lead Overdrive:
+    A model of the Overdrive channel with some seriously tight bottom chunk to liquid,
+    screaming lead capabilities.'
+  notable_users: The SLO-100 was made an instant hit by early adopters Eric Clapton
+    and Mark Knopfler, and used by a range of players, including Warren DeMartini,
+    Warren Haynes, Lou Reed, and Eddie Van Halen.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: EV Panama Blue
+  based_on: EVH 5150III 100 [6L6] Blue channel
+  firmware_version: '3.80'
+  synopsis: The EVH 5150III 100 [6L6] guitar amplifier is a powerful 100-watt tube
+    amp designed for versatility and high-performance sound. Featuring three channels—
+    clean, crunch, and lead—it offers a wide range of tones suitable for various musical
+    styles. The amp is equipped with dual-concentric controls for independent gain
+    and volume adjustments on the first two channels, while the lead channel has its
+    own dedicated controls. With EL34 power tubes, the 5150III delivers a dynamic
+    sound characterized by articulate highs and robust lows. Additional features include
+    a global presence and resonance control, an effects loop, and MIDI compatibility,
+    making it a favorite among professional guitarists seeking a reliable and expressive
+    amplifier.
+  notable_users: The EVH 5150III 100 [6L6] guitar amplifier is endorsed by several
+    prominent musicians, including Eddie Van Halen, who co-designed the amp and is
+    known for its versatile tone. Alex Lifeson utilizes it for a wide range of sounds,
+    while Kirk Hammett appreciates its aggressive, dynamic capabilities. Steve Vai
+    values the amp's versatility across various styles, and Derek Trucks uses it for
+    its rich tonal palette. These artists rely on the 5150III to achieve their signature
+    sounds in a variety of genres.
+  available_parameters:
+  - Gain
+  - Low
+  - Mid
+  - High
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: EV Panama Red
+  based_on: EVH 5150III 100 [6L6] Red channel
+  firmware_version: '3.80'
+  synopsis: The EVH 5150III 100 [6L6] guitar amplifier is a powerful 100-watt tube
+    amp designed for versatility and high-performance sound. Featuring three channels—
+    clean, crunch, and lead—it offers a wide range of tones suitable for various musical
+    styles. The amp is equipped with dual-concentric controls for independent gain
+    and volume adjustments on the first two channels, while the lead channel has its
+    own dedicated controls. With EL34 power tubes, the 5150III delivers a dynamic
+    sound characterized by articulate highs and robust lows. Additional features include
+    a global presence and resonance control, an effects loop, and MIDI compatibility,
+    making it a favorite among professional guitarists seeking a reliable and expressive
+    amplifier.
+  notable_users: The EVH 5150III 100 [6L6] guitar amplifier is endorsed by several
+    prominent musicians, including Eddie Van Halen, who co-designed the amp and is
+    known for its versatile tone. Alex Lifeson utilizes it for a wide range of sounds,
+    while Kirk Hammett appreciates its aggressive, dynamic capabilities. Steve Vai
+    values the amp's versatility across various styles, and Derek Trucks uses it for
+    its rich tonal palette. These artists rely on the 5150III to achieve their signature
+    sounds in a variety of genres.
+  available_parameters:
+  - Gain
+  - Low
+  - Mid
+  - High
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: PV Panama
+  based_on: Peavey® 5150®
+  firmware_version: null
+  synopsis: Well known for its high gain overdrive channel, and has seen widespread
+    use by rock, hardcore and metal guitarists. An early breakthrough was its use
+    by Colin Richardson and Andy Sneap, two "seminal" British producers of heavy metal;
+    especially Machine Head's Burn My Eyes (1994) helped the 5150 gain a reputation
+    for its sound, which "defined a generation of guitar tone".
+  available_parameters:
+  - Pre Gain
+  - Bass
+  - Mid
+  - Treble
+  - Post Gain
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Revv Gen Purple
+  based_on: Gain 1 (purple) channel of the Revv® Generator 120
+  firmware_version: '2.90'
+  synopsis: The high gain Purple Channel is famous for its razor-sharp metal clarity,
+    & contains plenty of low end & saturation without a loss in tightness. Video Examples
+    Massimo Di Tanna
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Aggression
+  - Sag
+  - Hum
+- name: Revv Gen Red
+  based_on: Gain 2 channel of the Revv® Generator 120
+  firmware_version: '2.80'
+  synopsis: The highest gain setting on the Revv Generator 120, the Red Channel has
+    a touch- The highest gain setting on the Revv Generator 120, the Red Channel has
+    a touch- sensitive feel which takes you from warm old-school overdrive to the
+    most massive modern tones available.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Aggression
+  - Sag
+  - Hum
+- name: Das Benzin Mega
+  based_on: Diezel VH4
+  firmware_version: '3.00'
+  synopsis: The Mega channel delivers Diezel's trademark - highly-defined heavy metal
+    rhythm sounds to soaring solo sounds. The lead channel carries over from Mega,
+    more gain, more compression, more bottom, more smooth top end - creamy, authoritative,
+    loud.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+- name: Das Benzin Lead
+  based_on: Diezel VH4
+  firmware_version: '3.00'
+  synopsis: The Mega channel delivers Diezel's trademark - highly-defined heavy metal
+    rhythm sounds to soaring solo sounds. The lead channel carries over from Mega,
+    more gain, more compression, more bottom, more smooth top end - creamy, authoritative,
+    loud.
+  available_parameters:
+    text: Line 6 Clarity
+    items:
+    - Drive
+    - Bass
+    - Mid
+    - Treble
+    - Master
+    - Ch Vol
+    - Sag
+- name: Line 6 Clarity
+  based_on: Line 6 Catalyst
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Line 6 The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, Kinetic, and Oblivion) are taken from Line 6''s popular line
+      of Catalyst guitar amps. Each boasts a unique, integrated boost circuit optimized
+      specifically for that amp. You can assign the Boost parameter to a stomp switch:
+      adjust Min Value and Max Value to dial in how much boost you want. parameter
+      in Helix/HX to a stomp switch? Why haven''t I done this before?"— OR—ponder
+      "I''m a power user who knows all the shortcuts. I should assign parameters to
+      switches more often."'
+    items:
+    - Select one of the six Original Amp Design models below.
+    - Press and hold the Boost knob. Helix/HX jumps to the Controller Assign screen.
+    - '(HX only: Press PAGE > to show the Learn knob.) Press Learn.'
+    - Press the desired stomp switch. Helix/HX automatically assigns it. If you like,
+    - Press HOME to exit. Wonder to yourself "wait, it's that easy to assign any
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Boost
+  - Sag
+  - Hum
+- name: Line 6 Aristocrat
+  based_on: Line 6 Catalyst
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Line 6 The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, Kinetic, and Oblivion) are taken from Line 6''s popular line
+      of Catalyst guitar amps. Each boasts a unique, integrated boost circuit optimized
+      specifically for that amp. You can assign the Boost parameter to a stomp switch:
+      adjust Min Value and Max Value to dial in how much boost you want. parameter
+      in Helix/HX to a stomp switch? Why haven''t I done this before?"— OR—ponder
+      "I''m a power user who knows all the shortcuts. I should assign parameters to
+      switches more often."'
+    items:
+    - Select one of the six Original Amp Design models below.
+    - Press and hold the Boost knob. Helix/HX jumps to the Controller Assign screen.
+    - '(HX only: Press PAGE > to show the Learn knob.) Press Learn.'
+    - Press the desired stomp switch. Helix/HX automatically assigns it. If you like,
+    - Press HOME to exit. Wonder to yourself "wait, it's that easy to assign any
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Boost
+  - Sag
+  - Hum
+- name: Line 6 Carillon
+  based_on: Line 6 Catalyst
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Line 6 The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, Kinetic, and Oblivion) are taken from Line 6''s popular line
+      of Catalyst guitar amps. Each boasts a unique, integrated boost circuit optimized
+      specifically for that amp. You can assign the Boost parameter to a stomp switch:
+      adjust Min Value and Max Value to dial in how much boost you want. parameter
+      in Helix/HX to a stomp switch? Why haven''t I done this before?"— OR—ponder
+      "I''m a power user who knows all the shortcuts. I should assign parameters to
+      switches more often."'
+    items:
+    - Select one of the six Original Amp Design models below.
+    - Press and hold the Boost knob. Helix/HX jumps to the Controller Assign screen.
+    - '(HX only: Press PAGE > to show the Learn knob.) Press Learn.'
+    - Press the desired stomp switch. Helix/HX automatically assigns it. If you like,
+    - Press HOME to exit. Wonder to yourself "wait, it's that easy to assign any
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Boost
+  - Sag
+  - Hum
+- name: Line 6 Voltage
+  based_on: Line 6 Catalyst
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Line 6 The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, Kinetic, and Oblivion) are taken from Line 6''s popular line
+      of Catalyst guitar amps. Each boasts a unique, integrated boost circuit optimized
+      specifically for that amp. You can assign the Boost parameter to a stomp switch:
+      adjust Min Value and Max Value to dial in how much boost you want. parameter
+      in Helix/HX to a stomp switch? Why haven''t I done this before?"— OR—ponder
+      "I''m a power user who knows all the shortcuts. I should assign parameters to
+      switches more often."'
+    items:
+    - Select one of the six Original Amp Design models below.
+    - Press and hold the Boost knob. Helix/HX jumps to the Controller Assign screen.
+    - '(HX only: Press PAGE > to show the Learn knob.) Press Learn.'
+    - Press the desired stomp switch. Helix/HX automatically assigns it. If you like,
+    - Press HOME to exit. Wonder to yourself "wait, it's that easy to assign any
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Boost
+  - Sag
+  - Hum
+- name: Line 6 Kinetic
+  based_on: Line 6 Catalyst
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Line 6 The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, Kinetic, and Oblivion) are taken from Line 6''s popular line
+      of Catalyst guitar amps. Each boasts a unique, integrated boost circuit optimized
+      specifically for that amp. You can assign the Boost parameter to a stomp switch:
+      adjust Min Value and Max Value to dial in how much boost you want. parameter
+      in Helix/HX to a stomp switch? Why haven''t I done this before?"— OR—ponder
+      "I''m a power user who knows all the shortcuts. I should assign parameters to
+      switches more often."'
+    items:
+    - Select one of the six Original Amp Design models below.
+    - Press and hold the Boost knob. Helix/HX jumps to the Controller Assign screen.
+    - '(HX only: Press PAGE > to show the Learn knob.) Press Learn.'
+    - Press the desired stomp switch. Helix/HX automatically assigns it. If you like,
+    - Press HOME to exit. Wonder to yourself "wait, it's that easy to assign any
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Boost
+  - Sag
+  - Hum
+- name: Line 6 Oblivion
+  based_on: Line 6 Catalyst
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Line 6 The six Original Amp Designs in Helix/HX 3.70 (Clarity, Aristocrat,
+      Carillon, Voltage, Kinetic, and Oblivion) are taken from Line 6''s popular line
+      of Catalyst guitar amps. Each boasts a unique, integrated boost circuit optimized
+      specifically for that amp. You can assign the Boost parameter to a stomp switch:
+      adjust Min Value and Max Value to dial in how much boost you want. parameter
+      in Helix/HX to a stomp switch? Why haven''t I done this before?"— OR—ponder
+      "I''m a power user who knows all the shortcuts. I should assign parameters to
+      switches more often."'
+    items:
+    - Select one of the six Original Amp Design models below.
+    - Press and hold the Boost knob. Helix/HX jumps to the Controller Assign screen.
+    - '(HX only: Press PAGE > to show the Learn knob.) Press Learn.'
+    - Press the desired stomp switch. Helix/HX automatically assigns it. If you like,
+    - Press HOME to exit. Wonder to yourself "wait, it's that easy to assign any
+  available_parameters:
+  - Ch1 Drive
+  - Bass
+  - Mid
+  - Treble
+  - Ch Vol
+  - Boost
+  - Sag
+  - Hum
+- name: Line 6 Ventoux
+  based_on: Line 6 Original
+  firmware_version: '3.15'
+  synopsis:
+    text: '"The amp model name is Ventoux, which is a mountain in the south of France
+      that is a legendary cycling climb. I did it in 2018 and it was awesome and very
+      hard. This model comes from a physical amp idea I had a while back. I was going
+      to build it as a tube amp first. There are only so many hours in a day, though.
+      The idea was to create a “coveted boutique amp” that had a different origin
+      story. Most coveted boutique amps come from modified black panel Fenders or
+      modified Marshall circuits. I wanted to do the same thing, but base it on the
+      early 70s Orange circuits and the mid-wattage Fender Tweed circuits. Ventoux
+      has a unique topology. In an indirect way, every knob is kind of a gain/drive
+      control. The tone controls adjust the character and/or amount of the overdrive
+      in those frequencies. This might be seen as complicated by some, but I find
+      it exciting and full of possibilities." —Ben Adrian, Sound Design Manager values
+      result in looser distortions and warmer cleans sounds of traditional 60s Fender
+      amps; at higher values it''s flatter, like the 50s tweed amps that have very
+      little tone-shaping in the circuits. Plus, a full-up mid sound will get a nice
+      crunch when Drive is up treble controls. That is accounted for with Depth and
+      Presence controls; bass and treble for the power amp. These actually occur in
+      the circuit just before phase inverter, but they really need the whole power
+      amp to function. They also affect the character of the power amp distortion
+      amp. Generally, you''ll want to leave this at 10.0, like a vintage amp with
+      no master volume. However, a variety of textures can be had by reducing the
+      level'
+    items:
+    - Drive—Controls the amount of amp drive
+    - HP Filter—Higher values result in tighter distortions and thinner cleans; lower
+    - Mid—Allows for more character than most. At lower values it's like the scooped
+    - Presence/Depth—You may have noticed this amp was lacking regular bass and
+    - Ch Vol—Sets the overall level of the Amp block
+    - Master—Ventoux's Master volume exists in an "impossible" place for a physical
+  available_parameters:
+  - Drive
+  - HP Filter
+  - Mid
+  - Presence
+  - Depth
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Line 6 Elmsley
+  based_on: Line 6 Original
+  firmware_version: '3.60'
+  synopsis: '"The Line 6 Elmsley is a new Line 6 original amplifier that employs a
+    parallel distortion topology that layers distinct saturation characteristics across
+    the lower and upper registers. The Elmsley features a smooth and present bottom
+    end with some exceptional sparkle and definition all through the midrange and
+    above. The result is an amplifier that is dazzling across the full spectrum, and
+    the amplifier deals with pedals in spades. "The other new key feature of The Elmsley''s
+    power amp section is the Negative Feedback (NFB) parameter, where the amount of
+    feedback within the power section''s response can be dialed anywhere from wild
+    and unhinged, tight and punchy, and anything in between. As with many amplifier
+    designs, the presence and depth controls are part of this negative feedback circuit
+    and functions to control the brilliance and resonance of the power amp, respectively.
+    As the NFB param is reduced, the presence and depth controls'' influences are
+    also influenced, and they become effectively deactivated when the NFB knob is
+    at zero. These interactions allow the player to create countless tonal variations
+    to suit their needs.” —Sam Hwang, Sound Designer'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Line 6 Elektrik
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: This high-voltage, face-melting original has interactive presence & mid-range
+    controls, with more gain than you can shake a stick at. It has something from
+    the first Bomber Uber.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+- name: Line 6 Doom
+  based_on: 'Line 6 Original Based on: Line 6 Original'
+  firmware_version: null
+  synopsis: Here's a hybrid to fill a void for doom/sludge players. It's a JCM800
+    preamp going into a Hiwatt® power amp with some additional tweaks, to give you
+    large amounts of gain and a rich, sag-induced reaction with a whole lot of bass.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Line 6 Epic
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: A metal-friendly beast that provides sustain for days at virtually any
+    playing dynamic, giving up gobs of distortion with ease.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Pre Mid
+  - Pre Mid Fc
+- name: Line 6 Fatality
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: It's a heavily modified Mesa Rectifier. It sounds a bit like a Mark V
+    Extreme setting.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Presence
+  - Ch Vol
+  - Master
+  - Sag
+  - Hum
+- name: Line 6 Litigator
+  based_on: Line 6 Original inspired by boutique mid-gain amps
+  firmware_version: null
+  synopsis: Based on a heavily modded Fender and then hammered on and tweaked. It
+    wouldn't be impossible to make in the physical world, but it might get a little
+    messy. removing a lot of the noise and irregularities that people find unpleasant,
+    but adding just enough of the wrong things so they enhance without being a distraction.
+    It's like a vintage amp with movie magic color correction and hyped depth of field.
+    Like a dirty Vintage Deluxe, dumble-esqe, very smooth, mid-gain, edge-of-breakup
+    model. In the same general neighborhood as the Pete Anderson Deluxe model that
+    was in the HD model packs, but with more gain on tap.
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag
+  - Hum
+- name: Line 6 Badonk
+  based_on: Line 6 Original inspired by the original high gain Big Bottom model
+  firmware_version: null
+  synopsis: 'To create the Line 6 Badonk, the Big Bottom model from the XT code was
+    rebuilt using new tools so that the overall EQ and pre-post distortion filtering
+    matched. The previous tone stack was a little limited, so it was tuned up to have
+    more range and provide a realistic, interactive response. To make this model feel
+    more like a full amp, the power amp from the Fatality model (mesa rectifier mod)
+    was added then tweaked slightly to reinforce the overall EQ curve of the Big Bottom.
+    Tone Secret: The Big Bottom does not have a crap-load of low frequency. Instead,
+    it is an amp with a slightly more than average amount of low end that can really
+    hold together while being fed a lot of low frequency. It holds together well with
+    heavily detuned guitars.'
+  available_parameters:
+  - Drive
+  - Bass
+  - Mid
+  - Treble
+  - Master
+  - Ch Vol
+  - Sag

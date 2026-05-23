@@ -1,0 +1,508 @@
+distortion_effects:
+- name: Kinky Boost
+  based_on: Xotic® EP Booster
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Boost
+  - Bright
+- name: Deranged Master
+  based_on: Dallas Rangemaster Treble Booster
+  firmware_version: null
+  synopsis: WARNING! Like the real thing, this model can take your head off! Works
+    best before a distorted amp.
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Level
+- name: Minotaur
+  based_on: Klon® Centaur
+  firmware_version: null
+  notable_users:
+  - Jeff Beck
+  - Mark Tremonti
+  - Aaron Dessner
+  - Lzzy Hale
+  - Andy Summers
+  - Keith Urban
+  - John Mayer
+  - Black Francis
+  - Peter Frampton
+  - Warren Haynes
+  - Mike McCready
+  - Stone Gossard
+  - Nels Cline
+  - Lee Ranaldo
+  - James Hetfield
+  - Britt Daniel
+  - Joe Bonamassa
+  - Joe Perry
+  - Trey Anastasio
+  - Philip Sayce
+  - Nick Valensi
+  - Jason Isbell
+  - Mike Ness
+  - Josh Klinghoffer
+  - Dave Welsh
+  - Dean Wareham
+  - Yannis Philippakis
+  - Wooden Shjips (Erik 'Ripley' Johnson)
+  - Noel Gallagher
+  available_parameters:
+  - Gain
+  - Tone
+  - Level
+- name: Teemah!
+  based_on: Paul Cochrane Timmy® Overdrive
+  firmware_version: null
+  synopsis:
+    text: The Timmy Overdrive provides a versatile range of overdrive tones that enhance
+      the natural sound of your guitar and amp setup. With three different clipping
+      options and ingeniously configured Bass and Treble controls, this pedal offers
+      players a ton of options to make the most of their playing and recording experience.
+    items:
+    - Gain adjusts overdrive intensity
+    - Bass Cut cuts the low end frequencies from pre-overdrive signal
+    - Treble Cut cuts high end frequencies from post-overdrive signal
+    - Clipping switch sets the clipping mode
+    - Level adjusts overall volume of effect
+  clipping_modes:
+    text: a wide, dynamic range of sounds. definition for a big sound.
+    items:
+    - 'Up: Asymmetrical clipping with moderate saturation and slight compression for'
+    - 'Center: Symmetrical clipping with light saturation, high headroom, and high'
+    - 'Down: Symmetrical clipping with heavy saturation and low headroom.'
+  available_parameters:
+  - Gain
+  - Bass Cut
+  - Treble Cut
+  - Clipping
+  - Level
+- name: Heir Apparent
+  based_on: Analogman Prince of Tone (basically half a King of Tone)
+  firmware_version: '2.80'
+  available_parameters:
+  - Gain
+  - Tone
+  - Presence
+  - Clipping
+  - Gain Mod
+  - Level
+  - Voltage
+- name: Tone Sovereign
+  based_on: Analogman King of Tone V4 (basically two Prince of Tones in one)
+  firmware_version: '2.80'
+  available_parameters:
+  - Gain 1
+  - Tone 1
+  - Presence 1
+  - Clipping 1
+  - Gain Mod 1
+  - Level 1
+  - Gain 2
+  - Tone 2
+  - Presence 2
+  - Clipping 2
+  - Gain Mod 2
+  - Level 2
+  - Voltage
+- name: Alpaca Rouge
+  based_on: Way Huge® Red Llama (modded)
+  firmware_version: '2.90'
+  synopsis: This model is used in front of a Derailed Ingrid for the guitar tracks
+    in this video. For complete details, read the videos description on YouTube.
+  available_parameters:
+  - Drive
+  - High Cut
+  - Level
+- name: Compulsive Drive
+  based_on: Fulltone® OCD
+  firmware_version: null
+  available_parameters:
+  - Gain
+  - Tone
+  - Peak Type
+  - Version
+  - Level
+- name: Dhyana Drive
+  based_on: Hermida Zendrive
+  firmware_version: '2.80'
+  available_parameters:
+    text: Horizon Drive
+    items:
+    - Gain
+    - Voice
+    - Tone
+    - Level
+- name: Horizon Drive
+  based_on: Horizon Devices Precision Drive
+  firmware_version: '3.00'
+  synopsis: Includes an extra Gate Range parameter that, when set to "Extended," drops
+    the gate's threshold down to -90dB
+  available_parameters:
+  - Drive
+  - Attack
+  - Bright
+  - Gate
+  - Gate Range
+  - Level
+- name: Valve Driver
+  based_on: Chandler Tube Driver
+  firmware_version: null
+  available_parameters:
+    text: Top Secret OD
+    items:
+    - Gain
+    - Bass
+    - Treble
+    - Level
+- name: Top Secret OD
+  based_on: DOD® OD-250
+  firmware_version: null
+  available_parameters:
+  - Gain
+  - Level
+- name: Prize Drive
+  based_on: Nobels ODR-1
+  firmware_version: '3.70'
+  available_parameters:
+    text: Bass Cut
+    items:
+    - Drive
+    - Spectrum
+    - Level
+    - Bass Cut
+    - Voltage
+- name: Scream 808
+  based_on: Ibanez® TS808 Tube Screamer®
+  firmware_version: null
+  available_parameters:
+  - Gain
+  - Tone
+  - Level
+- name: Pillars
+  based_on: Earthquaker Devices Plumes
+  firmware_version: '3.50'
+  synopsis: Plumes® is a unique, all-analog approach to a classic tube-like overdrive
+    circuit offering 3 different clipping voices, loads of headroom and almost three-
+    dimensional clarity that will push your amp over the edge. The reimagined tone
+    control is finely tuned to sculpt low end, clear top end, and focus midrange with
+    blooming sustain.
+  available_parameters:
+    text: Level
+    items:
+    - Gain
+    - Tone
+    - Level
+    - Mode
+- name: Hedgehog D9
+  based_on: MAXON® SD9 Sonic Distortion
+  firmware_version: null
+  available_parameters:
+  - Gain
+  - Tone
+  - Level
+- name: Stupor OD
+  based_on: BOSS® SD-1 Overdrive
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Tone
+  - Level
+- name: Deez One Vintage
+  based_on: BOSS© DS-1 distortion pedal (classic Made-in-Japan version)
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Tone
+  - Level
+- name: Deez One Mod
+  based_on: BOSS© DS-1 distortion pedal (Keeley mod version)
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Tone
+  - Level
+  - Clipping
+- name: Ratatouille Dist
+  based_on: 1984 Pro Co RAT
+  firmware_version: '3.10'
+  synopsis:
+    text: Turns out our Vermin Dist model was broken. Sorry! We were going to replace
+      it completely but a bunch of people had presets with the old version. On top
+      of that, we found out our RAT's LM308 chip had crapped out since we modeled
+      it last so we decided to get it into perfect working order and start from scratch
+      basically letting more treble through (lower values) or filtering it out (higher
+      values)
+    items:
+    - 'Gain: Sets the amount of distortion'
+    - 'Filter: Sets the amount of high cut (low pass) filter applied to the distortion;'
+    - 'Level: Sets the overall level of the block'
+  blues_type_tone:
+    text: This setting produces a "bluesy" soft-clipped distortion sound much like
+      that of a small tube amp. "Fine tune" the control settings to suit your instrument's
+      own tone and character.
+    items:
+    - 'Gain: 3.5-4'
+    - 'Filter: 0'
+    - 'Level: 6.5-7'
+  lead_type_tone:
+    text: A very "biting" lead sound with lots of harmonic emphasis; use the treble
+      pickup on your guitar and vary the DISTORTION control a bit to "home in" on
+      the overtones for a subtle fixed-"wah" effect.
+    items:
+    - 'Gain: 6.5-7'
+    - 'Filter: 8-8.5'
+    - 'Level: 5-5.5'
+  heavy_type_tone:
+    text: A bone-crunching heavy-metal sound yielding incredible power and smooth,
+      effortless sustain.
+    items:
+    - 'Gain: 10'
+    - 'Filter: 5-5.5'
+    - 'Level: 3.5-4'
+  notable_users:
+    text: 'The Foo Fighters make extensive use of the Pro Co Rat alongside a Memory
+      Man into a Vox AC-30 on their third album, There''s Nothing Left to Lose. See
+      the following excerpts: What was the fundamental guitar-sound recipe for the
+      new album? We focused on not using too many distortion pedals, and went for
+      a cleaner, fatter, more natural overdrive. We used a Vox AC30 for pretty much
+      everything on the record, tweaking the sound so that it broke up nicely when
+      played loud. Sometimes we''d double a track using an old Pro Co Rat, and then
+      hard-pan the parts so that a super-distorted guitar was in the left channel
+      and a grindy guitar was in the right. Then we''d sprinkle in lots of clean guitar
+      overdubs. Check out the rest of this fantastic interview with Dave Grohl from
+      a 1999 issue of Guitar Player Magazine for more details.'
+    items:
+    - Kurt Cobain
+    - Krist Novoselic
+    - Jeff Beck
+    - Jerry Cantrell
+    - Dave Grohl
+    - David Gilmour
+    - Thom Yorke
+    - Rivers Cuomo
+    - James Hetfield
+    - Many, many more…
+  available_parameters:
+  - Gain
+  - Filter
+  - Level
+- name: Vermin Dist
+  based_on: Pro Co RAT
+  firmware_version: null
+  synopsis:
+    text: Turns out our Vermin Dist model was broken. Sorry! This is still a cool
+      model with it's use cases but for a closer representation of a physical Pro
+      Co Rat, check out the Ratatouille Dist. basically letting more treble through
+      (lower values) or filtering it out (higher values)
+    items:
+    - 'Gain: Sets the amount of distortion'
+    - 'Filter: Sets the amount of high cut (low pass) filter applied to the distortion;'
+    - 'Level: Sets the overall level of the block'
+  available_parameters:
+  - Gain
+  - Filter
+  - Level
+- name: Vital Dist
+  based_on: Earthquaker Devices Life (distortion side)
+  firmware_version: '3.50'
+  available_parameters:
+  - Gain
+  - Filter
+  - Level
+  - Clipping
+  - Octave
+- name: Vital Boost
+  based_on: Earthquaker Devices Life (boost side)
+  firmware_version: '3.50'
+  available_parameters:
+  - Boost
+- name: KWB
+  based_on: Benadrian Kowloon Walled Bunny Distortion
+  firmware_version: null
+  available_parameters:
+  - Gain
+  - Push Diode
+  - Pull Diode
+  - Bass
+  - Treble
+  - Level
+  - Asymmetry
+- name: Legendary Drive
+  based_on: Carvin VLD1 Legacy Drive (high gain channel)
+  firmware_version: '2.90'
+  available_parameters:
+  - Drive
+  - Bass
+  - Middle
+  - Treble
+  - Presence
+  - Level
+- name: Swedish Chainsaw
+  based_on: BOSS® HM-2 Heavy Metal Distortion (Made in Japan black label)
+  firmware_version: '3.00'
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Level
+- name: Arbitrator Fuzz
+  based_on: Arbiter® FuzzFace®
+  firmware_version: null
+  available_parameters:
+  - Fuzz
+  - Level
+- name: Pocket Fuzz
+  based_on: Inspired by the Jordan Boss Tone fuzz
+  firmware_version: '3.00'
+  available_parameters:
+  - Drive
+  - Level
+- name: Bighorn Fuzz
+  based_on: 1973 Electro-Harmonix® Ram's Head Big Muff Pi
+  firmware_version: '3.00'
+  available_parameters:
+  - Sustain
+  - Tone
+  - Level
+- name: Triangle Fuzz
+  based_on: Electro-Harmonix® Big Muff π®
+  firmware_version: null
+  available_parameters:
+  - Sustain
+  - Tone
+  - Level
+- name: Dark Dove Fuzz
+  based_on: Electro-Harmonix Russian Big Muff
+  firmware_version: '3.60'
+  synopsis: The cult classic Green Russian Big Muff first shook the ground in the
+    mid-1990s. Since then it has been heralded by guitarists and bassists for its
+    devastating low- end and unique sludge and sizzle.
+  available_parameters:
+  - Sustain
+  - Tone
+  - Level
+- name: Ballistic Fuzz
+  based_on: Euthymia ICBM fuzz
+  firmware_version: '3.00'
+  available_parameters:
+  - Sustain
+  - Tone
+  - Level
+- name: Industrial Fuzz
+  based_on: Z.Vex Fuzz Factory
+  firmware_version: null
+  available_parameters:
+  - Compress
+  - Gate
+  - Drive
+  - Stability
+  - Oscillator
+  - Level
+- name: Tycoctavia Fuzz
+  based_on: Tycobrahe® Octavia
+  firmware_version: null
+  available_parameters:
+  - Fuzz
+  - Level
+- name: Wringer Fuzz
+  based_on: Garbage's modded BOSS® FZ-2
+  firmware_version: null
+  available_parameters:
+  - Gain
+  - Treble
+  - Bass
+  - Level
+  - Fuzz Type
+- name: Thrifter Fuzz
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Attack
+  - Notch Freq
+  - Notch Gain
+  - Thick
+  - Level
+- name: Xenomorph Fuzz
+  based_on: Subdecay Harmonic Antagonizer
+  firmware_version: '2.90'
+  available_parameters:
+  - Gain
+  - Tone
+  - Level
+  - Clipping
+  - Osc Level
+  - Osc Tone
+  - Min Freq
+  - Max Freq
+  - Wave Shape
+  - Sensitivity
+- name: Megaphone
+  based_on: Megaphone
+  firmware_version: null
+  available_parameters:
+  - Grit
+  - Tone
+  - Focus
+  - Space
+  - Mix
+  - Level
+- name: Bitcrusher
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Blend
+  - Treble
+  - Level
+- name: ZeroAmp Bass DI
+  based_on: Tech 21 SansAmp Bass Driver DI V1
+  firmware_version: '2.80'
+  available_parameters:
+  - Drive
+  - Bass
+  - Treble
+  - Presence
+  - Blend
+  - Level
+- name: Regal Bass DI
+  based_on: Nobel Bass Preamp DI
+  firmware_version: '3.70'
+  available_parameters:
+  - Bass
+  - Treble
+  - Low Cut
+  - Volume
+- name: Obsidian 7000
+  based_on: Darkglass Electronics® Microtubes B7K Ultra bass preamp/overdrive/EQ
+  firmware_version: null
+  available_parameters:
+  - Drive
+  - Level
+  - Blend
+  - Grunt
+  - Attack
+  - Master
+  - Bass
+  - Lo Mid Freq
+  - Lo Mid
+  - Hi Mid Freq
+  - Hi Mid
+  - Treble
+  - Distortion
+- name: Clawthorn Drive
+  based_on: Wounded Paw Battering Ram bass overdrive
+  firmware_version: null
+  available_parameters:
+  - OD Gain
+  - OD Tone
+  - OD Level
+  - Low Boost
+  - Fuzz
+  - Fuzz Oct
+  - Fuzz Gain
+  - Fuzz Tone
+  - Fuzz Level

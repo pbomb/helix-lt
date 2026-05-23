@@ -1,0 +1,209 @@
+dynamics_effects:
+- name: Deluxe Comp
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Threshold
+  - Ratio
+  - Attack
+  - Release
+  - Mix
+  - Level
+  - Knee
+- name: Red Squeeze
+  based_on: MXR® Dyna Comp
+  firmware_version: null
+  available_parameters:
+  - Sensitivity
+  - Mix
+  - Level
+- name: Kinky Comp
+  based_on: Xotic® SP Compressor
+  firmware_version: null
+  available_parameters:
+  - Sensitivity
+  - Mix
+  - Attack
+  - Release
+  - Level
+- name: Ampeg Opto Comp
+  based_on: Ampeg Opto Comp
+  firmware_version: '3.15'
+  synopsis:
+    text: compression. At 0.0, the ratio is 1:1; at 5.0, the ratio is at 3:1, and
+      at 10.0, the ratio is at 10:1 At 0.0, the release is 75 ms; at 10.0, the release
+      is around 600 ms compressed signal is heard; when set to 100%, no dry signal
+      is heard
+    items:
+    - Compress—This is actually a ratio control, which controls the amount of
+    - Release—Controls how long it takes for the compressor to stop reducing gain.
+    - Mix—Controls the wet/dry mix of the compressor. When set to 0%, no
+    - Level—Sets the overall level of the block
+  available_parameters:
+  - Compress
+  - Release
+  - Mix
+  - Level
+- name: Rochester Comp
+  based_on: Ashly® CLX-52 and created in conjunction with Billy Sheehan
+  firmware_version: '2.90'
+  available_parameters:
+  - Gain
+  - Threshold
+  - Ratio
+  - Attack
+  - Release
+  - Level
+  - Knee
+  - Mix
+- name: LA Studio Comp
+  based_on: Teletronix® LA-2A®
+  firmware_version: null
+  available_parameters:
+  - Peak Reduction
+  - Gain
+  - Type
+  - Emphasis
+  - Mix
+  - Level
+- name: 3-Band Comp
+  based_on: Line 6 Original multiband compressor
+  firmware_version: null
+  available_parameters:
+  - Ratio
+  - Attack
+  - Release
+  - Lo X Freq
+  - Hi X Freq
+  - Level
+  - Lo Thresh
+  - Lo Gain
+  - Mid Thresh
+  - Mid Gain
+  - Hi Thresh
+  - Hi Gain
+  - Detector
+- name: Noise Gate
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: Use this to eliminate the hiss from noisy pickups or the white noise from
+    extremely high gain distortions by placing the noise gate further in your signal
+    path chain.
+  available_parameters:
+  - Threshold
+  - Decay
+  - Level
+- name: Hard Gate
+  based_on: Line 6 Original
+  firmware_version: null
+  synopsis: With more controls than the Noise Gate, you can further use this one for
+    intentional effects, such as stuttering and lopped- off power chords.
+  available_parameters:
+  - Open Threshold
+  - Close Threshold
+  - Hold Time
+  - Decay
+  - Level
+- name: Horizon Gate
+  based_on: Horizon Devices Precision Drive's gate circuit
+  firmware_version: '3.00'
+  synopsis: Includes an extra Gate Range parameter that, when set to "Extended," drops
+    the gate's threshold down to -90dB. Works best before an amp.
+  available_parameters:
+  - Mode
+  - Sensitivity
+  - Gate Range
+  - Level
+- name: Autoswell
+  based_on: Line 6 Original
+  firmware_version: null
+  available_parameters:
+  - Threshold
+  - Rel Offset
+  - Attack
+  - Decay
+  - Taper
+  - Level
+- name: Feedbacker
+  based_on: Line 6 Original
+  firmware_version: '3.70'
+  synopsis:
+    text: 'Oh man, this one is fun with a capital Ffffff but you''ll want to read
+      up on how to get the best results. Works best as one of the first blocks in
+      your signal flow. NOTE: Feedbacker loads bypassed by default. overwhelm your
+      guitar signal; at lower settings, the feedback can better "sit" between chords.
+      WARNING! Be careful, as this effect can quickly go off the rails, just like
+      real feedback. Consider assigning it to a momentary stomp so feedback only appears
+      while you hold the switch. assigning different Feedback Type values to snapshots.
+      which is basically the note Feedbacker chooses to base its feedback generation
+      on. Depending on the chord, Feedbacker may choose different reference frequencies.
+      frequency. reference frequency. frequency. note frequency. note frequency. note
+      frequency. 1200 Hz and descends to lower harmonics as the signal decays. Hz
+      and drops down to lower harmonics as the signal decays. onset (note or chord''s
+      attack) is detected. In this case, repeating the same chord could still generate
+      different harmonics. Retrigger parameter is set to "Trigger." See the Retrigger
+      parameter below. different one. At higher values, you may hear more than one
+      harmonic as they transition. otherwise unaffected when the Feedbacker block
+      is turned on With Dry Kill on and Fdbk Type set to "Unison," playing slower,
+      single notes can result in sounds similar to using an E-bow. regardless of whether
+      the Feedback block is on or off. TIP: Use this setting only when Feedbacker
+      is on a parallel path. Assign this parameter to an expression pedal for blending
+      in the dry signal behind the feedback. feedback. "Lowest" prioritizes a chord''s
+      lowest-pitched note as the feedback reference, which often represents the fundamental
+      frequency of the chord. "Loudest" prioritizes the loudest note in the chord
+      as the feedback reference, which may not be the lowest note. Below this level,
+      no feedback will be generated. Onset Thr—When Feedback Type is set to Rndm Offset,
+      sets the threshold of onsets (plucks) that cause changes to the feedback note.
+      Lower values increase sensitivity to plucking and strumming, so changes to the
+      feedback note take place more often. Higher values reduce sensitivity to plucking
+      and strumming, so changes to the feedback note take place less often. it to
+      an unused momentary stomp switch. (Press and hold the Retrigger knob, press
+      Learn, press the desired stomp switch, and then set Type to "Momentary.") Every
+      time you press the switch (and the parameter changes from "---" to "Trigger"),
+      the feedback generated will change, depending on the type of mode: cause the
+      Feedbacker to descend to lower harmonics. Feedbacker to randomly choose a different
+      harmonic. regenerate at the mode''s selected frequency. Release parameter) after
+      the block is bypassed. When off, feedback stops abruptly when the block is bypassed.'
+    items:
+    - Fdbk Gain—Controls the amount of feedback. At higher settings, can easily
+    - 'Fdbk Type—Determines the type of the feedback generated. TIP: Try'
+    - -Octave—Feedback appears one octave below the "reference frequency,"
+    - Unison—Feedback appears at the reference frequency.
+    - +Octave—Feedback appears one octave above the the reference
+    - Oct +5th—Feedback appears one octave plus a 5th above the the
+    - +2 Octaves—Feedback appears two octaves above the the reference
+    - 2 Oct+3rd—Feedback appears two octaves plus a 3rd above the reference
+    - 2 Oct+5th—Feedback appears two octaves plus a 5th above the reference
+    - 2 Oct+7th—Feedback appears two octaves plus a 7th above the reference
+    - High to Low—Feedback typically begins on the highest harmonic below
+    - Mid to Low—Feedback typically starts on the highest harmonic below 500
+    - Rndm Onset—New harmonics are selected randomly every time a new
+    - Rndm Trigger—New harmonics are selected randomly every time the
+    - Attack—Controls how quickly feedback appears.
+    - Release—Controls how quickly each harmonic dies out or transitions to a
+    - 'Dry Kill—Determines what happens to the dry (unaffected) signal:'
+    - Off—The dry signal is controlled by the Dry Level parameter but is
+    - 'On—The dry signal is muted when the Feedback block is turned on. TIP:'
+    - Always—The dry signal is completely muted from the entire path,
+    - 'Dry Level—Sets the amount of dry signal through the Feedbacker block. TIP:'
+    - Reference—Determines which note within a chord is referenced by the
+    - Silence Thr—Sets the level threshold above which feedback is generated.
+    - Offset Thr—When the level drops below this level, feedback fades out.
+    - Retrigger—Okay, Retrigger isn't a parameter per sé; it's meant for you to assign
+    - High to Low or Mid to Low modes—Pressing the Retrigger switch will
+    - Rndm Trigger or Rndm Onset—Pressing the Retrigger switch will cause the
+    - All other modes—Pressing the Retrigger switch will cause feedback to
+    - Trails—When on, feedback continues to ring out (for the duration of the
+  available_parameters:
+  - Fdbk Gain
+  - Fdbk Type
+  - Attack
+  - Release
+  - Dry Kill
+  - Dry Level
+  - Reference
+  - Silence Thr
+  - Onset Thr
+  - Offset Thr
+  - Retrigger
+  - Trails
