@@ -438,7 +438,10 @@ amp_effects:
     due to an additional 12Ax7 tube stage.
   notable_users: Played clean but singing with a Telecaster, this is the sound of
     Roy Buchanan; cranked with a Les Paul, it's pure Michael Bloomfield. It never
-    gets extremely overdriven and dirty, mostly just louder-a lot louder.
+    gets extremely overdriven and dirty, mostly just louder-a lot louder. Albert Hammond
+    Jr. and Nick Valensi (The Strokes) — closest available approximation to their confirmed
+    Hot Rod DeVille rig (both are 6L6-powered high-headroom Fender combos; no Hot Rod
+    DeVille model exists on Helix LT).
   available_parameters:
   - Drive
   - Bass
@@ -758,7 +761,11 @@ amp_effects:
     greenbacks.'
   notable_users: The Beatles, The Shadows, Tom Petty & The Heartbreakers, Brian May
     of Queen, Peter Buck of R.E.M., and Foo Fighters have all used classic AC-30s
-    to make their music.
+    to make their music. Jonny Greenwood (Radiohead) — confirmed Vox AC30TB for
+    Bodysnatchers and In Rainbows era. Ed O'Brien (Radiohead) — confirmed Vox AC30
+    for OK Computer and In Rainbows era. Thom Yorke (Radiohead) — confirmed JMI Vox
+    AC30/6 Fawn. NOTE — Cut control works in REVERSE: higher values cut MORE high
+    frequencies (unlike a typical Treble control). Has no Mid parameter; uses Cut instead.
   available_parameters:
   - Drive
   - Bass
@@ -1265,7 +1272,13 @@ amp_effects:
   synopsis: Nothing embodies the essence of Marshall's legendary tone than the JCM800
     2203 guitar amplifier head. With just one channel, a 3-band EQ for tone shaping,
     and 100-watts of power, you've got everything you need to pound out classic tones
-    from crunchy blues to screaming leads and beyond.
+    from crunchy blues to screaming leads and beyond. The Input parameter (unique to
+    this model) controls which input jack is used, affecting overall gain structure.
+    Corgan's unit had EL34 tubes swapped for KT88s — compensate for tighter bass by
+    adding a Parametric EQ Low Cut.
+  notable_users:
+  - Billy Corgan (Smashing Pumpkins) — 1984 JCM800 with KT88 tube swap ('Soul' head), confirmed dominant amp on first three albums including Siamese Dream
+  - Jonny Greenwood (Radiohead) — confirmed JCM800 for aggressive Bends-era tones
   available_parameters:
   - Drive
   - Bass
@@ -2050,7 +2063,10 @@ amp_effects:
   synopsis: The Mega channel delivers Diezel's trademark - highly-defined heavy metal
     rhythm sounds to soaring solo sounds. The lead channel carries over from Mega,
     more gain, more compression, more bottom, more smooth top end - creamy, authoritative,
-    loud.
+    loud. Bass depth is controlled by the Deep parameter (NOT Hum — this model uses
+    Deep instead of Hum).
+  notable_users:
+  - Matt Bellamy (Muse) — confirmed dominant amp for MK Ultra and Resistance era
   available_parameters:
   - Drive
   - Bass

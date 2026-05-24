@@ -135,6 +135,11 @@ delay_effects:
 - name: Transistor Tape
   based_on: Maestro® Echoplex EP-3
   firmware_version: null
+  synopsis: Wow Flutter is a single combined parameter — there are no separate Wow
+    and Flutter controls, and no separate Bass/Treble tone controls (unlike Cosmos
+    Echo). Use Feedback 5–8% for a single slapback repeat.
+  notable_users:
+  - Jonny Greenwood (Radiohead) — Boss RE-20 Space Echo approximation, In Rainbows era
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -148,6 +153,11 @@ delay_effects:
 - name: Cosmos Echo
   based_on: Roland® RE-201 Space Echo
   firmware_version: null
+  synopsis: Set Ramp to 0 for all presets — value 0 means immediate response with
+    no mechanical lag simulation. Only use a nonzero Ramp when intentionally sweeping
+    the Time parameter during live performance.
+  notable_users:
+  - Jonny Greenwood (Radiohead) — confirmed RE-201 use from 1995, The Bends era
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -181,6 +191,11 @@ delay_effects:
 - name: Adriatic Delay
   based_on: BOSS® DM-2 w/ Adrian Mod
   firmware_version: null
+  synopsis: 'BBD Size uses numeric values only: 1024, 2048, 4096, or 8192 (NOT strings
+    like "Small"/"Medium"/"Large"). Character guide — 1024: tightest/brightest analog;
+    2048: standard analog (default); 4096: warmer/spacious for leads; 8192: maximum
+    warmth/vintage. Rate minimum is 0.1 Hz (NOT 0) — use Rate 0.1 + Depth 0 to disable
+    modulation effectively.'
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -228,7 +243,10 @@ delay_effects:
     set high, and feedback fairly high. Depth: The DEPTH control sets the amount of
     modulation in the delay time. The modulation rate is slow for chorus and faster
     for vibrato.'
-  notable_users: 'The Foo Fighters make extensive use of the Memory Man alongside
+  notable_users: 'Alex Kapranos (Franz Ferdinand) — Gurus Echosex 2 (Binson Echorec-style
+    tape echo); Mode Chorus + low Depth (1.2–1.8) adds the ''wonky wheel'' pitch wobble
+    Kapranos described, confirmed via Equipboard. The Foo Fighters make extensive use
+    of the Memory Man alongside
     a Pro Co Rat into a Vox AC-30 on their third album, There''s Nothing Left to Lose.
     See the following excerpts: What was the fundamental guitar-sound recipe for the
     new album? We focused on not using too many distortion pedals, and went for a

@@ -13,6 +13,12 @@ dynamics_effects:
 - name: Red Squeeze
   based_on: MXR® Dyna Comp
   firmware_version: null
+  synopsis: Always-on compression foundation in Strokes presets — place after Noise
+    Gate, before overdrive/distortion. Mix at 70% blends compressed and dry signal
+    to maintain pick attack transient. Active across all snapshots at the same settings;
+    compression is a constant tonal foundation, not a snapshot-variable element.
+  notable_users:
+  - Albert Hammond Jr. (The Strokes) — confirmed MXR Dyna Comp on board
   available_parameters:
   - Sensitivity
   - Mix

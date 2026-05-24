@@ -2,6 +2,8 @@ modulation_effects:
 - name: Optical Trem
   based_on: Fender® optical tremolo circuit
   firmware_version: null
+  synopsis: 'Intensity range is 0–10 maximum (NOT 18–20). Use 1.5–2.0 for barely
+    perceptible tremolo. Speed in Hz.'
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -60,6 +62,11 @@ modulation_effects:
 - name: Script Mod Phase
   based_on: MXR® Phase 90
   firmware_version: null
+  synopsis: Rate all the way down (0.3–0.5) for the Corgan Siamese Dream lead sound
+    — approximates the MXR Phase 100 / Mu-Tron Bi-Phase both confirmed for those
+    sessions. Barely-perceptible slow sweep at Rate 0.3–0.5.
+  notable_users:
+  - Billy Corgan (Smashing Pumpkins) — MXR Phase 100 and Mu-Tron Bi-Phase confirmed for Siamese Dream sessions
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -77,6 +84,9 @@ modulation_effects:
 - name: Ubiquitous Vibe
   based_on: Shin-ei Uni-Vibe®
   firmware_version: null
+  synopsis: 'Intensity range is 0–10 maximum (NOT 20). Use 2.0 for barely perceptible
+    organic modulation. Mode: Chorus preserves dry signal; Vibrato is pure pitch
+    modulation with no dry signal.'
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -175,6 +185,8 @@ modulation_effects:
 - name: Chorus
   based_on: Line 6 Original
   firmware_version: null
+  synopsis: Depth range is 0–10 (NOT a percentage like 30–35). Use 3.0–3.5 for
+    natural shimmer without obvious wobble.
   available_parameters:
   - TempoSync1
   - Note Sync
@@ -188,6 +200,8 @@ modulation_effects:
 - name: 70s Chorus
   based_on: BOSS® CE-1
   firmware_version: null
+  notable_users:
+  - Nick Valensi (The Strokes) — Boss CE-2 confirmed on board; CE-1 is the closest Helix model
   available_parameters:
   - TempoSync1
   - Note Sync (Chorus)
