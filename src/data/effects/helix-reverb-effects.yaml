@@ -20,7 +20,10 @@ reverb_effects:
     - 'Decay: Sets the decay of the reverb (0.1 sec ~ 45.0 sec, or Infinity) TIP:
       Assign'
     - 'Predelay: Determines the amount of delay heard before the signal enters the'
-    - 'Room Size: Sets the size of the hall (10, 20, or 30 meters). NOTE: This'
+    - 'Room Size: Sets the size of the hall (10, 20, or 30 meters). NOTE: This parameter
+      changes the algorithm — NEVER assign to snapshots or controllers. Changing Room
+      Size mid-preset causes an audible bump/glitch. Set as a fixed value per preset
+      (20m for rock presets, 15m for Franz Ferdinand-style).'
     - 'Diffusion: Sets the amount of smearing between discrete echoes, sometimes'
     - 'Damping: Determines the frequency above which the reverb will be absorbed.'
     - 'Mix: Controls the wet/dry mix of the reverb. When set to 0%, no reverb is'
@@ -343,6 +346,8 @@ reverb_effects:
 - name: Ganymede
   based_on: Line 6 Original
   firmware_version: null
+  synopsis: Does NOT have Low Cut or High Cut parameters — use Tone for overall frequency
+    shaping. Single Tone control (not separate Low/High). Decay range 0.1–60 sec.
   available_parameters:
   - Decay
   - Predelay

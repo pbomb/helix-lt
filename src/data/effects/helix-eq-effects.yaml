@@ -24,10 +24,13 @@ eq_effects:
   - High Gain
   - High Freq
   - Level
-- name: Parametric
+- name: Parametric EQ
   based_on: Line 6 Original
   firmware_version: null
-  synopsis: High shelf, low shelf, and a fully parametric band.
+  synopsis: 'Three bands only: Low shelf, single parametric Mid, High shelf — plus
+    Low Cut and High Cut filters. There are NO separate Low-Mid and High-Mid bands.
+    Telephone filter EQ pattern for The Strokes signature tone: Low Cut 100–120 Hz,
+    Low Gain -2 to -4 dB, Mid Freq 600–800 Hz, Mid Gain +3 to +5 dB, High Cut 8000–9500 Hz.'
   available_parameters:
   - Low Freq
   - Low Q

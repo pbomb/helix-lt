@@ -2,6 +2,10 @@ distortion_effects:
 - name: Kinky Boost
   based_on: Xotic® EP Booster
   firmware_version: null
+  synopsis: Drive is a continuous numeric parameter (0–10). Boost is an On/Off toggle
+    with a fixed boost amount — cannot be set to a specific dB value. Use Minotaur
+    for a variable-level clean boost role. Kinky Boost is better suited as a fixed
+    color/boost effect.
   available_parameters:
   - Drive
   - Boost
@@ -11,6 +15,9 @@ distortion_effects:
   firmware_version: null
   synopsis: WARNING! Like the real thing, this model can take your head off! Works
     best before a distorted amp.
+  notable_users:
+  - Eric Clapton — confirmed Dallas Rangemaster user
+  - Alex Kapranos (Franz Ferdinand) — Telenordia Treble Booster approximation, confirmed via Equipboard
   available_parameters:
   - Drive
   - Bass
@@ -160,6 +167,11 @@ distortion_effects:
 - name: Top Secret OD
   based_on: DOD® OD-250
   firmware_version: null
+  synopsis: Two-parameter design. Shares an identical LM741 op-amp circuit with the
+    MXR Distortion+, making it interchangeable as a Distortion+ approximation.
+  notable_users:
+  - Thom Yorke (Radiohead) — confirmed MXR Distortion+ user; DOD OD-250 shares identical LM741 op-amp circuit with MXR Distortion+
+  - Billy Corgan (Smashing Pumpkins) — MXR Distortion+ confirmed stacked before Big Muff for leads on Siamese Dream
   available_parameters:
   - Gain
   - Level
@@ -199,6 +211,10 @@ distortion_effects:
 - name: Hedgehog D9
   based_on: MAXON® SD9 Sonic Distortion
   firmware_version: null
+  synopsis: Harder clipping character than the Stupor OD (SD-1), better suited to
+    high-energy driving rhythm tones.
+  notable_users:
+  - Nick Valensi (The Strokes) — Maxon DS830 Distortion Master confirmed on board; DS830 and SD9 share the same Maxon distortion circuit family
   available_parameters:
   - Gain
   - Tone
@@ -206,6 +222,10 @@ distortion_effects:
 - name: Stupor OD
   based_on: BOSS® SD-1 Overdrive
   firmware_version: null
+  notable_users:
+  - Albert Hammond Jr. (The Strokes) — Jekyll & Hyde overdrive side approximation, Is This It/Room on Fire era
+  - Nick Valensi (The Strokes) — Is This It/Room on Fire era
+  - Jonny Greenwood (Radiohead) — The Bends era, confirmed Boss SD-1 usage
   available_parameters:
   - Drive
   - Tone
@@ -284,6 +304,8 @@ distortion_effects:
     - Thom Yorke
     - Rivers Cuomo
     - James Hetfield
+    - Nick Valensi (The Strokes) — confirmed Is This It/Room on Fire era
+    - Albert Hammond Jr. (The Strokes) — confirmed Is This It/Room on Fire era
     - Many, many more…
   available_parameters:
   - Gain
@@ -363,6 +385,12 @@ distortion_effects:
 - name: Bighorn Fuzz
   based_on: 1973 Electro-Harmonix® Ram's Head Big Muff Pi
   firmware_version: '3.00'
+  synopsis: Closest available Helix approximation to the V4/V5 Op-Amp Big Muff Pi
+    used by Corgan on Siamese Dream. Run Sustain at 9.0–10.0 for Corgan tones —
+    he ran the Big Muff wide open. Tone 4.0 for maximum wall-of-fuzz thickness;
+    Tone 6.0 for lead definition.
+  notable_users:
+  - Billy Corgan (Smashing Pumpkins) — closest approximation to V4/V5 Op-Amp Big Muff Pi used on Siamese Dream; confirmed via Billy Corgan TikTok and Reverb News
   available_parameters:
   - Sustain
   - Tone
@@ -379,7 +407,10 @@ distortion_effects:
   firmware_version: '3.60'
   synopsis: The cult classic Green Russian Big Muff first shook the ground in the
     mid-1990s. Since then it has been heralded by guitarists and bassists for its
-    devastating low- end and unique sludge and sizzle.
+    devastating low-end and unique sludge and sizzle. For the 12:51 (The Strokes)
+    synth tone, use Sustain 9.5 and Tone 0.5 — and critically, roll the guitar's
+    tone knob physically to 0. No digital EQ fully replicates what happens when the
+    tone control removes high frequencies before the signal reaches any pedal.
   available_parameters:
   - Sustain
   - Tone
@@ -394,6 +425,12 @@ distortion_effects:
 - name: Industrial Fuzz
   based_on: Z.Vex Fuzz Factory
   firmware_version: null
+  synopsis: Stability and Gate are counterintuitive — LOWER Stability values = more
+    unstable/oscillating (chaos); HIGHER values = stable fuzz. Gate nearly closed
+    (1.5) for intentional oscillation in the intro; higher (5.5–6.0) for controlled
+    stable fuzz. Oscillator On for oscillating sounds, Off for stable fuzz.
+  notable_users:
+  - Matt Bellamy (Muse) — confirmed Z.Vex Fuzz Factory for Plug In Baby intro
   available_parameters:
   - Compress
   - Gate
@@ -410,6 +447,9 @@ distortion_effects:
 - name: Wringer Fuzz
   based_on: Garbage's modded BOSS® FZ-2
   firmware_version: null
+  synopsis: 'Fuzz Type 0: notched mid-scooped fuzz suited to lead/articulate applications
+    (melodic solos, defined notes). Fuzz Type 1: thicker mid-focused wall-of-sound
+    suited to heavy rhythm (MXR Blue Box approximation, dense rhythm layers).'
   available_parameters:
   - Gain
   - Treble
