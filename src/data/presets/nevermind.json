@@ -276,7 +276,8 @@
         "1_clean": {
           "Decay": 0.8,
           "Predelay": 6,
-          "Diffusion": 5.0,
+          "Room Size": 10,
+          "Diffusion": 50,
           "Damping": 6000,
           "Mix": 15,
           "Motion": 2.0,
@@ -290,7 +291,8 @@
         "2_ds1_distortion": {
           "Decay": 0.5,
           "Predelay": 4,
-          "Diffusion": 4.0,
+          "Room Size": 10,
+          "Diffusion": 40,
           "Damping": 5000,
           "Mix": 8,
           "Motion": 2.0,
@@ -304,7 +306,8 @@
         "3_small_clone_chorus": {
           "Decay": 0.9,
           "Predelay": 8,
-          "Diffusion": 5.0,
+          "Room Size": 10,
+          "Diffusion": 50,
           "Damping": 6500,
           "Mix": 18,
           "Motion": 2.0,
@@ -318,7 +321,8 @@
         "4_big_muff_rat": {
           "Decay": 0.4,
           "Predelay": 3,
-          "Diffusion": 4.0,
+          "Room Size": 10,
+          "Diffusion": 40,
           "Damping": 4500,
           "Mix": 6,
           "Motion": 2.0,
