@@ -1,0 +1,406 @@
+{
+  "preset_name": "Nevermind",
+  "artist": "Nirvana",
+  "album": "Nevermind (1991)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d00004851e175a19e530c898d167d39bf",
+  "tuning": "Standard / Eb (see snapshot notes)",
+  "master_bpm": 116,
+  "notes": "No amp+cab block — running into tube amp. General album preset covering the four main tonal moods of Nevermind across four snapshots. Confirmed rig from multiple primary sources including Butch Vig interviews: Boss DS-1 as primary distortion (Deez One Vintage — exact Japanese-made DS-1 model), EHX Small Clone for chorus (PlastiChorus approximation — no dedicated Small Clone model on Helix), EHX Big Muff for Lithium (Triangle Fuzz), ProCo RAT for Breed (Ratatouille Dist). Amps: Fender Bassman, Mesa Boogie, and Vox AC30 — confirmed by Butch Vig. No delay used anywhere on Nevermind — the album is intentionally dry and direct. Master BPM set to 116 (Smells Like Teen Spirit tempo as representative). DS-1 CONFIRMED SETTINGS from Ground Guitar: Tone ~10 o'clock (approximately 3.0-3.5 on 0-10 scale), Distortion at 4 (4.0/10), Level maxed. IMPORTANT GUITAR NOTE: Cobain used humbuckers on the bridge pickup for rhythm parts (Japanese Strats with humbucker bridge, Mustang). Lace Sensor single coils will have lower output — compensate by raising Deez One Vintage Drive slightly above Cobain's confirmed 4.0 setting.",
+  "confirmed_sources": [
+    "Ground Guitar — What Gear Did Kurt Cobain Use on Nevermind? (specific DS-1 settings, ProCo RAT on Breed)",
+    "Butch Vig — Classic Rock Albums: Nirvana Nevermind (Small Clone quote, amp confirmation)",
+    "Guitar.com — The Humble Gear Used By Kurt Cobain on Nevermind (Big Muff Lithium confirmation)",
+    "Rock Guitar Universe — Kurt Cobain gear guide (DS-1 settings, Small Clone song list)",
+    "Boost Guitar Pedals — Kurt Cobain's Sound on Nevermind (DS-1 settings confirmation)",
+    "Equipboard — Nirvana Nevermind album gear page (DS-1 auction letter confirming pedal)"
+  ],
+  "no_delay_policy": "Nevermind uses NO delay effects. The album's raw, direct character is fundamental to its sound. This is the only preset in the collection with no delay block.",
+  "tuning_note": "Most of Nevermind is in standard tuning. Some songs use Eb (half step down). Check specific song.",
+  "signal_chain": [
+    "Noise Gate",
+    "Deez One Vintage",
+    "Ratatouille Dist",
+    "Triangle Fuzz",
+    "PlastiChorus",
+    "Parametric EQ",
+    "Dynamic Hall"
+  ],
+  "signal_chain_notes": "No delay block — intentional. Seven blocks leaving one spare. All three distortion/fuzz blocks are mutually exclusive across snapshots — only one is active at a time.",
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "S1 clean most open. S2 DS-1 moderately tight. S3 chorus open — Small Clone tone is clean. S4 Big Muff/RAT tightest — high gain requires control.",
+      "snapshots": {
+        "1_clean": {
+          "Threshold": -68,
+          "Decay": 35,
+          "Level": 0
+        },
+        "2_ds1_distortion": {
+          "Threshold": -55,
+          "Decay": 25,
+          "Level": 0
+        },
+        "3_small_clone_chorus": {
+          "Threshold": -68,
+          "Decay": 35,
+          "Level": 0
+        },
+        "4_big_muff_rat": {
+          "Threshold": -50,
+          "Decay": 22,
+          "Level": 0
+        }
+      }
+    },
+    "ds1_distortion": {
+      "model": "Deez One Vintage",
+      "based_on": "BOSS DS-1 distortion pedal (classic Made-in-Japan version)",
+      "notes": "EXACT confirmed pedal — Cobain's DS-1 was the classic Japanese-made version. CONFIRMED SETTINGS from Ground Guitar sourcing Butch Vig/guitar tech: Tone at 10 o'clock (~3.0-3.5 on 0-10 scale), Distortion at 4.0, Level maxed. ACTIVE in Snapshot 2 only. BYPASSED in all other snapshots. Lace Sensor compensation: raise Drive slightly to 5.0 from confirmed 4.0 to compensate for lower pickup output vs Cobain's humbucker bridge pickups.",
+      "confirmed_ds1_settings": {
+        "source": "Ground Guitar — Kurt Cobain Nevermind tone breakdown",
+        "Tone": "~10 o'clock position",
+        "Distortion": "4 out of 10",
+        "Level": "maxed"
+      },
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "Drive": 5.0,
+          "Tone": 3.0,
+          "Level": 9.5
+        },
+        "2_ds1_distortion": {
+          "active": true,
+          "Drive": 5.0,
+          "Tone": 3.0,
+          "Level": 9.5
+        },
+        "3_small_clone_chorus": {
+          "active": false,
+          "Drive": 5.0,
+          "Tone": 3.0,
+          "Level": 9.5
+        },
+        "4_big_muff_rat": {
+          "active": false,
+          "Drive": 5.0,
+          "Tone": 3.0,
+          "Level": 9.5
+        }
+      }
+    },
+    "rat_distortion": {
+      "model": "Ratatouille Dist",
+      "based_on": "1984 Pro Co RAT",
+      "notes": "Confirmed for Breed — main guitar tone from ProCo RAT split into amp and direct console. ACTIVE in Snapshot 4 only alongside Triangle Fuzz for the combined Breed/Lithium heavy snapshot. For purist Breed tone: activate only this block (bypass Triangle Fuzz). For Lithium: activate only Triangle Fuzz (bypass this). The combined snapshot covers both moods with a toggle approach.",
+      "confirmed_source": "Ground Guitar: 'The main guitar tone came from a ProCo Rat pedal, which was split into two signals'",
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "Gain": 6.0,
+          "Filter": 4.0,
+          "Level": 6.5
+        },
+        "2_ds1_distortion": {
+          "active": false,
+          "Gain": 6.0,
+          "Filter": 4.0,
+          "Level": 6.5
+        },
+        "3_small_clone_chorus": {
+          "active": false,
+          "Gain": 6.0,
+          "Filter": 4.0,
+          "Level": 6.5
+        },
+        "4_big_muff_rat": {
+          "active": true,
+          "Gain": 6.0,
+          "Filter": 4.0,
+          "Level": 6.5
+        }
+      }
+    },
+    "big_muff": {
+      "model": "Triangle Fuzz",
+      "based_on": "Electro-Harmonix Big Muff π",
+      "notes": "Confirmed for Lithium — Butch Vig: 'an Electro-Harmonix Big Muff fuzz box was used on Lithium for that dark, thumpier sound.' Triangle Fuzz (original Big Muff circuit) chosen over Bighorn Fuzz (Ram's Head) or Dark Dove (Russian) because the original Triangle/Pi circuit is what Cobain used — it has slightly more mids and less extreme scooping than the Ram's Head version. BYPASSED in Snapshots 1, 2, 3. ACTIVE in Snapshot 4. For pure Lithium tone: bypass the Ratatouille Dist. For Breed: bypass this. The snapshot covers both with both active.",
+      "confirmed_source": "Butch Vig — Classic Rock Albums interview: 'dark, thumpier sound' on Lithium",
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "Sustain": 8.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "2_ds1_distortion": {
+          "active": false,
+          "Sustain": 8.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "3_small_clone_chorus": {
+          "active": false,
+          "Sustain": 8.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "4_big_muff_rat": {
+          "active": true,
+          "Sustain": 8.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        }
+      }
+    },
+    "small_clone_chorus": {
+      "model": "PlastiChorus",
+      "based_on": "Modded Arion SCH-Z Chorus",
+      "notes": "Approximates EHX Small Clone — no dedicated Small Clone model on Helix. The Arion SCH-Z is a simple analog chorus with warm, lush character similar to the Small Clone. Confirmed songs: Come As You Are (main verses and pre-chorus), Smells Like Teen Spirit (pre-chorus build-up and solo), In Bloom (bridge). BYPASSED in Snapshots 1, 2, 4. ACTIVE in Snapshot 3 only. The Small Clone has only two controls: Rate and Depth — the PlastiChorus Mode, Tone, and Headroom parameters extend beyond the real pedal's controls.",
+      "confirmed_source": "Butch Vig: 'He had an Electro-Harmonix Small Clone. That's the watery sound you hear on the guitar in the verse and pre-chorus buildup.'",
+      "confirmed_songs": ["Come As You Are", "Smells Like Teen Spirit (pre-chorus/solo)", "In Bloom (bridge)", "Endless Nameless"],
+      "snapshots": {
+        "1_clean": {
+          "active": false,
+          "Rate": 3.5,
+          "Depth": 6.5,
+          "Mode": "Chorus",
+          "Tone": 5.0,
+          "Mix": 5.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "2_ds1_distortion": {
+          "active": false,
+          "Rate": 3.5,
+          "Depth": 6.5,
+          "Mode": "Chorus",
+          "Tone": 5.0,
+          "Mix": 5.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "3_small_clone_chorus": {
+          "active": true,
+          "Rate": 3.5,
+          "Depth": 6.5,
+          "Mode": "Chorus",
+          "Tone": 5.0,
+          "Mix": 5.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "4_big_muff_rat": {
+          "active": false,
+          "Rate": 3.5,
+          "Depth": 6.5,
+          "Mode": "Chorus",
+          "Tone": 5.0,
+          "Mix": 5.0,
+          "Level": 0,
+          "Headroom": 0
+        }
+      }
+    },
+    "eq": {
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Compensates for removed Vox AC30 / Fender Bassman amp voicing and lack of cabinet simulation. S1 clean: warm and open approximating the Vox AC30 Butch Vig confirmed for clean parts. S2 DS-1: relatively flat EQ — the DS-1's confirmed Tone at 10 o'clock already cuts high end; the EQ reinforces the raw, direct character without over-sculpting. S3 chorus: open and bright — Small Clone tone is clean and shimmery. S4 Big Muff/RAT: manages Big Muff's mid-scoop and adds low cut to prevent muddiness.",
+      "snapshots": {
+        "1_clean": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 2,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 10000,
+          "Level": 0
+        },
+        "2_ds1_distortion": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 1,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 9000,
+          "Level": 2
+        },
+        "3_small_clone_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 900,
+          "Mid Q": 2.0,
+          "Mid Gain": 2,
+          "High Freq": 4500,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 11000,
+          "Level": 0
+        },
+        "4_big_muff_rat": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -3,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -1,
+          "High Freq": 3000,
+          "High Q": 0.7,
+          "High Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 8000,
+          "Level": 3
+        }
+      }
+    },
+    "reverb": {
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 10m — small room character matching the raw, close-mic'd studio recording. Nevermind is NOT a reverb-heavy album — all reverb settings are short and minimal. The recording has a tight, punchy studio character. Do NOT use long decay or high mix values.",
+      "room_size_fixed": 10,
+      "snapshots": {
+        "1_clean": {
+          "Decay": 0.8,
+          "Predelay": 6,
+          "Diffusion": 5.0,
+          "Damping": 6000,
+          "Mix": 15,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 7000,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_ds1_distortion": {
+          "Decay": 0.5,
+          "Predelay": 4,
+          "Diffusion": 4.0,
+          "Damping": 5000,
+          "Mix": 8,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 90,
+          "High Cut": 6000,
+          "Level": 0,
+          "Trails": true
+        },
+        "3_small_clone_chorus": {
+          "Decay": 0.9,
+          "Predelay": 8,
+          "Diffusion": 5.0,
+          "Damping": 6500,
+          "Mix": 18,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 7500,
+          "Level": 0,
+          "Trails": true
+        },
+        "4_big_muff_rat": {
+          "Decay": 0.4,
+          "Predelay": 3,
+          "Diffusion": 4.0,
+          "Damping": 4500,
+          "Mix": 6,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 5500,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  },
+  "snapshots": {
+    "1_clean": {
+      "footswitch": "FS1",
+      "description": "Clean / strummy tone. All distortion bypassed. PlastiChorus bypassed. Warm, open EQ approximating Vox AC30 character confirmed by Butch Vig for clean parts. Short room reverb (0.8 sec, 15% mix). Represents: Polly (clean strumming), Something In The Way, clean intros across the album.",
+      "representative_songs": [
+        "Polly",
+        "Something In The Way",
+        "Drain You (clean sections)",
+        "Lounge Act (clean intro)"
+      ],
+      "pickup_position": "Neck or middle",
+      "tuning": "Standard or Eb depending on song"
+    },
+    "2_ds1_distortion": {
+      "footswitch": "FS2",
+      "description": "Main DS-1 distortion — the defining Nevermind tone. Deez One Vintage active at confirmed settings: Drive 5.0 (Cobain's confirmed 4.0 raised slightly for Lace Sensor compensation), Tone 3.0 (~10 o'clock), Level 9.5 (maxed). Flat EQ — DS-1 Tone already shapes the sound. Very tight room reverb (0.5 sec, 8% mix). Intentionally dry. Represents: Smells Like Teen Spirit rhythm, Breed (rhythm sections), Come As You Are (distorted chorus), Teen Spirit choruses.",
+      "representative_songs": [
+        "Smells Like Teen Spirit (rhythm/chorus)",
+        "In Bloom (heavy sections)",
+        "Come As You Are (chorus distortion)",
+        "Stay Away",
+        "Drain You (heavy sections)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning": "Standard for most"
+    },
+    "3_small_clone_chorus": {
+      "footswitch": "FS3",
+      "description": "Small Clone chorus tone. PlastiChorus active — Rate 3.5, Depth 6.5. All distortion bypassed. Open, bright EQ. Very short room reverb (0.9 sec, 18% mix). The Small Clone has high Depth for that watery, prominent chorus character Cobain used. Represents: Come As You Are verses and pre-chorus, Smells Like Teen Spirit pre-chorus build-up and solo, In Bloom bridge.",
+      "representative_songs": [
+        "Come As You Are (verse/pre-chorus — PRIMARY)",
+        "Smells Like Teen Spirit (pre-chorus build-up, solo)",
+        "In Bloom (bridge)",
+        "Endless Nameless"
+      ],
+      "pickup_position": "Neck or middle",
+      "tuning": "Standard or Eb",
+      "technique_note": "Come As You Are uses a specific descending riff. The Small Clone chorus should be immediately recognizable at Depth 6.5. If it sounds too prominent, back off Depth toward 5.5."
+    },
+    "4_big_muff_rat": {
+      "footswitch": "FS4",
+      "description": "Big Muff and RAT — for Lithium and Breed specifically. Triangle Fuzz and Ratatouille Dist both active. For LITHIUM: bypass Ratatouille Dist, use Triangle Fuzz only (Butch Vig confirmed Big Muff for dark thumpier sound). For BREED: bypass Triangle Fuzz, use Ratatouille Dist only (confirmed ProCo RAT split signal). As combined: both active gives a stacked fuzz/distortion character suitable for the heaviest moments. EQ manages Big Muff mid-scoop. Driest reverb (0.4 sec, 6% mix).",
+      "representative_songs": [
+        "Lithium (Triangle Fuzz only — bypass Ratatouille)",
+        "Breed (Ratatouille only — bypass Triangle Fuzz)",
+        "Territorial Pissings (heaviest moments)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning": "Standard",
+      "toggle_instructions": {
+        "lithium": "Bypass Ratatouille Dist block. Keep Triangle Fuzz active.",
+        "breed": "Bypass Triangle Fuzz block. Keep Ratatouille Dist active.",
+        "combined": "Both active for maximum heaviness"
+      }
+    }
+  },
+  "playing_notes": {
+    "tuning": "Mostly standard. Some songs in Eb — check specific song.",
+    "pickup_notes": "Neck or middle for Snapshots 1 and 3 (clean, chorus). Bridge for Snapshots 2 and 4 (distortion, heavy). Cobain used humbucker bridge pickups on his primary studio guitars — Lace Sensor single coils will sound slightly thinner and brighter. The Drive compensation (4.0 → 5.0) addresses output difference.",
+    "ds1_technique": "The DS-1 at Tone 3.0 / Distortion 5.0 is a relatively dark, mid-scooped distortion. Pick firmly and directly — Cobain's rhythm technique was aggressive and percussive. Power chords, not full barre chords, are the primary voicing across the album.",
+    "small_clone_technique": "Come As You Are uses a specific descending chromatic riff with the chorus prominent. The PlastiChorus at Depth 6.5 should produce an obviously watery, lush sound — not subtle. This is one of the most prominent chorus sounds in rock history.",
+    "no_delay_reminder": "Nevermind uses NO delay. Resist the temptation to add delay — it fundamentally changes the album's dry, direct character.",
+    "big_muff_toggle": "Snapshot 4 has both Triangle Fuzz and Ratatouille Dist active by default. For song-specific accuracy, bypass one or the other as documented in the snapshot's toggle_instructions field.",
+    "tap_tempo": "Master BPM set to 116 (SLTS). Adjust via tap tempo for other songs — Breed is ~183 BPM, Lithium is ~122 BPM, Come As You Are is ~120 BPM.",
+    "further_listening": {
+      "S1_reference": ["Polly", "Something In The Way"],
+      "S2_reference": ["Smells Like Teen Spirit (verse/chorus)", "In Bloom (heavy)"],
+      "S3_reference": ["Come As You Are (verse)", "SLTS (pre-chorus)"],
+      "S4_reference": ["Lithium (Big Muff only)", "Breed (RAT only)"]
+    }
+  }
+}
