@@ -181,7 +181,7 @@
         "1_clean": {
           "Decay": 2.8,
           "Predelay": 15,
-          "Diffusion": 6.0,
+          "Diffusion": 60,
           "Damping": 6500,
           "Mix": 42,
           "Motion": 3.0,
@@ -195,7 +195,7 @@
         "2_heavy": {
           "Decay": 0.7,
           "Predelay": 5,
-          "Diffusion": 5.0,
+          "Diffusion": 50,
           "Damping": 4000,
           "Mix": 15,
           "Motion": 2.0,

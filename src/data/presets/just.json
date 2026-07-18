@@ -243,7 +243,7 @@
         "1_verse": {
           "Decay": 1.8,
           "Predelay": 12,
-          "Diffusion": 6.0,
+          "Diffusion": 60,
           "Damping": 6000,
           "Mix": 30,
           "Motion": 3.0,
@@ -257,7 +257,7 @@
         "2_heavy_riff": {
           "Decay": 0.6,
           "Predelay": 4,
-          "Diffusion": 5.0,
+          "Diffusion": 50,
           "Damping": 4000,
           "Mix": 10,
           "Motion": 2.0,
@@ -271,7 +271,7 @@
         "3_whammy_solo": {
           "Decay": 1.5,
           "Predelay": 10,
-          "Diffusion": 6.0,
+          "Diffusion": 60,
           "Damping": 5000,
           "Mix": 28,
           "Motion": 3.0,

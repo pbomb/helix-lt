@@ -200,7 +200,7 @@
         "1_angular_intro": {
           "Decay": 1.5,
           "Predelay": 10,
-          "Diffusion": 5.0,
+          "Diffusion": 50,
           "Damping": 6000,
           "Mix": 28,
           "Motion": 2.5,
@@ -214,7 +214,7 @@
         "2_main_riff": {
           "Decay": 0.7,
           "Predelay": 5,
-          "Diffusion": 5.0,
+          "Diffusion": 50,
           "Damping": 5000,
           "Mix": 12,
           "Motion": 2.0,
@@ -228,7 +228,7 @@
         "3_lead": {
           "Decay": 1.8,
           "Predelay": 12,
-          "Diffusion": 6.0,
+          "Diffusion": 60,
           "Damping": 6500,
           "Mix": 32,
           "Motion": 3.0,

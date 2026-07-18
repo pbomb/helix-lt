@@ -341,7 +341,7 @@
         "1_clean": {
           "Decay": 2.5,
           "Predelay": 15,
-          "Diffusion": 7.0,
+          "Diffusion": 70,
           "Damping": 7000,
           "Mix": 40,
           "Motion": 3.0,
@@ -355,7 +355,7 @@
         "2_heavy_rhythm": {
           "Decay": 0.6,
           "Predelay": 5,
-          "Diffusion": 5.0,
+          "Diffusion": 50,
           "Damping": 5000,
           "Mix": 12,
           "Motion": 2.0,
@@ -369,7 +369,7 @@
         "3_lead_phase": {
           "Decay": 1.8,
           "Predelay": 12,
-          "Diffusion": 6.0,
+          "Diffusion": 60,
           "Damping": 6500,
           "Mix": 28,
           "Motion": 3.0,
@@ -383,7 +383,7 @@
         "4_wall_of_fuzz": {
           "Decay": 0.5,
           "Predelay": 4,
-          "Diffusion": 5.0,
+          "Diffusion": 50,
           "Damping": 4500,
           "Mix": 8,
           "Motion": 2.0,
