@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d00004851e175a19e530c898d167d39bf",
   "tuning": "Standard / Eb (see snapshot notes)",
   "master_bpm": 116,
-  "notes": "No amp+cab block — running into tube amp. General album preset covering the four main tonal moods of Nevermind across four snapshots. Confirmed rig from multiple primary sources including Butch Vig interviews: Boss DS-1 as primary distortion (Deez One Vintage — exact Japanese-made DS-1 model), EHX Small Clone for chorus (PlastiChorus approximation — no dedicated Small Clone model on Helix), EHX Big Muff for Lithium (Triangle Fuzz), ProCo RAT for Breed (Ratatouille Dist). Amps: Fender Bassman, Mesa Boogie, and Vox AC30 — confirmed by Butch Vig. No delay used anywhere on Nevermind — the album is intentionally dry and direct. Master BPM set to 116 (Smells Like Teen Spirit tempo as representative). DS-1 CONFIRMED SETTINGS from Ground Guitar: Tone ~10 o'clock (approximately 3.0-3.5 on 0-10 scale), Distortion at 4 (4.0/10), Level maxed. IMPORTANT GUITAR NOTE: Cobain used humbuckers on the bridge pickup for rhythm parts (Japanese Strats with humbucker bridge, Mustang). Lace Sensor single coils will have lower output — compensate by raising Deez One Vintage Drive slightly above Cobain's confirmed 4.0 setting.",
+  "notes": "No amp+cab block — running into tube amp. EXPERIMENTAL: a Tweed Blues Nrm (Fender Bassman) Preamp-only block has been added (see preamp_experiment_note and the 'preamp' block) to try amp-stage coloration in front of the real Super Champ XD, filling the chain to the 8-block hardware limit. General album preset covering the four main tonal moods of Nevermind across four snapshots. Confirmed rig from multiple primary sources including Butch Vig interviews: Boss DS-1 as primary distortion (Deez One Vintage — exact Japanese-made DS-1 model), EHX Small Clone for chorus (PlastiChorus approximation — no dedicated Small Clone model on Helix), EHX Big Muff for Lithium (Triangle Fuzz), ProCo RAT for Breed (Ratatouille Dist). Amps: Fender Bassman, Mesa Boogie, and Vox AC30 — confirmed by Butch Vig. No delay used anywhere on Nevermind — the album is intentionally dry and direct. Master BPM set to 116 (Smells Like Teen Spirit tempo as representative). DS-1 CONFIRMED SETTINGS from Ground Guitar: Tone ~10 o'clock (approximately 3.0-3.5 on 0-10 scale), Distortion at 4 (4.0/10), Level maxed. IMPORTANT GUITAR NOTE: Cobain used humbuckers on the bridge pickup for rhythm parts (Japanese Strats with humbucker bridge, Mustang). Lace Sensor single coils will have lower output — compensate by raising Deez One Vintage Drive slightly above Cobain's confirmed 4.0 setting.",
   "confirmed_sources": [
     "Ground Guitar — What Gear Did Kurt Cobain Use on Nevermind? (specific DS-1 settings, ProCo RAT on Breed)",
     "Butch Vig — Classic Rock Albums: Nirvana Nevermind (Small Clone quote, amp confirmation)",
@@ -22,10 +22,12 @@
     "Ratatouille Dist",
     "Triangle Fuzz",
     "PlastiChorus",
+    "Tweed Blues Nrm",
     "Parametric EQ",
     "Dynamic Hall"
   ],
-  "signal_chain_notes": "No delay block — intentional. Seven blocks leaving one spare. All three distortion/fuzz blocks are mutually exclusive across snapshots — only one is active at a time.",
+  "signal_chain_notes": "No delay block — intentional. EXPERIMENTAL: Tweed Blues Nrm (Fender Bassman) Preamp block added, filling the previously spare 8th slot — now at the 8-block hardware limit. All three distortion/fuzz blocks are mutually exclusive across snapshots — only one is active at a time.",
+  "preamp_experiment_note": "Added per request to try a Preamp-only block (no cab/power-amp modeling) in front of the real tube amp, instead of running purely on pedals into the amp's own front end. Fender Bassman chosen as the single preamp model — Butch Vig confirmed Fender Bassman, Mesa Boogie, and Vox AC30 were all used across Nevermind sessions, but a Helix Preamp block can only host ONE model per preset (snapshots can vary its parameters but cannot swap the model), so Bassman was picked as the most universally-cited 'ground zero' grunge-era platform that works both clean and pushed by pedals. Drive is kept moderate throughout since the DS-1/RAT/Big Muff pedals already provide the gain — the preamp's job here is just amp-stage coloration/saturation, consistent with the rig's usual compensation strategy. If this doesn't sound right, Essex A30 (Vox AC30) is the next thing to try, since it's confirmed for the clean/chorus (S1/S3) parts specifically.",
   "blocks": {
     "noise_gate": {
       "model": "Noise Gate",
@@ -201,6 +203,53 @@
           "Mix": 5.0,
           "Level": 0,
           "Headroom": 0
+        }
+      }
+    },
+    "preamp": {
+      "model": "Tweed Blues Nrm",
+      "based_on": "Fender Bassman",
+      "notes": "EXPERIMENTAL preamp-only block (no cab/power-amp modeling) — Preamp category, not Amp+Cab, so it still runs into the real Super Champ XD rather than replacing it. Placed after all drive/fuzz/chorus pedals and before the corrective EQ, mirroring pedals-into-amp-front-end signal order. Drive kept moderate in every snapshot since the DS-1/RAT/Big Muff pedals already supply distortion — this block adds amp-stage coloration and touch response rather than additional gain. Bass/Mid/Treble trimmed down slightly from the amp's own defaults since the downstream Parametric EQ block still does the heavy corrective sculpting (may want to re-balance EQ levels down now that this block adds real amp character). Sag and Hum kept low/moderate for a tighter, more modern feel rather than a fully vintage-sagging Bassman.",
+      "snapshots": {
+        "1_clean": {
+          "Drive": 3.0,
+          "Bass": 5.5,
+          "Mid": 5.0,
+          "Treble": 6.0,
+          "Master": 6.0,
+          "Ch Vol": 6.0,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "2_ds1_distortion": {
+          "Drive": 4.0,
+          "Bass": 5.0,
+          "Mid": 4.5,
+          "Treble": 5.5,
+          "Master": 6.5,
+          "Ch Vol": 6.5,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "3_small_clone_chorus": {
+          "Drive": 3.0,
+          "Bass": 5.5,
+          "Mid": 5.0,
+          "Treble": 6.5,
+          "Master": 6.0,
+          "Ch Vol": 6.0,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "4_big_muff_rat": {
+          "Drive": 4.5,
+          "Bass": 4.5,
+          "Mid": 4.0,
+          "Treble": 5.0,
+          "Master": 7.0,
+          "Ch Vol": 7.0,
+          "Sag": 3.5,
+          "Hum": 2.5
         }
       }
     },

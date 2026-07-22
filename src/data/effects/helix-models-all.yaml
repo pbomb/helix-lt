@@ -6914,7 +6914,7 @@ reverb:
       Assign'
     - 'Predelay: Determines the amount of delay heard before the signal enters the'
     - 'Room Size: Sets the size of the hall (10, 20, or 30 meters). NOTE: This'
-    - 'Diffusion: Sets the amount of smearing between discrete echoes, sometimes'
+    - 'Diffusion: Sets the amount of smearing between discrete echoes as a percentage, sometimes'
     - 'Damping: Determines the frequency above which the reverb will be absorbed.'
     - 'Mix: Controls the wet/dry mix of the reverb. When set to 0%, no reverb is'
     - 'Motion: Sets the amount of randomization, which can be helpful to minimize'
@@ -7000,7 +7000,7 @@ reverb:
     - Decay—Sets the decay of the reverb (0.1 sec ~ 3.0 sec)
     - Predelay—Determines the amount of delay heard before the signal enters the
     - Damping—Determines the frequency above which the reverb will be absorbed.
-    - Diffusion—Sets the amount of smearing between discrete echoes, sometimes
+    - Diffusion—Sets the amount of smearing between discrete echoes as a percentage, sometimes
     - MotRate—Motion Rate, or how quickly the room's shape may be changing, due
     - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
     - Low Freq—Sets the frequency below which the Low Gain parameter is applied
@@ -7111,7 +7111,7 @@ reverb:
     - Predelay—Determines the amount of delay heard before the signal enters the
     - Room Size—Sets the size of the room (10, 20, or 30 meters)
     - Damping—Determines the frequency above which the reverb will be absorbed
-    - Diffusion—Sets the amount of smearing between discrete echoes, sometimes
+    - Diffusion—Sets the amount of smearing between discrete echoes as a percentage, sometimes
     - Motion—Sets the amount of randomization, which can be helpful to minimize
     - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
     - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
@@ -7190,7 +7190,7 @@ reverb:
     - Late Dry—
     - Mix—Controls the wet/dry mix of the reverb. When set to 0%, no reverb is
     - Level—Sets the overall level of the block.
-    - Diffusion—Sets the amount of smearing between discrete echoes, sometimes
+    - Diffusion—Sets the amount of smearing between discrete echoes as a percentage, sometimes
     - Low Cut—Applies a low cut (or high pass) filter to the reverb, letting you
     - High Cut—Applies a high cut (or low pass) filter to the reverb, letting you
     - Mod—Controls the amount of modulation applied to the reverb.

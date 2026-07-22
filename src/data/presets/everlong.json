@@ -1,0 +1,244 @@
+{
+  "preset_name": "Everlong",
+  "artist": "Foo Fighters",
+  "album": "The Colour and the Shape (1997)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d000048514bc9bcdbdc9ac34e37d8b6bb",
+  "tuning": "Drop D",
+  "master_bpm": 158,
+  "notes": "No amp+cab block — running into the real tube amp per usual rig rules. Added an EXPERIMENTAL Cali Rectifire (Mesa/Boogie Dual Rectifier) Preamp-only block since the Dual Rectifier is the specifically confirmed amp the ProCo RAT was driving for Everlong's heavy tone (unlike Nevermind's three-way amp tossup, this is a single well-documented pairing). Two-snapshot design matching the song's core quiet/loud structure: a light-gain, near-clean intro/verse tone that still lets a bit of grit through under hard picking, and a fully driven RAT-into-cranked-amp chorus/bridge tone with layered Drop D guitars. Confirmed rig: ProCo RAT distortion into a cranked Mesa/Boogie Dual/Triple Rectifier for the heavy parts, Boss DM-2 Analog Delay as a long-standing Grohl pedalboard constant. Lace Sensor / Super Champ XD compensation applied via a mild always-on Stupor OD ahead of the RAT and raised Parametric EQ Level.",
+  "confirmed_sources": [
+    "Guitar.com — The Guitar Gear Used on The Foo Fighters' The Colour and the Shape (ProCo RAT/Rat 2, DigiTech Whammy and other pedals sent to Bear Creek Studios; Everlong's driving tone from RAT into a cranked amp, Drop D layered guitars)",
+    "Reverb News — The Gear of Foo Fighters (Boss DM-2 Analog Delay, Boss DD-3, MXR Phase 90 as long-standing Grohl pedalboard constants; Mesa/Boogie Dual Rectifier and Vox AC30 confirmed live rig c. 2000)",
+    "Guitar Space — Everlong Amp Settings Guide (light-gain, clean-and-bright tone with grit appearing under hard picking)",
+    "Ground Guitar — Dave Grohl Guitars & Gear (Mesa/Boogie Dual Rectifier detail page)"
+  ],
+  "tempo_note": "158 BPM, 4/4. Delay division chosen as 1/8 note (190ms at 158 BPM) for a tight rhythmic echo under the palm-muted intro/verse riff without smearing into slapback territory.",
+  "signal_chain": [
+    "Noise Gate",
+    "Stupor OD",
+    "Ratatouille Dist",
+    "Cali Rectifire",
+    "Adriatic Delay",
+    "Parametric EQ",
+    "Dynamic Hall"
+  ],
+  "signal_chain_notes": "7 of 8 available blocks used. Cali Rectifire (preamp-only, no cab/power-amp) placed after the overdrive/distortion blocks and before the delay block, per the AGENTS.md convention: pedals hit the amp's preamp stage first, modulation/time-based effects sit after the amp. Ratatouille Dist (RAT) is bypassed in the clean/verse snapshot and active in the chorus/heavy snapshot — the only toggled block; everything else stays on and just changes its parameters between snapshots.",
+  "preamp_experiment_note": "EXPERIMENTAL Cali Rectifire block added because the Mesa/Boogie Dual Rectifier is specifically confirmed (not just era-plausible) as the amp the RAT was driving for Everlong's heavy tone. Kept at low/moderate Drive in the clean/verse snapshot so it only adds amp-stage warmth and touch response — the light-gain, almost-clean character there should come from Stupor OD alone, not this block. Pushed further in the chorus/heavy snapshot to reinforce the RAT's aggressive, driving character with real amp-stage push, while the RAT itself remains the primary gain source (consistent with the rig's usual pedals-do-the-gain, preamp-does-the-coloration approach).",
+  "blocks": {
+    "noise_gate": {
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "S1 clean/verse: light-gain tone needs a fairly open gate to preserve pick dynamics and let the intended 'grit when picked hard' through. S2 chorus/heavy: RAT + pushed preamp needs a tighter gate to control the layered Drop D guitars.",
+      "snapshots": {
+        "1_clean_verse": {
+          "Threshold": -65,
+          "Decay": 30,
+          "Level": 0
+        },
+        "2_chorus_heavy": {
+          "Threshold": -52,
+          "Decay": 20,
+          "Level": 0
+        }
+      }
+    },
+    "stupor_od": {
+      "model": "Stupor OD",
+      "based_on": "Rig compensation (not a confirmed Everlong pedal)",
+      "notes": "Standard Lace Sensor / Super Champ XD compensation — mild always-on saturation to simulate the amp-stage grit a hotter-output rig would have for free. Kept very low in the clean/verse snapshot so it only contributes the 'grit when you pick extra hard' character described in confirmed tone breakdowns, not audible gain. Raised ahead of the RAT in the chorus/heavy snapshot to push the front end harder.",
+      "snapshots": {
+        "1_clean_verse": {
+          "active": true,
+          "Drive": 2.0,
+          "Tone": 5.0,
+          "Level": 5.5
+        },
+        "2_chorus_heavy": {
+          "active": true,
+          "Drive": 4.0,
+          "Tone": 5.5,
+          "Level": 6.5
+        }
+      }
+    },
+    "rat_distortion": {
+      "model": "Ratatouille Dist",
+      "based_on": "ProCo RAT",
+      "notes": "CONFIRMED pedal — the driving, aggressive Everlong tone comes from a ProCo RAT into a cranked amp. Bypassed entirely in the clean/verse snapshot (intro/verse is light-gain, not RAT-driven). Active in the chorus/heavy snapshot as the primary gain source alongside the Cali Rectifire preamp push.",
+      "confirmed_source": "Guitar.com / Reverb News: driving, aggressive Everlong tone from ProCo RAT distortion into a cranked amp",
+      "snapshots": {
+        "1_clean_verse": {
+          "active": false,
+          "Gain": 5.5,
+          "Filter": 4.5,
+          "Level": 6.0
+        },
+        "2_chorus_heavy": {
+          "active": true,
+          "Gain": 5.5,
+          "Filter": 4.5,
+          "Level": 6.0
+        }
+      }
+    },
+    "cali_rectifire": {
+      "model": "Cali Rectifire",
+      "based_on": "MESA/Boogie Dual Rectifier",
+      "notes": "EXPERIMENTAL preamp-only block (no cab/power-amp modeling), placed after Stupor OD/Ratatouille Dist and before Adriatic Delay per the preamp placement convention. S1 clean/verse: low Drive, amp-stage coloration only. S2 chorus/heavy: Drive and Master pushed further, Mid trimmed slightly for the scooped, aggressive Rectifier character, reinforcing the RAT rather than replacing it as the gain source.",
+      "snapshots": {
+        "1_clean_verse": {
+          "Drive": 2.5,
+          "Bass": 5.0,
+          "Mid": 5.0,
+          "Treble": 6.0,
+          "Presence": 5.0,
+          "Ch Vol": 5.0,
+          "Master": 5.5,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "2_chorus_heavy": {
+          "Drive": 6.0,
+          "Bass": 5.5,
+          "Mid": 4.0,
+          "Treble": 6.5,
+          "Presence": 6.0,
+          "Ch Vol": 6.5,
+          "Master": 7.0,
+          "Sag": 4.0,
+          "Hum": 2.5
+        }
+      }
+    },
+    "dm2_delay": {
+      "model": "Adriatic Delay",
+      "based_on": "BOSS DM-2 Analog Delay w/ Adrian Mod",
+      "notes": "Confirmed long-standing constant on Grohl's pedalboard. Tempo-synced to 1/8 note (190ms at 158 BPM) for a tight rhythmic echo — more present under the clean/verse palm-muted riff, pulled back in the chorus/heavy snapshot so it doesn't wash out the layered Drop D guitars.",
+      "snapshots": {
+        "1_clean_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "190ms (1/8 at 158 BPM)",
+          "Feedback": 2.5,
+          "Noise": 2.0,
+          "BBD Size": 2048,
+          "Mix": 18
+        },
+        "2_chorus_heavy": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "190ms (1/8 at 158 BPM)",
+          "Feedback": 2.0,
+          "Noise": 2.5,
+          "BBD Size": 2048,
+          "Mix": 8
+        }
+      }
+    },
+    "eq": {
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Compensates for the missing Dual Rectifier/Vox AC30 cab voicing and raises Level to help push the real tube amp's input stage. S1 clean/verse: gently brightened, minimal cut, keeping the light-gain tone clean and bright as described in confirmed tone breakdowns. S2 chorus/heavy: low end tightened and mids trimmed slightly to keep the layered Drop D guitars from getting muddy.",
+      "snapshots": {
+        "1_clean_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": 0,
+          "Mid Freq": 750,
+          "Mid Q": 1.5,
+          "Mid Gain": 1,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 9000,
+          "Level": 1
+        },
+        "2_chorus_heavy": {
+          "Low Freq": 120,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": 0,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 100,
+          "High Cut": 8500,
+          "Level": 3
+        }
+      }
+    },
+    "reverb": {
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 12m — a touch bigger and more modern than a tight studio room to suit the driving rock production, but still short/punchy overall rather than ambient. S1 clean/verse: slightly longer decay and higher mix for the more open intro/verse texture. S2 chorus/heavy: shorter decay, lower mix so the wall of layered guitars stays tight and driving.",
+      "room_size_fixed": 12,
+      "snapshots": {
+        "1_clean_verse": {
+          "Decay": 1.0,
+          "Predelay": 8,
+          "Room Size": 12,
+          "Diffusion": 55,
+          "Damping": 6500,
+          "Mix": 16,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 7500,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_chorus_heavy": {
+          "Decay": 0.6,
+          "Predelay": 4,
+          "Room Size": 12,
+          "Diffusion": 45,
+          "Damping": 5000,
+          "Mix": 10,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 6500,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  },
+  "snapshots": {
+    "1_clean_verse": {
+      "footswitch": "FS1",
+      "description": "Intro/verse tone. Ratatouille Dist bypassed — light-gain, clean-and-bright character with Stupor OD and Cali Rectifire kept low, just enough to let grit come through under hard picking, per confirmed Everlong tone breakdowns. Slightly more present tempo-synced delay (1/8 note) under the palm-muted riff. Represents: the palm-muted intro, verses, pre-choruses.",
+      "representative_songs": [
+        "Everlong (intro)",
+        "Everlong (verse 1 & 2)",
+        "Everlong (pre-chorus build)"
+      ],
+      "pickup_position": "Bridge or bridge/middle (palm-muted picking)",
+      "tuning": "Drop D"
+    },
+    "2_chorus_heavy": {
+      "footswitch": "FS2",
+      "description": "Chorus/bridge tone. Ratatouille Dist active, Cali Rectifire and Stupor OD pushed further for a driving, aggressive wall-of-guitar sound approximating the layered Drop D tracking on the record. Delay mix pulled back so it doesn't wash out the distortion. Represents: the full-band choruses and the bridge's heaviest moment.",
+      "representative_songs": [
+        "Everlong (chorus)",
+        "Everlong (bridge — heaviest section)",
+        "Everlong (outro)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning": "Drop D"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Drop D throughout — confirmed for Everlong's layered guitar tracking.",
+    "quiet_loud_dynamic": "Everlong's structure is a classic quiet/loud arrangement — intro and verses stay on Snapshot 1, choruses and the bridge's heaviest moment switch to Snapshot 2. Toggle on the downbeat where the full band and distorted guitar layer in.",
+    "picking_technique": "Snapshot 1 is intentionally light-gain rather than fully clean — dig in on palm-muted notes to let the confirmed 'grit when you pick extra hard' character come through; don't expect a pristine clean tone.",
+    "preamp_caveat": "The Cali Rectifire block is an experimental addition layered in front of the real Super Champ XD, not a replacement for it — if the heavy snapshot feels too saturated or compressed, try lowering Cali Rectifire Drive/Master before touching the RAT, since the RAT should remain the primary distortion character.",
+    "delay_note": "Adriatic Delay is tempo-synced to 1/8 note (190ms at 158 BPM). Retap tempo if playing at a different reference BPM live.",
+    "tap_tempo": "Master BPM set to 158 (Everlong's tempo)."
+  }
+}
