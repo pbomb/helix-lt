@@ -7,17 +7,8 @@
   "master_bpm": 118,
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 118 BPM. Three snapshots: rhythm, chorus, and bridge solo. Key tonal difference from other Strokes presets: Hedgehog D9 (Maxon SD9) replaces Stupor OD — harder clipping, more aggressive character matching the song's upbeat, energetic character. 70s Chorus (Boss CE-2 approximation) active on rhythm and chorus snapshots — gives the New Order-adjacent character noted by reviewers.",
   "signal_chain": [
-    "Noise Gate",
-    "Red Squeeze",
-    "Hedgehog D9",
-    "Minotaur",
-    "70s Chorus",
-    "Parametric EQ",
-    "Adriatic Delay",
-    "Ganymede"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Tighter gate than Selfless — Hedgehog D9 is harder-clipping than Stupor OD and generates more noise between notes.",
@@ -39,7 +30,8 @@
         }
       }
     },
-    "compressor": {
+    {
+      "type": "compressor",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
       "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in all three snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
@@ -64,7 +56,8 @@
         }
       }
     },
-    "distortion": {
+    {
+      "type": "distortion",
       "model": "Hedgehog D9",
       "based_on": "MAXON SD9 Sonic Distortion",
       "notes": "Valensi's confirmed Maxon DS830 Distortion Master is closely related to the SD9 circuit. Harder clipping than the Stupor OD used in other Strokes presets — gives Bad Decisions its more energetic, driving character. ACTIVE in all three snapshots.",
@@ -89,7 +82,8 @@
         }
       }
     },
-    "boost": {
+    {
+      "type": "boost",
       "model": "Minotaur",
       "based_on": "Klon Centaur",
       "notes": "Nick Valensi confirmed Klon user per YAML. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only for bridge solo — Bright switched On for the glam rock character of the solo.",
@@ -114,7 +108,8 @@
         }
       }
     },
-    "chorus": {
+    {
+      "type": "chorus",
       "model": "70s Chorus",
       "based_on": "BOSS CE-1",
       "notes": "Boss CE-2 confirmed on Valensi's board — CE-1 is the closest Helix model. Gives the New Order-adjacent character noted by reviewers. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 — bridge solo should be direct and unmodulated. Note: 70s Chorus has separate Chorus and Vibrato rate parameters. Mode set to Chorus to keep dry signal intact.",
@@ -142,7 +137,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Snapshots 1 and 2 use telephone filter character — low and high cuts with boosted mids. Snapshot 3 opens up significantly for the bridge solo: wider mid Q, higher mid frequency, open high end. This is the key EQ difference separating solo from rhythm tones.",
@@ -191,7 +187,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
       "notes": "Delays are tempo-synced to 118 BPM. Snapshots 1 and 2: eighth note (254ms) — tight, driving, matches energetic rhythm character. Snapshot 3: dotted eighth (381ms) — more spacious for bridge solo. Snapshot 3 uses BBD Size 4096 and slight modulation (Rate 2.0Hz, Depth 1.5) for a slightly organic vintage delay character appropriate for the glam rock bridge.",
@@ -240,7 +237,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "Rhythm snapshots are relatively dry — Bad Decisions has a tight, punchy character. Snapshot 3 opens up for the sustaining bridge solo notes.",
@@ -274,7 +272,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",

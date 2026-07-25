@@ -7,17 +7,8 @@
   "master_bpm": 87,
   "notes": "No amp+cab block — running into tube amp. Confirmed rig: Ed O'Brien used a 1964 Gibson ES-335, Voodoo Lab Sparkle Drive, Boss DD5 delay, and Akai Headrush E2 looper through a Mesa Boogie Trem-O-Verb and Vox AC30. Thom Yorke used a 1964 Gibson SG. Jonny played totally clean with just a Gretsch Tennessee Rose, Akai Headrush E1 looper, and small vintage Orpheum amplifier. Two delays approximate the dual-delay/looper setup — Delay 1 is the primary dotted eighth (exact match at 87 BPM), Delay 2 is a secondary dotted sixteenth creating rhythmic interlocking shimmer. Teemah! approximates Sparkle Drive — BYPASSED in S1, ACTIVE in S2 as song intensifies.",
   "signal_chain": [
-    "Noise Gate",
-    "Teemah!",
-    "Chorus",
-    "Parametric EQ",
-    "Simple Delay (primary)",
-    "Simple Delay (secondary)",
-    "Ganymede"
-  ],
-  "note_on_block_limit": "Seven blocks — at the eight-block limit. Two Simple Delay blocks used for the dual-delay texture. If Helix LT does not allow two instances of the same delay model, substitute the secondary Simple Delay with an Adriatic Delay or Cosmos Echo.",
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Very open gate — delicate arpeggio tone. Natural decay essential.",
@@ -34,7 +25,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Teemah!",
       "based_on": "Paul Cochrane Timmy Overdrive",
       "notes": "Approximates Voodoo Lab Sparkle Drive. BYPASSED in Snapshot 1 (clean arpeggios). ACTIVE in Snapshot 2 as song intensifies around the 2:30 mark — very low gain, just warmth and slight compression. NOTE: Bass Cut and Treble Cut are CUT controls — higher values remove more frequency.",
@@ -57,7 +49,8 @@
         }
       }
     },
-    "modulation": {
+    {
+      "type": "chorus",
       "model": "Chorus",
       "based_on": "Line 6 Original",
       "notes": "Very subtle chorus adds slight width and shimmer — the three-dimensional bloom of the arpeggio tone. Speed very slow, Depth low — should feel like natural animation not obvious chorus. ACTIVE in both snapshots, slightly more prominent in Snapshot 2.",
@@ -84,7 +77,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Gentle EQ shaping. Slight mid boost adds body and presence to arpeggiated notes so they cut through the dual-delay wash. Snapshot 2 slightly warms high mid to compensate for Teemah! coloring.",
@@ -119,7 +113,8 @@
         }
       }
     },
-    "delay_primary": {
+    {
+      "type": "delay",
       "model": "Simple Delay",
       "based_on": "Line 6 Original",
       "notes": "PRIMARY DELAY — approximates Boss DD5 set to dotted eighth. Tempo-synced to 87 BPM. Dotted eighth = 517ms — exact match (0.2ms off). This is the defining effect of the song — Mix at 45-50% makes delay structural, not supportive. High Mix is intentional. Feedback increases in S2 as song densifies.",
@@ -144,7 +139,8 @@
         }
       }
     },
-    "delay_secondary": {
+    {
+      "type": "delay",
       "model": "Simple Delay",
       "based_on": "Line 6 Original",
       "notes": "SECONDARY DELAY — approximates Akai Headrush E2 looper used for additional texture. Tempo-synced to 87 BPM. Dotted sixteenth = 259ms (original target 276ms, 17ms off — synced value preferred). The two delays (517ms d1/8 + 259ms d1/16) create rhythmically interlocking repeat pattern filling gaps between primary repeats — this is the shimmer making the song sound like multiple guitars.",
@@ -169,7 +165,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "Long, lush reverb — this song lives in space. Snapshot 1 more reverberant and atmospheric. Snapshot 2 pulls slightly tighter as song intensifies to prevent dual-delay texture from becoming too washy.",
@@ -194,7 +191,8 @@
         }
       }
     }
-  },
+  ],
+  "note_on_block_limit": "Seven blocks — at the eight-block limit. Two Simple Delay blocks used for the dual-delay texture. If Helix LT does not allow two instances of the same delay model, substitute the secondary Simple Delay with an Adriatic Delay or Cosmos Echo.",
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",

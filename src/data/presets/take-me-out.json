@@ -14,15 +14,8 @@
   ],
   "tempo_change_note": "Take Me Out has a famous deliberate tempo change at approximately 0:53. The intro (Snapshot 1) is at ~104 BPM. The main section (Snapshots 2+3) is at ~133 BPM. Use tap tempo on the Helix to lock to each section. Master BPM is set to 133 for the main section — tap before Snapshot 1 to adjust intro delay if needed, or leave it as a fixed ms value.",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Deranged Master",
-    "Parametric EQ",
-    "Elephant Man",
-    "Dynamic Hall"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Intro snapshot most open — angular riff must decay naturally. Main riff and lead tighten as Stupor OD and Deranged Master generate more noise.",
@@ -44,7 +37,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Added to compensate for Lace Sensor lower output and Super Champ XD higher clean headroom vs Kapranos's confirmed rig. Simulates the natural valve breakup the Selmer combo would have provided at volume. Drive kept low in all snapshots — this is not an obvious overdrive effect, just a foundation of saturation. ACTIVE in all three snapshots with progressively increasing Drive.",
@@ -69,7 +63,8 @@
         }
       }
     },
-    "treble_booster": {
+    {
+      "type": "boost",
       "model": "Deranged Master",
       "based_on": "Dallas Rangemaster Treble Booster",
       "notes": "Confirmed: Kapranos uses a Telenordia Treble Booster on his 2022 live rig. Deranged Master (Dallas Rangemaster) is the closest available model. WARNING from YAML: 'Like the real thing, this model can take your head off! Works best before a distorted amp.' BYPASSED in Snapshot 1 (intro riff is cleaner and more angular). ACTIVE in Snapshots 2 and 3. Drive and Level pushed harder than initial version to compensate for Lace Sensor lower output and Super Champ XD clean headroom.",
@@ -97,7 +92,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Compensates for removed Selmer valve amp voicing. Level raised significantly from initial version to push Super Champ XD input stage harder, encouraging natural preamp breakup. Mid boost at 800-900Hz adds the angular, percussive Selmer midrange character. Intro uses more open voicing — brighter and more jangly.",
@@ -146,7 +142,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Elephant Man",
       "based_on": "Electro-Harmonix Deluxe Memory Man",
       "notes": "Chosen for Mode and Depth parameters which approximate the Gurus Echosex 2 / Binson Echorec wobbly character. Kapranos described the Echosex as having 'a bit of wobble in it as if like you've got a wonky wheel on the original.' Mode Chorus, Depth at low values adds subtle pitch modulation to repeats. S1: FIXED 345ms — no note division lands cleanly at 104 BPM. S2: 1/8 synced to 133 BPM (226ms, 0.6ms off). S3: d1/8 synced to 133 BPM (338ms, 0.3ms off). Unchanged from initial version.",
@@ -191,7 +188,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
       "notes": "Room Size FIXED at 15m — do NOT make snapshot-variable, causes audible algorithm bump. Unchanged from initial version — reverb settings were correct.",
@@ -241,7 +239,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_angular_intro": {
       "footswitch": "FS1",

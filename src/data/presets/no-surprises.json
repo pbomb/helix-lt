@@ -8,15 +8,8 @@
   "master_bpm": 75,
   "notes": "No amp+cab block — running into tube amp. Ed O'Brien used a Rickenbacker 360 with capo at 15th fret — on standard guitar use capo at 5th fret. Confirmed rig for OK Computer era: Vox AC30 (Essex A30 — removed per amp+cab policy), minimal effects. Recording is intentionally dry and intimate — recorded at Canned Applause rehearsal room. Teemah! approximates Voodoo Lab Sparkle Drive transparent overdrive character. Ubiquitous Vibe adds subtle organic modulation. Dotted eighth delay exact match at 75 BPM.",
   "signal_chain": [
-    "Noise Gate",
-    "Teemah!",
-    "Ubiquitous Vibe",
-    "Parametric EQ",
-    "Simple Delay",
-    "Ganymede"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Very open gate — pristine clean tone. Notes must decay naturally.",
@@ -33,7 +26,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Teemah!",
       "based_on": "Paul Cochrane Timmy Overdrive",
       "notes": "Approximates Voodoo Lab Sparkle Drive — transparent overdrive with clean blend character. BYPASSED in Snapshot 1 (studio faithful). ACTIVE in Snapshot 2 (live atmospheric). Very low gain — just warmth and slight compression, not obvious overdrive. NOTE: Bass Cut and Treble Cut are CUT controls — higher values cut more of that frequency.",
@@ -56,7 +50,8 @@
         }
       }
     },
-    "modulation": {
+    {
+      "type": "modulation",
       "model": "Ubiquitous Vibe",
       "based_on": "Shin-ei Uni-Vibe",
       "notes": "Very subtle — adds organic breathing quality without obvious modulation. Mode set to Chorus to keep dry signal. Intensity at low value — barely perceptible movement. ACTIVE in both snapshots.",
@@ -81,7 +76,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Gentle shaping compensating for removed Essex A30 amp voicing. Low cut at 100Hz removes muddiness from open chord voicings. Mild mid boosts give Lace Sensors body through the tube amp. Snapshot 2 opens slightly for more atmospheric character.",
@@ -116,7 +112,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Simple Delay",
       "based_on": "Line 6 Original",
       "notes": "Tempo-synced to 75 BPM. Dotted eighth = 600ms — exact match. Studio snapshot uses modest mix matching the dry, intimate recording character. Live snapshot opens up. Simple Delay chosen over Cosmos Echo for this song — cleaner, more transparent repeats suit the pristine clean tone.",
@@ -141,7 +138,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "CRITICAL CORRECTION from GT-6 version: recording is intentionally dry and intimate — Studio snapshot uses very short Room-like decay at low mix. Live snapshot opens up moderately. Previous GT-6 version used Hall reverb at 2.8 seconds which was incorrect.",
@@ -166,7 +164,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_studio": {
       "footswitch": "FS1",

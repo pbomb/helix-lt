@@ -6,16 +6,9 @@
   "tuning": "Standard",
   "master_bpm": 120,
   "notes": "No amp+cab block — running into tube amp. Three snapshots plus expression pedal assignment. Confirmed effect: ZVex Fuzz Factory (Industrial Fuzz — exact model available in Helix). Confirmed amp: Marshall Super Lead / Vox AC30 combination for Origin of Symmetry era (Brit Plexi Jump — removed per amp+cab policy). Expression pedal assigned to Industrial Fuzz Stability parameter — sweeps from oscillating chaos (heel, Stability ~2) to stable fuzz (toe, Stability ~8). This recreates the famous intro sweep where Bellamy tames the Fuzz Factory oscillation. IMPORTANT NOTE: Industrial Fuzz Stability parameter — lower values = more oscillation/instability (chaos), higher values = stable fuzz. The intro starts at LOW stability (chaotic oscillation) and sweeps TO high stability (controlled fuzz) as the riff begins.",
-  "signal_chain": ["Noise Gate", "Industrial Fuzz", "Parametric EQ", "Cosmos Echo", "Ganymede"],
-  "expression_pedal": {
-    "assigned_to": "Industrial Fuzz — Stability parameter",
-    "heel_value": 2.0,
-    "toe_value": 8.0,
-    "usage": "Snapshot 1 ONLY — start at heel (Stability 2.0 = oscillating chaos), sweep to toe as intro progresses. Switch to Snapshot 2 as first riff note lands. In Snapshots 2+3 the Stability is fixed at 9.5 via snapshot parameter — EXP pedal has no meaningful effect.",
-    "note": "Industrial Fuzz auto-assigns to EXP 1 — verify this or manually assign Stability to EXP 1"
-  },
-  "blocks": {
-    "noise_gate": {
+  "signal_chain": [
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 nearly open — Fuzz Factory oscillation and noise is intentional, must not be gated. S2+S3 tighten.",
@@ -37,7 +30,8 @@
         }
       }
     },
-    "fuzz": {
+    {
+      "type": "fuzz",
       "model": "Industrial Fuzz",
       "based_on": "Z.Vex Fuzz Factory",
       "notes": "Exact confirmed model — ZVex Fuzz Factory is the confirmed Bellamy pedal for Plug In Baby. ACTIVE in all three snapshots. Stability is the key snapshot-variable parameter: S1 uses Stability 2.0 as starting point (EXP pedal sweeps from 2.0 to 8.0 during intro). S2+S3 use fixed Stability 9.5 (fully stable fuzz). Compress, Gate, Drive, Oscillator, Level are fixed across all snapshots. NOTE: Stability values — lower = more unstable/oscillating, higher = more stable fuzz.",
@@ -71,7 +65,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Compensates for removed Brit Plexi Jump and 4x12 Greenback 25 cab voicing. S1 gentle — oscillation fills sonic space without additional EQ shaping. S2+S3 push mids for the cutting, aggressive character of the Fuzz Factory into Plexi tone. High Cut rolled back in S2+S3 to control top-end harshness from fuzz.",
@@ -120,7 +115,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
       "notes": "No delay in Snapshot 1 (Mix 0%) — oscillation fills all sonic space. Tempo-synced to 120 BPM. S2: d1/16 (188ms, exact match to 187.5ms). S3: 1/8 (250ms, exact match) — slightly more spacious for chorus. Treble rolled back to keep repeats dark and not competing with the bright fuzz character.",
@@ -181,7 +177,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "Ganymede chosen over Dynamic Hall for Plug In Baby — Origin of Symmetry era tone benefits from the smoother, less controlled reverb character. Tone parameter shapes overall brightness. S1 moderate reverb around the oscillation. S2 relatively dry — riff is aggressive and doesn't benefit from reverb wash. S3 opens up slightly for chorus.",
@@ -215,6 +212,13 @@
         }
       }
     }
+  ],
+  "expression_pedal": {
+    "assigned_to": "Industrial Fuzz — Stability parameter",
+    "heel_value": 2.0,
+    "toe_value": 8.0,
+    "usage": "Snapshot 1 ONLY — start at heel (Stability 2.0 = oscillating chaos), sweep to toe as intro progresses. Switch to Snapshot 2 as first riff note lands. In Snapshots 2+3 the Stability is fixed at 9.5 via snapshot parameter — EXP pedal has no meaningful effect.",
+    "note": "Industrial Fuzz auto-assigns to EXP 1 — verify this or manually assign Stability to EXP 1"
   },
   "snapshots": {
     "1_oscillating_intro": {

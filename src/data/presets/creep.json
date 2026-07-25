@@ -7,35 +7,8 @@
   "master_bpm": 92,
   "notes": "No amp+cab block — running into tube amp. Single patch with CTL pedal toggling between clean verse and heavy chorus. Confirmed rig: Thom Yorke used a Fender Telecaster Plus through a Fender Twin Reverb (clean channel) for verse. Jonny Greenwood's famous pre-chorus scrape is a pick rake on strings — no additional effect needed, pure technique. GUV DS (Guv'nor) approximates the Marshall Guv'nor distortion used for chorus. Four Pedal Assign parameters change simultaneously via CTL pedal toggle.",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Parametric EQ",
-    "Simple Delay",
-    "Ganymede"
-  ],
-  "ctl_pedal_assign": {
-    "function": "Toggle between clean verse and heavy chorus",
-    "note": "CTL pedal toggles OD/DS on/off AND simultaneously adjusts Preamp Gain, Reverb level, and Chorus level via Pedal Assign. On Helix LT this is achieved through snapshot switching — assign FS1 and FS2 to Snapshots 1 and 2.",
-    "assigns": [
-      {
-        "target": "Stupor OD active state",
-        "snapshot_1_clean": "BYPASSED",
-        "snapshot_2_heavy": "ACTIVE"
-      },
-      {
-        "target": "Parametric EQ Level",
-        "snapshot_1_clean": "+1 dB",
-        "snapshot_2_heavy": "+3 dB"
-      },
-      {
-        "target": "Ganymede Mix",
-        "snapshot_1_clean": "38%",
-        "snapshot_2_heavy": "55%"
-      }
-    ]
-  },
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -51,7 +24,8 @@
         }
       }
     },
-    "distortion": {
+    {
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Used at high drive to approximate the Marshall Guv'nor character for the chorus. BYPASSED in Snapshot 1 (clean verse). ACTIVE in Snapshot 2 (heavy chorus).",
@@ -70,7 +44,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Clean verse uses gentle EQ — just mild body and presence boost. Heavy chorus tightens low cut and boosts mids more aggressively. Level raised in chorus snapshot to match expected volume increase.",
@@ -105,7 +80,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Simple Delay",
       "based_on": "Line 6 Original",
       "notes": "Tempo-synced to 92 BPM. Eighth note = 326ms — original target was 360ms (34ms off), using synced eighth note instead. Low mix in both snapshots — delay is supportive depth, not a feature. Slightly lower mix in heavy chorus so delay doesn't clutter the distortion.",
@@ -130,7 +106,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "Clean verse uses moderate hall reverb. Heavy chorus swells reverb for extra drama — this was a Pedal Assign target in the original design.",
@@ -155,6 +132,27 @@
         }
       }
     }
+  ],
+  "ctl_pedal_assign": {
+    "function": "Toggle between clean verse and heavy chorus",
+    "note": "CTL pedal toggles OD/DS on/off AND simultaneously adjusts Preamp Gain, Reverb level, and Chorus level via Pedal Assign. On Helix LT this is achieved through snapshot switching — assign FS1 and FS2 to Snapshots 1 and 2.",
+    "assigns": [
+      {
+        "target": "Stupor OD active state",
+        "snapshot_1_clean": "BYPASSED",
+        "snapshot_2_heavy": "ACTIVE"
+      },
+      {
+        "target": "Parametric EQ Level",
+        "snapshot_1_clean": "+1 dB",
+        "snapshot_2_heavy": "+3 dB"
+      },
+      {
+        "target": "Ganymede Mix",
+        "snapshot_1_clean": "38%",
+        "snapshot_2_heavy": "55%"
+      }
+    ]
   },
   "snapshots": {
     "1_clean_verse": {

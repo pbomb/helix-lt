@@ -1,14 +1,35 @@
-import { useState } from 'react'
+import { useState, type MouseEvent } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import type { Block } from '../types'
+import type { SignalChainBlock } from '../types'
 import { presetBySlug } from '../data/index'
 import { getBlockIcon, getBlockCategory } from './BlockIcon'
 
-interface BlockWithKey extends Block {
-  key: string
+const HZ_PARAMS = new Set(['Low Freq', 'Mid Freq', 'High Freq', 'Low Cut', 'High Cut'])
+
+const TYPE_ACRONYMS: Record<string, string> = { eq: 'EQ' }
+
+function formatBlockType(type: string): string {
+  return type
+    .split('_')
+    .map(w => TYPE_ACRONYMS[w.toLowerCase()] ?? w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
 }
 
-const HZ_PARAMS = new Set(['Low Freq', 'Mid Freq', 'High Freq', 'Low Cut', 'High Cut'])
+function chainLabel(block: SignalChainBlock): string {
+  const label = formatBlockType(block.type)
+  return label === block.model ? label : `${label} (${block.model})`
+}
+
+function blockAnchorId(block: SignalChainBlock, i: number): string {
+  return `block-${block.type}-${i}`
+}
+
+function scrollToBlock(id: string) {
+  return (e: MouseEvent) => {
+    e.preventDefault()
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 
 function formatHz(val: number): string {
   if (val >= 1000) {
@@ -26,7 +47,7 @@ function formatValue(val: string | number | boolean | null | undefined, param?: 
   return String(val)
 }
 
-function BlockCard({ block, snapshotNames }: { block: BlockWithKey; snapshotNames: string[] }) {
+function BlockCard({ block, id, snapshotNames }: { block: SignalChainBlock; id: string; snapshotNames: string[] }) {
   const params = snapshotNames.length > 0
     ? Object.keys(block.snapshots[snapshotNames[0]] ?? {}).filter(k => k !== 'active')
     : []
@@ -39,7 +60,7 @@ function BlockCard({ block, snapshotNames }: { block: BlockWithKey; snapshotName
   const category = getBlockCategory(block.model)
 
   return (
-    <div className="block-card">
+    <div className="block-card" id={id}>
       <div className="block-card-header">
         {icon && (
           <span className={`block-icon block-icon--${category}`}>{icon}</span>
@@ -107,12 +128,6 @@ export default function PresetDetail() {
 
   const snapshotNames = Object.keys(preset.snapshots)
 
-  const orderedBlocks: BlockWithKey[] = preset.signal_chain.map(modelName => {
-    const entry = Object.entries(preset.blocks).find(([, b]) => b.model === modelName)
-    if (!entry) return null
-    return { key: entry[0], ...entry[1] }
-  }).filter((b): b is BlockWithKey => b !== null)
-
   const notes = preset.playing_notes
   const { tuning, key: key_, capo, technique, snapshot_cues, tone_control, pickup_notes, reference } = notes ?? {}
 
@@ -136,17 +151,18 @@ export default function PresetDetail() {
       <section className="signal-chain-section">
         <h2>Signal Chain</h2>
         <div className="signal-chain">
-          {preset.signal_chain.map((model, i) => {
-            const chainIcon = getBlockIcon(model)
-            const chainCat = getBlockCategory(model)
+          {preset.signal_chain.map((block, i) => {
+            const chainIcon = getBlockIcon(block.model)
+            const chainCat = getBlockCategory(block.model)
+            const id = blockAnchorId(block, i)
             return (
               <div key={i} className="chain-wrap">
-                <div className="chain-pill">
+                <a href={`#${id}`} className="chain-pill" onClick={scrollToBlock(id)}>
                   {chainIcon && (
                     <span className={`chain-pill-icon block-icon--${chainCat}`}>{chainIcon}</span>
                   )}
-                  {model}
-                </div>
+                  {chainLabel(block)}
+                </a>
                 {i < preset.signal_chain.length - 1 && <span className="chain-arrow">→</span>}
               </div>
             )
@@ -163,8 +179,8 @@ export default function PresetDetail() {
           ))}
         </div>
         <div className="block-list">
-          {orderedBlocks.map(block => (
-            <BlockCard key={block.key} block={block} snapshotNames={snapshotNames} />
+          {preset.signal_chain.map((block, i) => (
+            <BlockCard key={`${block.type}-${i}`} id={blockAnchorId(block, i)} block={block} snapshotNames={snapshotNames} />
           ))}
         </div>
       </section>

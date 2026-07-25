@@ -7,17 +7,8 @@
   "master_bpm": 138,
   "notes": "No amp+cab block — running into tube amp. Two snapshots: clean intro/verse and heavy riff. Confirmed effect: MXR Blue Box sub-octave fuzz. IMPORTANT: 'Sub Octave Fuzz' model referenced in earlier preset research does not exist in the YAML. Best available approximation uses TWO blocks: Wringer Fuzz (fuzz character) + Boctaver (Boss OC-2, sub-octave). These work together to approximate the Blue Box's integrated fuzz-plus-sub-octave circuit — Wringer Fuzz provides the aggressive fuzz saturation, Boctaver adds the octave-down voice. This is less integrated than a dedicated sub-octave fuzz model but achieves the core tonal elements. Scream 808 as additional boost/tightener in S2. Confirmed amp: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy).",
   "signal_chain": [
-    "Noise Gate",
-    "Wringer Fuzz",
-    "Boctaver",
-    "Scream 808",
-    "Parametric EQ",
-    "Cosmos Echo",
-    "Dynamic Hall"
-  ],
-  "note_on_blue_box_approximation": "The MXR Blue Box generates fuzz with signals one AND two octaves below. Boctaver (-1 Oct and -2 Oct level controls) matches this architecture exactly — set -1 Oct prominently and -2 Oct subtly. Wringer Fuzz feeds into Boctaver so the octave tracking receives a fuzz-saturated signal, which more closely matches the Blue Box's integrated circuit behavior than placing them in reverse order.",
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -33,7 +24,8 @@
         }
       }
     },
-    "fuzz": {
+    {
+      "type": "fuzz",
       "model": "Wringer Fuzz",
       "based_on": "Garbage's modded BOSS FZ-2",
       "notes": "Provides the fuzz saturation component of the Blue Box approximation. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Fuzz Type set to Fuzz for most direct hard-clipping character. Bass rolled back to prevent muddiness through Boctaver and into Drop D tube amp.",
@@ -56,7 +48,8 @@
         }
       }
     },
-    "octave": {
+    {
+      "type": "octave",
       "model": "Boctaver",
       "based_on": "BOSS OC-2 Octaver",
       "notes": "Provides the sub-octave component of the Blue Box approximation. Parameters: -1 Oct level, -2 Oct level, Dry Level. -1 Oct prominent (matching Blue Box's primary sub-octave voice). -2 Oct subtle (matching Blue Box's secondary sub-octave voice). Dry Level at 100 preserves dry signal alongside octave voices. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Boctaver tracks single notes best — play riff with clean separated notes.",
@@ -75,7 +68,8 @@
         }
       }
     },
-    "boost": {
+    {
+      "type": "boost",
       "model": "Scream 808",
       "based_on": "Ibanez TS808 Tube Screamer",
       "notes": "Clean boost and low-end tightener into tube amp. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Minimal Gain — this is a clean level boost, not additional overdrive.",
@@ -94,7 +88,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Compensates for removed Das Benzin Lead and 4x12 Brit V30 cab voicing. S2 requires very aggressive Low Cut (100Hz) — Wringer Fuzz + Boctaver octave-down + Drop D generates significant low-frequency content that will become muddy without firm management. Dual low cut approach (EQ Low Cut at 100-120Hz) replaces the removed cab's Low Cut. Mid boost at 700Hz gives Bellamy's Resistance-era mid-forward cutting heavy tone.",
@@ -129,7 +124,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
       "notes": "Tempo-synced to 138 BPM. S1: 1/4 quarter note (435ms, 35ms off original 400ms — original too far from any division, quarter note preferred for spacious atmospheric clean). S2: d1/16 dotted sixteenth (163ms, 17ms off original 180ms — synced). S2 very short and dark to avoid cluttering Wringer Fuzz + Boctaver texture.",
@@ -172,7 +168,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
       "notes": "Room Size FIXED at 20m — do NOT make snapshot-variable. S1 long and spacious for atmospheric clean intro. S2 very tight and dry — heavy riff must punch through.",
@@ -208,7 +205,8 @@
         }
       }
     }
-  },
+  ],
+  "note_on_blue_box_approximation": "The MXR Blue Box generates fuzz with signals one AND two octaves below. Boctaver (-1 Oct and -2 Oct level controls) matches this architecture exactly — set -1 Oct prominently and -2 Oct subtly. Wringer Fuzz feeds into Boctaver so the octave tracking receives a fuzz-saturated signal, which more closely matches the Blue Box's integrated circuit behavior than placing them in reverse order.",
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",

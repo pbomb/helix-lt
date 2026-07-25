@@ -7,16 +7,8 @@
   "master_bpm": 97,
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 97 BPM. Three snapshots: rhythm, lead shimmer (Poly Pitch octave-up), and fuzz solo (Wringer Fuzz).",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Wringer Fuzz",
-    "Poly Pitch",
-    "Parametric EQ",
-    "Adriatic Delay",
-    "Ganymede"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -37,7 +29,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Very low drive throughout — Selfless runs almost clean. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 where Wringer Fuzz handles all distortion.",
@@ -62,7 +55,8 @@
         }
       }
     },
-    "fuzz": {
+    {
+      "type": "fuzz",
       "model": "Wringer Fuzz",
       "based_on": "Garbage's modded BOSS FZ-2",
       "notes": "Approximates fuzz character heard in Selfless solo. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only.",
@@ -93,7 +87,8 @@
         }
       }
     },
-    "pitch": {
+    {
+      "type": "pitch",
       "model": "Poly Pitch",
       "based_on": "Line 6 Original",
       "notes": "Approximates EHX POG2 octave-up shimmer confirmed as key effect for Valensi's Selfless guitar sound. ACTIVE in Snapshots 1 and 2 at different Mix levels. BYPASSED in Snapshot 3 — fuzz solo stands alone.",
@@ -130,7 +125,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Gentler telephone filtering than The Adults Are Talking — Selfless is warmer and less confrontational. Snapshot 3 uses wider mid Q and raised frequency to suit sustaining fuzz solo notes.",
@@ -179,7 +175,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
       "notes": "Delays are tempo-synced to 97 BPM. All snapshots use triplet quarter note (412ms) — gives Selfless its slightly dreamy, off-kilter rhythmic feel. Mix and Feedback increase with each snapshot.",
@@ -228,7 +225,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "More reverb than The Adults Are Talking throughout — Selfless has a noticeably spacious, dreamy quality.",
@@ -262,7 +260,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",

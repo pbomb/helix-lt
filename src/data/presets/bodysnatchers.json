@@ -7,19 +7,8 @@
   "master_bpm": 166,
   "notes": "Combined Jonny Greenwood and Thom Yorke parts in a single preset with four snapshots. Snapshots 1+2 cover Jonny's lead/riff part (standard tuning, Boss OD-3 via Stupor OD, Boss RE-20 slapback). Snapshots 3+4 cover Thom's rhythm guitar part (Drop D, MXR Distortion+ via Top Secret OD, minimal slapback). Signal chain uses only 5 blocks — Stupor OD and Top Secret OD alternate active/bypassed states across snapshot pairs, sharing the same Noise Gate, EQ, and Transistor Tape blocks. If playing both parts in the same session, tune to Drop D and use a capo at the 2nd fret for Snapshots 1+2 (Jonny part) to restore effective standard pitch — or retune between snapshots. Confirmed sources: Jools Holland January 2008 for Thom; From The Basement for Jonny.",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Top Secret OD",
-    "Parametric EQ",
-    "Transistor Tape"
-  ],
-  "tuning_strategy": {
-    "option_1": "Retune between Jonny (S1+S2) and Thom (S3+S4) snapshots — most accurate",
-    "option_2": "Stay in Drop D throughout, use capo at 2nd fret for Snapshots 1+2 to restore effective standard pitch on Jonny riff (approximate — Jonny plays standard tuning)",
-    "option_3": "Play only one part per session — use S1+S2 for Jonny or S3+S4 for Thom"
-  },
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Shared across all snapshots. Thom snapshots (S3+S4) are slightly tighter — Top Secret OD at high Gain generates more noise than Stupor OD.",
@@ -46,7 +35,8 @@
         }
       }
     },
-    "overdrive_jonny": {
+    {
+      "type": "overdrive_jonny",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Jonny's Boss OD-3 approximation. ACTIVE in Snapshots 1+2 only. BYPASSED in Snapshots 3+4 (Thom's part uses Top Secret OD instead). Confirmed: Jonny does not adjust pedals during the song — Drive stays constant, only dynamics from picking hand change the intensity.",
@@ -77,7 +67,8 @@
         }
       }
     },
-    "overdrive_thom": {
+    {
+      "type": "overdrive_thom",
       "model": "Top Secret OD",
       "based_on": "DOD OD-250",
       "notes": "Thom's MXR Distortion+ approximation — both use the same LM741 op-amp clipping circuit. Only two parameters: Gain and Level. BYPASSED in Snapshots 1+2 (Jonny's part). ACTIVE in Snapshots 3+4 only. Confirmed via Jools Holland January 2008 performance.",
@@ -104,7 +95,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "CRITICAL DIFFERENCE between Jonny and Thom snapshots: Thom's part is in Drop D — Low Cut must be raised to 120-140Hz to prevent open D string from becoming muddy under distortion. Jonny's part (standard tuning) uses a lower Low Cut of 100Hz. Both share a mid-forward character compensating for removed Essex A30 voicing but at different frequencies. Thom's mid boost is more aggressive and lower in frequency (600-650Hz) matching the confrontational chorus character.",
@@ -167,7 +159,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Transistor Tape",
       "based_on": "Maestro Echoplex EP-3",
       "notes": "Shared slapback block. Confirmed: Jonny used Boss RE-20 Space Echo for slapback (one repeat, fast delay time). Thom's confirmed rig has NO delay — very low Mix on Thom snapshots (S3: 18%, S4: 12%) approximates the slightly larger-than-life studio quality when Godrich ran Thom's guitar direct into console. Transistor Tape optional for Thom snapshots — can be bypassed in S3+S4 if desired. Tempo-synced to 166 BPM. Sixteenth note = 90ms (original targets: Jonny 95ms, Thom 85ms — both within 5ms of synced value, use synced).",
@@ -219,6 +212,11 @@
         }
       }
     }
+  ],
+  "tuning_strategy": {
+    "option_1": "Retune between Jonny (S1+S2) and Thom (S3+S4) snapshots — most accurate",
+    "option_2": "Stay in Drop D throughout, use capo at 2nd fret for Snapshots 1+2 to restore effective standard pitch on Jonny riff (approximate — Jonny plays standard tuning)",
+    "option_3": "Play only one part per session — use S1+S2 for Jonny or S3+S4 for Thom"
   },
   "snapshots": {
     "1_jonny_verse": {
