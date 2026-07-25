@@ -89,12 +89,13 @@ const ICONS: Record<Category, ReactElement> = {
       <ellipse cx="16" cy="16" rx="3" ry="2" />
     </svg>
   ),
-  // Gain-stage triangle (op-amp style) — preamp-only, no cab/power-amp
+  // Amp head with control knobs, no cabinet — preamp-only, no cab/power-amp
   preamp: (
     <svg {...SVG_PROPS}>
-      <line x1="2" y1="12" x2="6" y2="12" />
-      <path d="M6 6L18 12L6 18Z" />
-      <line x1="18" y1="12" x2="22" y2="12" />
+      <rect x="3" y="7" width="18" height="10" rx="1" />
+      <circle cx="8" cy="12" r="1.5" />
+      <circle cx="12" cy="12" r="1.5" />
+      <circle cx="16" cy="12" r="1.5" />
     </svg>
   ),
   // Amp head with control knobs, no cabinet
