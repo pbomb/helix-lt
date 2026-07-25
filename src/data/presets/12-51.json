@@ -5,12 +5,13 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048510f35726025e0f025da4c688f",
   "tuning": "Standard",
   "master_bpm": 96,
-  "notes": "No amp+cab block — running into tube amp. CRITICAL TONE NOTE: The defining guitar sound of this song is not a conventional effect — it was an accidental discovery. Valensi confirmed in Guitar Player December 2003: neck pickup with tone control fully rolled off, accidentally engaged the Hot Rod DeVille's high-gain channel with gain at maximum, producing a keyboard/analog-synth-like sound. He blew up three DeVilles. This is fundamentally an overloaded amp into fuzz territory, not a pedal effect. On Helix LT without amp+cab: approximated using Dark Dove Fuzz (Russian Big Muff) with Tone at minimum and Sustain high — the Russian Muff's dark, compressed, attack-free character most closely matches the smooth synth bloom. Hammond plays conventional rhythm guitar simultaneously — two snapshots cover both parts.",
+  "notes": "No amp+cab block for Snapshot 1 (Hammond's rhythm part) — running into tube amp as usual. Snapshot 2 (Valensi's synth lead) adds a Preamp-only block (US Double Nrm, no cab/power amp) since a specific real amp is confirmed for that part and isn't covered by the fuzz + EQ alone — see rig rule in AGENTS.md. CRITICAL TONE NOTE: The defining guitar sound of this song is not a conventional effect — it was an accidental discovery. Valensi confirmed in Guitar Player December 2003: neck pickup with tone control fully rolled off, accidentally engaged the Hot Rod DeVille's high-gain channel with gain at maximum, producing a keyboard/analog-synth-like sound. He blew up three DeVilles. This is fundamentally an overloaded amp into fuzz territory, not a pedal effect. On Helix LT without amp+cab: approximated using Dark Dove Fuzz (Russian Big Muff) with Tone at minimum and Sustain high — the Russian Muff's dark, compressed, attack-free character most closely matches the smooth synth bloom. Hammond plays conventional rhythm guitar simultaneously — two snapshots cover both parts.",
   "confirmed_source": "Guitar Player December 2003 — Valensi direct quote explaining tone creation",
   "signal_chain": [
     "Noise Gate",
     "Stupor OD",
     "Dark Dove Fuzz",
+    "Preamp (US Double Nrm)",
     "Parametric EQ",
     "Adriatic Delay",
     "Ganymede"
@@ -72,8 +73,37 @@
         }
       }
     },
+    "preamp": {
+      "model": "US Double Nrm",
+      "based_on": "Fender Hot Rod DeVille (no dedicated DeVille model exists on Helix LT — US Double Nrm/Twin Reverb is the closest available 6L6 Fender platform per AGENTS.md substitution table)",
+      "notes": "S1 rhythm (Hammond's part): BYPASSED — the confirmed 'blew up three DeVilles' story is specific to Valensi's synth lead, not Hammond's rhythm guitar, so it would be wrong to attribute this amp's coloration to a different guitarist's part. S2 synth lead (Valensi): ACTIVE, Drive at maximum (10) matching his description of the DeVille's high-gain channel with gain maxed. Preamp-only (no cab/power amp) — sits after the Dark Dove Fuzz doing the heavy saturation, and colors/darkens ahead of the EQ and modulation/delay/reverb blocks per signal-chain convention. Bass/Treble kept low and Mid slightly scooped to reinforce the dark, hollow synth character rather than compete with it. Sag raised for the loose, spongy compression of a maxed-out tube amp; Hum kept low since the Noise Gate is already very open on this snapshot.",
+      "snapshots": {
+        "1_rhythm": {
+          "active": false,
+          "Drive": 2,
+          "Bass": 5,
+          "Mid": 5,
+          "Treble": 5,
+          "Master": 5,
+          "Ch Vol": 5,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "2_synth_lead": {
+          "active": true,
+          "Drive": 10,
+          "Bass": 4,
+          "Mid": 4,
+          "Treble": 3,
+          "Master": 7,
+          "Ch Vol": 6,
+          "Sag": 6,
+          "Hum": 2
+        }
+      }
+    },
     "eq": {
-      "model": "Parametric",
+      "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "S1 rhythm: standard telephone filter Strokes character — low and high cuts, mid boost at 600Hz. S2 synth lead: radically different — the synth tone is intentionally dark and mid-scooped. Low Cut kept moderate, High Cut very aggressive at 4000Hz to approximate the tone-knob-at-zero darkness. Mid scooped slightly rather than boosted — the synth character has a hollow, scooped quality unlike the telephone-filter rhythm tone.",
       "snapshots": {
@@ -171,13 +201,13 @@
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",
-      "description": "Hammond-style rhythm guitar. Stupor OD active at Drive 5.5. Dark Dove Fuzz bypassed. Standard telephone filter EQ — mid +3dB at 600Hz. Eighth note delay (313ms) at 20% mix. Short reverb (1.0 sec, 18% mix). Guitar tone knob at normal position.",
+      "description": "Hammond-style rhythm guitar. Stupor OD active at Drive 5.5. Dark Dove Fuzz bypassed. Preamp bypassed (the confirmed DeVille story is Valensi's, not Hammond's). Standard telephone filter EQ — mid +3dB at 600Hz. Eighth note delay (313ms) at 20% mix. Short reverb (1.0 sec, 18% mix). Guitar tone knob at normal position.",
       "pickup_position": "Bridge or middle",
       "guitar_tone_knob": "Normal position (7-10)"
     },
     "2_synth_lead": {
       "footswitch": "FS2",
-      "description": "Valensi's synth lead tone. Stupor OD bypassed. Dark Dove Fuzz active — Sustain 9.5, Tone 0.5 (minimum). EQ inverted from S1: mid scooped -2dB, High Cut aggressive at 4000Hz, approximating fully-rolled-off tone control character. No delay (Mix 0%). Slightly more reverb for space. CRITICAL: roll guitar tone knob to 0 before switching to this snapshot.",
+      "description": "Valensi's synth lead tone. Stupor OD bypassed. Dark Dove Fuzz active — Sustain 9.5, Tone 0.5 (minimum). Preamp active (US Double Nrm standing in for the Hot Rod DeVille) — Drive maxed at 10, Bass/Treble low and Mid slightly scooped to darken further, Sag raised for loose amp compression. EQ inverted from S1: mid scooped -2dB, High Cut aggressive at 4000Hz, approximating fully-rolled-off tone control character. No delay (Mix 0%). Slightly more reverb for space. CRITICAL: roll guitar tone knob to 0 before switching to this snapshot.",
       "pickup_position": "Neck",
       "guitar_tone_knob": "FULLY ROLLED OFF to 0 — this is essential for the tone",
       "confirmed_technique": "Valensi: neck pickup, tone control rolled all the way down, Hot Rod DeVille high-gain channel at gain 12 — Guitar Player December 2003"
@@ -193,7 +223,7 @@
     "technique_synth": "Play the synth lead melody with very light pick attack — the tone has virtually no transient. Notes should bloom and sustain smoothly. Pick close to the neck for additional warmth.",
     "technique_rhythm": "Hammond's rhythm part is conventional fast strumming Strokes character — pick firmly with the OD doing the compression work.",
     "snapshot_cues": "Snapshot 1 for rhythm sections. Switch to Snapshot 2 — AND roll guitar tone knob to 0 — for the synth lead melody. The two actions must happen together.",
-    "approximation_honesty": "The 12:51 synth tone was created by overloading a real tube amp (Hot Rod DeVille gain at maximum on its high-gain channel) — a form of power amp saturation and speaker breakup that no digital approximation fully captures. The Dark Dove Fuzz at maximum Sustain and minimum Tone gets close in character but the exact quality of three blown DeVilles is inherently analog. The guitar's physical tone knob rolloff is the most critical non-negotiable element.",
+    "approximation_honesty": "The 12:51 synth tone was created by overloading a real tube amp (Hot Rod DeVille gain at maximum on its high-gain channel) — a form of power amp saturation and speaker breakup that no digital approximation fully captures. The Dark Dove Fuzz at maximum Sustain and minimum Tone gets close in character, and the added US Double Nrm preamp block (no dedicated DeVille model exists on Helix LT) contributes some of the amp-front-end coloration and Sag-driven compression Valensi's overloaded DeVille would have added — but the exact quality of three blown DeVilles, and the power-amp/speaker breakup specifically, is inherently analog and beyond what a preamp-only block can reproduce. The guitar's physical tone knob rolloff is still the most critical non-negotiable element.",
     "doubled_part_note": "Valensi doubled the synth lead part in the studio. As a single player this is obviously not possible, but the Dark Dove Fuzz's thick, full sustain partially compensates for the missing layer."
   }
 }
