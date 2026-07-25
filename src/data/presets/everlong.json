@@ -14,18 +14,8 @@
   ],
   "tempo_note": "158 BPM, 4/4. Delay division chosen as 1/8 note (190ms at 158 BPM) for a tight rhythmic echo under the palm-muted intro/verse riff without smearing into slapback territory.",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Ratatouille Dist",
-    "Cali Rectifire",
-    "Adriatic Delay",
-    "Parametric EQ",
-    "Dynamic Hall"
-  ],
-  "signal_chain_notes": "7 of 8 available blocks used. Cali Rectifire (preamp-only, no cab/power-amp) placed after the overdrive/distortion blocks and before the delay block, per the AGENTS.md convention: pedals hit the amp's preamp stage first, modulation/time-based effects sit after the amp. Ratatouille Dist (RAT) is bypassed in the clean/verse snapshot and active in the chorus/heavy snapshot — the only toggled block; everything else stays on and just changes its parameters between snapshots.",
-  "preamp_experiment_note": "EXPERIMENTAL Cali Rectifire block added because the Mesa/Boogie Dual Rectifier is specifically confirmed (not just era-plausible) as the amp the RAT was driving for Everlong's heavy tone. Kept at low/moderate Drive in the clean/verse snapshot so it only adds amp-stage warmth and touch response — the light-gain, almost-clean character there should come from Stupor OD alone, not this block. Pushed further in the chorus/heavy snapshot to reinforce the RAT's aggressive, driving character with real amp-stage push, while the RAT itself remains the primary gain source (consistent with the rig's usual pedals-do-the-gain, preamp-does-the-coloration approach).",
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 clean/verse: light-gain tone needs a fairly open gate to preserve pick dynamics and let the intended 'grit when picked hard' through. S2 chorus/heavy: RAT + pushed preamp needs a tighter gate to control the layered Drop D guitars.",
@@ -42,7 +32,8 @@
         }
       }
     },
-    "stupor_od": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "Rig compensation (not a confirmed Everlong pedal)",
       "notes": "Standard Lace Sensor / Super Champ XD compensation — mild always-on saturation to simulate the amp-stage grit a hotter-output rig would have for free. Kept very low in the clean/verse snapshot so it only contributes the 'grit when you pick extra hard' character described in confirmed tone breakdowns, not audible gain. Raised ahead of the RAT in the chorus/heavy snapshot to push the front end harder.",
@@ -61,7 +52,8 @@
         }
       }
     },
-    "rat_distortion": {
+    {
+      "type": "distortion",
       "model": "Ratatouille Dist",
       "based_on": "ProCo RAT",
       "notes": "CONFIRMED pedal — the driving, aggressive Everlong tone comes from a ProCo RAT into a cranked amp. Bypassed entirely in the clean/verse snapshot (intro/verse is light-gain, not RAT-driven). Active in the chorus/heavy snapshot as the primary gain source alongside the Cali Rectifire preamp push.",
@@ -81,7 +73,8 @@
         }
       }
     },
-    "cali_rectifire": {
+    {
+      "type": "preamp",
       "model": "Cali Rectifire",
       "based_on": "MESA/Boogie Dual Rectifier",
       "notes": "EXPERIMENTAL preamp-only block (no cab/power-amp modeling), placed after Stupor OD/Ratatouille Dist and before Adriatic Delay per the preamp placement convention. S1 clean/verse: low Drive, amp-stage coloration only. S2 chorus/heavy: Drive and Master pushed further, Mid trimmed slightly for the scooped, aggressive Rectifier character, reinforcing the RAT rather than replacing it as the gain source.",
@@ -110,7 +103,8 @@
         }
       }
     },
-    "dm2_delay": {
+    {
+      "type": "delay",
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 Analog Delay w/ Adrian Mod",
       "notes": "Confirmed long-standing constant on Grohl's pedalboard. Tempo-synced to 1/8 note (190ms at 158 BPM) for a tight rhythmic echo — more present under the clean/verse palm-muted riff, pulled back in the chorus/heavy snapshot so it doesn't wash out the layered Drop D guitars.",
@@ -135,7 +129,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Compensates for the missing Dual Rectifier/Vox AC30 cab voicing and raises Level to help push the real tube amp's input stage. S1 clean/verse: gently brightened, minimal cut, keeping the light-gain tone clean and bright as described in confirmed tone breakdowns. S2 chorus/heavy: low end tightened and mids trimmed slightly to keep the layered Drop D guitars from getting muddy.",
@@ -170,7 +165,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
       "notes": "Room Size FIXED at 12m — a touch bigger and more modern than a tight studio room to suit the driving rock production, but still short/punchy overall rather than ambient. S1 clean/verse: slightly longer decay and higher mix for the more open intro/verse texture. S2 chorus/heavy: shorter decay, lower mix so the wall of layered guitars stays tight and driving.",
@@ -208,7 +204,9 @@
         }
       }
     }
-  },
+  ],
+  "signal_chain_notes": "7 of 8 available blocks used. Cali Rectifire (preamp-only, no cab/power-amp) placed after the overdrive/distortion blocks and before the delay block, per the AGENTS.md convention: pedals hit the amp's preamp stage first, modulation/time-based effects sit after the amp. Ratatouille Dist (RAT) is bypassed in the clean/verse snapshot and active in the chorus/heavy snapshot — the only toggled block; everything else stays on and just changes its parameters between snapshots.",
+  "preamp_experiment_note": "EXPERIMENTAL Cali Rectifire block added because the Mesa/Boogie Dual Rectifier is specifically confirmed (not just era-plausible) as the amp the RAT was driving for Everlong's heavy tone. Kept at low/moderate Drive in the clean/verse snapshot so it only adds amp-stage warmth and touch response — the light-gain, almost-clean character there should come from Stupor OD alone, not this block. Pushed further in the chorus/heavy snapshot to reinforce the RAT's aggressive, driving character with real amp-stage push, while the RAT itself remains the primary gain source (consistent with the rig's usual pedals-do-the-gain, preamp-does-the-coloration approach).",
   "snapshots": {
     "1_clean_verse": {
       "footswitch": "FS1",

@@ -8,17 +8,8 @@
   "notes": "No amp+cab block for Snapshot 1 (Hammond's rhythm part) — running into tube amp as usual. Snapshot 2 (Valensi's synth lead) adds a Preamp-only block (US Double Nrm, no cab/power amp) since a specific real amp is confirmed for that part and isn't covered by the fuzz + EQ alone — see rig rule in AGENTS.md. CRITICAL TONE NOTE: The defining guitar sound of this song is not a conventional effect — it was an accidental discovery. Valensi confirmed in Guitar Player December 2003: neck pickup with tone control fully rolled off, accidentally engaged the Hot Rod DeVille's high-gain channel with gain at maximum, producing a keyboard/analog-synth-like sound. He blew up three DeVilles. This is fundamentally an overloaded amp into fuzz territory, not a pedal effect. On Helix LT without amp+cab: approximated using Dark Dove Fuzz (Russian Big Muff) with Tone at minimum and Sustain high — the Russian Muff's dark, compressed, attack-free character most closely matches the smooth synth bloom. Hammond plays conventional rhythm guitar simultaneously — two snapshots cover both parts.",
   "confirmed_source": "Guitar Player December 2003 — Valensi direct quote explaining tone creation",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Dark Dove Fuzz",
-    "US Double Nrm",
-    "Parametric EQ",
-    "Adriatic Delay",
-    "Ganymede"
-  ],
-  "guitar_setup_note": "For Snapshot 2 (synth lead): roll guitar tone knob fully to 0 before switching. This is essential — the rolled-off tone control is 50% of the sound. Switch back for Snapshot 1 (rhythm). Valensi used neck pickup for the synth lead.",
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 rhythm: moderate gate. S2 synth lead: very open — the fuzz sustain and bloom must not be gated. The smooth attack-free character of the synth tone requires notes to sustain and bloom naturally.",
@@ -35,7 +26,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Jekyll & Hyde overdrive side — confirmed Room on Fire era pedal. S1 rhythm: moderate drive for conventional Strokes rhythm character. S2 synth lead: BYPASSED — the Dark Dove Fuzz handles all saturation, stacking OD on top of fuzz would over-saturate and obscure the synth character.",
@@ -54,7 +46,8 @@
         }
       }
     },
-    "fuzz": {
+    {
+      "type": "fuzz",
       "model": "Dark Dove Fuzz",
       "based_on": "Electro-Harmonix Russian Big Muff",
       "notes": "Best available approximation for the 12:51 synth tone. The Russian Big Muff is dark, smooth, and compressed — when Tone is set at minimum (fully rolled off) it produces an attack-free, blooming fuzz sustain that closely matches what Valensi achieved by rolling off his guitar's tone control into a maxed-out amp. Sustain at maximum for the smooth, boundless sustain of the synth character. S1 rhythm: BYPASSED — conventional rhythm tone uses Stupor OD only. S2 synth lead: ACTIVE with Tone at minimum and Sustain at maximum.",
@@ -73,7 +66,8 @@
         }
       }
     },
-    "preamp": {
+    {
+      "type": "preamp",
       "model": "US Double Nrm",
       "based_on": "Fender Hot Rod DeVille (no dedicated DeVille model exists on Helix LT — US Double Nrm/Twin Reverb is the closest available 6L6 Fender platform per AGENTS.md substitution table)",
       "notes": "S1 rhythm (Hammond's part): BYPASSED — the confirmed 'blew up three DeVilles' story is specific to Valensi's synth lead, not Hammond's rhythm guitar, so it would be wrong to attribute this amp's coloration to a different guitarist's part. S2 synth lead (Valensi): ACTIVE, Drive at maximum (10) matching his description of the DeVille's high-gain channel with gain maxed. Preamp-only (no cab/power amp) — sits after the Dark Dove Fuzz doing the heavy saturation, and colors/darkens ahead of the EQ and modulation/delay/reverb blocks per signal-chain convention. Bass/Treble kept low and Mid slightly scooped to reinforce the dark, hollow synth character rather than compete with it. Sag raised for the loose, spongy compression of a maxed-out tube amp; Hum kept low since the Noise Gate is already very open on this snapshot.",
@@ -102,7 +96,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "S1 rhythm: standard telephone filter Strokes character — low and high cuts, mid boost at 600Hz. S2 synth lead: radically different — the synth tone is intentionally dark and mid-scooped. Low Cut kept moderate, High Cut very aggressive at 4000Hz to approximate the tone-knob-at-zero darkness. Mid scooped slightly rather than boosted — the synth character has a hollow, scooped quality unlike the telephone-filter rhythm tone.",
@@ -137,7 +132,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
       "notes": "Tempo-synced to 96 BPM. S1 rhythm: eighth note (313ms) — near exact match (2.5ms off). Low Mix for supportive depth on rhythm. S2 synth lead: NO delay (Mix 0%) — the synth tone is very dry in the recording. The blooming fuzz sustain fills the sonic space without needing delay. BBD Size 2048 throughout. Rate 0.1Hz, Depth 0 to disable modulation.",
@@ -172,7 +168,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "S1 rhythm: short intimate reverb matching Room on Fire recording aesthetic. S2 synth lead: slightly more reverb to add space around the blooming fuzz sustain — the synth tone benefits from a small amount of room to breathe. Tone at 4.0 on S2 — darker to complement the high-cut EQ and rolled-off fuzz character.",
@@ -197,7 +194,8 @@
         }
       }
     }
-  },
+  ],
+  "guitar_setup_note": "For Snapshot 2 (synth lead): roll guitar tone knob fully to 0 before switching. This is essential — the rolled-off tone control is 50% of the sound. Switch back for Snapshot 1 (rhythm). Valensi used neck pickup for the synth lead.",
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",

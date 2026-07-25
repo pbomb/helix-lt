@@ -7,19 +7,8 @@
   "master_bpm": 128,
   "notes": "No amp+cab block — running into tube amp. Three snapshots: verse/clean, heavy riff, bridge/breakdown. Confirmed rig: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy). Scream 808 (TS808) confirmed as clean boost into amp for heavy sections. Pitch Wham (DigiTech Whammy) confirmed for octave-down harmony — Bellamy uses Whammy set to Harmony -1 octave, blending dry with octave-down signal. Poly Wham (Helix version) auto-assigns to EXP 1. EQ compensates for removed Das Benzin Lead and 4x12 V30 cab voicing — aggressive mid boost at 700Hz is the defining characteristic of Bellamy's Resistance-era tone. IMPORTANT: Dynamic Hall Room Size must NOT be snapshot-variable — set as fixed value to avoid audible algorithm bump.",
   "signal_chain": [
-    "Noise Gate",
-    "Scream 808",
-    "Pitch Wham",
-    "Parametric EQ",
-    "Cosmos Echo",
-    "Dynamic Hall"
-  ],
-  "expression_pedal": {
-    "assigned_to": "Pitch Wham — Position parameter",
-    "note": "Pitch Wham auto-assigns to EXP 1. For live performance in Snapshot 1, sweep from heel (Position 0, unison) toward toe (Position 100, full octave down) as verse builds intensity. Snapshots 2+3 use fixed Position 100."
-  },
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -40,7 +29,8 @@
         }
       }
     },
-    "boost": {
+    {
+      "type": "boost",
       "model": "Scream 808",
       "based_on": "Ibanez TS808 Tube Screamer",
       "notes": "Transparent clean boost tightening tube amp low end and adding small amount of gain. Minimal Gain, neutral Tone, high Level. BYPASSED in Snapshot 1 (clean verse). ACTIVE in Snapshots 2 and 3.",
@@ -65,7 +55,8 @@
         }
       }
     },
-    "pitch": {
+    {
+      "type": "pitch",
       "model": "Pitch Wham",
       "based_on": "DigiTech Whammy",
       "notes": "Confirmed: Bellamy uses DigiTech Whammy set to Harmony -1 octave for MK Ultra riff — blends dry signal with octave-down voice. Heel Pitch 0 (unison) + Toe Pitch -12 (one octave down). Position 100 = full toe-down = full octave-down blend at set Mix level. ACTIVE in all snapshots but Mix varies significantly — S1 subtle shimmer (15%), S2 prominent octave-down (40%), S3 most prominent (50%).",
@@ -96,7 +87,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Compensates for removed Das Benzin Lead and 4x12 Brit V30 cab voicing. Heavy snapshots use aggressive mid boost at 700Hz — defining characteristic of Bellamy's Resistance-era tone. Drop D requires firm Low Cut to prevent open string flabbiness. S2 most aggressive — maximum mid boost, tightest cuts.",
@@ -145,7 +137,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
       "notes": "Cosmos Echo chosen for Muse presets — Bass and Treble tone controls allow darker repeats in heavy snapshots. Tempo-synced to 128 BPM. S1: d1/8 (352ms, 28ms off original 380ms target — synced preferred). S2: d1/16 (176ms, 12ms off original 188ms — synced). S3: d1/8 (352ms, near exact match to original 350ms). S2 very short and dark — minimal delay so Pitch Wham octave voice stays defined.",
@@ -206,7 +199,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
       "notes": "Room Size FIXED at 20m — do NOT make snapshot-variable, causes audible algorithm bump. S1 long and cinematic. S2 very tight and punchy — riff must not be washy. S3 medium — bridge more expansive than heavy riff.",
@@ -256,6 +250,10 @@
         }
       }
     }
+  ],
+  "expression_pedal": {
+    "assigned_to": "Pitch Wham — Position parameter",
+    "note": "Pitch Wham auto-assigns to EXP 1. For live performance in Snapshot 1, sweep from heel (Position 0, unison) toward toe (Position 100, full octave down) as verse builds intensity. Snapshots 2+3 use fixed Position 100."
   },
   "snapshots": {
     "1_verse": {

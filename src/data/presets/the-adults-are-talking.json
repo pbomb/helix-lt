@@ -7,16 +7,8 @@
   "master_bpm": 112,
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 112 BPM. Nick Valensi Minotaur (Klon Centaur) confirmed notable user.",
   "signal_chain": [
-    "Noise Gate",
-    "Red Squeeze",
-    "Stupor OD",
-    "Minotaur",
-    "Parametric EQ",
-    "Adriatic Delay",
-    "Ganymede"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -32,7 +24,8 @@
         }
       }
     },
-    "compressor": {
+    {
+      "type": "compressor",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
       "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in both snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
@@ -51,7 +44,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "active": "both snapshots",
@@ -69,7 +63,8 @@
         }
       }
     },
-    "boost": {
+    {
+      "type": "boost",
       "model": "Minotaur",
       "based_on": "Klon Centaur",
       "notes": "Nick Valensi confirmed Klon user per YAML. Approximates MXR Micro Amp clean boost for lead passages. BYPASSED in Snapshot 1, ACTIVE in Snapshot 2.",
@@ -88,7 +83,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Telephone filter EQ is the defining Strokes character — aggressive low and high cut with boosted mids. Also compensates for removed amp voicing. Single mid band only.",
@@ -123,7 +119,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
       "notes": "Delays are tempo-synced to 112 BPM. Snapshot 1: eighth note (268ms). Snapshot 2: dotted eighth (402ms) — the prominent echo-soaked lead tone central to this song.",
@@ -158,7 +155,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -182,7 +180,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_rhythm": {
       "footswitch": "FS1",

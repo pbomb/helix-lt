@@ -7,15 +7,8 @@
   "master_bpm": 92,
   "notes": "No amp+cab block — running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB (Essex A30 — removed per amp+cab policy) with Boss OD-3 (Stupor OD approximation) and Boss RE-20 Space Echo (Cosmos Echo). Mid-forward, slightly psychedelic tone with tribal, percussive character. 4-stage phaser adds swirling quality. Two snapshots: verse riff and heavy chorus.",
   "signal_chain": [
-    "Noise Gate",
-    "Stupor OD",
-    "Script Mod Phase",
-    "Parametric EQ",
-    "Cosmos Echo",
-    "Ganymede"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -31,7 +24,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Boss OD-3 — mid-forward overdrive. ACTIVE in both snapshots. Chorus snapshot pushes Drive harder for more intensity.",
@@ -50,7 +44,8 @@
         }
       }
     },
-    "modulation": {
+    {
+      "type": "phaser",
       "model": "Script Mod Phase",
       "based_on": "MXR Phase 90 Script Mod",
       "notes": "Slow, subtle phaser adds the swirling, slightly psychedelic quality underneath the rhythm guitar. Keep understated — should feel like movement rather than an obvious effect. ACTIVE in both snapshots.",
@@ -69,7 +64,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "This song lives in the mids. Low cut at 100Hz removes bass muddiness. Mid boost at 500Hz adds the thick low-mid body. Chorus snapshot gets more aggressive mid boost and tighter high cut.",
@@ -104,7 +100,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
       "notes": "Confirmed Jonny Greenwood used RE-201 Space Echo from 1995. Tempo-synced to 92 BPM. Eighth note (326ms) — 6ms off target, synced value preferred. Short, dark delay at low level adds depth without cluttering rhythm. Treble rolled off to keep repeats dark.",
@@ -147,7 +144,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "Room 1-style character — contained, immediate reverb not a large hall. Short decay keeps the percussive attack from getting washy.",
@@ -172,7 +170,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",

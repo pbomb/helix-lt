@@ -3,7 +3,8 @@ export interface SnapshotParams {
   [key: string]: string | number | boolean | null | undefined
 }
 
-export interface Block {
+export interface SignalChainBlock {
+  type: string
   model: string
   based_on?: string
   notes?: string
@@ -39,8 +40,7 @@ export interface Preset {
   master_bpm?: number
   capo?: number
   notes?: string
-  signal_chain: string[]
-  blocks: Record<string, Block>
+  signal_chain: SignalChainBlock[]
   snapshots: Record<string, SnapshotMeta>
   playing_notes?: PlayingNotes
   note_on_block_limit?: string

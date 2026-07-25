@@ -30,17 +30,8 @@
     ]
   },
   "signal_chain": [
-    "Noise Gate",
-    "Red Squeeze",
-    "Stupor OD",
-    "Ratatouille Dist",
-    "Minotaur",
-    "Parametric EQ",
-    "Adriatic Delay",
-    "Ganymede"
-  ],
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Clean snapshot most open — compression and very light OD generate minimal noise. Dirty and solo snapshots tighten as Ratatouille Dist generates more noise between notes.",
@@ -62,7 +53,8 @@
         }
       }
     },
-    "compressor": {
+    {
+      "type": "compressor",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
       "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics that are central to the Strokes' compressed, even-attack rhythm character. ACTIVE in all three snapshots at the same settings — compression is a constant tonal foundation, not a snapshot-variable element. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
@@ -87,7 +79,8 @@
         }
       }
     },
-    "overdrive": {
+    {
+      "type": "overdrive",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Jekyll & Hyde overdrive side. ACTIVE in Snapshot 1 (clean) at very low Drive — provides the barely-there breakup that gives the Strokes their 'clean but not quite clean' foundation. BYPASSED in Snapshots 2 and 3 — the Ratatouille Dist handles all saturation in the dirty and solo snapshots, and stacking would over-saturate.",
@@ -112,7 +105,8 @@
         }
       }
     },
-    "distortion": {
+    {
+      "type": "distortion",
       "model": "Ratatouille Dist",
       "based_on": "1984 Pro Co RAT",
       "notes": "Confirmed cross-album Strokes pedal. BYPASSED in Snapshot 1 (clean). ACTIVE in Snapshots 2 and 3. S2 dirty: Gain at 4.5 — close to YAML-documented 'blues type tone' setting (Gain 3.5-4) which gives the gritty, mid-present crunch of the Strokes' driven rhythm tone. Filter at 4.5 — neutral, letting the RAT's natural character through without over-cutting high frequencies. S3 solo: Gain pushed to 7.0 approaching YAML-documented 'lead type tone' setting — more bite and harmonic emphasis for lead lines.",
@@ -137,7 +131,8 @@
         }
       }
     },
-    "boost": {
+    {
+      "type": "boost",
       "model": "Minotaur",
       "based_on": "Klon Centaur",
       "notes": "Nick Valensi confirmed notable user per YAML. Approximates MXR Micro Amp clean boost. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only — lifts the solo above the rhythm bed and adds slight Klon harmonic character on top of the Ratatouille Dist. Low Gain to keep it transparent, high Level for the boost.",
@@ -162,7 +157,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "The telephone filter EQ is the single most defining characteristic of the Strokes' tone across all albums. All three snapshots share this fundamental voicing: aggressive low bass cut, boosted mids, rolled-off highs. The specific mid frequency and gain vary per snapshot — clean uses a lower, warmer mid boost; dirty pushes it harder and lower for telephone character; solo opens the high end slightly for lead clarity and raises the mid frequency for more cut.",
@@ -211,7 +207,8 @@
         }
       }
     },
-    "delay": {
+    {
+      "type": "delay",
       "model": "Adriatic Delay",
       "based_on": "BOSS DM-2 w/ Adrian Mod",
       "notes": "Tempo-synced to Master BPM (default 100). All three snapshots use eighth note — the most universally applicable Strokes delay division across tempos. Use tap tempo to lock to the specific song. Clean: modest mix for depth. Dirty: low mix — the rhythm tone should be tight and not washy. Solo: higher mix and feedback for the lead lines to bloom. BBD Size 2048 throughout. Rate 0.1Hz, Depth 0 — modulation disabled.",
@@ -260,7 +257,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Ganymede",
       "based_on": "Line 6 Original",
       "notes": "Short, intimate reverb throughout — the Strokes' recording aesthetic across all albums favors a contained, close-mic'd quality. None of the three snapshots use a long or spacious reverb. Clean is the most reverberant — the slightly open, warm quality of clean Strokes passages benefits from a little air. Dirty is the driest — tight, punchy rhythm tone. Solo opens up moderately for lead lines to breathe. Tone at 4.5 on clean and dirty — slightly darker than neutral, matching the lo-fi recording aesthetic of the classic albums.",
@@ -294,7 +292,7 @@
         }
       }
     }
-  },
+  ],
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",

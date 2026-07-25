@@ -17,19 +17,8 @@
   "no_delay_policy": "Nevermind uses NO delay effects. The album's raw, direct character is fundamental to its sound. This is the only preset in the collection with no delay block.",
   "tuning_note": "Most of Nevermind is in standard tuning. Some songs use Eb (half step down). Check specific song.",
   "signal_chain": [
-    "Noise Gate",
-    "Deez One Vintage",
-    "Ratatouille Dist",
-    "Triangle Fuzz",
-    "PlastiChorus",
-    "Tweed Blues Nrm",
-    "Parametric EQ",
-    "Dynamic Hall"
-  ],
-  "signal_chain_notes": "No delay block — intentional. EXPERIMENTAL: Tweed Blues Nrm (Fender Bassman) Preamp block added, filling the previously spare 8th slot — now at the 8-block hardware limit. All three distortion/fuzz blocks are mutually exclusive across snapshots — only one is active at a time.",
-  "preamp_experiment_note": "Added per request to try a Preamp-only block (no cab/power-amp modeling) in front of the real tube amp, instead of running purely on pedals into the amp's own front end. Fender Bassman chosen as the single preamp model — Butch Vig confirmed Fender Bassman, Mesa Boogie, and Vox AC30 were all used across Nevermind sessions, but a Helix Preamp block can only host ONE model per preset (snapshots can vary its parameters but cannot swap the model), so Bassman was picked as the most universally-cited 'ground zero' grunge-era platform that works both clean and pushed by pedals. Drive is kept moderate throughout since the DS-1/RAT/Big Muff pedals already provide the gain — the preamp's job here is just amp-stage coloration/saturation, consistent with the rig's usual compensation strategy. If this doesn't sound right, Essex A30 (Vox AC30) is the next thing to try, since it's confirmed for the clean/chorus (S1/S3) parts specifically.",
-  "blocks": {
-    "noise_gate": {
+    {
+      "type": "noise_gate",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 clean most open. S2 DS-1 moderately tight. S3 chorus open — Small Clone tone is clean. S4 Big Muff/RAT tightest — high gain requires control.",
@@ -56,7 +45,8 @@
         }
       }
     },
-    "ds1_distortion": {
+    {
+      "type": "distortion_ds1",
       "model": "Deez One Vintage",
       "based_on": "BOSS DS-1 distortion pedal (classic Made-in-Japan version)",
       "notes": "EXACT confirmed pedal — Cobain's DS-1 was the classic Japanese-made version. CONFIRMED SETTINGS from Ground Guitar sourcing Butch Vig/guitar tech: Tone at 10 o'clock (~3.0-3.5 on 0-10 scale), Distortion at 4.0, Level maxed. ACTIVE in Snapshot 2 only. BYPASSED in all other snapshots. Lace Sensor compensation: raise Drive slightly to 5.0 from confirmed 4.0 to compensate for lower pickup output vs Cobain's humbucker bridge pickups.",
@@ -93,7 +83,8 @@
         }
       }
     },
-    "rat_distortion": {
+    {
+      "type": "distortion_rat",
       "model": "Ratatouille Dist",
       "based_on": "1984 Pro Co RAT",
       "notes": "Confirmed for Breed — main guitar tone from ProCo RAT split into amp and direct console. ACTIVE in Snapshot 4 only alongside Triangle Fuzz for the combined Breed/Lithium heavy snapshot. For purist Breed tone: activate only this block (bypass Triangle Fuzz). For Lithium: activate only Triangle Fuzz (bypass this). The combined snapshot covers both moods with a toggle approach.",
@@ -125,7 +116,8 @@
         }
       }
     },
-    "big_muff": {
+    {
+      "type": "fuzz",
       "model": "Triangle Fuzz",
       "based_on": "Electro-Harmonix Big Muff π",
       "notes": "Confirmed for Lithium — Butch Vig: 'an Electro-Harmonix Big Muff fuzz box was used on Lithium for that dark, thumpier sound.' Triangle Fuzz (original Big Muff circuit) chosen over Bighorn Fuzz (Ram's Head) or Dark Dove (Russian) because the original Triangle/Pi circuit is what Cobain used — it has slightly more mids and less extreme scooping than the Ram's Head version. BYPASSED in Snapshots 1, 2, 3. ACTIVE in Snapshot 4. For pure Lithium tone: bypass the Ratatouille Dist. For Breed: bypass this. The snapshot covers both with both active.",
@@ -157,12 +149,18 @@
         }
       }
     },
-    "small_clone_chorus": {
+    {
+      "type": "chorus",
       "model": "PlastiChorus",
       "based_on": "Modded Arion SCH-Z Chorus",
       "notes": "Approximates EHX Small Clone — no dedicated Small Clone model on Helix. The Arion SCH-Z is a simple analog chorus with warm, lush character similar to the Small Clone. Confirmed songs: Come As You Are (main verses and pre-chorus), Smells Like Teen Spirit (pre-chorus build-up and solo), In Bloom (bridge). BYPASSED in Snapshots 1, 2, 4. ACTIVE in Snapshot 3 only. The Small Clone has only two controls: Rate and Depth — the PlastiChorus Mode, Tone, and Headroom parameters extend beyond the real pedal's controls.",
       "confirmed_source": "Butch Vig: 'He had an Electro-Harmonix Small Clone. That's the watery sound you hear on the guitar in the verse and pre-chorus buildup.'",
-      "confirmed_songs": ["Come As You Are", "Smells Like Teen Spirit (pre-chorus/solo)", "In Bloom (bridge)", "Endless Nameless"],
+      "confirmed_songs": [
+        "Come As You Are",
+        "Smells Like Teen Spirit (pre-chorus/solo)",
+        "In Bloom (bridge)",
+        "Endless Nameless"
+      ],
       "snapshots": {
         "1_clean": {
           "active": false,
@@ -206,7 +204,8 @@
         }
       }
     },
-    "preamp": {
+    {
+      "type": "preamp",
       "model": "Tweed Blues Nrm",
       "based_on": "Fender Bassman",
       "notes": "EXPERIMENTAL preamp-only block (no cab/power-amp modeling) — Preamp category, not Amp+Cab, so it still runs into the real Super Champ XD rather than replacing it. Placed after all drive/fuzz/chorus pedals and before the corrective EQ, mirroring pedals-into-amp-front-end signal order. Drive kept moderate in every snapshot since the DS-1/RAT/Big Muff pedals already supply distortion — this block adds amp-stage coloration and touch response rather than additional gain. Bass/Mid/Treble trimmed down slightly from the amp's own defaults since the downstream Parametric EQ block still does the heavy corrective sculpting (may want to re-balance EQ levels down now that this block adds real amp character). Sag and Hum kept low/moderate for a tighter, more modern feel rather than a fully vintage-sagging Bassman.",
@@ -253,7 +252,8 @@
         }
       }
     },
-    "eq": {
+    {
+      "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
       "notes": "Compensates for removed Vox AC30 / Fender Bassman amp voicing and lack of cabinet simulation. S1 clean: warm and open approximating the Vox AC30 Butch Vig confirmed for clean parts. S2 DS-1: relatively flat EQ — the DS-1's confirmed Tone at 10 o'clock already cuts high end; the EQ reinforces the raw, direct character without over-sculpting. S3 chorus: open and bright — Small Clone tone is clean and shimmery. S4 Big Muff/RAT: manages Big Muff's mid-scoop and adds low cut to prevent muddiness.",
@@ -316,7 +316,8 @@
         }
       }
     },
-    "reverb": {
+    {
+      "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
       "notes": "Room Size FIXED at 10m — small room character matching the raw, close-mic'd studio recording. Nevermind is NOT a reverb-heavy album — all reverb settings are short and minimal. The recording has a tight, punchy studio character. Do NOT use long decay or high mix values.",
@@ -384,7 +385,9 @@
         }
       }
     }
-  },
+  ],
+  "signal_chain_notes": "No delay block — intentional. EXPERIMENTAL: Tweed Blues Nrm (Fender Bassman) Preamp block added, filling the previously spare 8th slot — now at the 8-block hardware limit. All three distortion/fuzz blocks are mutually exclusive across snapshots — only one is active at a time.",
+  "preamp_experiment_note": "Added per request to try a Preamp-only block (no cab/power-amp modeling) in front of the real tube amp, instead of running purely on pedals into the amp's own front end. Fender Bassman chosen as the single preamp model — Butch Vig confirmed Fender Bassman, Mesa Boogie, and Vox AC30 were all used across Nevermind sessions, but a Helix Preamp block can only host ONE model per preset (snapshots can vary its parameters but cannot swap the model), so Bassman was picked as the most universally-cited 'ground zero' grunge-era platform that works both clean and pushed by pedals. Drive is kept moderate throughout since the DS-1/RAT/Big Muff pedals already provide the gain — the preamp's job here is just amp-stage coloration/saturation, consistent with the rig's usual compensation strategy. If this doesn't sound right, Essex A30 (Vox AC30) is the next thing to try, since it's confirmed for the clean/chorus (S1/S3) parts specifically.",
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",
@@ -450,10 +453,22 @@
     "big_muff_toggle": "Snapshot 4 has both Triangle Fuzz and Ratatouille Dist active by default. For song-specific accuracy, bypass one or the other as documented in the snapshot's toggle_instructions field.",
     "tap_tempo": "Master BPM set to 116 (SLTS). Adjust via tap tempo for other songs — Breed is ~183 BPM, Lithium is ~122 BPM, Come As You Are is ~120 BPM.",
     "further_listening": {
-      "S1_reference": ["Polly", "Something In The Way"],
-      "S2_reference": ["Smells Like Teen Spirit (verse/chorus)", "In Bloom (heavy)"],
-      "S3_reference": ["Come As You Are (verse)", "SLTS (pre-chorus)"],
-      "S4_reference": ["Lithium (Big Muff only)", "Breed (RAT only)"]
+      "S1_reference": [
+        "Polly",
+        "Something In The Way"
+      ],
+      "S2_reference": [
+        "Smells Like Teen Spirit (verse/chorus)",
+        "In Bloom (heavy)"
+      ],
+      "S3_reference": [
+        "Come As You Are (verse)",
+        "SLTS (pre-chorus)"
+      ],
+      "S4_reference": [
+        "Lithium (Big Muff only)",
+        "Breed (RAT only)"
+      ]
     }
   }
 }
