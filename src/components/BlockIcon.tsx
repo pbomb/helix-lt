@@ -1,6 +1,17 @@
 import type { ReactElement } from 'react'
 
-type Category = 'multi' | 'distortion' | 'dynamics' | 'eq' | 'modulation' | 'delay' | 'reverb' | 'pitch'
+type Category =
+  | 'multi'
+  | 'distortion'
+  | 'dynamics'
+  | 'eq'
+  | 'modulation'
+  | 'delay'
+  | 'reverb'
+  | 'pitch'
+  | 'preamp'
+  | 'amp'
+  | 'ampcab'
 
 const SVG_PROPS = {
   xmlns: 'http://www.w3.org/2000/svg',
@@ -78,6 +89,33 @@ const ICONS: Record<Category, ReactElement> = {
       <ellipse cx="16" cy="16" rx="3" ry="2" />
     </svg>
   ),
+  // Gain-stage triangle (op-amp style) — preamp-only, no cab/power-amp
+  preamp: (
+    <svg {...SVG_PROPS}>
+      <line x1="2" y1="12" x2="6" y2="12" />
+      <path d="M6 6L18 12L6 18Z" />
+      <line x1="18" y1="12" x2="22" y2="12" />
+    </svg>
+  ),
+  // Amp head with control knobs, no cabinet
+  amp: (
+    <svg {...SVG_PROPS}>
+      <rect x="3" y="7" width="18" height="10" rx="1" />
+      <circle cx="8" cy="12" r="1.5" />
+      <circle cx="12" cy="12" r="1.5" />
+      <circle cx="16" cy="12" r="1.5" />
+    </svg>
+  ),
+  // Amp head stacked on a speaker cabinet
+  ampcab: (
+    <svg {...SVG_PROPS}>
+      <rect x="5" y="3" width="14" height="6" rx="1" />
+      <circle cx="9" cy="6" r="1" fill="currentColor" stroke="none" />
+      <circle cx="15" cy="6" r="1" fill="currentColor" stroke="none" />
+      <rect x="3" y="10" width="18" height="11" rx="1" />
+      <circle cx="12" cy="15.5" r="3.5" />
+    </svg>
+  ),
 }
 
 const MODEL_CATEGORY: Record<string, Category> = {
@@ -95,6 +133,11 @@ const MODEL_CATEGORY: Record<string, Category> = {
   'Hedgehog D9': 'distortion',
   'Teemah!': 'distortion',
   'Top Secret OD': 'distortion',
+
+  // Preamp (preamp-only blocks — no cab/power-amp modeling, per rig setup)
+  'US Double Nrm': 'preamp',
+  'Tweed Blues Nrm': 'preamp',
+  'Cali Rectifire': 'preamp',
 
   // Dynamics
   'Red Squeeze': 'dynamics',
