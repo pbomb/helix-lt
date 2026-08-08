@@ -161,9 +161,9 @@
     {
       "type": "preamp",
       "model": "US Double Nrm",
-      "variant": "Path 1B (parallel, merges before EQ — see note_on_block_limit)",
-      "based_on": "Fender Hot Rod DeVille (no dedicated DeVille model exists on Helix LT — US Double Nrm/Twin Reverb is the closest available 6L6 Fender platform per AGENTS.md substitution table)",
-      "notes": "Confirmed cross-album rig constant. Routed on parallel Path 1B rather than stacked onto the already-full 8-block Path 1A — splits after Minotaur and rejoins before Parametric EQ. Settings held CONSTANT across all three snapshots, same treatment as the Red Squeeze compressor — this represents a fixed physical amp setting (a rig-level characteristic), with the pedals ahead of it (Stupor OD, Ratatouille, Minotaur) doing the per-snapshot dynamic work rather than the amp itself. Kept neutral/mild (low Drive, moderate Master) so it adds gentle amp-front-end coloration and gain-staging support without fighting the telephone filter EQ that follows.",
+      "variant": "Path 1B",
+      "based_on": "Fender Hot Rod DeVille",
+      "notes": "No dedicated DeVille model exists on Helix LT — US Double Nrm/Twin Reverb is the closest available 6L6 Fender platform per AGENTS.md substitution table. Confirmed cross-album rig constant. Routed on parallel Path 1B rather than stacked onto the already-full 8-block Path 1A — splits after Minotaur and rejoins before Parametric EQ (see note_on_block_limit). Settings held CONSTANT across all three snapshots, same treatment as the Red Squeeze compressor — this represents a fixed physical amp setting (a rig-level characteristic), with the pedals ahead of it (Stupor OD, Ratatouille, Minotaur) doing the per-snapshot dynamic work rather than the amp itself. Kept neutral/mild (low Drive, moderate Master) so it adds gentle amp-front-end coloration and gain-staging support without fighting the telephone filter EQ that follows.",
       "snapshots": {
         "1_clean": {
           "active": true,
