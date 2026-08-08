@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 (Brit 2203 — removed per amp+cab policy) with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). DigiTech Whammy WH-1 confirmed for solo — Poly Wham at +12 semitones (octave up) at 65% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -30,7 +30,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Confirmed Boss SD-1 used on The Bends era. Pre-distortion boost and tone shaper — pushes Ratatouille and adds mid-forward character. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 — solo tone uses Ratatouille alone for clearer, more defined character.",
@@ -82,7 +82,7 @@
       }
     },
     {
-      "type": "pitch",
+      "type": "pitch_synth",
       "model": "Poly Wham",
       "based_on": "Line 6 Original",
       "notes": "Approximates DigiTech Whammy WH-1 — CONFIRMED Jonny kicks Whammy on at 2:17 in live performance for squealing solo sustain, octave up setting. Automatically assigned to EXP 1. Position 100 = full toe-down = constant octave up. Mix at 65% makes octave-up voice prominently audible. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only. Tracking set to Fast for responsive pitch detection.",

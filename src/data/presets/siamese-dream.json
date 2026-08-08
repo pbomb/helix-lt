@@ -18,7 +18,7 @@
   "layering_note": "Corgan's technique was to track rhythm guitars 4-6 times, panning them across the stereo field. A single guitar will sound thinner than the record regardless of settings — this is inherent to the recording technique, not a preset limitation.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 clean most open. S2 heavy rhythm tightens significantly — Big Muff into JCM800 generates significant noise. S3 lead same as S2. S4 wall-of-fuzz tightest — maximum gain scenario.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Top Secret OD",
       "based_on": "DOD OD-250",
       "notes": "Approximates MXR Distortion+ — both use the same LM741 op-amp circuit (confirmed in Bodysnatchers research). Corgan confirmed: 'I used the MXR Distortion+ to play leads on Siamese Dream — we'd run that through a Big Muff.' BYPASSED in S1 (clean) and S2 (pure Big Muff rhythm). ACTIVE in S3 (lead) and S4 (wall-of-fuzz) — stacked before the Bighorn Fuzz per Corgan's confirmed signal chain order. Two parameters only: Gain and Level.",
@@ -74,7 +74,7 @@
       }
     },
     {
-      "type": "fuzz",
+      "type": "distortion",
       "model": "Bighorn Fuzz",
       "based_on": "1973 Electro-Harmonix Ram's Head Big Muff Pi",
       "notes": "Closest available approximation to Corgan's confirmed V4/V5 Op-Amp Big Muff Pi. The Op-Amp version uses operational amplifiers instead of transistors giving a harsher, more aggressive distortion than transistor Big Muffs. The Ram's Head (Bighorn) is the most aggressive transistor Big Muff available on the Helix — not identical to the Op-Amp version but the closest. BYPASSED in S1 (clean). ACTIVE in S2, S3, S4. Sustain at maximum throughout — Corgan ran the Big Muff wide open. Tone varies per snapshot: S2 neutral, S3 slightly brighter for lead definition, S4 rolled back for maximum wall-of-fuzz thickness.",
@@ -106,7 +106,7 @@
       }
     },
     {
-      "type": "phaser",
+      "type": "modulation",
       "model": "Script Mod Phase",
       "based_on": "MXR Phase 90",
       "notes": "Approximates MXR Phase 100 and Mu-Tron Bi-Phase — both confirmed for Siamese Dream. Corgan's direct quote: 'MXR Phase 100, for those of you looking for the Siamese Dream lead sound — pick one of these and turn the speed all the way down. It gives you a little bit of movement there.' Butch Vig: 'The Mu-Tron Bi-Phase — we run everything through it, everything.' Rate at very low value approximating Corgan's 'all the way down' instruction. BYPASSED in S1 and S2 — phaser is primarily a lead and texture effect on the album. ACTIVE in S3 (lead) and S4 (wall-of-fuzz texture layer).",
@@ -138,7 +138,7 @@
       }
     },
     {
-      "type": "flanger",
+      "type": "modulation",
       "model": "Courtesan Flange",
       "based_on": "Electro-Harmonix Deluxe Electric Mistress",
       "notes": "Confirmed: Corgan used the Electric Mistress for flanger and chorus layers on Siamese Dream. The Courtesan Flange is based on the Deluxe EM. ACTIVE in S1 (clean — adds dreamy shimmer to clean tones like Today intro) at very low mix. BYPASSED in S2 (pure heavy rhythm — no modulation needed). ACTIVE in S3 at moderate mix for the atmospheric lead character. BYPASSED in S4 — wall-of-fuzz is too dense for flanger to be useful. Parameters: Rate, Range, Color, Freeze LFO, Mix, Level, Headroom.",

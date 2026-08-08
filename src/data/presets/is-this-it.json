@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Confirmed rig for Is This It era: Visual Sound Jekyll & Hyde Ultimate Overdrive/Distortion pedal + Pro Co RAT + MXR Micro Amp, both guitarists through Fender Hot Rod DeVille 2x12 (US Double Nrm — removed per amp+cab policy). Title track is described as the album's ballad — one of the slowest tempos on the record. Tone is intentionally restrained compared to more aggressive Is This It era tracks. Jekyll & Hyde overdrive side (Stupor OD) at low drive is the correct voice for this song — the RAT (Ratatouille Dist) is more appropriate for heavier tracks on the album. Minotaur (Klon Centaur — Nick Valensi confirmed notable user per YAML) approximates MXR Micro Amp boost for lead passages. No chorus, no modulation — this is one of the most stripped-back presets in the collection, honoring the album's bare-bones ethos. Studio recording had no EQ applied after the preamp — the engineer ran guitar directly into preamp with no post EQ. EQ block is kept gentle to honor this.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Very open gate — this is the album's ballad, clean and intimate. Natural decay essential. Both snapshots use conservative settings.",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "type": "compressor",
+      "type": "dynamics",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
       "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in both snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Jekyll & Hyde overdrive side. Low Drive throughout — Is This It the title track is the album's most restrained song. The RAT (Ratatouille Dist) was also confirmed for the Is This It era but is more appropriate for heavier album tracks — the Jekyll & Hyde OD at low setting is correct for this specific song's gentle, intimate character. ACTIVE in both snapshots but Drive increases slightly for chorus.",
@@ -66,7 +66,7 @@
       }
     },
     {
-      "type": "boost",
+      "type": "distortion",
       "model": "Minotaur",
       "based_on": "Klon Centaur",
       "notes": "Nick Valensi confirmed notable user per YAML. Approximates MXR Micro Amp clean boost for lead passages and chorus. BYPASSED in Snapshot 1 (verse). ACTIVE in Snapshot 2 (chorus/lead) — lifts level for lead melody lines and chorus guitar without adding drive.",

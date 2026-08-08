@@ -8,7 +8,7 @@
   "notes": "Combined Jonny Greenwood and Thom Yorke parts in a single preset with four snapshots. Snapshots 1+2 cover Jonny's lead/riff part (standard tuning, Boss OD-3 via Stupor OD, Boss RE-20 slapback). Snapshots 3+4 cover Thom's rhythm guitar part (Drop D, MXR Distortion+ via Top Secret OD, minimal slapback). Signal chain uses only 5 blocks — Stupor OD and Top Secret OD alternate active/bypassed states across snapshot pairs, sharing the same Noise Gate, EQ, and Transistor Tape blocks. If playing both parts in the same session, tune to Drop D and use a capo at the 2nd fret for Snapshots 1+2 (Jonny part) to restore effective standard pitch — or retune between snapshots. Confirmed sources: Jools Holland January 2008 for Thom; From The Basement for Jonny.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Shared across all snapshots. Thom snapshots (S3+S4) are slightly tighter — Top Secret OD at high Gain generates more noise than Stupor OD.",
@@ -36,7 +36,8 @@
       }
     },
     {
-      "type": "overdrive_jonny",
+      "type": "distortion",
+      "variant": "Jonny",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Jonny's Boss OD-3 approximation. ACTIVE in Snapshots 1+2 only. BYPASSED in Snapshots 3+4 (Thom's part uses Top Secret OD instead). Confirmed: Jonny does not adjust pedals during the song — Drive stays constant, only dynamics from picking hand change the intensity.",
@@ -68,7 +69,8 @@
       }
     },
     {
-      "type": "overdrive_thom",
+      "type": "distortion",
+      "variant": "Thom",
       "model": "Top Secret OD",
       "based_on": "DOD OD-250",
       "notes": "Thom's MXR Distortion+ approximation — both use the same LM741 op-amp clipping circuit. Only two parameters: Gain and Level. BYPASSED in Snapshots 1+2 (Jonny's part). ACTIVE in Snapshots 3+4 only. Confirmed via Jools Holland January 2008 performance.",

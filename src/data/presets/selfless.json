@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 97 BPM. Three snapshots: rhythm, lead shimmer (Poly Pitch octave-up), and fuzz solo (Wringer Fuzz).",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -30,7 +30,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Very low drive throughout — Selfless runs almost clean. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 where Wringer Fuzz handles all distortion.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "type": "fuzz",
+      "type": "distortion",
       "model": "Wringer Fuzz",
       "based_on": "Garbage's modded BOSS FZ-2",
       "notes": "Approximates fuzz character heard in Selfless solo. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only.",
@@ -88,7 +88,7 @@
       }
     },
     {
-      "type": "pitch",
+      "type": "pitch_synth",
       "model": "Poly Pitch",
       "based_on": "Line 6 Original",
       "notes": "Approximates EHX POG2 octave-up shimmer confirmed as key effect for Valensi's Selfless guitar sound. ACTIVE in Snapshots 1 and 2 at different Mix levels. BYPASSED in Snapshot 3 — fuzz solo stands alone.",

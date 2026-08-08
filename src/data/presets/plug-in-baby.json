@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Three snapshots plus expression pedal assignment. Confirmed effect: ZVex Fuzz Factory (Industrial Fuzz — exact model available in Helix). Confirmed amp: Marshall Super Lead / Vox AC30 combination for Origin of Symmetry era (Brit Plexi Jump — removed per amp+cab policy). Expression pedal assigned to Industrial Fuzz Stability parameter — sweeps from oscillating chaos (heel, Stability ~2) to stable fuzz (toe, Stability ~8). This recreates the famous intro sweep where Bellamy tames the Fuzz Factory oscillation. IMPORTANT NOTE: Industrial Fuzz Stability parameter — lower values = more oscillation/instability (chaos), higher values = stable fuzz. The intro starts at LOW stability (chaotic oscillation) and sweeps TO high stability (controlled fuzz) as the riff begins.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 nearly open — Fuzz Factory oscillation and noise is intentional, must not be gated. S2+S3 tighten.",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "type": "fuzz",
+      "type": "distortion",
       "model": "Industrial Fuzz",
       "based_on": "Z.Vex Fuzz Factory",
       "notes": "Exact confirmed model — ZVex Fuzz Factory is the confirmed Bellamy pedal for Plug In Baby. ACTIVE in all three snapshots. Stability is the key snapshot-variable parameter: S1 uses Stability 2.0 as starting point (EXP pedal sweeps from 2.0 to 8.0 during intro). S2+S3 use fixed Stability 9.5 (fully stable fuzz). Compress, Gate, Drive, Oscillator, Level are fixed across all snapshots. NOTE: Stability values — lower = more unstable/oscillating, higher = more stable fuzz.",

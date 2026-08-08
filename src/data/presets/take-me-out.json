@@ -15,7 +15,7 @@
   "tempo_change_note": "Take Me Out has a famous deliberate tempo change at approximately 0:53. The intro (Snapshot 1) is at ~104 BPM. The main section (Snapshots 2+3) is at ~133 BPM. Use tap tempo on the Helix to lock to each section. Master BPM is set to 133 for the main section — tap before Snapshot 1 to adjust intro delay if needed, or leave it as a fixed ms value.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Intro snapshot most open — angular riff must decay naturally. Main riff and lead tighten as Stupor OD and Deranged Master generate more noise.",
@@ -38,7 +38,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Added to compensate for Lace Sensor lower output and Super Champ XD higher clean headroom vs Kapranos's confirmed rig. Simulates the natural valve breakup the Selmer combo would have provided at volume. Drive kept low in all snapshots — this is not an obvious overdrive effect, just a foundation of saturation. ACTIVE in all three snapshots with progressively increasing Drive.",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "type": "boost",
+      "type": "distortion",
       "model": "Deranged Master",
       "based_on": "Dallas Rangemaster Treble Booster",
       "notes": "Confirmed: Kapranos uses a Telenordia Treble Booster on his 2022 live rig. Deranged Master (Dallas Rangemaster) is the closest available model. WARNING from YAML: 'Like the real thing, this model can take your head off! Works best before a distorted amp.' BYPASSED in Snapshot 1 (intro riff is cleaner and more angular). ACTIVE in Snapshots 2 and 3. Drive and Level pushed harder than initial version to compensate for Lace Sensor lower output and Super Champ XD clean headroom.",

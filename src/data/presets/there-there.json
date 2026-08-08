@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB (Essex A30 — removed per amp+cab policy) with Boss OD-3 (Stupor OD approximation) and Boss RE-20 Space Echo (Cosmos Echo). Mid-forward, slightly psychedelic tone with tribal, percussive character. 4-stage phaser adds swirling quality. Two snapshots: verse riff and heavy chorus.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -25,7 +25,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Boss OD-3 — mid-forward overdrive. ACTIVE in both snapshots. Chorus snapshot pushes Drive harder for more intensity.",
@@ -45,7 +45,7 @@
       }
     },
     {
-      "type": "phaser",
+      "type": "modulation",
       "model": "Script Mod Phase",
       "based_on": "MXR Phase 90 Script Mod",
       "notes": "Slow, subtle phaser adds the swirling, slightly psychedelic quality underneath the rhythm guitar. Keep understated — should feel like movement rather than an obvious effect. ACTIVE in both snapshots.",

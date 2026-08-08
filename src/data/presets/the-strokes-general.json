@@ -31,7 +31,7 @@
   },
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Clean snapshot most open — compression and very light OD generate minimal noise. Dirty and solo snapshots tighten as Ratatouille Dist generates more noise between notes.",
@@ -54,7 +54,7 @@
       }
     },
     {
-      "type": "compressor",
+      "type": "dynamics",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
       "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics that are central to the Strokes' compressed, even-attack rhythm character. ACTIVE in all three snapshots at the same settings — compression is a constant tonal foundation, not a snapshot-variable element. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
@@ -80,7 +80,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Jekyll & Hyde overdrive side. ACTIVE in Snapshot 1 (clean) at very low Drive — provides the barely-there breakup that gives the Strokes their 'clean but not quite clean' foundation. BYPASSED in Snapshots 2 and 3 — the Ratatouille Dist handles all saturation in the dirty and solo snapshots, and stacking would over-saturate.",
@@ -132,7 +132,7 @@
       }
     },
     {
-      "type": "boost",
+      "type": "distortion",
       "model": "Minotaur",
       "based_on": "Klon Centaur",
       "notes": "Nick Valensi confirmed notable user per YAML. Approximates MXR Micro Amp clean boost. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only — lifts the solo above the rhythm bed and adds slight Klon harmonic character on top of the Ratatouille Dist. Low Gain to keep it transparent, high Level for the boost.",
