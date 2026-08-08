@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Amp voicing compensated via Parametric EQ. Delays are tempo-synced to 118 BPM. Three snapshots: rhythm, chorus, and bridge solo. Key tonal difference from other Strokes presets: Hedgehog D9 (Maxon SD9) replaces Stupor OD — harder clipping, more aggressive character matching the song's upbeat, energetic character. 70s Chorus (Boss CE-2 approximation) active on rhythm and chorus snapshots — gives the New Order-adjacent character noted by reviewers.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Tighter gate than Selfless — Hedgehog D9 is harder-clipping than Stupor OD and generates more noise between notes.",
@@ -31,7 +31,7 @@
       }
     },
     {
-      "type": "compressor",
+      "type": "dynamics",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
       "notes": "Confirmed on Hammond's board. Provides the consistent, slightly squashed dynamics central to the Strokes' compressed, even-attack rhythm character. ACTIVE in all three snapshots at the same settings — compression is a constant tonal foundation. Mix at 70% blends compressed and dry signal to maintain some pick attack transient.",
@@ -83,7 +83,7 @@
       }
     },
     {
-      "type": "boost",
+      "type": "distortion",
       "model": "Minotaur",
       "based_on": "Klon Centaur",
       "notes": "Nick Valensi confirmed Klon user per YAML. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only for bridge solo — Bright switched On for the glam rock character of the solo.",
@@ -109,7 +109,7 @@
       }
     },
     {
-      "type": "chorus",
+      "type": "modulation",
       "model": "70s Chorus",
       "based_on": "BOSS CE-1",
       "notes": "Boss CE-2 confirmed on Valensi's board — CE-1 is the closest Helix model. Gives the New Order-adjacent character noted by reviewers. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 — bridge solo should be direct and unmodulated. Note: 70s Chorus has separate Chorus and Vibrato rate parameters. Mode set to Chorus to keep dry signal intact.",

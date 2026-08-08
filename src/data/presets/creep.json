@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Single patch with CTL pedal toggling between clean verse and heavy chorus. Confirmed rig: Thom Yorke used a Fender Telecaster Plus through a Fender Twin Reverb (clean channel) for verse. Jonny Greenwood's famous pre-chorus scrape is a pick rake on strings — no additional effect needed, pure technique. GUV DS (Guv'nor) approximates the Marshall Guv'nor distortion used for chorus. Four Pedal Assign parameters change simultaneously via CTL pedal toggle.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {

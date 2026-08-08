@@ -228,17 +228,19 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 }
 
 /* Category-based icon colors */
-.block-icon--multi      { color: #94a3b8; }
-.block-icon--distortion { color: #f97316; }
-.block-icon--dynamics   { color: #a78bfa; }
-.block-icon--eq         { color: #34d399; }
-.block-icon--modulation { color: #60a5fa; }
-.block-icon--delay      { color: #fbbf24; }
-.block-icon--reverb     { color: #67e8f9; }
-.block-icon--pitch      { color: #f472b6; }
-.block-icon--preamp     { color: #facc15; }
-.block-icon--amp        { color: #fb923c; }
-.block-icon--ampcab     { color: #f87171; }
+.block-icon--input        { color: #94a3b8; }
+.block-icon--distortion   { color: #f97316; }
+.block-icon--dynamics     { color: #a78bfa; }
+.block-icon--eq           { color: #34d399; }
+.block-icon--filter       { color: #a3e635; }
+.block-icon--modulation   { color: #60a5fa; }
+.block-icon--delay        { color: #fbbf24; }
+.block-icon--reverb       { color: #67e8f9; }
+.block-icon--pitch_synth  { color: #f472b6; }
+.block-icon--preamp       { color: #facc15; }
+.block-icon--amp          { color: #fb923c; }
+.block-icon--cab          { color: #f87171; }
+.block-icon--wah          { color: #2dd4bf; }
 
 .block-model { font-weight: 600; font-size: 1rem; }
 

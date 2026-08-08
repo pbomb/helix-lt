@@ -9,7 +9,7 @@
   "notes": "No amp+cab block — running into tube amp. Ed O'Brien used a Rickenbacker 360 with capo at 15th fret — on standard guitar use capo at 5th fret. Confirmed rig for OK Computer era: Vox AC30 (Essex A30 — removed per amp+cab policy), minimal effects. Recording is intentionally dry and intimate — recorded at Canned Applause rehearsal room. Teemah! approximates Voodoo Lab Sparkle Drive transparent overdrive character. Ubiquitous Vibe adds subtle organic modulation. Dotted eighth delay exact match at 75 BPM.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Very open gate — pristine clean tone. Notes must decay naturally.",
@@ -27,7 +27,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Teemah!",
       "based_on": "Paul Cochrane Timmy Overdrive",
       "notes": "Approximates Voodoo Lab Sparkle Drive — transparent overdrive with clean blend character. BYPASSED in Snapshot 1 (studio faithful). ACTIVE in Snapshot 2 (live atmospheric). Very low gain — just warmth and slight compression, not obvious overdrive. NOTE: Bass Cut and Treble Cut are CUT controls — higher values cut more of that frequency.",

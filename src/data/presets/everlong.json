@@ -15,7 +15,7 @@
   "tempo_note": "158 BPM, 4/4. Delay division chosen as 1/8 note (190ms at 158 BPM) for a tight rhythmic echo under the palm-muted intro/verse riff without smearing into slapback territory.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 clean/verse: light-gain tone needs a fairly open gate to preserve pick dynamics and let the intended 'grit when picked hard' through. S2 chorus/heavy: RAT + pushed preamp needs a tighter gate to control the layered Drop D guitars.",
@@ -33,7 +33,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "Rig compensation (not a confirmed Everlong pedal)",
       "notes": "Standard Lace Sensor / Super Champ XD compensation — mild always-on saturation to simulate the amp-stage grit a hotter-output rig would have for free. Kept very low in the clean/verse snapshot so it only contributes the 'grit when you pick extra hard' character described in confirmed tone breakdowns, not audible gain. Raised ahead of the RAT in the chorus/heavy snapshot to push the front end harder.",

@@ -1,22 +1,20 @@
 import { useState, type MouseEvent } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import type { SignalChainBlock } from '../types'
+import type { Category, SignalChainBlock } from '../types'
 import { presetBySlug } from '../data/index'
-import { getBlockIcon, getBlockCategory } from './BlockIcon'
+import { getBlockIcon } from './BlockIcon'
 
 const HZ_PARAMS = new Set(['Low Freq', 'Mid Freq', 'High Freq', 'Low Cut', 'High Cut'])
 
-const TYPE_ACRONYMS: Record<string, string> = { eq: 'EQ' }
+const TYPE_LABELS: Partial<Record<Category, string>> = { eq: 'EQ', pitch_synth: 'Pitch/Synth' }
 
-function formatBlockType(type: string): string {
-  return type
-    .split('_')
-    .map(w => TYPE_ACRONYMS[w.toLowerCase()] ?? w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ')
+function formatBlockType(type: Category): string {
+  return TYPE_LABELS[type] ?? type.charAt(0).toUpperCase() + type.slice(1)
 }
 
 function chainLabel(block: SignalChainBlock): string {
-  const label = formatBlockType(block.type)
+  const base = formatBlockType(block.type)
+  const label = block.variant ? `${base} ${block.variant}` : base
   return label === block.model ? label : `${label} (${block.model})`
 }
 
@@ -56,15 +54,12 @@ function BlockCard({ block, id, snapshotNames }: { block: SignalChainBlock; id: 
   const hasActiveField = activeValues.some(v => v !== undefined)
   const activeVaries = hasActiveField && new Set(activeValues.map(String)).size > 1
 
-  const icon = getBlockIcon(block.model)
-  const category = getBlockCategory(block.model)
+  const icon = getBlockIcon(block.type)
 
   return (
     <div className="block-card" id={id}>
       <div className="block-card-header">
-        {icon && (
-          <span className={`block-icon block-icon--${category}`}>{icon}</span>
-        )}
+        <span className={`block-icon block-icon--${block.type}`}>{icon}</span>
         <span className="block-model">{block.model}</span>
         {block.based_on && <span className="block-based-on">based on {block.based_on}</span>}
       </div>
@@ -152,15 +147,12 @@ export default function PresetDetail() {
         <h2>Signal Chain</h2>
         <div className="signal-chain">
           {preset.signal_chain.map((block, i) => {
-            const chainIcon = getBlockIcon(block.model)
-            const chainCat = getBlockCategory(block.model)
+            const chainIcon = getBlockIcon(block.type)
             const id = blockAnchorId(block, i)
             return (
               <div key={i} className="chain-wrap">
                 <a href={`#${id}`} className="chain-pill" onClick={scrollToBlock(id)}>
-                  {chainIcon && (
-                    <span className={`chain-pill-icon block-icon--${chainCat}`}>{chainIcon}</span>
-                  )}
+                  <span className={`chain-pill-icon block-icon--${block.type}`}>{chainIcon}</span>
                   {chainLabel(block)}
                 </a>
                 {i < preset.signal_chain.length - 1 && <span className="chain-arrow">→</span>}

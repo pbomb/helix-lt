@@ -9,7 +9,7 @@
   "confirmed_source": "Guitar Player December 2003 — Valensi direct quote explaining tone creation",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "S1 rhythm: moderate gate. S2 synth lead: very open — the fuzz sustain and bloom must not be gated. The smooth attack-free character of the synth tone requires notes to sustain and bloom naturally.",
@@ -27,7 +27,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
       "notes": "Approximates Jekyll & Hyde overdrive side — confirmed Room on Fire era pedal. S1 rhythm: moderate drive for conventional Strokes rhythm character. S2 synth lead: BYPASSED — the Dark Dove Fuzz handles all saturation, stacking OD on top of fuzz would over-saturate and obscure the synth character.",
@@ -47,7 +47,7 @@
       }
     },
     {
-      "type": "fuzz",
+      "type": "distortion",
       "model": "Dark Dove Fuzz",
       "based_on": "Electro-Harmonix Russian Big Muff",
       "notes": "Best available approximation for the 12:51 synth tone. The Russian Big Muff is dark, smooth, and compressed — when Tone is set at minimum (fully rolled off) it produces an attack-free, blooming fuzz sustain that closely matches what Valensi achieved by rolling off his guitar's tone control into a maxed-out amp. Sustain at maximum for the smooth, boundless sustain of the synth character. S1 rhythm: BYPASSED — conventional rhythm tone uses Stupor OD only. S2 synth lead: ACTIVE with Tone at minimum and Sustain at maximum.",

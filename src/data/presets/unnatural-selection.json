@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Two snapshots: clean intro/verse and heavy riff. Confirmed effect: MXR Blue Box sub-octave fuzz. IMPORTANT: 'Sub Octave Fuzz' model referenced in earlier preset research does not exist in the YAML. Best available approximation uses TWO blocks: Wringer Fuzz (fuzz character) + Boctaver (Boss OC-2, sub-octave). These work together to approximate the Blue Box's integrated fuzz-plus-sub-octave circuit — Wringer Fuzz provides the aggressive fuzz saturation, Boctaver adds the octave-down voice. This is less integrated than a dedicated sub-octave fuzz model but achieves the core tonal elements. Scream 808 as additional boost/tightener in S2. Confirmed amp: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy).",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -25,7 +25,7 @@
       }
     },
     {
-      "type": "fuzz",
+      "type": "distortion",
       "model": "Wringer Fuzz",
       "based_on": "Garbage's modded BOSS FZ-2",
       "notes": "Provides the fuzz saturation component of the Blue Box approximation. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Fuzz Type set to Fuzz for most direct hard-clipping character. Bass rolled back to prevent muddiness through Boctaver and into Drop D tube amp.",
@@ -49,7 +49,7 @@
       }
     },
     {
-      "type": "octave",
+      "type": "pitch_synth",
       "model": "Boctaver",
       "based_on": "BOSS OC-2 Octaver",
       "notes": "Provides the sub-octave component of the Blue Box approximation. Parameters: -1 Oct level, -2 Oct level, Dry Level. -1 Oct prominent (matching Blue Box's primary sub-octave voice). -2 Oct subtle (matching Blue Box's secondary sub-octave voice). Dry Level at 100 preserves dry signal alongside octave voices. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Boctaver tracks single notes best — play riff with clean separated notes.",
@@ -69,7 +69,7 @@
       }
     },
     {
-      "type": "boost",
+      "type": "distortion",
       "model": "Scream 808",
       "based_on": "Ibanez TS808 Tube Screamer",
       "notes": "Clean boost and low-end tightener into tube amp. BYPASSED in Snapshot 1. ACTIVE in Snapshot 2. Minimal Gain — this is a clean level boost, not additional overdrive.",

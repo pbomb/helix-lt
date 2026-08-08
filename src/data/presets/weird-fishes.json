@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Confirmed rig: Ed O'Brien used a 1964 Gibson ES-335, Voodoo Lab Sparkle Drive, Boss DD5 delay, and Akai Headrush E2 looper through a Mesa Boogie Trem-O-Verb and Vox AC30. Thom Yorke used a 1964 Gibson SG. Jonny played totally clean with just a Gretsch Tennessee Rose, Akai Headrush E1 looper, and small vintage Orpheum amplifier. Two delays approximate the dual-delay/looper setup — Delay 1 is the primary dotted eighth (exact match at 87 BPM), Delay 2 is a secondary dotted sixteenth creating rhythmic interlocking shimmer. Teemah! approximates Sparkle Drive — BYPASSED in S1, ACTIVE in S2 as song intensifies.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "notes": "Very open gate — delicate arpeggio tone. Natural decay essential.",
@@ -26,7 +26,7 @@
       }
     },
     {
-      "type": "overdrive",
+      "type": "distortion",
       "model": "Teemah!",
       "based_on": "Paul Cochrane Timmy Overdrive",
       "notes": "Approximates Voodoo Lab Sparkle Drive. BYPASSED in Snapshot 1 (clean arpeggios). ACTIVE in Snapshot 2 as song intensifies around the 2:30 mark — very low gain, just warmth and slight compression. NOTE: Bass Cut and Treble Cut are CUT controls — higher values remove more frequency.",
@@ -50,7 +50,7 @@
       }
     },
     {
-      "type": "chorus",
+      "type": "modulation",
       "model": "Chorus",
       "based_on": "Line 6 Original",
       "notes": "Very subtle chorus adds slight width and shimmer — the three-dimensional bloom of the arpeggio tone. Speed very slow, Depth low — should feel like natural animation not obvious chorus. ACTIVE in both snapshots, slightly more prominent in Snapshot 2.",

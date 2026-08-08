@@ -8,7 +8,7 @@
   "notes": "No amp+cab block — running into tube amp. Three snapshots: verse/clean, heavy riff, bridge/breakdown. Confirmed rig: Diezel VH4 (Das Benzin Lead — removed per amp+cab policy). Scream 808 (TS808) confirmed as clean boost into amp for heavy sections. Pitch Wham (DigiTech Whammy) confirmed for octave-down harmony — Bellamy uses Whammy set to Harmony -1 octave, blending dry with octave-down signal. Poly Wham (Helix version) auto-assigns to EXP 1. EQ compensates for removed Das Benzin Lead and 4x12 V30 cab voicing — aggressive mid boost at 700Hz is the defining characteristic of Bellamy's Resistance-era tone. IMPORTANT: Dynamic Hall Room Size must NOT be snapshot-variable — set as fixed value to avoid audible algorithm bump.",
   "signal_chain": [
     {
-      "type": "noise_gate",
+      "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
       "snapshots": {
@@ -30,7 +30,7 @@
       }
     },
     {
-      "type": "boost",
+      "type": "distortion",
       "model": "Scream 808",
       "based_on": "Ibanez TS808 Tube Screamer",
       "notes": "Transparent clean boost tightening tube amp low end and adding small amount of gain. Minimal Gain, neutral Tone, high Level. BYPASSED in Snapshot 1 (clean verse). ACTIVE in Snapshots 2 and 3.",
@@ -56,7 +56,7 @@
       }
     },
     {
-      "type": "pitch",
+      "type": "pitch_synth",
       "model": "Pitch Wham",
       "based_on": "DigiTech Whammy",
       "notes": "Confirmed: Bellamy uses DigiTech Whammy set to Harmony -1 octave for MK Ultra riff — blends dry signal with octave-down voice. Heel Pitch 0 (unison) + Toe Pitch -12 (one octave down). Position 100 = full toe-down = full octave-down blend at set Mix level. ACTIVE in all snapshots but Mix varies significantly — S1 subtle shimmer (15%), S2 prominent octave-down (40%), S3 most prominent (50%).",

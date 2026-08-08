@@ -3,8 +3,36 @@ export interface SnapshotParams {
   [key: string]: string | number | boolean | null | undefined
 }
 
+// The block categories as defined on the Helix itself (top-level keys of
+// helix-models-all.yaml, plus 'input'). Determines both the chain-pill label
+// and (via BlockIcon's ICONS) the icon/color shown for the block. Note that
+// 'amp' and 'preamp' share the same underlying model list on the device —
+// the same amp model can be placed in either block slot — so category is a
+// property of how a block is used, not of the model name. Likewise 'input':
+// "Noise Gate" and "Hard Gate" are Dynamics-category models, but every
+// preset here uses one as the fixed first block's gate mode (the always-
+// present Input block), never as a discrete mid-chain Dynamics pedal — so
+// that usage gets its own category rather than 'dynamics'.
+export type Category =
+  | 'amp'
+  | 'cab'
+  | 'delay'
+  | 'distortion'
+  | 'dynamics'
+  | 'eq'
+  | 'filter'
+  | 'input'
+  | 'modulation'
+  | 'pitch_synth'
+  | 'preamp'
+  | 'reverb'
+  | 'wah'
+
 export interface SignalChainBlock {
-  type: string
+  type: Category
+  // Disambiguates two blocks of the same type in one chain (e.g. whose pedal,
+  // or which of two identical models) — shown alongside the type in the label.
+  variant?: string
   model: string
   based_on?: string
   notes?: string
