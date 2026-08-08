@@ -45,6 +45,22 @@ function formatValue(val: string | number | boolean | null | undefined, param?: 
   return String(val)
 }
 
+// Splits a dense prose note into one paragraph per sentence so long notes
+// don't render as a single unbroken wall of text.
+function splitSentences(text: string): string[] {
+  return text.split(/(?<=[.!?])\s+(?=[A-Z])/)
+}
+
+function NotesText({ text, className }: { text: string; className: string }) {
+  return (
+    <div className={className}>
+      {splitSentences(text).map((sentence, i) => (
+        <p key={i}>{sentence}</p>
+      ))}
+    </div>
+  )
+}
+
 function BlockCard({ block, id, snapshotNames }: { block: SignalChainBlock; id: string; snapshotNames: string[] }) {
   const params = snapshotNames.length > 0
     ? Object.keys(block.snapshots[snapshotNames[0]] ?? {}).filter(k => k !== 'active')
@@ -63,7 +79,7 @@ function BlockCard({ block, id, snapshotNames }: { block: SignalChainBlock; id: 
         <span className="block-model">{block.model}</span>
         {block.based_on && <span className="block-based-on">based on {block.based_on}</span>}
       </div>
-      {block.notes && <p className="block-notes">{block.notes}</p>}
+      {block.notes && <NotesText text={block.notes} className="block-notes" />}
       <table className="param-table">
         <thead>
           <tr>
@@ -140,7 +156,13 @@ export default function PresetDetail() {
           {preset.tuning && <><span className="meta-sep">·</span><span>{preset.tuning}</span></>}
           {notes?.capo && <><span className="meta-sep">·</span><span>Capo {notes.capo}</span></>}
         </div>
-        {preset.notes && <p className="detail-notes">{preset.notes}</p>}
+        {preset.notes && <NotesText text={preset.notes} className="detail-notes" />}
+        {preset.note_on_block_limit && (
+          <div className="block-limit-note">
+            <span className="block-limit-note-label">Block limit note</span>
+            <NotesText text={preset.note_on_block_limit} className="block-limit-note-body" />
+          </div>
+        )}
       </header>
 
       <section className="signal-chain-section">
