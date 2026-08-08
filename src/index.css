@@ -144,6 +144,33 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
   padding-left: 0.75rem;
 }
 
+.detail-notes p, .block-notes p, .block-limit-note-body p {
+  margin: 0 0 0.6rem;
+}
+
+.detail-notes p:last-child, .block-notes p:last-child, .block-limit-note-body p:last-child {
+  margin-bottom: 0;
+}
+
+.block-limit-note {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  border-left: 3px solid var(--accent);
+  padding-left: 0.75rem;
+}
+
+.block-limit-note-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+}
+
 /* ── Signal Chain ── */
 .signal-chain-section { margin-bottom: 2rem; }
 
