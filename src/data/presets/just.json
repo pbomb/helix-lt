@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048519293c743fa542094336c5e12",
   "tuning": "Standard",
   "master_bpm": 102,
-  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 (Brit 2203 — removed per amp+cab policy) with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). DigiTech Whammy WH-1 confirmed for solo — Poly Wham at +12 semitones (octave up) at 65% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). Since the JCM800 2203 is a specific confirmed amp (not just generic rig compensation), it's modeled as a Preamp-only block (Brit 2203, no cab/power amp) active across all three snapshots, per AGENTS.md's rule that preamp blocks are warranted when a real amp is confirmed for the part. DigiTech Whammy WH-1 confirmed for solo — Poly Wham at +12 semitones (octave up) at 65% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
   "signal_chain": [
     {
       "type": "input",
@@ -116,6 +116,47 @@
           "Auto EQ": true,
           "Mix": 65,
           "Level": 0
+        }
+      }
+    },
+    {
+      "type": "preamp",
+      "model": "Brit 2203",
+      "based_on": "Marshall JCM800 2203",
+      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Poly Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all three snapshots since this is the amp for the whole song, not a per-section coloration choice. S1 verse: moderate Drive for the semi-clean/mid-forward SD-1 tone. S2 heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. S3 whammy solo: Drive between the two, Sag raised slightly for looser compression under sustained bent notes. Input parameter (jack selection, unique to this model) intentionally left unset — its value scale/options aren't reliably documented in the YAML; ask before setting if further accuracy is wanted.",
+      "snapshots": {
+        "1_verse": {
+          "active": true,
+          "Drive": 4.0,
+          "Bass": 5,
+          "Mid": 6,
+          "Treble": 5,
+          "Master": 5,
+          "Ch Vol": 5,
+          "Sag": 4,
+          "Hum": 1
+        },
+        "2_heavy_riff": {
+          "active": true,
+          "Drive": 6.5,
+          "Bass": 5,
+          "Mid": 6,
+          "Treble": 5,
+          "Master": 6,
+          "Ch Vol": 6,
+          "Sag": 4,
+          "Hum": 1
+        },
+        "3_whammy_solo": {
+          "active": true,
+          "Drive": 5.5,
+          "Bass": 5,
+          "Mid": 6,
+          "Treble": 5,
+          "Master": 6,
+          "Ch Vol": 6,
+          "Sag": 5,
+          "Hum": 1
         }
       }
     },
@@ -286,17 +327,17 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Verse / semi-clean. SD-1 only — no Ratatouille. Poly Wham bypassed. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
+      "description": "Verse / semi-clean. SD-1 only — no Ratatouille. Poly Wham bypassed. Brit 2203 preamp active at moderate Drive 4.0 for JCM800 front-end push. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
       "pickup_position": "Bridge"
     },
     "2_heavy_riff": {
       "footswitch": "FS2",
-      "description": "Heavy riff. SD-1 boosting into Ratatouille — stacked ShredMaster approximation. Poly Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
+      "description": "Heavy riff. SD-1 boosting into Ratatouille — stacked ShredMaster approximation, both pushing the Brit 2203 preamp (Drive 6.5) hard. Poly Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
       "pickup_position": "Bridge"
     },
     "3_whammy_solo": {
       "footswitch": "FS3",
-      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5. Poly Wham active — Position 100, Toe Shift +12, Mix 65%. Octave-up voice prominent. EQ mid at 1.0kHz wider Q. Eighth note delay at 35% mix. High Cut at 8kHz to tame octave harshness.",
+      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5, into Brit 2203 preamp (Drive 5.5, Sag 5 for looser sustain). Poly Wham active — Position 100, Toe Shift +12, Mix 65%. Octave-up voice prominent. EQ mid at 1.0kHz wider Q. Eighth note delay at 35% mix. High Cut at 8kHz to tame octave harshness.",
       "pickup_position": "Bridge"
     }
   },
