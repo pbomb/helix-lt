@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048512d6d46ea0c000c11083f2158",
   "tuning": "Standard / Eb (see snapshot notes)",
   "master_bpm": 120,
-  "notes": "No amp+cab block — running into tube amp. General album preset covering the four main tonal moods of Siamese Dream across four snapshots. CONFIRMED RIG from multiple primary sources including Billy Corgan's own TikTok gear tour: 1984 Marshall JCM800 100W (Brit 2203 — removed per amp+cab policy), Electro-Harmonix V4/V5 Op-Amp Big Muff Pi (Bighorn Fuzz — closest available), MXR Distortion+ for leads (Top Secret OD — same LM741 circuit), MXR Phase 100 / Mu-Tron Bi-Phase for modulation (Script Mod Phase), Electro-Harmonix Electric Mistress for flange/chorus layers (Courtesan Flange). IMPORTANT LAYERING NOTE: The definitive Siamese Dream tone was created by Corgan and Iha recording guitar parts 4 to 6 times rather than double-tracking. A single guitar through this preset will not replicate the full wall-of-sound — it captures the tonal character. Master BPM set to 120 as neutral default — use tap tempo for specific songs. Many Siamese Dream songs use Eb tuning (half step down).",
+  "notes": "No cab block — running into tube amp. General album preset covering the four main tonal moods of Siamese Dream across four snapshots. CONFIRMED RIG from multiple primary sources including Billy Corgan's own TikTok gear tour: 1984 Marshall JCM800 100W (Brit 2203, preamp-only), Electro-Harmonix V4/V5 Op-Amp Big Muff Pi (Bighorn Fuzz — closest available), MXR Distortion+ for leads (Top Secret OD — same LM741 circuit), MXR Phase 100 / Mu-Tron Bi-Phase for modulation (Script Mod Phase), Electro-Harmonix Electric Mistress for flange/chorus layers (Courtesan Flange). Since the JCM800 is a specific confirmed amp (not generic rig compensation) it's modeled as a Brit 2203 preamp block per AGENTS.md's rule — see note_on_block_limit for how it's routed given the 8-block serial-path limit. IMPORTANT LAYERING NOTE: The definitive Siamese Dream tone was created by Corgan and Iha recording guitar parts 4 to 6 times rather than double-tracking. A single guitar through this preset will not replicate the full wall-of-sound — it captures the tonal character. Master BPM set to 120 as neutral default — use tap tempo for specific songs. Many Siamese Dream songs use Eb tuning (half step down).",
   "confirmed_sources": [
     "Billy Corgan TikTok gear tour — personal confirmation of Big Muff, MXR Distortion+, MXR Phase 100 settings",
     "Reverb News — The Gear of The Smashing Pumpkins",
@@ -16,6 +16,7 @@
   ],
   "tuning_note": "Several Siamese Dream songs use Eb tuning (half step down): Soma, Mayonaise, Luna, Spaceboy, Hummer, Silverfuck. Standard tuning songs include Cherub Rock, Today, Rocket, Geek USA, Quiet, Thru the Eyes of Ruby. Check the specific song before playing.",
   "layering_note": "Corgan's technique was to track rhythm guitars 4-6 times, panning them across the stereo field. A single guitar will sound thinner than the record regardless of settings — this is inherent to the recording technique, not a preset limitation.",
+  "note_on_block_limit": "Path 1A is already at the 8-block limit (Noise Gate, Top Secret OD, Bighorn Fuzz, Script Mod Phase, Courtesan Flange, Parametric EQ, Cosmos Echo, Dynamic Hall). The Brit 2203 preamp block runs in parallel on Path 1B rather than in series on 1A, merging back into the main path before the EQ block — set up the two paths to split after Courtesan Flange and rejoin before Parametric EQ. It's listed in signal_chain at that same point (between Courtesan Flange and Parametric EQ) to reflect where it sits in the audio flow, even though physically it occupies a separate path slot, not an additional 1A block.",
   "signal_chain": [
     {
       "type": "input",
@@ -186,10 +187,63 @@
       }
     },
     {
+      "type": "preamp",
+      "model": "Brit 2203",
+      "variant": "Path 1B (parallel, merges before EQ — see note_on_block_limit)",
+      "based_on": "1984 Marshall JCM800 100W",
+      "notes": "Confirmed via Corgan's own TikTok gear tour and corroborated by Andertons' signal-chain research. Routed on parallel Path 1B rather than stacked onto the already-full 8-block Path 1A — splits after Courtesan Flange and rejoins before Parametric EQ. Settings held CONSTANT across all four snapshots rather than toggled/varied — this reflects Corgan's confirmed fixed physical amp setting (see jcm800_technique in playing_notes): Big Muff into the LOW SENSITIVITY input, Master on full, preamp Drive barely on. That's why Drive here is low while Master/Ch Vol are high — the dirt comes entirely from the pedals ahead of it, not the amp's own gain stage, matching how Corgan actually ran it regardless of song section. Mid scooped and Treble raised for the JCM800's characteristic upper-mid presence.",
+      "snapshots": {
+        "1_clean": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "2_heavy_rhythm": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "3_lead_phase": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "4_wall_of_fuzz": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1
+        }
+      }
+    },
+    {
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Compensates for removed Brit 2203 and Marshall 4x12 cab voicing. The JCM800 into a 4x12 has a naturally scooped low-mid and prominent upper-mid presence — the EQ block approximates this character. S1 clean: warm and open, minimal sculpting. S2 heavy rhythm: mid-scooped character matching the Big Muff's natural mid scoop through a Marshall. S3 lead: upper-mid presence boosted for lead definition and cut. S4 wall-of-fuzz: aggressive low cut to prevent muddiness from maximum Sustain Big Muff. Level raised in S2-S4 to push Super Champ XD harder and compensate for Lace Sensor lower output vs Corgan's hot Lace Sensor Red/Silver/Blue set.",
+      "notes": "Works alongside the Brit 2203 preamp (Path 1B) and Marshall 4x12 cab voicing that's still not modeled — the JCM800 into a 4x12 has a naturally scooped low-mid and prominent upper-mid presence, which the preamp block now handles directly; this EQ block adds finer per-snapshot sculpting on top. S1 clean: warm and open, minimal sculpting. S2 heavy rhythm: mid-scooped character matching the Big Muff's natural mid scoop through a Marshall. S3 lead: upper-mid presence boosted for lead definition and cut. S4 wall-of-fuzz: aggressive low cut to prevent muddiness from maximum Sustain Big Muff. Level raised in S2-S4 to push Super Champ XD harder and compensate for Lace Sensor lower output vs Corgan's hot Lace Sensor Red/Silver/Blue set.",
       "snapshots": {
         "1_clean": {
           "Low Freq": 150,
@@ -398,7 +452,7 @@
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",
-      "description": "Clean / gentle tone. Top Secret OD and Bighorn Fuzz both bypassed. Courtesan Flange active at very low Mix (3.0) — adds dreamy shimmer. Script Mod Phase bypassed. Open EQ. Dotted eighth delay (375ms) at 32% mix. Long atmospheric reverb (2.5 sec, 40% mix). Represents: Today intro clean arpeggio, Disarm, Luna, Spaceboy clean sections.",
+      "description": "Clean / gentle tone. Top Secret OD and Bighorn Fuzz both bypassed. Courtesan Flange active at very low Mix (3.0) — adds dreamy shimmer. Script Mod Phase bypassed. Brit 2203 preamp active (Path 1B) at its fixed low-Drive setting for JCM800 front-end character. Open EQ. Dotted eighth delay (375ms) at 32% mix. Long atmospheric reverb (2.5 sec, 40% mix). Represents: Today intro clean arpeggio, Disarm, Luna, Spaceboy clean sections.",
       "representative_songs": [
         "Today (clean intro arpeggios)",
         "Disarm",
@@ -411,7 +465,7 @@
     },
     "2_heavy_rhythm": {
       "footswitch": "FS2",
-      "description": "Heavy rhythm / wall-of-sound rhythm. Top Secret OD bypassed — Big Muff alone into JCM800 for rhythm. Bighorn Fuzz active at Sustain 9.0, Tone 5.0. Phaser and Flanger bypassed. Mid-scooped EQ matching Big Muff's natural character through Marshall. Tight eighth note delay (250ms, 15% mix). Tight reverb (0.6 sec, 12% mix). Represents: Cherub Rock main riff, Geek USA, Rocket, Quiet.",
+      "description": "Heavy rhythm / wall-of-sound rhythm. Top Secret OD bypassed — Big Muff alone into the Brit 2203 preamp (Path 1B) for rhythm. Bighorn Fuzz active at Sustain 9.0, Tone 5.0. Phaser and Flanger bypassed. Mid-scooped EQ matching Big Muff's natural character through the Marshall front end. Tight eighth note delay (250ms, 15% mix). Tight reverb (0.6 sec, 12% mix). Represents: Cherub Rock main riff, Geek USA, Rocket, Quiet.",
       "representative_songs": [
         "Cherub Rock (main riff)",
         "Geek USA (rhythm)",
@@ -424,7 +478,7 @@
     },
     "3_lead_phase": {
       "footswitch": "FS3",
-      "description": "Lead / solo with phase. Top Secret OD active (Gain 7.0) — Distortion+ stacked before Big Muff per Corgan's confirmed lead signal chain. Bighorn Fuzz active at Sustain 9.5, Tone 6.0 (brighter for lead definition). Script Mod Phase active at Rate 0.3 (very slow, per Corgan's instruction). Courtesan Flange active at Mix 4.0. Upper-mid boosted EQ for lead cut. Dotted eighth delay (375ms, 38% mix). Moderate reverb (1.8 sec, 28% mix). Represents: Today solo, Silverfuck lead, Soma solo, Mayonaise lead.",
+      "description": "Lead / solo with phase. Top Secret OD active (Gain 7.0) — Distortion+ stacked before Big Muff per Corgan's confirmed lead signal chain, both feeding the Brit 2203 preamp (Path 1B). Bighorn Fuzz active at Sustain 9.5, Tone 6.0 (brighter for lead definition). Script Mod Phase active at Rate 0.3 (very slow, per Corgan's instruction). Courtesan Flange active at Mix 4.0. Upper-mid boosted EQ for lead cut. Dotted eighth delay (375ms, 38% mix). Moderate reverb (1.8 sec, 28% mix). Represents: Today solo, Silverfuck lead, Soma solo, Mayonaise lead.",
       "representative_songs": [
         "Today (lead solo)",
         "Silverfuck (lead passages)",
@@ -437,7 +491,7 @@
     },
     "4_wall_of_fuzz": {
       "footswitch": "FS4",
-      "description": "Maximum wall-of-fuzz. Top Secret OD active at Gain 8.0. Bighorn Fuzz at maximum Sustain 10.0, Tone 4.0 (rolled back for massive thickness). Script Mod Phase active at Rate 0.5. Flanger bypassed. Very aggressive low cut EQ (Low Cut 120Hz, Low Gain -4dB, Mid Gain -3dB at 600Hz) managing the extreme low-end density. Eighth note delay at minimal mix (10%). Very tight reverb (0.5 sec, 8% mix). Represents: Geek USA intro, Thru the Eyes of Ruby, heaviest moments of Cherub Rock chorus.",
+      "description": "Maximum wall-of-fuzz. Top Secret OD active at Gain 8.0. Bighorn Fuzz at maximum Sustain 10.0, Tone 4.0 (rolled back for massive thickness), all feeding the Brit 2203 preamp (Path 1B) at its usual fixed low-Drive setting — the fuzz, not the amp, does the heavy lifting here too. Script Mod Phase active at Rate 0.5. Flanger bypassed. Very aggressive low cut EQ (Low Cut 120Hz, Low Gain -4dB, Mid Gain -3dB at 600Hz) managing the extreme low-end density. Eighth note delay at minimal mix (10%). Very tight reverb (0.5 sec, 8% mix). Represents: Geek USA intro, Thru the Eyes of Ruby, heaviest moments of Cherub Rock chorus.",
       "representative_songs": [
         "Geek USA (heaviest sections)",
         "Thru the Eyes of Ruby (heavy passages)",
@@ -456,7 +510,7 @@
     "bighorn_fuzz_note": "The Bighorn Fuzz (Ram's Head Big Muff) approximates the Op-Amp V4/V5 Big Muff but is not identical. The Op-Amp version is harsher and more aggressive — the Ram's Head is the closest available Helix approximation. Sustain at 9.0-10.0 and the Tone rolled back in S4 gets close to the characteristic wall-of-fuzz density.",
     "distortion_plus_stacking": "In S3 and S4 the Top Secret OD (Distortion+) stacks before the Bighorn Fuzz (Big Muff) per Corgan's confirmed signal chain. This is counterintuitive — normally you'd put the lighter pedal before the heavier one — but Corgan ran the Distortion+ into the Big Muff specifically for leads. The result is a tighter, more defined lead tone that cuts through the fuzz.",
     "phase_technique": "Corgan's instruction was to turn the Phase 100 speed 'all the way down' — the Script Mod Phase Rate at 0.3 approximates this. At this speed the phasing is barely perceptible as movement — it adds a subtle, slow-sweeping quality to the tone rather than an obvious phase effect. If it sounds too obvious, reduce Rate further toward 0.1.",
-    "jcm800_technique": "Corgan plugged the Big Muff into the LOW SENSITIVITY input of the JCM800 with master volume on full and preamp volume barely on. Without the amp+cab block this technique's specific character is lost — the EQ block compensates by adding the naturally scooped mid character this technique produced. If your tube amp has a separate input sensitivity option, try plugging into the lower sensitivity input.",
+    "jcm800_technique": "Corgan plugged the Big Muff into the LOW SENSITIVITY input of the JCM800 with master volume on full and preamp volume barely on. This is now modeled directly by the Brit 2203 preamp block (Path 1B) — Drive held low and constant at 2.5 while Master/Ch Vol sit high (8/7) across all snapshots, matching his fixed physical setting rather than varying per song section. The Parametric EQ block still does additional per-snapshot fine sculpting on top. If your tube amp has a separate input sensitivity option, try plugging into the lower sensitivity input as well for closer front-end feel.",
     "further_listening": {
       "S1_reference_tracks": [
         "Today",

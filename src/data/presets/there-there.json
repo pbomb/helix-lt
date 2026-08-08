@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048510da53e8f58e59f28a79c10c7",
   "tuning": "Standard",
   "master_bpm": 92,
-  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB (Essex A30 — removed per amp+cab policy) with Boss OD-3 (Stupor OD approximation) and Boss RE-20 Space Echo (Cosmos Echo). Mid-forward, slightly psychedelic tone with tribal, percussive character. 4-stage phaser adds swirling quality. Two snapshots: verse riff and heavy chorus.",
+  "notes": "No cab block — running into tube amp. Confirmed rig: Jonny Greenwood used a Vox AC30TB (Essex A30, preamp-only) with Boss OD-3 (Stupor OD approximation) and Boss RE-20 Space Echo (Cosmos Echo). Since the AC30TB is a specific confirmed amp, it's modeled as an Essex A30 preamp block per AGENTS.md's rule — the chain has room under the 8-block serial-path limit so it sits on Path 1A, no parallel path needed. Mid-forward, slightly psychedelic tone with tribal, percussive character. 4-stage phaser adds swirling quality. Two snapshots: verse riff and heavy chorus.",
   "signal_chain": [
     {
       "type": "input",
@@ -41,6 +41,34 @@
           "Drive": 6.5,
           "Tone": 5.5,
           "Level": 7.0
+        }
+      }
+    },
+    {
+      "type": "preamp",
+      "model": "Essex A30",
+      "based_on": "Vox AC30TB",
+      "notes": "Confirmed amp for Jonny Greenwood's Hail to the Thief-era tone. Preamp-only (no cab/power amp) — sits after the Stupor OD (per AGENTS.md convention: after distortion, before modulation) and before Script Mod Phase, EQ, delay, and reverb. Fits within the existing 8-block limit on Path 1A, so no parallel path needed. The preamp-only version of this model doesn't expose Cut, Mid, or Presence (those are power-amp/cab-stage parameters on the full Amp version) — only Drive/Bass/Treble/Master/Sag/Ch Vol/Hum are available. Chorus snapshot pushes Drive and Master slightly harder, mirroring the Stupor OD's own increase, for the thicker, more saturated section.",
+      "snapshots": {
+        "1_verse": {
+          "active": true,
+          "Drive": 4.0,
+          "Bass": 5,
+          "Treble": 6,
+          "Master": 6,
+          "Ch Vol": 5,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "2_chorus": {
+          "active": true,
+          "Drive": 5.0,
+          "Bass": 5,
+          "Treble": 6,
+          "Master": 7,
+          "Ch Vol": 6,
+          "Sag": 3.5,
+          "Hum": 1
         }
       }
     },
@@ -174,12 +202,12 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Verse riff tone. Stupor OD at Drive 5.0. Script Mod Phase slow and subtle. Mid boost +4dB at 500Hz. Cosmos Echo at 28% mix. Moderate reverb.",
+      "description": "Verse riff tone. Stupor OD at Drive 5.0. Essex A30 preamp active at Drive 4.0 for AC30TB front-end character. Script Mod Phase slow and subtle. Mid boost +4dB at 500Hz. Cosmos Echo at 28% mix. Moderate reverb.",
       "pickup_position": "Bridge"
     },
     "2_chorus": {
       "footswitch": "FS2",
-      "description": "Heavy chorus tone. Stupor OD pushed to Drive 6.5. More aggressive mid boost +5dB. Tighter high cut. Delay pulls back to 18% mix so it doesn't clutter the heavier texture. Shorter, drier reverb keeps punch.",
+      "description": "Heavy chorus tone. Stupor OD pushed to Drive 6.5, driving the Essex A30 preamp harder too (Drive 5.0, Master 7). More aggressive mid boost +5dB. Tighter high cut. Delay pulls back to 18% mix so it doesn't clutter the heavier texture. Shorter, drier reverb keeps punch.",
       "pickup_position": "Bridge"
     }
   },

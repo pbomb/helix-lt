@@ -5,7 +5,8 @@
   "thumbnail": "https://images.seeklogo.com/logo-png/13/2/the-strokes-logo-png_seeklogo-139195.png",
   "tuning": "Standard",
   "master_bpm": 100,
-  "notes": "No amp+cab block — running into tube amp. General-purpose Strokes preset with three snapshots covering clean, dirty, and solo tones drawn from the overall cross-album tonal signature. Not specific to any one song — designed to cover the mood of the most popular tracks across Is This It, Room on Fire, and The New Abnormal. BPM set to 100 as a neutral default — use tap tempo to lock to the specific song being played. Confirmed cross-album rig constants: Visual Sound Jekyll & Hyde OD (Stupor OD), Pro Co RAT (Ratatouille Dist), MXR Micro Amp (Minotaur), Fender Hot Rod DeVille (US Double Nrm — removed per amp+cab policy). Compression (Red Squeeze / MXR Dyna Comp) confirmed on Hammond's board. The telephone filter EQ — aggressive low and high cuts with boosted mids — is the single most defining characteristic of the Strokes' tone across all albums and must be present in all three snapshots.",
+  "notes": "No cab block — running into tube amp. General-purpose Strokes preset with three snapshots covering clean, dirty, and solo tones drawn from the overall cross-album tonal signature. Not specific to any one song — designed to cover the mood of the most popular tracks across Is This It, Room on Fire, and The New Abnormal. BPM set to 100 as a neutral default — use tap tempo to lock to the specific song being played. Confirmed cross-album rig constants: Visual Sound Jekyll & Hyde OD (Stupor OD), Pro Co RAT (Ratatouille Dist), MXR Micro Amp (Minotaur), Fender Hot Rod DeVille (US Double Nrm, preamp-only). Since the DeVille is a confirmed cross-album rig constant, it's modeled as a US Double Nrm preamp block per AGENTS.md's rule — see note_on_block_limit for how it's routed given the 8-block serial-path limit. Compression (Red Squeeze / MXR Dyna Comp) confirmed on Hammond's board. The telephone filter EQ — aggressive low and high cuts with boosted mids — is the single most defining characteristic of the Strokes' tone across all albums and must be present in all three snapshots.",
+  "note_on_block_limit": "Path 1A is already at the 8-block limit (Noise Gate, Red Squeeze, Stupor OD, Ratatouille Dist, Minotaur, Parametric EQ, Adriatic Delay, Ganymede). The US Double Nrm preamp block runs in parallel on Path 1B rather than in series on 1A, merging back into the main path before the EQ block — set up the two paths to split after Minotaur and rejoin before Parametric EQ. It's listed in signal_chain at that same point to reflect where it sits in the audio flow, even though physically it occupies a separate path slot, not an additional 1A block.",
   "songs_that_inspired_each_snapshot": {
     "1_clean": [
       "Last Nite (verse)",
@@ -158,6 +159,48 @@
       }
     },
     {
+      "type": "preamp",
+      "model": "US Double Nrm",
+      "variant": "Path 1B (parallel, merges before EQ — see note_on_block_limit)",
+      "based_on": "Fender Hot Rod DeVille (no dedicated DeVille model exists on Helix LT — US Double Nrm/Twin Reverb is the closest available 6L6 Fender platform per AGENTS.md substitution table)",
+      "notes": "Confirmed cross-album rig constant. Routed on parallel Path 1B rather than stacked onto the already-full 8-block Path 1A — splits after Minotaur and rejoins before Parametric EQ. Settings held CONSTANT across all three snapshots, same treatment as the Red Squeeze compressor — this represents a fixed physical amp setting (a rig-level characteristic), with the pedals ahead of it (Stupor OD, Ratatouille, Minotaur) doing the per-snapshot dynamic work rather than the amp itself. Kept neutral/mild (low Drive, moderate Master) so it adds gentle amp-front-end coloration and gain-staging support without fighting the telephone filter EQ that follows.",
+      "snapshots": {
+        "1_clean": {
+          "active": true,
+          "Drive": 3.0,
+          "Bass": 5,
+          "Mid": 5,
+          "Treble": 5,
+          "Master": 6,
+          "Ch Vol": 6,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "2_dirty": {
+          "active": true,
+          "Drive": 3.0,
+          "Bass": 5,
+          "Mid": 5,
+          "Treble": 5,
+          "Master": 6,
+          "Ch Vol": 6,
+          "Sag": 3,
+          "Hum": 1
+        },
+        "3_solo": {
+          "active": true,
+          "Drive": 3.0,
+          "Bass": 5,
+          "Mid": 5,
+          "Treble": 5,
+          "Master": 6,
+          "Ch Vol": 6,
+          "Sag": 3,
+          "Hum": 1
+        }
+      }
+    },
+    {
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
@@ -296,7 +339,7 @@
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",
-      "description": "Clean/lightly driven foundation tone. Red Squeeze compressor active throughout. Stupor OD at Drive 3.5 — barely overdriven, the 'not quite clean' compressed character of the Strokes' quieter passages. Ratatouille and Minotaur bypassed. Telephone filter EQ with mid +3dB at 600Hz. Eighth note delay at 22% mix. Short warm reverb (1.2 sec, 20% mix, Tone 4.5).",
+      "description": "Clean/lightly driven foundation tone. Red Squeeze compressor active throughout. Stupor OD at Drive 3.5 — barely overdriven, the 'not quite clean' compressed character of the Strokes' quieter passages. Ratatouille and Minotaur bypassed. US Double Nrm preamp active (Path 1B) at its fixed mild setting. Telephone filter EQ with mid +3dB at 600Hz. Eighth note delay at 22% mix. Short warm reverb (1.2 sec, 20% mix, Tone 4.5).",
       "pickup_position": "Neck or middle",
       "representative_songs": [
         "Last Nite (verse)",
@@ -307,7 +350,7 @@
     },
     "2_dirty": {
       "footswitch": "FS2",
-      "description": "Driven rhythm tone. Red Squeeze compressor active. Stupor OD bypassed. Ratatouille Dist active at Gain 4.5, Filter 4.5 — RAT blues-type tone setting giving gritty, mid-present crunch. Minotaur bypassed. Telephone filter EQ pushed harder — mid +4dB at 700Hz, tighter High Cut at 8000Hz. Eighth note delay very low mix (15%) — tight and not washy. Shortest driest reverb (0.8 sec, 12% mix).",
+      "description": "Driven rhythm tone. Red Squeeze compressor active. Stupor OD bypassed. Ratatouille Dist active at Gain 4.5, Filter 4.5 — RAT blues-type tone setting giving gritty, mid-present crunch, feeding the US Double Nrm preamp (Path 1B) at its usual fixed setting. Minotaur bypassed. Telephone filter EQ pushed harder — mid +4dB at 700Hz, tighter High Cut at 8000Hz. Eighth note delay very low mix (15%) — tight and not washy. Shortest driest reverb (0.8 sec, 12% mix).",
       "pickup_position": "Bridge",
       "representative_songs": [
         "Reptilia (rhythm)",
@@ -318,7 +361,7 @@
     },
     "3_solo": {
       "footswitch": "FS3",
-      "description": "Lead/solo tone. Red Squeeze compressor active. Stupor OD bypassed. Ratatouille Dist at Gain 7.0, Filter 5.5 — pushed toward RAT lead-type setting for more bite and harmonic emphasis. Minotaur active — Gain 2.5, Tone 5.5, Level 8.0 (MXR Micro Amp boost lifting lead above rhythm bed). Telephone filter EQ opens slightly — mid frequency at 800Hz, High Cut at 9500Hz. Eighth note delay at 35% mix with more feedback. More reverb (1.5 sec, 25% mix) for lead lines to breathe.",
+      "description": "Lead/solo tone. Red Squeeze compressor active. Stupor OD bypassed. Ratatouille Dist at Gain 7.0, Filter 5.5 — pushed toward RAT lead-type setting for more bite and harmonic emphasis. Minotaur active — Gain 2.5, Tone 5.5, Level 8.0 (MXR Micro Amp boost lifting lead above rhythm bed), all feeding the US Double Nrm preamp (Path 1B) at its usual fixed setting. Telephone filter EQ opens slightly — mid frequency at 800Hz, High Cut at 9500Hz. Eighth note delay at 35% mix with more feedback. More reverb (1.5 sec, 25% mix) for lead lines to breathe.",
       "pickup_position": "Bridge",
       "representative_songs": [
         "Reptilia (lead)",
