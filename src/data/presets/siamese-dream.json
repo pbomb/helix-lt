@@ -189,9 +189,9 @@
     {
       "type": "preamp",
       "model": "Brit 2203",
-      "variant": "Path 1B (parallel, merges before EQ — see note_on_block_limit)",
+      "variant": "Path 1B",
       "based_on": "1984 Marshall JCM800 100W",
-      "notes": "Confirmed via Corgan's own TikTok gear tour and corroborated by Andertons' signal-chain research. Routed on parallel Path 1B rather than stacked onto the already-full 8-block Path 1A — splits after Courtesan Flange and rejoins before Parametric EQ. Settings held CONSTANT across all four snapshots rather than toggled/varied — this reflects Corgan's confirmed fixed physical amp setting (see jcm800_technique in playing_notes): Big Muff into the LOW SENSITIVITY input, Master on full, preamp Drive barely on. That's why Drive here is low while Master/Ch Vol are high — the dirt comes entirely from the pedals ahead of it, not the amp's own gain stage, matching how Corgan actually ran it regardless of song section. Mid scooped and Treble raised for the JCM800's characteristic upper-mid presence.",
+      "notes": "Confirmed via Corgan's own TikTok gear tour and corroborated by Andertons' signal-chain research. Routed on parallel Path 1B rather than stacked onto the already-full 8-block Path 1A — splits after Courtesan Flange and rejoins before Parametric EQ (see note_on_block_limit). Settings held CONSTANT across all four snapshots rather than toggled/varied — this reflects Corgan's confirmed fixed physical amp setting (see jcm800_technique in playing_notes): Big Muff into the LOW SENSITIVITY input, Master on full, preamp Drive barely on. That's why Drive here is low while Master/Ch Vol are high — the dirt comes entirely from the pedals ahead of it, not the amp's own gain stage, matching how Corgan actually ran it regardless of song section. Mid scooped and Treble raised for the JCM800's characteristic upper-mid presence.",
       "snapshots": {
         "1_clean": {
           "active": true,
