@@ -279,9 +279,10 @@ Each preset file should include, at minimum:
   "master_bpm": <number>,
   "notes": "<long-form explanation of design decisions, confirmed rig, deviations>",
   "confirmed_sources": ["...", "..."],
-  "signal_chain": ["Block 1", "Block 2", ...],
-  "blocks": {
-    "<block_key>": {
+  "signal_chain": [
+    {
+      "type": "<Category — see below>",
+      "variant": "<optional, disambiguates two blocks of the same type>",
       "model": "<exact Helix model name>",
       "based_on": "<real pedal/amp>",
       "notes": "<why this model, what it approximates, any caveats>",
@@ -289,7 +290,7 @@ Each preset file should include, at minimum:
         "<snapshot_key>": { "param": "value", "active": true }
       }
     }
-  },
+  ],
   "snapshots": {
     "<snapshot_key>": {
       "footswitch": "FS#",
@@ -300,6 +301,20 @@ Each preset file should include, at minimum:
   "playing_notes": {}
 }
 ```
+
+`signal_chain` is a single ordered array — the order of blocks in the array is the
+order they appear in the Helix's signal path. There is no separate `blocks` map; each
+block's model, notes, and per-snapshot params live inline in its `signal_chain` entry.
+
+Each block's `type` must be one of the `Category` values defined in `src/types.ts`:
+`amp`, `cab`, `delay`, `distortion`, `dynamics`, `eq`, `filter`, `input`, `modulation`,
+`pitch_synth`, `preamp`, `reverb`, `wah`. This drives the block's icon and color in the
+UI (`src/components/BlockIcon.tsx`), so it must reflect how the block is *used* in this
+chain, not just the model's on-device menu category — e.g. an amp model placed in a
+preamp-only slot is `type: "preamp"`, not `"amp"`; the always-present first block
+(gate) is `type: "input"` even though "Noise Gate" lives under Dynamics on the device.
+Use `variant` (e.g. a pedal name or position) to disambiguate two blocks that share the
+same `type` in one chain.
 
 For general/album-spanning presets (not tied to one song), also include a
 `songs_that_inspired_each_snapshot` or `representative_songs` field per snapshot so
