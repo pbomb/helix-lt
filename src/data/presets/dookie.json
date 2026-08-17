@@ -1,0 +1,298 @@
+{
+  "preset_name": "Dookie-Era Green Day",
+  "artist": "Green Day",
+  "album": "Dookie (1994)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d00004851db89b08034de626ebee6823d",
+  "tuning": "Standard",
+  "master_bpm": 155,
+  "notes": "General album-era preset covering the two dynamic states of Billie Joe Armstrong's confirmed Dookie tone plus an optional lead/boost snapshot. CONFIRMED RIG: a $180 blue Fernandes Stratocaster copy fitted with a Bill Lawrence L500XL bridge humbucker ('Blue'), through a 100W Marshall 1959SLP Super Lead Plexi nicknamed 'Pete', modified with what's known as the 'Dookie Mod' (also called the Bradshaw Gain Mod / Cascading Gain Mod) — this cascades the gain of both channels together and adds a master volume the stock Plexi didn't have. CONFLICTING SOURCE NOTE: one detailed source (Guitar.com) states flatly 'one guitar, one amp, no pedals' for the Dookie recording sessions. Other sources (GuitarGangsters, Equipboard, MusicStrive) confirm an Ibanez TS9 Tube Screamer used as a boost pedal into the modified Marshall, and Dunlop's MXR Dookie Drive pedal was specifically designed by Armstrong's team to recreate this two-amp cascading-gain tone as a standalone pedal. Given the ambiguity, this preset's core rhythm tone requires NO boost pedal active (matching the 'no pedals' account), with an optional TS9-style boost snapshot available for leads and the more processed live/later-era tone. Armstrong's own quote on dynamics: 'If there's one thing that you listen to on the Dookie record, I would say it was the Dookie sound that would be in the verses, but then when we wanted more power, we turned it up.' This quote directly informs the two-snapshot verse/power structure. Added an EXPERIMENTAL Brit Plexi Jump Preamp-only block since the modified Marshall Super Lead is specifically confirmed (not just era-plausible) and is a dramatically different amp character from the Super Champ XD it's running into — the preamp block recreates the cascading-gain Plexi front end that the Deez One Vintage substitute alone can only approximate. Lace Sensor / Super Champ XD compensation applied via raised Parametric EQ Level as usual.",
+  "confirmed_sources": [
+    "Guitar.com — The Gear Used by Billie Joe Armstrong on Green Day's Dookie",
+    "Guitar.com — Billie Joe Armstrong reveals amp that inspired MXR Dookie Drive",
+    "Guitar World — Billie Joe Armstrong Demos the MXR Dookie Drive",
+    "Kerrang — Billie Joe Armstrong On The Sound Of Green Day's Dookie",
+    "Equipboard — Green Day Dookie Gear & Equipment",
+    "GuitarGangsters.net — Billie Joe Armstrong Guitars & Gear",
+    "MusicStrive — Green Day Guitar Tone (Hans, Armstrong's guitar tech, quoted on amp settings)"
+  ],
+  "amp_settings_confirmed": {
+    "source": "Hans (Armstrong's guitar tech) via MusicStrive/Equipboard",
+    "description": "Knobs pretty much straight up, Master and Gain at 10 o'clock. 'You turn it up any louder or any more gain it doesn't really sound that great.' Billie's tone is not about tons of gain — it's actually cleaner than you'd think. His technique with pick attack and riding the guitar volume knob is more responsible for the sound than the amp gain itself."
+  },
+  "signal_chain": [
+    {
+      "type": "input",
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "Moderate gate throughout — palm-muted punk rhythm playing needs tight control between chords but the moderate-gain tone doesn't generate excessive noise. Lead/boost snapshot tightens further.",
+      "snapshots": {
+        "1_verse": {
+          "Threshold": -58,
+          "Decay": 25,
+          "Level": 0
+        },
+        "2_power_chorus": {
+          "Threshold": -54,
+          "Decay": 22,
+          "Level": 0
+        },
+        "3_lead_boost": {
+          "Threshold": -52,
+          "Decay": 20,
+          "Level": 0
+        }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "Boost",
+      "model": "Scream 808",
+      "based_on": "Ibanez TS808 Tube Screamer",
+      "notes": "Approximates the confirmed Ibanez TS9 (closest available Helix model — no dedicated TS9 exists, TS808 and TS9 share very similar circuits with TS9 being slightly brighter and more mid-forward). BYPASSED in Snapshots 1 and 2 per the 'no pedals in studio' account. ACTIVE in Snapshot 3 only, for leads and the more boosted live/later tone confirmed by other sources.",
+      "snapshots": {
+        "1_verse": {
+          "active": false,
+          "Gain": 4.0,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "2_power_chorus": {
+          "active": false,
+          "Gain": 4.0,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "3_lead_boost": {
+          "active": true,
+          "Gain": 4.0,
+          "Tone": 5.5,
+          "Level": 7.0
+        }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "Drive",
+      "model": "Deez One Vintage",
+      "based_on": "BOSS DS-1 distortion pedal (classic Made-in-Japan version)",
+      "notes": "Substitutes for part of the modified Plexi's cascading-gain amp character, alongside the Brit Plexi Jump preamp block below. NOT a confirmed pedal in Armstrong's rig — this is a practical stand-in to deliver the aggressive, moderate-gain punk crunch the Dookie Mod produced, now working together with the preamp block rather than carrying the amp character alone. Confirmed amp settings were moderate ('gain at 10 o'clock', 'not about tons of gain') — reflected here with restrained Drive values, trimmed slightly from the pre-preamp version since the Brit Plexi Jump block now contributes its own gain stage. Snapshot 2 (power/chorus) pushes Drive and Level higher per Armstrong's own account: 'when we wanted more power, we turned it up.'",
+      "snapshots": {
+        "1_verse": {
+          "active": true,
+          "Drive": 3.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "2_power_chorus": {
+          "active": true,
+          "Drive": 5.0,
+          "Tone": 5.5,
+          "Level": 7.5
+        },
+        "3_lead_boost": {
+          "active": true,
+          "Drive": 5.5,
+          "Tone": 6.0,
+          "Level": 7.5
+        }
+      }
+    },
+    {
+      "type": "preamp",
+      "model": "Brit Plexi Jump",
+      "based_on": "Marshall 1959SLP Super Lead 100 ('Pete', modified with the Dookie Mod / Bradshaw Gain Mod)",
+      "notes": "EXPERIMENTAL preamp-only block (no cab/power-amp modeling), placed after the Scream 808/Deez One Vintage pedals and before the Parametric EQ per the preamp placement convention. The Dookie Mod cascades the Plexi's Bright and Normal channels together — approximated here by running both Bright Drive and Normal Drive engaged simultaneously rather than using just one channel, mirroring the mod's cascading-gain behavior. Kept restrained across all snapshots per the confirmed 'knobs straight up, Master and Gain at 10 o'clock, not about tons of gain' amp settings — this block should read as amp-stage color and cut, not as an additional distortion source. Snapshot 2 pushes Ch Vol and Master slightly for 'when we wanted more power, we turned it up.' Snapshot 3 nudges Treble/Presence up for lead cut-through.",
+      "confirmed_source": "MusicStrive/Equipboard (Hans, Armstrong's guitar tech) on amp settings; Guitar.com on the modified Plexi and Dookie Mod circuit",
+      "snapshots": {
+        "1_verse": {
+          "Bright Drive": 4.0,
+          "Normal Drive": 4.0,
+          "Bass": 2.0,
+          "Mid": 8.0,
+          "Treble": 6.5,
+          "Ch Vol": 5.0,
+          "Master": 5.0,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "2_power_chorus": {
+          "Bright Drive": 4.5,
+          "Normal Drive": 4.5,
+          "Bass": 2.0,
+          "Mid": 8.0,
+          "Treble": 6.5,
+          "Ch Vol": 6.0,
+          "Master": 6.0,
+          "Sag": 3.5,
+          "Hum": 2.0
+        },
+        "3_lead_boost": {
+          "Bright Drive": 5.0,
+          "Normal Drive": 4.5,
+          "Bass": 2.0,
+          "Mid": 8.0,
+          "Treble": 7.0,
+          "Ch Vol": 6.0,
+          "Master": 6.0,
+          "Sag": 3.5,
+          "Hum": 2.0
+        }
+      }
+    },
+    {
+      "type": "eq",
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Compensates for what the Brit Plexi Jump preamp block doesn't fully cover — mid-forward but NOT scooped, matching the cascading-gain Marshall tone's cutting, present midrange rather than a scooped metal character. Low Cut kept moderate to preserve power chord punch — punk rhythm needs low-end weight, unlike more surgical high-gain genres. Level raised progressively across snapshots to compensate for Lace Sensor lower output vs Armstrong's confirmed Bill Lawrence L500XL bridge humbucker, and to push the real Super Champ XD's input stage harder.",
+      "snapshots": {
+        "1_verse": {
+          "Low Freq": 130,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 750,
+          "Mid Q": 1.8,
+          "Mid Gain": 3,
+          "High Freq": 3800,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 90,
+          "High Cut": 9500,
+          "Level": 2
+        },
+        "2_power_chorus": {
+          "Low Freq": 130,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 750,
+          "Mid Q": 1.8,
+          "Mid Gain": 4,
+          "High Freq": 3800,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 100,
+          "High Cut": 9000,
+          "Level": 3
+        },
+        "3_lead_boost": {
+          "Low Freq": 130,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 850,
+          "Mid Q": 1.8,
+          "Mid Gain": 4,
+          "High Freq": 4200,
+          "High Q": 0.7,
+          "High Gain": 3,
+          "Low Cut": 100,
+          "High Cut": 10000,
+          "Level": 4
+        }
+      }
+    },
+    {
+      "type": "reverb",
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 8m — very small, tight room character. Dookie is a dry, direct punk production with minimal ambience. Reverb here is nearly imperceptible — just enough to avoid a completely dead, DI-direct sound. Do NOT use long decay or high mix.",
+      "room_size_fixed": 8,
+      "snapshots": {
+        "1_verse": {
+          "Decay": 0.5,
+          "Predelay": 4,
+          "Room Size": 8,
+          "Diffusion": 40,
+          "Damping": 5500,
+          "Mix": 10,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 6000,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_power_chorus": {
+          "Decay": 0.4,
+          "Predelay": 3,
+          "Room Size": 8,
+          "Diffusion": 35,
+          "Damping": 5000,
+          "Mix": 7,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 110,
+          "High Cut": 5500,
+          "Level": 0,
+          "Trails": true
+        },
+        "3_lead_boost": {
+          "Decay": 0.6,
+          "Predelay": 5,
+          "Room Size": 8,
+          "Diffusion": 45,
+          "Damping": 6000,
+          "Mix": 14,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 90,
+          "High Cut": 6500,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  ],
+  "signal_chain_notes": "6 of 8 available blocks used. Brit Plexi Jump (preamp-only, no cab/power-amp) placed after the overdrive/distortion blocks and before the Parametric EQ, per the AGENTS.md convention. Scream 808 is bypassed in Snapshots 1 and 2 and active only in Snapshot 3 — the only toggled block; everything else stays on and just changes its parameters between snapshots.",
+  "preamp_experiment_note": "EXPERIMENTAL Brit Plexi Jump block added because the modified Marshall 1959SLP Super Lead ('Pete', with the Dookie Mod) is specifically confirmed rather than era-plausible, and its cascading-gain character is dramatically different from the Super Champ XD it's running into. Kept restrained (Drive around 4.0-5.0 on both channels, Master/Ch Vol around 5.0-6.0) per the confirmed 'knobs straight up, not about tons of gain' amp settings — this block should read as amp-stage cut and color, not as an added distortion source. Deez One Vintage remains the primary gain/crunch source; the preamp exists to recreate the Plexi's cutting midrange voicing and cascading-gain feel that a pedal alone can't fully deliver. If the tone feels too saturated or amp-like (losing the raw, pedal-driven punk edge), try lowering Bright Drive/Normal Drive here before touching Deez One Vintage.",
+  "snapshots": {
+    "1_verse": {
+      "footswitch": "FS1",
+      "description": "The 'Dookie sound' — verse dynamics per Armstrong's own description. Scream 808 bypassed. Deez One Vintage at moderate Drive 3.5 plus the restrained Brit Plexi Jump preamp block approximating the confirmed 'gain at 10 o'clock', 'cleaner than you'd think' amp settings. Mid-forward, present EQ. Nearly dry — very short room reverb (0.5 sec, 10% mix).",
+      "representative_songs": [
+        "Longview (verse)",
+        "When I Come Around (verse)",
+        "Basket Case (verse)",
+        "Coming Clean"
+      ],
+      "pickup_position": "Bridge",
+      "technique_note": "Armstrong's confirmed technique includes riding the guitar's volume knob to control dynamics between verse and chorus rather than relying solely on amp/pedal changes. Consider rolling guitar volume back slightly for this snapshot even with Snapshot 1 engaged."
+    },
+    "2_power_chorus": {
+      "footswitch": "FS2",
+      "description": "'When we wanted more power, we turned it up' — the chorus/power dynamic. Deez One Vintage pushed to Drive 5.0, Level 7.5, and the Brit Plexi Jump preamp's Ch Vol/Master nudged up alongside it. More aggressive mid boost. Tighter, drier reverb (0.4 sec, 7% mix) for maximum punch. This is the classic driving Green Day power-chord chorus tone.",
+      "representative_songs": [
+        "Basket Case (chorus)",
+        "Longview (chorus)",
+        "When I Come Around (chorus)",
+        "Welcome to Paradise",
+        "She",
+        "F.O.D. (heavy sections)"
+      ],
+      "pickup_position": "Bridge",
+      "technique_note": "Rapid-fire power chords played on all six strings even when only fretting two or three notes, with unused fretting fingers muting unplayed strings to control noise. Pick hard near the bridge with light fretting pressure."
+    },
+    "3_lead_boost": {
+      "footswitch": "FS3",
+      "description": "Lead/boost tone — Scream 808 (TS9 approximation) active for leads and the more processed later-era tone confirmed by secondary sources. Deez One Vintage pushed further (Drive 5.5), Brit Plexi Jump Treble/Presence opened up slightly for lead cut-through. Brighter, slightly more open EQ. Most reverb of the three snapshots (still short at 0.6 sec, 14% mix) for lead lines to have a touch more presence.",
+      "representative_songs": [
+        "Basket Case (guitar solo)",
+        "When I Come Around (lead fills)",
+        "Chump (lead sections)"
+      ],
+      "pickup_position": "Bridge",
+      "note": "This snapshot reflects the TS9-boost account rather than the 'no pedals' account — use if the fuller, more processed tone is desired for lead passages."
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard throughout Dookie",
+    "pickup_notes": "Bridge pickup (or bridge humbucker if available) throughout all three snapshots. Armstrong's guitar has a Bill Lawrence L500XL humbucker in the bridge position — hotter output than Lace Sensor single coils. The Drive/preamp and EQ Level compensations in this preset partially address the output gap, but a bridge humbucker-equipped guitar would get closer to the source tone if available.",
+    "rig_compensation": "Lace Sensor single coils are lower output and lower midrange density than the confirmed Bill Lawrence L500XL bridge humbucker. Deez One Vintage Drive values (3.5-5.5) and the Brit Plexi Jump preamp's own gain stage are both somewhat elevated from what a truly 'moderate gain, straight up knobs' amp setting would need with a hotter pickup, to compensate.",
+    "technique_is_the_tone": "Per Armstrong's own guitar tech: 'His technique playing and using the pick is more about where the sound is coming out of... he'll turn the guitar down and clean it up then pop it back up.' The dynamic range in this tone comes significantly from pick attack and guitar volume control, not just pedal/snapshot switching. Aggressive, consistent picking with minimal unwanted noise is the core skill — practice muting unused strings with fretting-hand fingers.",
+    "tap_tempo": "Master BPM set to 155 as a general pop-punk default. Actual Dookie tempos vary — Basket Case is around 171 BPM, When I Come Around around 148 BPM, Longview has a loping, slower groove feel. Use tap tempo per song (though this preset has no delay block, so tempo mainly affects nothing currently — kept for potential future delay additions).",
+    "guitar_note": "The confirmed guitar is a cheap ($180) Fernandes Stratocaster copy — the tone is notably not precious about gear. A Strat-shaped guitar with a hot bridge pickup gets you most of the way there regardless of brand pedigree.",
+    "conflicting_source_acknowledgment": "This preset takes a conservative approach given the conflicting 'no pedals' vs 'TS9 boost' accounts — Snapshots 1 and 2 (the core rhythm tones) require no boost pedal, matching the more detailed and specific Guitar.com account. Snapshot 3 provides the TS9-boosted alternative for those who want to follow the other sources or specifically want a hotter lead tone.",
+    "preamp_caveat": "The Brit Plexi Jump block is an experimental addition layered in front of the real Super Champ XD, not a replacement for it — if the tone feels too amp-like or saturated compared to the raw, pedal-driven Dookie sound, try lowering Bright Drive/Normal Drive here before touching Deez One Vintage, which should remain the primary crunch source."
+  }
+}
