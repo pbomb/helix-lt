@@ -169,13 +169,13 @@
       "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
-      "notes": "Room Size FIXED at 12m — a touch bigger and more modern than a tight studio room to suit the driving rock production, but still short/punchy overall rather than ambient. S1 clean/verse: slightly longer decay and higher mix for the more open intro/verse texture. S2 chorus/heavy: shorter decay, lower mix so the wall of layered guitars stays tight and driving.",
-      "room_size_fixed": 12,
+      "notes": "Room Size FIXED at 20m — the mid-size of the Helix's three selectable hall sizes (10/20/30m), a step bigger and more modern than a tight studio room to suit the driving rock production, but still short of the 30m ambient extreme. S1 clean/verse: slightly longer decay and higher mix for the more open intro/verse texture. S2 chorus/heavy: shorter decay, lower mix so the wall of layered guitars stays tight and driving.",
+      "room_size_fixed": 20,
       "snapshots": {
         "1_clean_verse": {
           "Decay": 1.0,
           "Predelay": 8,
-          "Room Size": 12,
+          "Room Size": 20,
           "Diffusion": 55,
           "Damping": 6500,
           "Mix": 16,
@@ -190,7 +190,7 @@
         "2_chorus_heavy": {
           "Decay": 0.6,
           "Predelay": 4,
-          "Room Size": 12,
+          "Room Size": 20,
           "Diffusion": 45,
           "Damping": 5000,
           "Mix": 10,

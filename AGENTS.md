@@ -70,7 +70,7 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Adriatic Delay | BBD Size | "Small"/"Medium"/"Large" strings | Numeric: 1024, 2048, 4096, 8192 |
 | Adriatic Delay | Rate | 0 (to disable mod) | Minimum is **0.1 Hz** — 0 is invalid. Use 0.1 + Depth 0 to disable. |
 | Ganymede (reverb) | Low Cut / High Cut | Assumed present | **Does not exist.** Use single `Tone` knob instead. |
-| Dynamic Hall (reverb) | Room Size | Snapshot-variable | **Must be a FIXED value per preset.** Changing it between snapshots changes the algorithm and causes an audible bump/glitch. |
+| Dynamic Hall (reverb) | Room Size | Snapshot-variable, arbitrary meter value | **Must be a FIXED value per preset**, and a 3-way select of exactly **10, 20, or 30** (meters) — no other value is valid. Changing it between snapshots changes the algorithm and causes an audible bump/glitch. |
 | Dynamic Hall (reverb) | Diffusion | 0–10 scale assumed | **Percentage (0–100%)** |
 | Optical Trem | Intensity | Set to 18–20 | Range is **0–10**. Use ~1.5–2.0 for subtle. |
 | Ubiquitous Vibe | Intensity | Set to 20 | Range is **0–10**. Use ~2.0 for subtle. |

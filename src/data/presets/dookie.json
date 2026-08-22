@@ -193,13 +193,13 @@
       "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
-      "notes": "Room Size FIXED at 8m — very small, tight room character. Dookie is a dry, direct punk production with minimal ambience. Reverb here is nearly imperceptible — just enough to avoid a completely dead, DI-direct sound. Do NOT use long decay or high mix.",
-      "room_size_fixed": 8,
+      "notes": "Room Size FIXED at 10m — the smallest of the Helix's three selectable hall sizes (10/20/30m), giving the tightest room character available. Dookie is a dry, direct punk production with minimal ambience. Reverb here is nearly imperceptible — just enough to avoid a completely dead, DI-direct sound. Do NOT use long decay or high mix.",
+      "room_size_fixed": 10,
       "snapshots": {
         "1_verse": {
           "Decay": 0.5,
           "Predelay": 4,
-          "Room Size": 8,
+          "Room Size": 10,
           "Diffusion": 40,
           "Damping": 5500,
           "Mix": 10,
@@ -214,7 +214,7 @@
         "2_power_chorus": {
           "Decay": 0.4,
           "Predelay": 3,
-          "Room Size": 8,
+          "Room Size": 10,
           "Diffusion": 35,
           "Damping": 5000,
           "Mix": 7,
@@ -229,7 +229,7 @@
         "3_lead_boost": {
           "Decay": 0.6,
           "Predelay": 5,
-          "Room Size": 8,
+          "Room Size": 10,
           "Diffusion": 45,
           "Damping": 6000,
           "Mix": 14,

@@ -192,8 +192,8 @@
       "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
-      "notes": "Room Size FIXED at 15m — do NOT make snapshot-variable, causes audible algorithm bump. Unchanged from initial version — reverb settings were correct.",
-      "room_size_fixed": 15,
+      "notes": "Room Size FIXED at 20m — the mid-size of the Helix's three selectable hall sizes (10/20/30m), matching the fairly spacious Selmer/AC30-adjacent ambience of the confirmed rig without going fully ambient. Do NOT make snapshot-variable, causes audible algorithm bump.",
+      "room_size_fixed": 20,
       "snapshots": {
         "1_angular_intro": {
           "Decay": 1.5,

@@ -2,38 +2,11 @@ reverb_effects:
 - name: Dynamic Hall
   based_on: Line 6 Original
   firmware_version: '3.10'
-  synopsis:
-    text: 'Here is a description of each parameter: a second stomp switch to toggle
-      between a lower Decay value and Infinity. Label it "ForEVER ever?" hall. Can
-      sometimes result in more definition between the dry and effected signals parameter
-      actually changes the algorithm so you''ll hear a small bump when changing it.
-      Therefore, we don''t recommend assigning Room Size to snapshots or other controllers
-      resulting in a softer effected signal For example, if your hall is full of people
-      wearing fake ocelot jumpsuits, more high frequencies would be absorbed than
-      if the room were empty heard; when set to 100%, no dry signal is heard any metallic
-      artifacts common in static reverbs. At higher values, can impart a bit of modulation
-      to the effected signal Values below 0.0dB mean the bass frequencies decay faster
-      than the treble frequencies; values above 0.0dB mean the bass frequencies decay
-      slower than the treble frequencies remove the effected signal below a certain
-      frequency remove the effected signal above a certain frequency'
-    items:
-    - 'Decay: Sets the decay of the reverb (0.1 sec ~ 45.0 sec, or Infinity) TIP:
-      Assign'
-    - 'Predelay: Determines the amount of delay heard before the signal enters the'
-    - 'Room Size: Sets the size of the hall (10, 20, or 30 meters). NOTE: This parameter
-      changes the algorithm — NEVER assign to snapshots or controllers. Changing Room
-      Size mid-preset causes an audible bump/glitch. Set as a fixed value per preset
-      (20m for rock presets, 15m for Franz Ferdinand-style).'
-    - 'Diffusion: Sets the amount of smearing between discrete echoes as a percentage, sometimes'
-    - 'Damping: Determines the frequency above which the reverb will be absorbed.'
-    - 'Mix: Controls the wet/dry mix of the reverb. When set to 0%, no reverb is'
-    - 'Motion: Sets the amount of randomization, which can be helpful to minimize'
-    - 'Low Freq: Sets the frequency below which the Low Gain parameter is applied'
-    - 'Low Gain: Sets the reverb time for frequencies below the Low Freq value.'
-    - 'Low Cut: Applies a low cut (or high pass) filter to the reverb, letting you'
-    - 'High Cut: Applies a high cut (or low pass) filter to the reverb, letting you'
-    - 'Level: Controls the overall output level of the block'
-    - 'Trails: When on, reverb decay continues to ring out after the block is bypassed'
+  synopsis: 'Room Size is a 3-way select, NOT a continuous range — allowed values
+    are exactly 10, 20, or 30 (meters) and nothing in between. Changing Room Size
+    changes the reverb algorithm, so you''ll hear a small bump/glitch if it changes
+    mid-preset — NEVER assign it to snapshots or other controllers; set one fixed
+    value per preset instead. Diffusion is a percentage (0-100%), not a 0-10 scale.'
   available_parameters:
   - Decay
   - Predelay
