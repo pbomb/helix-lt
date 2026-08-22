@@ -137,6 +137,7 @@ matters more than matching the raw internal Helix name.
 | Fender Twin Reverb / "Hot Rod DeVille" substitute | US Double Nrm | No dedicated DeVille model exists; Twin Reverb is closest 6L6 Fender clean platform. **No Presence parameter.** |
 | Marshall JCM800 2203 | Brit 2203 | Has unique **Input** parameter (which jack) other Marshalls lack |
 | Marshall Super Lead / Plexi | Brit Plexi Jump | Has separate **Bright Drive** and **Normal Drive** (two channels) |
+| Park 75 | Brit P75 Nrm (or Brit P75 Brt) | Nrm/Brt are two separate channel models, not one model with a channel switch. Preamp-only params: Drive, Bass, Mid, Treble, Master, Ch Vol, Sag, Hum (no Presence) |
 | Diezel VH4 | Das Benzin Lead / Das Benzin Mega | Has **Deep** parameter (bass depth), NOT Hum |
 
 ---

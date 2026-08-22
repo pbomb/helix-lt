@@ -1,0 +1,263 @@
+{
+  "preset_name": "American Idiot-Era Green Day",
+  "artist": "Green Day",
+  "album": "American Idiot (2004)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d0000485108a1b1e0674086d3f1995e1b",
+  "tuning": "Standard",
+  "master_bpm": 189,
+  "notes": "General album-era preset covering American Idiot's three main dynamic states: near-clean intro/verse passages, driving punk rhythm, and the heavier layered-overdrive sections used for choruses/bridges. CONFIRMED RIG: two guitars are documented as valid paths — the 'Blue' Fernandes Strat copy (SH-4 JB humbucker) carried over from the Dookie era, and a 1956 Gibson Les Paul Junior nicknamed 'Floyd' (single P-90 pickup) that producer Butch Vig describes as Armstrong's primary tracking guitar for this album. CONFIRMED AMPS: a modified 50W Park 75 fitted with a version of Armstrong's 'Dookie mod' (Bradshaw-style cascading gain) is documented as 'the second principal amp on American Idiot' and, per Butch Vig, the amp Floyd was tracked through for the base rhythm layer ('he'd do Floyd... into a Park amp... left and right'). A separately modified Marshall nicknamed the 'Idiot Amp' (extra gain stage, thicker/crunchier voicing) was layered in on top when 'they really wanted to hit overdrive' — a second guitar pair added on top of the Floyd/Park layer for the heaviest sections. Clean tones (the 'American Idiot' and 'Homecoming' intros) were tracked through Fender-voiced clean amps (a '65 Deluxe Reverb and a Victoria 35210 'Little Vicky'). Since Helix only allows one Preamp model per preset, this uses the Park 75 preamp (the more distinctly documented and different-from-Fender amp) throughout, with the Deez One Vintage pedal doing the extra pushing that the Marshall 'Idiot Amp' layer would add on the record, and Drive backed off close to zero for the clean snapshot to approximate the Fender-voiced clean amps' contribution. Overall EQ philosophy is more scooped than Dookie's mid-forward voicing — highs and bass moderately boosted, mids trimmed rather than pushed, per the confirmed 'punk crunch' tone breakdowns for this album.",
+  "confirmed_sources": [
+    "Ground Guitar — Billie Joe Armstrong Guitars and Gear (Floyd 1956 Les Paul Junior, Marshall 1959SLP 'Pete', Park 75 with Dookie mod, Victoria 80212/35210 amps, Butch Vig quote on Floyd/Park layering plus Marshall overdub layer)",
+    "Guitar Chalk — Tone Settings for American Idiot by Green Day (Blue Strat vs. Floyd LP Jr as valid guitar paths, punk crunch amp settings, mid-scooped EQ philosophy, Boss DS-1-style distortion as core drive)",
+    "Equipboard — Green Day American Idiot (Deluxe) Gear & Equipment",
+    "Equipboard — Billie Joe Armstrong's Amplifiers (Idiot Amp modded Marshall, Park 75 Dookie mod, '65 Fender Deluxe Reverb, Victoria 80212/35210 clean amps)"
+  ],
+  "amp_settings_confirmed": {
+    "source": "Guitar Chalk tone breakdown (secondary source, not a direct artist quote)",
+    "description": "Marshall-voiced lead channel around Bass 5, Mid 6, Treble 6, Presence 7, Gain 7, Volume 6 — 'bright, tight punk crunch, mid-forward, minimal effects' with highs and bass moderately boosted and mids slightly scooped relative to Dookie's more mid-forward EQ. Guitar at full volume, bridge pickup, tone knob wide open. Stay under Gain 8 — raw amp/preamp distortion plus one drive pedal is the core of the tone, not stacked gain stages."
+  },
+  "signal_chain": [
+    {
+      "type": "input",
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "Higher confirmed gain than the Dookie preset (Gain ~7 vs. 'knobs at 10 o'clock') means a tighter gate is needed to control noise, especially in the power/chorus snapshot where the Park 75 preamp and Deez One Vintage are both pushed.",
+      "snapshots": {
+        "1_clean_intro": {
+          "Threshold": -64,
+          "Decay": 28,
+          "Level": 0
+        },
+        "2_verse_drive": {
+          "Threshold": -56,
+          "Decay": 22,
+          "Level": 0
+        },
+        "3_power_chorus": {
+          "Threshold": -50,
+          "Decay": 18,
+          "Level": 0
+        }
+      }
+    },
+    {
+      "type": "distortion",
+      "model": "Deez One Vintage",
+      "based_on": "BOSS DS-1 distortion pedal (classic Made-in-Japan version)",
+      "notes": "Same substitute chosen for the Dookie preset — a practical stand-in for a Marshall/Park-style crunch pedal, consistent with Guitar Chalk's own 'Boss DS-1-style distortion' recommendation for this album. Bypassed in the clean/intro snapshot so the Park 75 preamp's own low-Drive character carries the tone, matching the confirmed Fender-voiced clean amps. Active and moderate in the verse/drive snapshot for the core punk rhythm crunch. Pushed further in the power/chorus snapshot to stand in for the second, heavier Marshall 'Idiot Amp' guitar layer documented on the record — since this preset can't add a second real amp layer, the pedal's extra push covers that role.",
+      "snapshots": {
+        "1_clean_intro": {
+          "active": false,
+          "Drive": 2.0,
+          "Tone": 5.0,
+          "Level": 6.0
+        },
+        "2_verse_drive": {
+          "active": true,
+          "Drive": 4.5,
+          "Tone": 5.5,
+          "Level": 7.0
+        },
+        "3_power_chorus": {
+          "active": true,
+          "Drive": 6.5,
+          "Tone": 6.0,
+          "Level": 7.5
+        }
+      }
+    },
+    {
+      "type": "preamp",
+      "model": "Brit P75 Nrm",
+      "based_on": "Park 75 (Armstrong's modified 50W unit with the Dookie mod)",
+      "notes": "EXPERIMENTAL preamp-only block (no cab/power-amp modeling), placed after Deez One Vintage and before the Parametric EQ per the preamp placement convention. Chosen over the Marshall 'Idiot Amp'/'Pete' option because the Park 75 is documented as the amp Floyd (the album's primary tracking guitar) was run through for the base rhythm layer, and because its Marshall-derived-but-distinct voicing (increased front-end gain, KT88 power tubes even though those aren't modeled here) differs sharply from the user's Fender-voiced Super Champ XD — the exact case AGENTS.md calls out as worth a preamp block. Normal channel used (Brit P75 Brt exists too but the Normal channel's slightly mellower voicing keeps this from stacking two bright/aggressive gain stages against Deez One Vintage). Drive kept near zero in the clean/intro snapshot so the block reads as clean Fender-adjacent amp coloration rather than added dirt; pushed progressively in the other two snapshots.",
+      "confirmed_source": "Ground Guitar / Equipboard: Park 75 with Dookie mod as 'the second principal amp on American Idiot'; Butch Vig quote on Floyd tracked through a Park amp",
+      "snapshots": {
+        "1_clean_intro": {
+          "Drive": 1.0,
+          "Bass": 5.5,
+          "Mid": 4.5,
+          "Treble": 6.0,
+          "Master": 4.5,
+          "Ch Vol": 4.5,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "2_verse_drive": {
+          "Drive": 4.0,
+          "Bass": 5.5,
+          "Mid": 4.5,
+          "Treble": 6.5,
+          "Master": 5.5,
+          "Ch Vol": 5.5,
+          "Sag": 3.0,
+          "Hum": 2.0
+        },
+        "3_power_chorus": {
+          "Drive": 5.5,
+          "Bass": 6.0,
+          "Mid": 4.0,
+          "Treble": 7.0,
+          "Master": 6.5,
+          "Ch Vol": 6.5,
+          "Sag": 3.5,
+          "Hum": 2.5
+        }
+      }
+    },
+    {
+      "type": "eq",
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Confirmed EQ philosophy for this album is more scooped than Dookie's mid-forward voicing — highs and bass moderately boosted, mids trimmed rather than pushed. Low Cut kept moderate for power-chord punch. Level raised progressively across snapshots for the usual Lace Sensor / Super Champ XD compensation, on top of what the Park 75 preamp block already contributes.",
+      "snapshots": {
+        "1_clean_intro": {
+          "Low Freq": 140,
+          "Low Q": 0.7,
+          "Low Gain": 1,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -1,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 85,
+          "High Cut": 10000,
+          "Level": 1
+        },
+        "2_verse_drive": {
+          "Low Freq": 130,
+          "Low Q": 0.7,
+          "Low Gain": 1,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -2,
+          "High Freq": 3800,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 95,
+          "High Cut": 9500,
+          "Level": 3
+        },
+        "3_power_chorus": {
+          "Low Freq": 120,
+          "Low Q": 0.7,
+          "Low Gain": 2,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -3,
+          "High Freq": 3800,
+          "High Q": 0.7,
+          "High Gain": 3,
+          "Low Cut": 105,
+          "High Cut": 9000,
+          "Level": 4
+        }
+      }
+    },
+    {
+      "type": "reverb",
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 20m — the mid-size of the Helix's three selectable hall sizes (10/20/30m), a step bigger than the Dookie preset's 10m room, matching American Idiot's more produced 'rock opera' character while staying well short of the 30m ambient extreme.",
+      "room_size_fixed": 20,
+      "snapshots": {
+        "1_clean_intro": {
+          "Decay": 0.9,
+          "Predelay": 6,
+          "Room Size": 20,
+          "Diffusion": 45,
+          "Damping": 6000,
+          "Mix": 16,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 90,
+          "High Cut": 7000,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_verse_drive": {
+          "Decay": 0.6,
+          "Predelay": 4,
+          "Room Size": 20,
+          "Diffusion": 40,
+          "Damping": 5500,
+          "Mix": 10,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 6500,
+          "Level": 0,
+          "Trails": true
+        },
+        "3_power_chorus": {
+          "Decay": 0.5,
+          "Predelay": 3,
+          "Room Size": 20,
+          "Diffusion": 35,
+          "Damping": 5000,
+          "Mix": 8,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 110,
+          "High Cut": 6000,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  ],
+  "signal_chain_notes": "5 of 8 available blocks used. Brit P75 Nrm (preamp-only, no cab/power-amp) placed after Deez One Vintage and before the Parametric EQ, per the AGENTS.md convention. Deez One Vintage is the only toggled block (bypassed for the clean/intro snapshot); everything else stays on and just changes parameters between snapshots.",
+  "preamp_experiment_note": "EXPERIMENTAL Brit P75 Nrm block added because the modified Park 75 is specifically confirmed as the primary tracking amp for this album's core rhythm layer, and its Marshall-derived voicing differs sharply from the Fender-voiced Super Champ XD it's running into. Kept restrained in the clean/intro snapshot (Drive ~1.0) so it doesn't fight the real amp's own clean character, and pushed only as far as the confirmed 'stay under Gain 8' guidance suggests in the driven snapshots. If the power/chorus snapshot feels too amp-saturated relative to the raw, pedal-driven punk edge, lower Drive/Master here before touching Deez One Vintage — the pedal should remain the primary crunch source, with this block adding amp-stage color and the extra push that stands in for the record's second (Marshall) guitar layer.",
+  "snapshots": {
+    "1_clean_intro": {
+      "footswitch": "FS1",
+      "description": "Near-clean intro/verse tone. Deez One Vintage bypassed, Brit P75 preamp Drive kept close to zero so it reads as clean Fender-adjacent amp color rather than dirt — approximating the confirmed '65 Deluxe Reverb / Victoria 35210 clean amps used for this album's intros. Mildly scooped EQ with brightened highs. More open reverb (0.9 sec, 16% mix) for the sparser arrangement typical of these sections.",
+      "representative_songs": [
+        "American Idiot (intro riff)",
+        "Homecoming (intro)",
+        "Are We the Waiting",
+        "Wake Me Up When September Ends (verse)"
+      ],
+      "pickup_position": "Bridge",
+      "technique_note": "These sections are sparser and more exposed than Dookie's verses — clean articulation and consistent pick attack matter more than muting technique here."
+    },
+    "2_verse_drive": {
+      "footswitch": "FS2",
+      "description": "Core driving punk rhythm tone — Deez One Vintage active at moderate Drive 4.5 plus the Brit P75 preamp pushed to a genuine crunch, matching the confirmed 'bright, tight punk crunch' amp settings. Mildly scooped mids, boosted highs/bass. Tighter reverb (0.6 sec, 10% mix) for rhythm-guitar punch.",
+      "representative_songs": [
+        "American Idiot (verse)",
+        "Holiday (verse)",
+        "Jesus of Suburbia (Pt. I/II)",
+        "Boulevard of Broken Dreams (verse)"
+      ],
+      "pickup_position": "Bridge",
+      "technique_note": "Tight, drum-locked palm-muted rhythm playing with unused fretting fingers muting unplayed strings, per the confirmed tone-guide technique notes."
+    },
+    "3_power_chorus": {
+      "footswitch": "FS3",
+      "description": "Heaviest snapshot — Deez One Vintage pushed to Drive 6.5 and the Brit P75 preamp's Master/Ch Vol pushed further, standing in for the confirmed second (Marshall 'Idiot Amp') guitar layer added on top of the base Floyd/Park tracking for the record's biggest sections. More scooped mids, most low end of the three snapshots for maximum power-chord weight. Driest, tightest reverb (0.5 sec, 8% mix).",
+      "representative_songs": [
+        "Holiday (chorus)",
+        "St. Jimmy",
+        "Letterbomb",
+        "American Idiot (chorus)",
+        "Give Me Novacaine → She's a Rebel transition"
+      ],
+      "pickup_position": "Bridge",
+      "technique_note": "Rapid-fire full-band power chords, picked hard near the bridge — this is the 'stacked guitars' moment on the record, so lean into a bigger, more aggressive attack than the verse/drive snapshot."
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard throughout American Idiot",
+    "pickup_notes": "Bridge pickup (or bridge humbucker if available) throughout all three snapshots, per the confirmed 'Blue' Strat path. If using a Les Paul Junior-style single-P-90 guitar (the 'Floyd' path), there's no pickup selection to make — just favor a slightly firmer pick attack, since a P-90 has less output than the confirmed Bill Lawrence/Duncan bridge humbuckers used on this rig's reference guitars.",
+    "rig_compensation": "Lace Sensor single coils are lower output than both confirmed reference guitars (Blue's SH-4 JB humbucker and Floyd's P-90). Deez One Vintage Drive values (2.0-6.5) and the Brit P75 preamp's own gain stage are both somewhat elevated versus the confirmed 'stay under Gain 8' amp guidance, to compensate.",
+    "two_amp_layering_context": "The record's heaviest sections come from physically layering a second guitar/amp pass (the Marshall 'Idiot Amp') on top of the base Floyd/Park 75 tracking — a studio double-tracking technique this single-guitar, single-signal-chain preset can't literally reproduce. The power/chorus snapshot's extra pedal and preamp push is an approximation of that layered weight, not a literal recreation; doubling the rhythm part on a second guitar track (if recording) would get closer to the source.",
+    "tap_tempo": "Master BPM set to 189 — the tempo of the title track 'American Idiot'. Album tempos vary widely (this is a multi-part rock opera): Holiday is around 130 BPM, Jesus of Suburbia shifts tempo across its five internal movements, Wake Me Up When September Ends is a ballad around 105 BPM. Use tap tempo per song (no delay block in this preset, so tempo mainly affects nothing currently — kept for potential future delay additions).",
+    "conflicting_source_acknowledgment": "Guitar Chalk's tone breakdown is a secondary/derived source (not a direct artist or tech quote like the Dookie preset's Hans interview), so treat the specific numeric amp settings as a reasonable starting point rather than a verified reference — the guitar/amp identities themselves (Floyd, Park 75, Idiot Amp, Blue) are corroborated across multiple sources.",
+    "preamp_caveat": "The Brit P75 Nrm block is an experimental addition layered in front of the real Super Champ XD, not a replacement for it — if the driven snapshots feel too amp-saturated or compressed, try lowering Drive/Master here before touching Deez One Vintage, which should remain the primary crunch source."
+  }
+}
