@@ -64,21 +64,26 @@ pitch_synth_effects:
 - name: Poly Pitch
   based_on: Line 6 Original
   firmware_version: '3.00'
+  notes: 'Confirmed valid parameters (others previously listed, e.g. TempoSync1/TempoSync2/Note
+    Sync, do not exist on this block). ShiftCurve/ReturnCurv accept: StartSlow5, StartSlow4,
+    StartSlow3, StartSlow2, StartSlow1, Linear, StartFast1, StartFast2, StartFast3, StartFast4,
+    StartFast5. Tracking accepts: X Fast, Fast, Stable, X Stable. Shift Time/ReturnTime form a
+    per-note pitch envelope: on each new note the shift ramps from unshifted up to the full
+    Interval/Cents amount over Shift Time, then ramps back down over ReturnTime on release/decay.
+    For a constant always-on harmony (e.g. emulating a POG-style octave doubler) set both times
+    very low (~1ms) with a Linear curve so the shift is effectively instantaneous rather than an
+    audible glide; longer times are useful for pitch-bend/swell style effects instead.'
   available_parameters:
   - Interval
   - Cents
-  - TempoSync1
-  - Note Sync
-  - Shift Time
+  - Shift Time (ms)
   - ShiftCurve
-  - TempoSync2
-  - Note Sync
-  - ReturnTime
+  - ReturnTime (ms)
   - ReturnCurv
   - Tracking
-  - Auto EQ
-  - Mix
-  - Level
+  - Auto EQ (0.0-10.0)
+  - Mix (%)
+  - Level (dB, -60.0 to 6.0)
 - name: Poly Wham
   based_on: Line 6 Original
   firmware_version: '3.00'
