@@ -324,7 +324,7 @@ button { cursor: pointer; border: none; background: none; color: inherit; font: 
 
 .param-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
 
-.row-varies td { background: rgba(224, 48, 48, 0.05) !important; }
+.row-varies td { background: rgba(224, 48, 48, 0.14) !important; }
 
 .val-active { color: var(--green); font-weight: 600; }
 .val-bypassed { color: var(--red); opacity: 0.7; }
