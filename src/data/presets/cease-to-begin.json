@@ -1,0 +1,147 @@
+{
+  "preset_name": "Cease to Begin",
+  "artist": "Band of Horses",
+  "album": "Cease to Begin (2007)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d000048512b87b0858c3bbf5261698326",
+  "tuning": "Standard",
+  "master_bpm": 110,
+  "notes": "General album preset — not a strict pedal-for-pedal recreation, because the specific overdrive/fuzz/modulation pedals used on this record are not documented in interviews the way e.g. the Siamese Dream or Bodysnatchers rigs are. What IS confirmed: recorded at Echo Mountain Studios (Asheville, NC) and Avast Studios (Seattle) with producer Phil Ek; guitars were mostly Gibson Les Pauls (Ben Bridwell's 1976 Norlin-era Les Paul Standard is his signature guitar); the band leaned on REAL PLATE reverb units in the studio rather than spring/hall — reflected here by choosing the Dynamic Plate model over Dynamic Hall/Ganymede; reviewers describe the album's reverb as 'trademark' but consciously dialed back from the wetter, hazier debut (Everything All the Time) for a clearer, more dynamic rock sound. A Boss DM-3 analog delay is visible on Bridwell's studio pedalboard in later photos, which is why Adriatic Delay (based on the DM-2/DM-3 circuit family) was chosen for the delay block, though that photo isn't dated to this specific session. The overdrive (Stupor OD), fuzz (Triangle Fuzz), tremolo (Optical Trem) and chorus (70s Chorus) blocks are genre-appropriate substitutes chosen to realize the 'shoegazey' character requested — hazy chorus-and-tremolo clean tones, a warm cracked-amp overdrive for the driving mid-tempo songs, and a Big Muff-style wall-of-fuzz for the album's big swells (e.g. the outro of 'Is There a Ghost', the climax of 'No One's Gonna Love You') — not confirmed period-accurate gear. Your Strat's Lace Sensors are brighter/quieter than the band's Les Paul humbuckers, so the Parametric EQ nudges Mid Gain and Level up throughout to compensate, per the standard rig-compensation approach for this Helix LT / Super Champ XD setup (no amp+cab block — running into the real tube amp).",
+  "confirmed_sources": [
+    "Wikipedia — Cease to Begin (recording locations, producer Phil Ek, band lineup)",
+    "Reverb News style coverage — 'the band used real plates as reverb, mostly Gibson Les Pauls for guitars' (studio/gear summary of the Echo Mountain sessions)",
+    "Equipboard — Ben Bridwell gear profile (1976 Gibson Les Paul Standard, Boss DM-3 delay on studio board)",
+    "Premier Guitar — Rig Rundown: Band of Horses (Tyler Ramsey & Ben Bridwell, Aug 2012) — later touring rig, used only for general tonal context since Ramsey joined after this album's tracking sessions per some sources"
+  ],
+  "genre_note": "'Shoegazey' is a listener's characterization of this album's hazy, reverb-and-tremolo-washed clean/atmospheric passages rather than a genre the band or press describe it in — the pedal choices below lean into that reading (chorus + tremolo + plate reverb for the wash, Big Muff-style fuzz for the wall-of-sound swells) rather than reproducing a documented shoegaze pedalboard.",
+  "signal_chain": [
+    {
+      "type": "input",
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "S1/S3 stay open (low gain, ambient content). S2 tightens for the driving overdrive. S4 tightens most for the fuzz wall.",
+      "snapshots": {
+        "1_clean": { "Threshold": -68, "Decay": 35, "Level": 0 },
+        "2_warm_drive": { "Threshold": -58, "Decay": 25, "Level": 0 },
+        "3_atmosphere": { "Threshold": -70, "Decay": 40, "Level": 0 },
+        "4_fuzz": { "Threshold": -50, "Decay": 20, "Level": 0 }
+      }
+    },
+    {
+      "type": "distortion",
+      "model": "Stupor OD",
+      "based_on": "Boss SD-1 (rig-compensation stage, not a confirmed Band of Horses pedal)",
+      "notes": "ALWAYS ACTIVE across all snapshots per the rig-compensation strategy — the Super Champ XD's clean headroom and the Strat's Lace Sensors are both cleaner/quieter than the band's Les Paul-into-driven-amp tone, so this stays on at a low, mostly-transparent setting to simulate the amp saturation the real rig would supply naturally. S1 clean: barely on (just a touch of push). S2 warm drive: moderate Drive is the main dirt source for that snapshot, Level kept at 4.5 (not boosted above the other snapshots) so the added Drive changes the character without also making S2 the loudest snapshot, and Tone at 5.0 (neutral) rather than bright. S3 atmosphere: very low, subtler than S1. S4 fuzz: low-moderate, boosting into the Triangle Fuzz (a boost-into-fuzz stack tightens the front end and is a common way to keep a Big Muff-style fuzz from getting flubby).",
+      "snapshots": {
+        "1_clean": { "active": true, "Drive": 1.5, "Tone": 5.0, "Level": 5.0 },
+        "2_warm_drive": { "active": true, "Drive": 5.0, "Tone": 5.0, "Level": 4.5 },
+        "3_atmosphere": { "active": true, "Drive": 1.0, "Tone": 4.5, "Level": 4.5 },
+        "4_fuzz": { "active": true, "Drive": 3.0, "Tone": 5.0, "Level": 5.5 }
+      }
+    },
+    {
+      "type": "distortion",
+      "model": "Triangle Fuzz",
+      "based_on": "EHX Big Muff Pi (Triangle) — genre-appropriate stand-in, not a confirmed Band of Horses pedal",
+      "notes": "BYPASSED except S4. A classic Big Muff-style wall-of-fuzz for the album's biggest swells and outros. Sustain near max for a thick, singing wall; Tone left fairly neutral so it doesn't get too buzzy/thin next to the plate reverb.",
+      "snapshots": {
+        "1_clean": { "active": false, "Sustain": 7.5, "Tone": 5.0, "Level": 6.5 },
+        "2_warm_drive": { "active": false, "Sustain": 7.5, "Tone": 5.0, "Level": 6.5 },
+        "3_atmosphere": { "active": false, "Sustain": 7.5, "Tone": 5.0, "Level": 6.5 },
+        "4_fuzz": { "active": true, "Sustain": 8.5, "Tone": 5.5, "Level": 7.0 }
+      }
+    },
+    {
+      "type": "modulation",
+      "model": "Optical Trem",
+      "based_on": "Fender optical tremolo circuit — genre-appropriate stand-in",
+      "notes": "Only three parameters on this model — Note Sync, Intensity, Level (no separate TempoSync1 toggle or free Speed-in-Hz control like other modulation blocks). Intensity range confirmed 0-10 (not 18-20). BYPASSED in S2 (warm drive stays steady/driving, no wobble). Subtle in S1 (adds a gentle pulse to clean chords). Most prominent in S3 (the dreamy/atmospheric snapshot) and S4 (slow pulse under the fuzz wall).",
+      "snapshots": {
+        "1_clean": { "active": true, "Note Sync": "1/4", "Intensity": 1.5, "Level": 0 },
+        "2_warm_drive": { "active": false, "Note Sync": "1/4", "Intensity": 1.5, "Level": 0 },
+        "3_atmosphere": { "active": true, "Note Sync": "1/4", "Intensity": 3.5, "Level": 0 },
+        "4_fuzz": { "active": true, "Note Sync": "1/2", "Intensity": 2.0, "Level": 0 }
+      }
+    },
+    {
+      "type": "modulation",
+      "model": "70s Chorus",
+      "based_on": "Boss CE-1 — genre-appropriate stand-in",
+      "notes": "No TempoSync/Note Sync on this model — Chorus Rate and Vibrato Rate/Depth are free-running. Mode set to \"Chorus\" (not \"Vibrato\") throughout so the dry signal stays intact — Vibrato Rate/Depth are held at neutral defaults since they're inactive while Mode is Chorus. BYPASSED in S2 (keeps the warm drive tight/driving). Active and lush in S1 and S3 for the hazy/dreamy clean character. Low mix in S4 — a little bit of chorus keeps a Big Muff-style fuzz from sounding static, without smearing the wall of sound.",
+      "snapshots": {
+        "1_clean": { "active": true, "Chorus Rate": 0.6, "Mode": "Chorus", "Vibrato Rate": 0.6, "Vibrato Depth": 0, "Mix": 30, "Level": 0, "Headroom": 0 },
+        "2_warm_drive": { "active": false, "Chorus Rate": 0.6, "Mode": "Chorus", "Vibrato Rate": 0.6, "Vibrato Depth": 0, "Mix": 30, "Level": 0, "Headroom": 0 },
+        "3_atmosphere": { "active": true, "Chorus Rate": 0.4, "Mode": "Chorus", "Vibrato Rate": 0.4, "Vibrato Depth": 0, "Mix": 40, "Level": 0, "Headroom": 0 },
+        "4_fuzz": { "active": true, "Chorus Rate": 0.5, "Mode": "Chorus", "Vibrato Rate": 0.5, "Vibrato Depth": 0, "Mix": 12, "Level": 0, "Headroom": 0 }
+      }
+    },
+    {
+      "type": "eq",
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Doing the usual double duty of this rig: recreating a little of the Les Paul-into-driven-amp midrange the band's humbuckers would give for free, and raising Level to push the Super Champ XD harder to compensate for the Strat's quieter Lace Sensors. S1/S3 open and airy. S2 mid-forward push for the warm drive, with a slight High Gain cut (-0.5) and High Cut pulled down to 8000 Hz to keep it warm rather than trebly. S4 slightly scooped low end (Big Muff character) with a mid bump to keep note definition inside the fuzz wall.",
+      "snapshots": {
+        "1_clean": { "Low Freq": 150, "Low Q": 0.7, "Low Gain": 0, "Mid Freq": 900, "Mid Q": 1.2, "Mid Gain": 1, "High Freq": 4500, "High Q": 0.7, "High Gain": 1, "Low Cut": 90, "High Cut": 11000, "Level": 2 },
+        "2_warm_drive": { "Low Freq": 150, "Low Q": 0.7, "Low Gain": -1, "Mid Freq": 750, "Mid Q": 1.5, "Mid Gain": 3, "High Freq": 4000, "High Q": 0.7, "High Gain": -0.5, "Low Cut": 100, "High Cut": 8000, "Level": 1 },
+        "3_atmosphere": { "Low Freq": 150, "Low Q": 0.7, "Low Gain": 0, "Mid Freq": 1000, "Mid Q": 1.0, "Mid Gain": 0, "High Freq": 5000, "High Q": 0.7, "High Gain": 2, "Low Cut": 85, "High Cut": 12000, "Level": 2 },
+        "4_fuzz": { "Low Freq": 150, "Low Q": 0.7, "Low Gain": -3, "Mid Freq": 650, "Mid Q": 1.5, "Mid Gain": 2, "High Freq": 3500, "High Q": 0.7, "High Gain": 0, "Low Cut": 110, "High Cut": 8500, "Level": 4 }
+      }
+    },
+    {
+      "type": "delay",
+      "model": "Adriatic Delay",
+      "based_on": "Boss DM-2/DM-3 w/ Adrian Mod",
+      "notes": "Boss DM-3 is visible on Ben Bridwell's studio pedalboard (per Equipboard), though not confirmed dated to this specific album's session. BBD Size 2048 (standard analog) throughout. Tempo-synced to Master BPM 110 — use tap tempo per song (album ranges from ~90 BPM ballads to ~140 BPM uptempo tracks). S1 dotted-eighth (545ms) for a gentle slap-echo shimmer. S2 tighter eighth-note (273ms), lower mix, stays out of the way of the driving rhythm. S3 dotted-eighth at higher mix/feedback for the atmospheric wash. S4 short eighth-note at low mix so the delay doesn't muddy the fuzz wall.",
+      "snapshots": {
+        "1_clean": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "545ms (d1/8 at 110 BPM)", "Feedback": 22, "Noise": 1.0, "BBD Size": 2048, "Mix": 25, "Level": 0, "Rate": 0.1, "Depth": 0, "Headroom": 0, "Trails": true },
+        "2_warm_drive": { "TempoSync1": true, "Note Sync": "1/8", "Time": "273ms (1/8 at 110 BPM)", "Feedback": 15, "Noise": 1.0, "BBD Size": 2048, "Mix": 14, "Level": 0, "Rate": 0.1, "Depth": 0, "Headroom": 0, "Trails": true },
+        "3_atmosphere": { "TempoSync1": true, "Note Sync": "1/8 dot", "Time": "545ms (d1/8 at 110 BPM)", "Feedback": 32, "Noise": 1.5, "BBD Size": 2048, "Mix": 34, "Level": 0, "Rate": 0.1, "Depth": 0, "Headroom": 0, "Trails": true },
+        "4_fuzz": { "TempoSync1": true, "Note Sync": "1/8", "Time": "273ms (1/8 at 110 BPM)", "Feedback": 10, "Noise": 1.0, "BBD Size": 2048, "Mix": 10, "Level": 0, "Rate": 0.1, "Depth": 0, "Headroom": 0, "Trails": true }
+      }
+    },
+    {
+      "type": "reverb",
+      "model": "Dynamic Plate",
+      "based_on": "Studio plate reverb — confirmed: 'the band used real plates as reverb' during the Cease to Begin sessions",
+      "notes": "Chosen specifically because a plate reverb (not hall/spring) is the confirmed studio technique for this album. 'Trademark' Band of Horses reverb, but reviewers note it was dialed back from the wetter debut for a clearer sound — kept moderate rather than washed-out except in S3. S1 clean: moderate, open plate. S2 warm drive: tighter/shorter, stays out of the pocket. S3 atmosphere: longest and wettest — this is the dreamy/shoegazey snapshot. S4 fuzz: short and low-mix so the wall of fuzz doesn't turn to mush.",
+      "snapshots": {
+        "1_clean": { "Decay": 2.2, "Predelay": 15, "Damping": 6500, "Mot Rate": 0.5, "MotRange": 2, "Mix": 28, "Low Freq": 200, "Low Gain": 0, "Low Cut": 100, "High Cut": 8500, "Level": 0, "Trails": true },
+        "2_warm_drive": { "Decay": 1.2, "Predelay": 8, "Damping": 5500, "Mot Rate": 0.5, "MotRange": 1, "Mix": 14, "Low Freq": 200, "Low Gain": 0, "Low Cut": 120, "High Cut": 7000, "Level": 0, "Trails": true },
+        "3_atmosphere": { "Decay": 3.5, "Predelay": 20, "Damping": 7500, "Mot Rate": 0.6, "MotRange": 3, "Mix": 42, "Low Freq": 200, "Low Gain": 0, "Low Cut": 90, "High Cut": 9500, "Level": 0, "Trails": true },
+        "4_fuzz": { "Decay": 1.0, "Predelay": 6, "Damping": 5000, "Mot Rate": 0.4, "MotRange": 1, "Mix": 10, "Low Freq": 200, "Low Gain": -1, "Low Cut": 130, "High Cut": 6500, "Level": 0, "Trails": true }
+      }
+    }
+  ],
+  "snapshots": {
+    "1_clean": {
+      "footswitch": "FS1",
+      "description": "Chiming clean tone with a gentle chorus wash, subtle tremolo pulse, and open plate reverb. The core clean sound for the album's quieter verses and arpeggiated intros.",
+      "representative_songs": ["Is There a Ghost (intro)", "No One's Gonna Love You (verses)", "Ode to LRC", "Detlef Schrempf (verses)"],
+      "pickup_position": "Neck or middle"
+    },
+    "2_warm_drive": {
+      "footswitch": "FS2",
+      "description": "Warm, mid-forward overdrive — a cracked-amp push rather than a hard distortion. Chorus and tremolo bypassed to keep the rhythm tight and driving.",
+      "representative_songs": ["The General Specific", "Detlef Schrempf (choruses)", "Islands on the Coast (verses)"],
+      "pickup_position": "Bridge"
+    },
+    "3_atmosphere": {
+      "footswitch": "FS3",
+      "description": "The 'shoegazey' snapshot — near-clean with heavy chorus, prominent slow tremolo, and the longest/wettest plate reverb. For dreamy interludes and atmospheric builds.",
+      "representative_songs": ["Marry Song", "Islands on the Coast (intro/outro)", "No One's Gonna Love You (bridge)"],
+      "pickup_position": "Neck"
+    },
+    "4_fuzz": {
+      "footswitch": "FS4",
+      "description": "Big Muff-style wall-of-fuzz, boosted into by the always-on overdrive stage, with a slow tremolo pulse underneath and reverb/delay pulled back so the wall stays defined rather than turning to mush.",
+      "representative_songs": ["Is There a Ghost (outro swell)", "No One's Gonna Love You (climax)", "The General Specific (heaviest hits)"],
+      "pickup_position": "Bridge"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard throughout.",
+    "pickup_notes": "Bridge for the driving/fuzz snapshots (S2, S4), neck or middle for the clean/atmospheric ones (S1, S3). The band's guitars were mostly Gibson Les Pauls (humbuckers) — your Strat's Lace Sensors will sound brighter and a touch thinner by comparison; the Parametric EQ's mid bump and raised Level throughout are compensating for that, along with the always-on low-level Stupor OD stage.",
+    "lace_sensor_note": "Because Lace Sensors are quieter than the band's humbuckers, push into the amp a bit harder than feels natural, especially for S2 and S4 — if S4 still feels too polite, raise the Stupor OD's Drive first before touching the Triangle Fuzz, since a hotter boost into the fuzz is more authentic to a real Big Muff-style wall-of-sound than just cranking the fuzz's own Gain.",
+    "tap_tempo": "Master BPM set to 110 as a neutral default — use tap tempo per song. The album ranges from slower ballads (~90 BPM) to more uptempo tracks (~135-140 BPM).",
+    "gear_confidence_note": "Treat this preset as a 'shoegazey Band of Horses' interpretation rather than a documented rig recreation. The plate reverb choice and Bridwell's Les Paul/Boss DM-3 are the only genuinely confirmed elements; the overdrive, fuzz, tremolo, and chorus models are reasonable genre-appropriate choices, not pedals confirmed for this specific record."
+  }
+}

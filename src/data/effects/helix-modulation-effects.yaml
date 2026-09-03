@@ -3,11 +3,11 @@ modulation_effects:
   based_on: Fender® optical tremolo circuit
   firmware_version: null
   synopsis: 'Intensity range is 0–10 maximum (NOT 18–20). Use 1.5–2.0 for barely
-    perceptible tremolo. Speed in Hz.'
+    perceptible tremolo. Only three parameters — Note Sync, Intensity, Level.
+    No separate TempoSync1 toggle or free-running Speed-in-Hz control (unlike
+    other modulation blocks); rate is set directly via Note Sync.'
   available_parameters:
-  - TempoSync1
   - Note Sync
-  - Speed
   - Intensity
   - Level
 - name: 60s Bias Trem
@@ -202,13 +202,13 @@ modulation_effects:
   firmware_version: null
   notable_users:
   - Nick Valensi (The Strokes) — Boss CE-2 confirmed on board; CE-1 is the closest Helix model
+  synopsis: 'Only 7 parameters — no TempoSync/Note Sync controls at all (unlike most
+    modulation blocks). Mode is a 2-way select: "Chorus" or "Vibrato" (not numeric
+    0/1). Chorus Rate and Vibrato Rate/Depth are separate free-running controls
+    regardless of Mode.'
   available_parameters:
-  - TempoSync1
-  - Note Sync (Chorus)
   - Chorus Rate
   - Mode
-  - TempoSync2
-  - Note Sync (Vibrato)
   - Vibrato Rate
   - Vibrato Depth
   - Mix

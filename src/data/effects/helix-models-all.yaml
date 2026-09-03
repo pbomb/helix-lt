@@ -4463,9 +4463,7 @@ modulation:
   based_on: Fender® optical tremolo circuit
   firmware_version: null
   available_parameters:
-  - TempoSync1
   - Note Sync
-  - Speed
   - Intensity
   - Level
 - name: 60s Bias Trem
@@ -4649,12 +4647,8 @@ modulation:
   based_on: BOSS® CE-1
   firmware_version: null
   available_parameters:
-  - TempoSync1
-  - Note Sync (Chorus)
   - Chorus Rate
   - Mode
-  - TempoSync2
-  - Note Sync (Vibrato)
   - Vibrato Rate
   - Vibrato Depth
   - Mix

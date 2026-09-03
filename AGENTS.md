@@ -65,6 +65,7 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 
 | Model | Parameter | Wrong (early) | Correct |
 |---|---|---|---|
+| (device-wide) | Any continuous/rate parameter | Assumed arbitrary decimal precision (e.g. 0.45) | **All continuous values on the device only display/accept 1 decimal place.** Round to the nearest 0.1 (e.g. 0.4 or 0.5, not 0.45). |
 | Kinky Boost | Boost | Variable dB value | On/Off toggle only, fixed boost amount |
 | Kinky Boost | Drive | — | IS a numeric value (0–10), not a toggle |
 | Adriatic Delay | BBD Size | "Small"/"Medium"/"Large" strings | Numeric: 1024, 2048, 4096, 8192 |
@@ -73,6 +74,8 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Dynamic Hall (reverb) | Room Size | Snapshot-variable, arbitrary meter value | **Must be a FIXED value per preset**, and a 3-way select of exactly **10, 20, or 30** (meters) — no other value is valid. Changing it between snapshots changes the algorithm and causes an audible bump/glitch. |
 | Dynamic Hall (reverb) | Diffusion | 0–10 scale assumed | **Percentage (0–100%)** |
 | Optical Trem | Intensity | Set to 18–20 | Range is **0–10**. Use ~1.5–2.0 for subtle. |
+| Optical Trem | Parameter set | Assumed `TempoSync1` + `Speed` (Hz) like other trem/mod blocks | **Only 3 parameters: Note Sync, Intensity, Level.** No separate TempoSync1 toggle and no free-running Speed-in-Hz control — rate is set directly via Note Sync only. |
+| 70s Chorus | Parameter set | Assumed `TempoSync1`/`TempoSync2` + separate `Note Sync (Chorus)`/`Note Sync (Vibrato)` | **Only 7 parameters, no tempo-sync/note-sync controls at all: Chorus Rate, Mode, Vibrato Rate, Vibrato Depth, Mix, Level, Headroom.** `Mode` is a 2-way select with string values `"Chorus"` or `"Vibrato"` (not numeric 0/1). Chorus Rate and Vibrato Rate/Depth are separate free-running controls that both exist regardless of which Mode is selected. |
 | Ubiquitous Vibe | Intensity | Set to 20 | Range is **0–10**. Use ~2.0 for subtle. |
 | Chorus (generic) | Depth | Set to 30–35 | Range is **0–10**, not percent. Use ~3.0–3.5 for subtle. |
 | Transistor Tape | Wow/Flutter | Assumed separate Wow + Flutter | **Single combined parameter**, no separate Bass/Treble either. |
