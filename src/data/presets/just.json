@@ -85,7 +85,7 @@
       "type": "pitch_synth",
       "model": "Poly Wham",
       "based_on": "Line 6 Original",
-      "notes": "Approximates DigiTech Whammy WH-1 — CONFIRMED Jonny kicks Whammy on at 2:17 in live performance for squealing solo sustain, octave up setting. Automatically assigned to EXP 1. Position 100 = full toe-down = constant octave up. Mix at 65% makes octave-up voice prominently audible. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only. Tracking set to Fast for responsive pitch detection.",
+      "notes": "Approximates DigiTech Whammy WH-1 — CONFIRMED Jonny kicks Whammy on at 2:17 in live performance for squealing solo sustain, octave up setting. Automatically assigned to EXP 1. Position 100 = full toe-down = constant octave up. Mix at 65% makes octave-up voice prominently audible. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only. Tracking set to Fast for responsive pitch detection. Auto EQ at 5.0 (0-10 range, moderate compensation for shift-endpoint harshness) — complements the High Cut applied downstream in Snapshot 3.",
       "snapshots": {
         "1_verse": {
           "active": false,
@@ -93,7 +93,7 @@
           "Heel Shift": 0,
           "Toe Shift": 12,
           "Tracking": "Fast",
-          "Auto EQ": true,
+          "Auto EQ": 5.0,
           "Mix": 65,
           "Level": 0
         },
@@ -103,7 +103,7 @@
           "Heel Shift": 0,
           "Toe Shift": 12,
           "Tracking": "Fast",
-          "Auto EQ": true,
+          "Auto EQ": 5.0,
           "Mix": 65,
           "Level": 0
         },
@@ -113,7 +113,7 @@
           "Heel Shift": 0,
           "Toe Shift": 12,
           "Tracking": "Fast",
-          "Auto EQ": true,
+          "Auto EQ": 5.0,
           "Mix": 65,
           "Level": 0
         }
