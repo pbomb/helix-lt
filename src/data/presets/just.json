@@ -123,7 +123,7 @@
       "type": "preamp",
       "model": "Brit 2203",
       "based_on": "Marshall JCM800 2203",
-      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Poly Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all three snapshots since this is the amp for the whole song, not a per-section coloration choice. S1 verse: moderate Drive for the semi-clean/mid-forward SD-1 tone. S2 heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. S3 whammy solo: Drive between the two, Sag raised slightly for looser compression under sustained bent notes. Input parameter (jack selection, unique to this model) intentionally left unset — its value scale/options aren't reliably documented in the YAML; ask before setting if further accuracy is wanted.",
+      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Poly Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all three snapshots since this is the amp for the whole song, not a per-section coloration choice. S1 verse: moderate Drive for the semi-clean/mid-forward SD-1 tone. S2 heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. S3 whammy solo: Drive between the two, Sag raised slightly for looser compression under sustained bent notes. Input set to Low (the real 2203's -6dB reduced-sensitivity jack) since drive pedals precede the amp in every snapshot — pads the front end so the pedal-boosted signal doesn't over-drive the input stage into uncontrolled harshness, leaving the amp's own Drive knob to do the shaping.",
       "snapshots": {
         "1_verse": {
           "active": true,
@@ -134,7 +134,8 @@
           "Master": 5,
           "Ch Vol": 5,
           "Sag": 4,
-          "Hum": 1
+          "Hum": 1,
+          "Input": "Low"
         },
         "2_heavy_riff": {
           "active": true,
@@ -145,7 +146,8 @@
           "Master": 6,
           "Ch Vol": 6,
           "Sag": 4,
-          "Hum": 1
+          "Hum": 1,
+          "Input": "Low"
         },
         "3_whammy_solo": {
           "active": true,
@@ -156,7 +158,8 @@
           "Master": 6,
           "Ch Vol": 6,
           "Sag": 5,
-          "Hum": 1
+          "Hum": 1,
+          "Input": "Low"
         }
       }
     },
