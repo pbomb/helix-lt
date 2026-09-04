@@ -85,9 +85,30 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Industrial Fuzz | Oscillator | Omitted | **On/Off toggle.** On = enables self-oscillation circuit (needed for chaotic/oscillating intro sounds). Off = stable fuzz only, even at low Stability. |
 | Industrial Fuzz | Stability | — | **Counterintuitive: LOWER = more unstable/oscillating (chaos). HIGHER = stable fuzz.** |
 | Poly Wham | Auto EQ | Boolean true/false | **Range is 0.0–10.0.** Compensation EQ applied to the shifted signal — higher = more EQ correction at the shift endpoints, 0 = none. |
-| Brit 2203 | Input | Omitted / unset | **2-way select: "Low" or "High"** (mirrors the real 2203's two physical input jacks — High = full sensitivity, Low = ~6dB pad). Use Low when drive pedals precede the amp to avoid over-driving the input stage. |
+| Brit 2203 | Input | Omitted / unset | **2-way select: "Low" or "High"** (mirrors the real 2203's two physical input jacks — High = full sensitivity, Low = ~6dB pad). Use Low when drive pedals precede the amp to avoid over-driving the input stage. **Treat as a FIXED value per preset, like Room Size below — do NOT vary it between snapshots** (see "Snapshot-switch pop" section). |
 | Cosmos Echo | Splice | Boolean true/false | **Range is 0.0–10.0**, not a toggle. |
 | Poly Wham / Poly Pitch (any) | (whole block) | Assumed cheap like other pitch blocks | **Extremely DSP-heavy** — polyphonic pitch tracking is one of the costliest block types on Helix. Stacking it with a preamp + multiple drive blocks can exhaust DSP for everything downstream, graying out most blocks after that point on hardware. If the part only needs single-note tracking, prefer the much lighter **Pitch Wham** (params: Position, Heel Pitch, Toe Pitch, Mix, Level — no Tracking/Auto EQ, since those are specific to Poly Wham's polyphonic engine). |
+
+### Snapshot-switch pop
+Confirmed via Line 6's own community support threads (multiple independent reports):
+a loud pop/click on snapshot switch has two common root causes, both worth checking
+before assuming it's unfixable:
+1. **Bypass/param ordering.** Helix applies each block's bypass state first, then
+   ramps continuous parameter changes afterward. If a block bypasses (e.g. a drive
+   pedal engaging) at the same instant other blocks' continuous params (Drive,
+   Level, EQ) are changing to compensate for the resulting loudness jump, there's a
+   brief window at the old bypass-only loudness before the ramped params catch up —
+   that gap is the pop. Minimize by keeping the loudness gap between a block's
+   bypassed and active states small, and prefer letting *continuous* params (not
+   more bypasses) carry the compensation.
+2. **Discrete/selector-type parameters varying between snapshots.** Anything that's
+   a hard selector rather than a continuous knob (Room Size's 10/20/30m 3-way,
+   Brit 2203's Input High/Low, likely other amp channel/jack-type selects) can
+   cause an audible discontinuity if it changes value on a snapshot switch,
+   independent of the bypass-ordering issue above. **Fix: treat these as a FIXED
+   value for the whole preset — set once, never snapshot-variable — and use
+   continuous params (Level, Drive, Master, etc.) to carry any tonal/loudness
+   difference between snapshots instead.**
 
 ### Naming convention fix
 **Always use "Parametric EQ" as the display name AND the `model` field value** —
