@@ -161,7 +161,7 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "S1 gentle and open — verse not heavily sculpted. S2 tightens high cut to control JCM800 brightness under heavy distortion. S3 raises mid frequency to 1.0kHz with wider Q — broader boost supports Pitch Wham octave-up voice. Level trimmed per snapshot to level-match loudness after user feedback on hardware: verse was too quiet (raised), heavy riff too loud (cut), solo too loud (cut) — these three are pure output trims, no other tone parameters changed for loudness. S2 eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of heavy riff's excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry. Solo's High Cut also lowered from 8kHz to 6kHz after user reported it was still too trebly even after fixing an unrelated Stupor OD bypass issue — 8kHz was letting too much of the octave-up voice's top end through.",
+      "notes": "S1 gentle and open — verse not heavily sculpted. S2 tightens high cut to control JCM800 brightness under heavy distortion. S3's mid boost pulled back down to 900Hz/Q2.0/+1 (from the original 1.0kHz/Q1.5/+2 'support the octave voice' boost) after user reported the solo was still too trebly even after the Mix and first High Cut cut — that boost was specifically brightening the octave-up voice, which is exactly what needed taming, not reinforcing. High Cut also dropped 6kHz->5kHz for the same reason. Level trimmed per snapshot to level-match loudness after user feedback on hardware: verse was too quiet (raised), heavy riff too loud (cut), solo too loud (cut) — these three are pure output trims, no other tone parameters changed for loudness. S2 eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of heavy riff's excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry. Solo's High Cut also lowered from 8kHz to 6kHz after user reported it was still too trebly even after fixing an unrelated Stupor OD bypass issue — 8kHz was letting too much of the octave-up voice's top end through.",
       "snapshots": {
         "1_verse": {
           "Low Freq": 150,
@@ -195,14 +195,14 @@
           "Low Freq": 150,
           "Low Q": 0.7,
           "Low Gain": -2,
-          "Mid Freq": 1000,
-          "Mid Q": 1.5,
-          "Mid Gain": 2,
+          "Mid Freq": 900,
+          "Mid Q": 2.0,
+          "Mid Gain": 1,
           "High Freq": 5000,
           "High Q": 0.7,
           "High Gain": 0,
           "Low Cut": 80,
-          "High Cut": 6000,
+          "High Cut": 5000,
           "Level": -1
         }
       }
@@ -337,7 +337,7 @@
     },
     "3_whammy_solo": {
       "footswitch": "FS3",
-      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5, into Brit 2203 preamp (Drive 5.5, Sag 5 for looser sustain). Pitch Wham active — Position 100, Toe Pitch +12, Mix 50%. Octave-up voice prominent but less bright/loud after hardware feedback. EQ mid at 1.0kHz wider Q. Eighth note delay at 35% mix. High Cut at 6kHz to tame octave brightness. Confirm Stupor OD is bypassed on this snapshot — leaving it active here stacks it with Ratatouille and made the tone unlistenable in testing.",
+      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5, into Brit 2203 preamp (Drive 5.5, Sag 5 for looser sustain). Pitch Wham active — Position 100, Toe Pitch +12, Mix 50%. Octave-up voice prominent but less bright/loud after hardware feedback. EQ mid pulled back to 900Hz/Q2.0/+1 and High Cut down to 5kHz after repeated hardware feedback that the solo was still too trebly. Eighth note delay at 35% mix. Confirm Stupor OD is bypassed on this snapshot — leaving it active here stacks it with Ratatouille and made the tone unlistenable in testing.",
       "pickup_position": "Bridge"
     }
   },
