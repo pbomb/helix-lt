@@ -59,7 +59,7 @@
       "type": "distortion",
       "model": "Ratatouille Dist",
       "based_on": "1984 Pro Co RAT",
-      "notes": "ShredMaster approximation — both use op-amp gain stages with diode clipping. ShredMaster Contour control (mid scoop) approximated by Filter parameter. BYPASSED in Snapshot 1 (verse). ACTIVE in Snapshots 2 and 3. Note: Thom Yorke is a confirmed notable user of the RAT per YAML. Filter at 5.0 is neutral in S2; raised to 6.5 in S3 to give solo more sustaining character.",
+      "notes": "ShredMaster approximation — both use op-amp gain stages with diode clipping. ShredMaster Contour control (mid scoop) approximated by Filter parameter. BYPASSED in Snapshot 1 (verse). ACTIVE in Snapshots 2 and 3. Note: Thom Yorke is a confirmed notable user of the RAT per YAML. Filter at 5.0 is neutral in S2; raised to 6.5 in S3 to give solo more sustaining character. S2 Level cut from 6.0 to 4.5 after user reported heavy riff still too loud even after a -2 EQ trim — with SD-1 feeding into Ratatouille, the two pedals' stacked output-gain Levels were the real source of the excess loudness, not something a small post-chain EQ trim could fully claw back. Gain/Filter (the distortion character) left untouched — only the output stage was trimmed.",
       "snapshots": {
         "1_verse": {
           "active": false,
@@ -71,7 +71,7 @@
           "active": true,
           "Gain": 8.0,
           "Filter": 5.0,
-          "Level": 6.0
+          "Level": 4.5
         },
         "3_whammy_solo": {
           "active": true,
@@ -161,7 +161,7 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "S1 gentle and open — verse not heavily sculpted. S2 tightens high cut to control JCM800 brightness under heavy distortion. S3 raises mid frequency to 1.0kHz with wider Q — broader boost supports Pitch Wham octave-up voice. Level trimmed per snapshot to level-match loudness after user feedback on hardware: verse was too quiet (raised), heavy riff too loud (cut), solo too loud (cut) — these three are pure output trims, no other tone parameters changed for loudness. Solo's High Cut also lowered from 8kHz to 6kHz after user reported it was still too trebly even after fixing an unrelated Stupor OD bypass issue — 8kHz was letting too much of the octave-up voice's top end through.",
+      "notes": "S1 gentle and open — verse not heavily sculpted. S2 tightens high cut to control JCM800 brightness under heavy distortion. S3 raises mid frequency to 1.0kHz with wider Q — broader boost supports Pitch Wham octave-up voice. Level trimmed per snapshot to level-match loudness after user feedback on hardware: verse was too quiet (raised), heavy riff too loud (cut), solo too loud (cut) — these three are pure output trims, no other tone parameters changed for loudness. S2 eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of heavy riff's excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry. Solo's High Cut also lowered from 8kHz to 6kHz after user reported it was still too trebly even after fixing an unrelated Stupor OD bypass issue — 8kHz was letting too much of the octave-up voice's top end through.",
       "snapshots": {
         "1_verse": {
           "Low Freq": 150,
@@ -189,7 +189,7 @@
           "High Gain": -1,
           "Low Cut": 90,
           "High Cut": 9000,
-          "Level": -2
+          "Level": -1
         },
         "3_whammy_solo": {
           "Low Freq": 150,
@@ -332,7 +332,7 @@
     },
     "2_heavy_riff": {
       "footswitch": "FS2",
-      "description": "Heavy riff. SD-1 boosting into Ratatouille — stacked ShredMaster approximation, both pushing the Brit 2203 preamp (Drive 6.5) hard. Pitch Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
+      "description": "Heavy riff. SD-1 boosting into Ratatouille (output Level trimmed to 4.5 to tame stacked-pedal loudness) — stacked ShredMaster approximation, both pushing the Brit 2203 preamp (Drive 6.5) hard. Pitch Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
       "pickup_position": "Bridge"
     },
     "3_whammy_solo": {
