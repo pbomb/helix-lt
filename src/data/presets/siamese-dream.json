@@ -323,7 +323,7 @@
           "Bass": 5.0,
           "Treble": 5.0,
           "FBTone": 5.0,
-          "Splice": false,
+          "Splice": 0,
           "Dry Thru": true,
           "Trails": true
         },
@@ -341,7 +341,7 @@
           "Bass": 5.0,
           "Treble": 4.5,
           "FBTone": 5.0,
-          "Splice": false,
+          "Splice": 0,
           "Dry Thru": true,
           "Trails": true
         },
@@ -359,7 +359,7 @@
           "Bass": 5.0,
           "Treble": 4.5,
           "FBTone": 5.0,
-          "Splice": false,
+          "Splice": 0,
           "Dry Thru": true,
           "Trails": true
         },
@@ -377,7 +377,7 @@
           "Bass": 5.0,
           "Treble": 4.0,
           "FBTone": 5.0,
-          "Splice": false,
+          "Splice": 0,
           "Dry Thru": true,
           "Trails": true
         }

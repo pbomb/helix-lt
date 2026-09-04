@@ -84,6 +84,10 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Wringer Fuzz | Fuzz Type | String "Fuzz" | **0 or 1 only** (0 = mid-scooped/high-octane "Fuzz 1", 1 = thick/mid-focused wall-of-sound "Fuzz 2"). Choose 0 for articulate/lead fuzz, 1 for heavy rhythm/doom fuzz. |
 | Industrial Fuzz | Oscillator | Omitted | **On/Off toggle.** On = enables self-oscillation circuit (needed for chaotic/oscillating intro sounds). Off = stable fuzz only, even at low Stability. |
 | Industrial Fuzz | Stability | — | **Counterintuitive: LOWER = more unstable/oscillating (chaos). HIGHER = stable fuzz.** |
+| Poly Wham | Auto EQ | Boolean true/false | **Range is 0.0–10.0.** Compensation EQ applied to the shifted signal — higher = more EQ correction at the shift endpoints, 0 = none. |
+| Brit 2203 | Input | Omitted / unset | **2-way select: "Low" or "High"** (mirrors the real 2203's two physical input jacks — High = full sensitivity, Low = ~6dB pad). Use Low when drive pedals precede the amp to avoid over-driving the input stage. |
+| Cosmos Echo | Splice | Boolean true/false | **Range is 0.0–10.0**, not a toggle. |
+| Poly Wham / Poly Pitch (any) | (whole block) | Assumed cheap like other pitch blocks | **Extremely DSP-heavy** — polyphonic pitch tracking is one of the costliest block types on Helix. Stacking it with a preamp + multiple drive blocks can exhaust DSP for everything downstream, graying out most blocks after that point on hardware. If the part only needs single-note tracking, prefer the much lighter **Pitch Wham** (params: Position, Heel Pitch, Toe Pitch, Mix, Level — no Tracking/Auto EQ, since those are specific to Poly Wham's polyphonic engine). |
 
 ### Naming convention fix
 **Always use "Parametric EQ" as the display name AND the `model` field value** —
