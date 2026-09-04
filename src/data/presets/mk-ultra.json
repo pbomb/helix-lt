@@ -209,6 +209,7 @@
         "1_verse": {
           "Decay": 3.2,
           "Predelay": 18,
+          "Room Size": 20,
           "Diffusion": 60,
           "Damping": 6500,
           "Mix": 42,
@@ -223,6 +224,7 @@
         "2_heavy_riff": {
           "Decay": 0.8,
           "Predelay": 5,
+          "Room Size": 20,
           "Diffusion": 50,
           "Damping": 4000,
           "Mix": 15,
@@ -237,6 +239,7 @@
         "3_bridge": {
           "Decay": 2.0,
           "Predelay": 12,
+          "Room Size": 20,
           "Diffusion": 60,
           "Damping": 5500,
           "Mix": 30,

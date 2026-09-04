@@ -198,6 +198,7 @@
         "1_angular_intro": {
           "Decay": 1.5,
           "Predelay": 10,
+          "Room Size": 20,
           "Diffusion": 50,
           "Damping": 6000,
           "Mix": 28,
@@ -212,6 +213,7 @@
         "2_main_riff": {
           "Decay": 0.7,
           "Predelay": 5,
+          "Room Size": 20,
           "Diffusion": 50,
           "Damping": 5000,
           "Mix": 12,
@@ -226,6 +228,7 @@
         "3_lead": {
           "Decay": 1.8,
           "Predelay": 12,
+          "Room Size": 20,
           "Diffusion": 60,
           "Damping": 6500,
           "Mix": 32,

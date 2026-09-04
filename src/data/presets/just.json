@@ -279,6 +279,7 @@
         "1_verse": {
           "Decay": 1.8,
           "Predelay": 12,
+          "Room Size": 20,
           "Diffusion": 60,
           "Damping": 6000,
           "Mix": 30,
@@ -293,6 +294,7 @@
         "2_heavy_riff": {
           "Decay": 0.6,
           "Predelay": 4,
+          "Room Size": 20,
           "Diffusion": 50,
           "Damping": 4000,
           "Mix": 10,
@@ -307,6 +309,7 @@
         "3_whammy_solo": {
           "Decay": 1.5,
           "Predelay": 10,
+          "Room Size": 20,
           "Diffusion": 60,
           "Damping": 5000,
           "Mix": 28,

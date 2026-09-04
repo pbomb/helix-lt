@@ -178,6 +178,7 @@
         "1_clean": {
           "Decay": 2.8,
           "Predelay": 15,
+          "Room Size": 20,
           "Diffusion": 60,
           "Damping": 6500,
           "Mix": 42,
@@ -192,6 +193,7 @@
         "2_heavy": {
           "Decay": 0.7,
           "Predelay": 5,
+          "Room Size": 20,
           "Diffusion": 50,
           "Damping": 4000,
           "Mix": 15,
