@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048519293c743fa542094336c5e12",
   "tuning": "Standard",
   "master_bpm": 102,
-  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). Since the JCM800 2203 is a specific confirmed amp (not just generic rig compensation), it's modeled as a Preamp-only block (Brit 2203, no cab/power amp) active across all three snapshots, per AGENTS.md's rule that preamp blocks are warranted when a real amp is confirmed for the part. DigiTech Whammy WH-1 confirmed for solo — Pitch Wham at +12 semitones (octave up) at 50% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Three snapshots: verse semi-clean, heavy riff, Whammy solo.",
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). Since the JCM800 2203 is a specific confirmed amp (not just generic rig compensation), it's modeled as a Preamp-only block (Brit 2203, no cab/power amp) active across all four snapshots, per AGENTS.md's rule that preamp blocks are warranted when a real amp is confirmed for the part. DigiTech Whammy WH-1 confirmed for solo — Pitch Wham at +12 semitones (octave up) at 50% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Four snapshots: verse clean, crunch, heavy riff, Whammy solo. Verse was split into two snapshots (clean Verse + Crunch) after confirming via research that Jonny Greenwood's actual approach on 'Just' alternates a genuinely clean tone for verses with the distorted ShredMaster tone for riff/chorus — the original single 'verse' snapshot (moderate SD-1 drive) was really a crunch tone, not clean, and is preserved as the 'Crunch' snapshot.",
   "signal_chain": [
     {
       "type": "input",
@@ -13,16 +13,21 @@
       "based_on": "Line 6 Original",
       "snapshots": {
         "1_verse": {
+          "Threshold": -65,
+          "Decay": 20,
+          "Level": 0
+        },
+        "2_crunch": {
           "Threshold": -62,
           "Decay": 30,
           "Level": 0
         },
-        "2_heavy_riff": {
+        "3_heavy_riff": {
           "Threshold": -52,
           "Decay": 22,
           "Level": 0
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "Threshold": -55,
           "Decay": 25,
           "Level": 0
@@ -33,21 +38,27 @@
       "type": "distortion",
       "model": "Stupor OD",
       "based_on": "BOSS SD-1 Super OverDrive",
-      "notes": "Confirmed Boss SD-1 used on The Bends era. Pre-distortion boost and tone shaper — pushes Ratatouille and adds mid-forward character. ACTIVE in Snapshots 1 and 2. BYPASSED in Snapshot 3 — solo tone uses Ratatouille alone for clearer, more defined character.",
+      "notes": "Confirmed Boss SD-1 used on The Bends era. Pre-distortion boost and tone shaper — pushes Ratatouille and adds mid-forward character. BYPASSED in Verse (clean) and Whammy Solo. ACTIVE in Crunch and Heavy Riff. Solo tone uses Ratatouille alone for clearer, more defined character — confirm this block is bypassed on that snapshot, since leaving it active stacked with Ratatouille made the solo unlistenable in testing.",
       "snapshots": {
         "1_verse": {
+          "active": false,
+          "Drive": 3.0,
+          "Tone": 5.5,
+          "Level": 6.5
+        },
+        "2_crunch": {
           "active": true,
           "Drive": 3.0,
           "Tone": 5.5,
           "Level": 6.5
         },
-        "2_heavy_riff": {
+        "3_heavy_riff": {
           "active": true,
           "Drive": 4.0,
           "Tone": 5.5,
           "Level": 7.0
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "active": false,
           "Drive": 3.0,
           "Tone": 5.5,
@@ -59,7 +70,7 @@
       "type": "distortion",
       "model": "Ratatouille Dist",
       "based_on": "1984 Pro Co RAT",
-      "notes": "ShredMaster approximation — both use op-amp gain stages with diode clipping. ShredMaster Contour control (mid scoop) approximated by Filter parameter. BYPASSED in Snapshot 1 (verse). ACTIVE in Snapshots 2 and 3. Note: Thom Yorke is a confirmed notable user of the RAT per YAML. Filter at 5.0 is neutral in S2; raised to 6.5 in S3 to give solo more sustaining character. S2 Level cut from 6.0 to 4.5 after user reported heavy riff still too loud even after a -2 EQ trim — with SD-1 feeding into Ratatouille, the two pedals' stacked output-gain Levels were the real source of the excess loudness, not something a small post-chain EQ trim could fully claw back. Gain/Filter (the distortion character) left untouched — only the output stage was trimmed.",
+      "notes": "ShredMaster approximation — both use op-amp gain stages with diode clipping. ShredMaster Contour control (mid scoop) approximated by Filter parameter. BYPASSED in Verse (clean) and Crunch. ACTIVE in Heavy Riff and Whammy Solo. Note: Thom Yorke is a confirmed notable user of the RAT per YAML. Filter at 5.0 is neutral in Heavy Riff; raised to 6.5 in Whammy Solo to give solo more sustaining character. Heavy Riff's Level cut from 6.0 to 4.5 after user reported it still too loud even after a -2 EQ trim — with SD-1 feeding into Ratatouille, the two pedals' stacked output-gain Levels were the real source of the excess loudness, not something a small post-chain EQ trim could fully claw back. Gain/Filter (the distortion character) left untouched — only the output stage was trimmed.",
       "snapshots": {
         "1_verse": {
           "active": false,
@@ -67,13 +78,19 @@
           "Filter": 5.0,
           "Level": 6.0
         },
-        "2_heavy_riff": {
+        "2_crunch": {
+          "active": false,
+          "Gain": 8.0,
+          "Filter": 5.0,
+          "Level": 6.0
+        },
+        "3_heavy_riff": {
           "active": true,
           "Gain": 8.0,
           "Filter": 5.0,
           "Level": 4.5
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "active": true,
           "Gain": 7.0,
           "Filter": 6.5,
@@ -85,7 +102,7 @@
       "type": "pitch_synth",
       "model": "Pitch Wham",
       "based_on": "Digitech Whammy",
-      "notes": "Approximates DigiTech Whammy WH-1 — CONFIRMED Jonny kicks Whammy on at 2:17 in live performance for squealing solo sustain, octave up setting. Switched from Poly Wham to Pitch Wham to free up DSP for the rest of the chain (Poly Wham's polyphonic tracking is one of the most DSP-heavy blocks in Helix, and stacked with the two drive blocks plus the preamp it was starving the downstream EQ/delay/reverb of DSP). Pitch Wham is mono-only, which matches the preset's playing notes — solo is single notes, not chords. Automatically assigned to EXP 1. Position 100 = full toe-down = constant octave up. BYPASSED in Snapshots 1 and 2. ACTIVE in Snapshot 3 only. No Tracking or Auto EQ parameters on this model — those were specific to Poly Wham's polyphonic engine. Mix lowered from 65% to 50% after user reported the solo was still too trebly on hardware even after fixing an unrelated Stupor OD bypass issue and cutting the EQ's High Cut — an octave-up voice is inherently brighter than the dry signal, so less of it mixed in reduces the treble-heavy character while staying clearly audible.",
+      "notes": "Approximates DigiTech Whammy WH-1 — CONFIRMED Jonny kicks Whammy on at 2:17 in live performance for squealing solo sustain, octave up setting. Switched from Poly Wham to Pitch Wham to free up DSP for the rest of the chain (Poly Wham's polyphonic tracking is one of the most DSP-heavy blocks in Helix, and stacked with the two drive blocks plus the preamp it was starving the downstream EQ/delay/reverb of DSP). Pitch Wham is mono-only, which matches the preset's playing notes — solo is single notes, not chords. Automatically assigned to EXP 1. Position 100 = full toe-down = constant octave up. BYPASSED in Verse (clean), Crunch, and Heavy Riff. ACTIVE in Whammy Solo only. No Tracking or Auto EQ parameters on this model — those were specific to Poly Wham's polyphonic engine. Mix lowered from 65% to 50% after user reported the solo was still too trebly on hardware even after fixing an unrelated Stupor OD bypass issue and cutting the EQ's High Cut — an octave-up voice is inherently brighter than the dry signal, so less of it mixed in reduces the treble-heavy character while staying clearly audible.",
       "snapshots": {
         "1_verse": {
           "active": false,
@@ -95,7 +112,7 @@
           "Mix": 50,
           "Level": 0
         },
-        "2_heavy_riff": {
+        "2_crunch": {
           "active": false,
           "Position": 100,
           "Heel Pitch": 0,
@@ -103,7 +120,15 @@
           "Mix": 50,
           "Level": 0
         },
-        "3_whammy_solo": {
+        "3_heavy_riff": {
+          "active": false,
+          "Position": 100,
+          "Heel Pitch": 0,
+          "Toe Pitch": 12,
+          "Mix": 50,
+          "Level": 0
+        },
+        "4_whammy_solo": {
           "active": true,
           "Position": 100,
           "Heel Pitch": 0,
@@ -117,9 +142,21 @@
       "type": "preamp",
       "model": "Brit 2203",
       "based_on": "Marshall JCM800 2203",
-      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Pitch Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all three snapshots since this is the amp for the whole song, not a per-section coloration choice. S1 verse: moderate Drive for the semi-clean/mid-forward SD-1 tone. S2 heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. S3 whammy solo: Drive between the two, Sag raised slightly for looser compression under sustained bent notes. Input set to Low (the real 2203's -6dB reduced-sensitivity jack) since drive pedals precede the amp in every snapshot — pads the front end so the pedal-boosted signal doesn't over-drive the input stage into uncontrolled harshness, leaving the amp's own Drive knob to do the shaping.",
+      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Pitch Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all four snapshots since this is the amp for the whole song, not a per-section coloration choice. Verse (clean): Drive dropped to 1.5 (just a touch of amp character, no pedals in front). Crunch: moderate Drive for the semi-clean/mid-forward SD-1 tone. Heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. Whammy solo: Drive between Crunch and Heavy Riff, Sag raised slightly for looser compression under sustained bent notes. Input is High on Verse (clean) since no pedal is boosting the signal there — full-sensitivity input is the historically correct choice for a bare guitar signal. Input is Low on Crunch/Heavy Riff/Whammy Solo (the real 2203's -6dB reduced-sensitivity jack) since drive pedals precede the amp on those three — pads the front end so the pedal-boosted signal doesn't over-drive the input stage into uncontrolled harshness, leaving the amp's own Drive knob to do the shaping.",
       "snapshots": {
         "1_verse": {
+          "active": true,
+          "Drive": 1.5,
+          "Bass": 5,
+          "Mid": 5,
+          "Treble": 6,
+          "Master": 4.5,
+          "Ch Vol": 4.5,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "High"
+        },
+        "2_crunch": {
           "active": true,
           "Drive": 4.0,
           "Bass": 5,
@@ -131,7 +168,7 @@
           "Hum": 1,
           "Input": "Low"
         },
-        "2_heavy_riff": {
+        "3_heavy_riff": {
           "active": true,
           "Drive": 6.5,
           "Bass": 5,
@@ -143,7 +180,7 @@
           "Hum": 1,
           "Input": "Low"
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "active": true,
           "Drive": 5.5,
           "Bass": 5,
@@ -161,9 +198,23 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "S1 gentle and open — verse not heavily sculpted. S2 tightens high cut to control JCM800 brightness under heavy distortion. S3's mid boost pulled back down to 900Hz/Q2.0/+1 (from the original 1.0kHz/Q1.5/+2 'support the octave voice' boost) after user reported the solo was still too trebly even after the Mix and first High Cut cut — that boost was specifically brightening the octave-up voice, which is exactly what needed taming, not reinforcing. High Cut also dropped 6kHz->5kHz for the same reason. Level trimmed per snapshot to level-match loudness after user feedback on hardware: verse was too quiet (raised), heavy riff too loud (cut), solo too loud (cut) — these three are pure output trims, no other tone parameters changed for loudness. S2 eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of heavy riff's excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry. Solo's High Cut also lowered from 8kHz to 6kHz after user reported it was still too trebly even after fixing an unrelated Stupor OD bypass issue — 8kHz was letting too much of the octave-up voice's top end through.",
+      "notes": "Verse (clean) is bright and wide open (High Cut 10kHz, small High Gain sparkle, no Mid boost) since there's no distortion to tame. Crunch (formerly the sole 'verse' snapshot) is gentle and open — not heavily sculpted. Heavy Riff tightens high cut to control JCM800 brightness under heavy distortion. Whammy Solo's mid boost pulled back down to 900Hz/Q2.0/+1 (from an original 1.0kHz/Q1.5/+2 'support the octave voice' boost) after user reported the solo was still too trebly even after the Mix and first High Cut cut — that boost was specifically brightening the octave-up voice, which is exactly what needed taming, not reinforcing. High Cut also dropped 6kHz->5kHz for the same reason. Level trimmed per snapshot to level-match loudness after user feedback on hardware: Crunch was too quiet (raised to +2), Heavy Riff too loud (cut), Solo too loud (cut) — these are pure output trims, no other tone parameters changed for loudness. Heavy Riff eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of its excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry.",
       "snapshots": {
         "1_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": 0,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 0,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 10000,
+          "Level": 0
+        },
+        "2_crunch": {
           "Low Freq": 150,
           "Low Q": 0.7,
           "Low Gain": -1,
@@ -177,7 +228,7 @@
           "High Cut": 10000,
           "Level": 2
         },
-        "2_heavy_riff": {
+        "3_heavy_riff": {
           "Low Freq": 150,
           "Low Q": 0.7,
           "Low Gain": -2,
@@ -191,7 +242,7 @@
           "High Cut": 9000,
           "Level": -1
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "Low Freq": 150,
           "Low Q": 0.7,
           "Low Gain": -2,
@@ -211,9 +262,27 @@
       "type": "delay",
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
-      "notes": "Confirmed Jonny used RE-201 since 1995, confirmed for The Bends era. Tempo-synced to 102 BPM. S1: eighth note = 294ms (original 320ms, 26ms off — using synced eighth). S2: sixteenth note = 147ms (original 160ms, 13ms off — synced). S3: eighth note = 294ms (original 280ms, 14ms off — synced). Treble rolled off in all snapshots to keep repeats dark.",
+      "notes": "Confirmed Jonny used RE-201 since 1995, confirmed for The Bends era. Tempo-synced to 102 BPM. Verse (clean) and Crunch: eighth note = 294ms (original 320ms, 26ms off — using synced eighth); Verse's Mix (22%) kept lower than Crunch's (30%) since a clean tone doesn't need as much wash to read clearly. Heavy Riff: sixteenth note = 147ms (original 160ms, 13ms off — synced). Whammy Solo: eighth note = 294ms (original 280ms, 14ms off — synced). Treble rolled off in all snapshots to keep repeats dark.",
       "snapshots": {
         "1_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "294ms (1/8 at 102 BPM)",
+          "Ramp": 0,
+          "Feedback": 18,
+          "Wow/Flutter": 2.0,
+          "Mix": 22,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "2_crunch": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "294ms (1/8 at 102 BPM)",
@@ -231,7 +300,7 @@
           "Dry Thru": true,
           "Trails": true
         },
-        "2_heavy_riff": {
+        "3_heavy_riff": {
           "TempoSync1": true,
           "Note Sync": "1/16",
           "Time": "147ms (1/16 at 102 BPM)",
@@ -249,7 +318,7 @@
           "Dry Thru": true,
           "Trails": true
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "TempoSync1": true,
           "Note Sync": "1/8",
           "Time": "294ms (1/8 at 102 BPM)",
@@ -277,6 +346,21 @@
       "room_size_fixed": 20,
       "snapshots": {
         "1_verse": {
+          "Decay": 2.0,
+          "Predelay": 14,
+          "Room Size": 20,
+          "Diffusion": 60,
+          "Damping": 6500,
+          "Mix": 32,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 7000,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_crunch": {
           "Decay": 1.8,
           "Predelay": 12,
           "Room Size": 20,
@@ -291,7 +375,7 @@
           "Level": 0,
           "Trails": true
         },
-        "2_heavy_riff": {
+        "3_heavy_riff": {
           "Decay": 0.6,
           "Predelay": 4,
           "Room Size": 20,
@@ -306,7 +390,7 @@
           "Level": 0,
           "Trails": true
         },
-        "3_whammy_solo": {
+        "4_whammy_solo": {
           "Decay": 1.5,
           "Predelay": 10,
           "Room Size": 20,
@@ -327,16 +411,21 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Verse / semi-clean. SD-1 only — no Ratatouille. Pitch Wham bypassed. Brit 2203 preamp active at moderate Drive 4.0 for JCM800 front-end push. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
+      "description": "Verse / clean. Both drive pedals bypassed, Pitch Wham bypassed. Brit 2203 preamp active at very low Drive 1.5 for a touch of amp character, Input set to High (no pedal boosting it, so full-sensitivity input is correct here unlike the driven snapshots). Bright, open EQ (High Cut fully open at 10kHz, small High Gain sparkle). Slightly more delay/reverb mix than Crunch for a spacious clean ambience. Confirmed by research: Jonny Greenwood's actual approach on 'Just' switches between a genuinely clean tone for verses and the distorted ShredMaster tone for the riff/chorus — the old all-purpose 'verse' snapshot was really a crunch tone, not a clean one.",
       "pickup_position": "Bridge"
     },
-    "2_heavy_riff": {
+    "2_crunch": {
       "footswitch": "FS2",
+      "description": "Crunch (formerly \"Verse\"). Semi-clean/mid-forward drive for distorted chord work. SD-1 only — no Ratatouille. Pitch Wham bypassed. Brit 2203 preamp active at moderate Drive 4.0 for JCM800 front-end push. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
+      "pickup_position": "Bridge"
+    },
+    "3_heavy_riff": {
+      "footswitch": "FS3",
       "description": "Heavy riff. SD-1 boosting into Ratatouille (output Level trimmed to 4.5 to tame stacked-pedal loudness) — stacked ShredMaster approximation, both pushing the Brit 2203 preamp (Drive 6.5) hard. Pitch Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
       "pickup_position": "Bridge"
     },
-    "3_whammy_solo": {
-      "footswitch": "FS3",
+    "4_whammy_solo": {
+      "footswitch": "FS4",
       "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5, into Brit 2203 preamp (Drive 5.5, Sag 5 for looser sustain). Pitch Wham active — Position 100, Toe Pitch +12, Mix 50%. Octave-up voice prominent but less bright/loud after hardware feedback. EQ mid pulled back to 900Hz/Q2.0/+1 and High Cut down to 5kHz after repeated hardware feedback that the solo was still too trebly. Eighth note delay at 35% mix. Confirm Stupor OD is bypassed on this snapshot — leaving it active here stacks it with Ratatouille and made the tone unlistenable in testing.",
       "pickup_position": "Bridge"
     }
@@ -345,10 +434,10 @@
     "tuning": "Standard",
     "key": "E major",
     "capo": null,
-    "pickup_notes": "Bridge pickup throughout all three snapshots",
-    "technique": "Verse requires firm deliberate picking — after recording The Bends Jonny developed arm pain requiring a brace, which tells you how hard he was playing. Full commitment to downstrokes on the riff.",
-    "snapshot_cues": "Snapshot 1 for verse sections. Snapshot 2 for heavy riff sections. Snapshot 3 at exactly 2:17 in the live arrangement when Whammy engages — switch at this moment for maximum dramatic effect.",
+    "pickup_notes": "Bridge pickup throughout all four snapshots",
+    "technique": "Crunch/riff sections require firm deliberate picking — after recording The Bends Jonny developed arm pain requiring a brace, which tells you how hard he was playing. Full commitment to downstrokes on the riff. The clean Verse can be played more lightly since there's no drive pedal to push into.",
+    "snapshot_cues": "Snapshot 1 (Verse, clean) for the true verse sections. Snapshot 2 (Crunch) for pre-chorus/driven chord sections. Snapshot 3 (Heavy Riff) for the main riff/chorus. Snapshot 4 (Whammy Solo) at exactly 2:17 in the live arrangement when Whammy engages — switch at this moment for maximum dramatic effect.",
     "whammy_technique": "Play solo as single notes only — Pitch Wham is mono-only (no polyphonic tracking). Hold notes and let Whammy octave-up and Cosmos Echo sustain and bloom. Space and sustain are the tools — resist playing busily.",
-    "pre_chorus_technique": "Verse sections (Snapshot 1) are not completely clean — there is a controlled mid-forward OD. Match this by picking with moderate force rather than trying to play softly into a clean tone."
+    "pre_chorus_technique": "Crunch (Snapshot 2) is not completely clean — there is a controlled mid-forward OD. Match this by picking with moderate force. The true Verse (Snapshot 1) is genuinely clean — pick more lightly there."
   }
 }
