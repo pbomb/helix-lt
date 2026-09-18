@@ -87,6 +87,10 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Poly Wham | Auto EQ | Boolean true/false | **Range is 0.0–10.0.** Compensation EQ applied to the shifted signal — higher = more EQ correction at the shift endpoints, 0 = none. |
 | Brit 2203 | Input | Omitted / unset | **2-way select: "Low" or "High"** (mirrors the real 2203's two physical input jacks — High = full sensitivity, Low = ~6dB pad). Use Low when drive pedals precede the amp to avoid over-driving the input stage. **Treat as a FIXED value per preset, like Room Size below — do NOT vary it between snapshots** (see "Snapshot-switch pop" section). |
 | Cosmos Echo | Splice | Boolean true/false | **Range is 0.0–10.0**, not a toggle. |
+| Vintage Digital | Bit Depth | Assumed continuous | **Discrete 8-way select: 6, 8, 10, 11, 12, 14, 16, 24.** Treat as a FIXED value per preset (selector — see "Snapshot-switch pop"). |
+| Vintage Digital | Sample Rate | Assumed continuous | **Discrete 8-way select: 8, 11.025, 12, 16, 22.05, 24, 44.1, 48 kHz.** Treat as a FIXED value per preset, same reason as Bit Depth. |
+| Vintage Digital | Rate / Depth / Headroom | Unknown | Rate **0.1–8.0 Hz** (1 decimal); Depth **0.0–10.0**; Headroom **-12.0 to +12.0 dB**. |
+| Tycoctavia Fuzz | Fuzz | Unknown | **0–10** (confirmed on hardware). Only two params: Fuzz, Level. |
 | Poly Wham / Poly Pitch (any) | (whole block) | Assumed cheap like other pitch blocks | **Extremely DSP-heavy** — polyphonic pitch tracking is one of the costliest block types on Helix. Stacking it with a preamp + multiple drive blocks can exhaust DSP for everything downstream, graying out most blocks after that point on hardware. If the part only needs single-note tracking, prefer the much lighter **Pitch Wham** (params: Position, Heel Pitch, Toe Pitch, Mix, Level — no Tracking/Auto EQ, since those are specific to Poly Wham's polyphonic engine). |
 
 ### Snapshot-switch pop
@@ -148,6 +152,10 @@ matters more than matching the raw internal Helix name.
 | EHX Russian Big Muff | Dark Dove Fuzz | Used for Strokes "12:51" synth-tone approximation (Tone at min) |
 | Z.Vex Fuzz Factory | Industrial Fuzz | Exact model match. See Stability/Oscillator notes above. |
 | MXR Blue Box | Wringer Fuzz + Boctaver (stacked) | No single-block equivalent exists |
+| Foxrox Octron | Tycoctavia Fuzz | Substitute, not a match (Tycobrahe Octavia, octave-up fuzz). Only Fuzz + Level. Place before other drives so it tracks a less-distorted signal. "Silversun Pickups" preset (Carnavas/Swoon era) |
+| Ibanez TS9 / TS9DX | Scream 808 | No TS9 model; TS808 is the nearest. Used always-on as rig-compensation OD in the Silversun preset |
+| Guyatone MD-3 / Line 6 DL4 / Boss DD-3 | Vintage Digital | No exact model for any. Chosen for lo-fi digital character (Bit Depth / Sample Rate). Fix both selectors per preset |
+| Alesis Midiverb II | Ganymede | No Midiverb model; Ganymede chosen for a smooth wash and because it has no discrete selectors |
 | DigiTech Whammy | Pitch Wham / Poly Wham | Poly Wham has Heel Shift/Toe Shift in semitones; Pitch Wham similar |
 | Boss OC-2 | Boctaver | -1 Oct / -2 Oct independent level controls |
 | MXR Phase 90 | Script Mod Phase | Simple Rate/Mix/Level |
@@ -195,7 +203,12 @@ matters more than matching the raw internal Helix name.
 - **8-block serial path (1A) limit.** Always count blocks before finalizing. If a
   design needs more than 8, either consolidate mutually-exclusive effects into shared
   blocks toggled per snapshot (see "Bodysnatchers" combined preset below) or cut
-  something.
+  something. **The Noise Gate does NOT count toward the 8** — it is the Input block's
+  built-in Gate Threshold/Decay, not a processing block (see `type: "input"` in
+  `src/types.ts`). Count only the processing blocks after it. (Older presets and notes
+  that say the gate "uses a slot" are counting it in error.) If DSP, not slot count, is
+  the constraint, route Path 1 into Path 2 (independent DSP engines) rather than
+  cutting blocks — but this sacrifices Path 2 if True Preset Spillover is enabled.
 - **Noise Gate is always first block.** Threshold in dB (negative), Decay in ms.
   Rough guidance: -70 to -75 dB (very open, clean tones) → -65/-68 (light drive) →
   -58/-62 (moderate OD) → -52/-55 (high gain/fuzz) → -48/-50 (max gain, wall of fuzz).
