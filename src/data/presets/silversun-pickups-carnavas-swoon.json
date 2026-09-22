@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d0000485157ab320b5d3dde7a870ffc79",
   "tuning": "Standard",
   "master_bpm": 120,
-  "notes": "General, album-spanning preset for the guitar sounds of Silversun Pickups' Carnavas (2006) and Swoon (2009), built around Brian Aubert. No amp+cab or preamp block — running into the Super Champ XD. Confirmed gear on Aubert's board: EHX Big Muff Pi (photographed on the 2006 board, so Carnavas era), 1980s Pro Co RAT, Ibanez TS9DX, Fulltone Full-Drive 2, Foxrox Octron, Guyatone MD-3, Boss DD-3 x2, Line 6 DL4, Eventide TimeFactor, Alesis Midiverb II; amps Fender Hot Rod DeVille, Marshall JCM900, Hiwatt Custom 100 (2009), guitar 1994 Epiphone Sheraton II (humbuckers). IMPORTANT caveat: the sources list this gear without saying which album used what — only the Big Muff is era-pinned. Everything else is 'confirmed on his rig, era unverified'. Design choices: (1) the Scream 808 is always on, both as a confirmed pedal and as the rig-compensation overdrive (Lace Sensors + clean Champ), so the biggest loudness step never crosses a bypass; (2) no preamp block, and the delay's discrete Bit Depth / Sample Rate are fixed and the reverb is Ganymede, removing every selector-type pop source noted in AGENTS.md; (3) each drive's Level was set low where it feeds another drive, to avoid the stacked-output loudness seen in the Just preset. All EQ Levels and drive Levels are STARTING values expected to need level-only trims after hardware testing. Processing blocks: 7 of 8 (the Input-block gate does not count). If DSP grays out on hardware, route Path 1 into Path 2 after the Parametric EQ (drives+EQ on Path 1, delay+reverb on Path 2). If pops persist, split into a Clean/Crunch preset and a Muff/Lead preset using the same chain. Substitutions: Foxrox Octron -> Tycoctavia Fuzz, Guyatone MD-3/DL4/DD-3 -> Vintage Digital, Alesis Midiverb II -> Ganymede, TS9DX -> Scream 808 (no exact models exist).",
+  "notes": "General, album-spanning preset for the guitar sounds of Silversun Pickups' Carnavas (2006) and Swoon (2009), built around Brian Aubert. No amp+cab or preamp block — running into the Super Champ XD. Confirmed gear on Aubert's board: EHX Big Muff Pi (photographed on the 2006 board, so Carnavas era), 1980s Pro Co RAT, Ibanez TS9DX, Fulltone Full-Drive 2, Foxrox Octron, Guyatone MD-3, Boss DD-3 x2, Line 6 DL4, Eventide TimeFactor, Alesis Midiverb II; amps Fender Hot Rod DeVille, Marshall JCM900, Hiwatt Custom 100 (2009), guitar 1994 Epiphone Sheraton II (humbuckers). IMPORTANT caveat: the sources list this gear without saying which album used what — only the Big Muff is era-pinned. Everything else is 'confirmed on his rig, era unverified'. Design choices: (1) the Scream 808 is always on, both as a confirmed pedal and as the rig-compensation overdrive (Lace Sensors + clean Champ), so the biggest loudness step never crosses a bypass; (2) no preamp block, and the delay's discrete Bit Depth / Sample Rate are fixed and the reverb is Ganymede, removing every selector-type pop source noted in AGENTS.md; (3) each drive's Level was set low where it feeds another drive, to avoid the stacked-output loudness seen in the Just preset. All EQ Levels and drive Levels are STARTING values expected to need level-only trims after hardware testing. UPDATE (first hardware pass): Clean Shimmer read as the loudest snapshot with Muff Wall and Ambient Lead much quieter, so Triangle Fuzz Level (5.5 -> 6.5) and Parametric EQ Level (Muff Wall 1 -> 3, Ambient Lead 0 -> 3) were raised in both snapshots; the Big Muff's own scooped voice plus the Muff Wall/Ambient Lead EQ's Low Gain cuts and tighter High Cut needed a real output boost, not just a small trim. No Gain/Tone/Sustain/Filter (tonal character) params were touched. Still expect further level-only trims after this correction is tested. Processing blocks: 7 of 8 (the Input-block gate does not count). If DSP grays out on hardware, route Path 1 into Path 2 after the Parametric EQ (drives+EQ on Path 1, delay+reverb on Path 2). If pops persist, split into a Clean/Crunch preset and a Muff/Lead preset using the same chain. Substitutions: Foxrox Octron -> Tycoctavia Fuzz, Guyatone MD-3/DL4/DD-3 -> Vintage Digital, Alesis Midiverb II -> Ganymede, TS9DX -> Scream 808 (no exact models exist).",
   "confirmed_sources": [
     "https://equipboard.com/pros/brian-aubert",
     "https://www.uberproaudio.com/who-plays-what/577-silversun-pickups-brian-aubert-guitar-rig-gear-and-equipment",
@@ -141,7 +141,7 @@
       "variant": "Big Muff",
       "model": "Triangle Fuzz",
       "based_on": "Electro-Harmonix Big Muff Pi (photographed on Aubert's 2006 board, so Carnavas era)",
-      "notes": "ACTIVE in Muff Wall and Ambient Lead. The Big Muff is the one item in this rig that is pinned to the Carnavas era; which Big Muff version is not documented, so the original-circuit Triangle model is used (Bighorn is the Ram's Head, Dark Dove the Russian). Muff Wall: Sustain 7.0 / Tone 5.0 for a thick wall, mids restored by the EQ block. Ambient Lead: Sustain 6.5 / Tone 6.0 for more note definition (Tone ~6 is the lead-definition setting in the Bighorn notes; same circuit family). Level 5.5 keeps the fuzz from towering over the always-on Scream 808 in front of it.",
+      "notes": "ACTIVE in Muff Wall and Ambient Lead. The Big Muff is the one item in this rig that is pinned to the Carnavas era; which Big Muff version is not documented, so the original-circuit Triangle model is used (Bighorn is the Ram's Head, Dark Dove the Russian). Muff Wall: Sustain 7.0 / Tone 5.0 for a thick wall, mids restored by the EQ block. Ambient Lead: Sustain 6.5 / Tone 6.0 for more note definition (Tone ~6 is the lead-definition setting in the Bighorn notes; same circuit family). Level raised from 5.5 to 6.5 in both snapshots after user reported Muff Wall and Ambient Lead were much quieter than Clean Shimmer on hardware — a scooped Big Muff voice reads quieter than the Scream 808 alone even at a similar raw signal level, so the output stage needed a real boost, not just an EQ trim. Sustain/Tone (the distortion character) left untouched — only the output Level changed.",
       "snapshots": {
         "1_clean_shimmer": {
           "active": false,
@@ -159,13 +159,13 @@
           "active": true,
           "Sustain": 7.0,
           "Tone": 5.0,
-          "Level": 5.5
+          "Level": 6.5
         },
         "4_ambient_lead": {
           "active": true,
           "Sustain": 6.5,
           "Tone": 6.0,
-          "Level": 5.5
+          "Level": 6.5
         }
       }
     },
@@ -173,7 +173,7 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Does double duty: (1) restores the amp/cab voicing that isn't modeled (mid fill under the Big Muff scoop; tamed highs on the fuzz snapshots) and (2) carries the rig-compensation output Level (+2 dB on Clean, +1 on the drive snapshots, 0 on the lead) plus per-snapshot loudness trims. All Levels here are STARTING values; expect level-only trims after hardware testing, same as the Just preset history.",
+      "notes": "Does double duty: (1) restores the amp/cab voicing that isn't modeled (mid fill under the Big Muff scoop; tamed highs on the fuzz snapshots) and (2) carries the rig-compensation output Level plus per-snapshot loudness trims. Muff Wall and Ambient Lead Level raised (1 -> 3, 0 -> 3) after user reported both were much quieter than Clean Shimmer on hardware — their Low Gain cuts (-3/-2 dB) and tighter High Cut (7000/6500 Hz) that restore the missing amp voicing were also pulling down overall loudness more than the +1/0 dB Level was making up for. Tone-shaping params (frequencies, Q, the cut/gain amounts) left untouched — only Level changed, same as the Just preset's loudness-matching history.",
       "snapshots": {
         "1_clean_shimmer": {
           "Low Freq": 150,
@@ -215,7 +215,7 @@
           "High Gain": -1,
           "Low Cut": 100,
           "High Cut": 7000,
-          "Level": 1
+          "Level": 3
         },
         "4_ambient_lead": {
           "Low Freq": 150,
@@ -229,7 +229,7 @@
           "High Gain": -1,
           "Low Cut": 90,
           "High Cut": 6500,
-          "Level": 0
+          "Level": 3
         }
       }
     },
@@ -367,7 +367,7 @@
     },
     "3_muff_wall": {
       "footswitch": "FS3",
-      "description": "Muff wall. Scream 808 lightly boosting the Triangle Fuzz (Sustain 7.0, Tone 5.0) for a thick wall of fuzz. RAT and octave bypassed. EQ scoops lows (-3 dB) and adds +3 dB at 800 Hz / Q1.0 to restore the mids the Muff removes, High Cut 7 kHz. Very restrained ambience (eighth-note delay 14% mix, 1.2 sec reverb at 14%) so the fuzz stays punchy instead of muddy.",
+      "description": "Muff wall. Scream 808 lightly boosting the Triangle Fuzz (Sustain 7.0, Tone 5.0, Level 6.5) for a thick wall of fuzz. RAT and octave bypassed. EQ scoops lows (-3 dB) and adds +3 dB at 800 Hz / Q1.0 to restore the mids the Muff removes, High Cut 7 kHz, EQ Level +3 dB. Fuzz Level and EQ Level were both raised after user feedback that this snapshot was much quieter than Clean Shimmer on hardware. Very restrained ambience (eighth-note delay 14% mix, 1.2 sec reverb at 14%) so the fuzz stays punchy instead of muddy.",
       "pickup_position": "Bridge",
       "representative_songs": [
         "Lazy Eye (chorus)",
@@ -378,7 +378,7 @@
     },
     "4_ambient_lead": {
       "footswitch": "FS4",
-      "description": "Ambient lead. Triangle Fuzz with Tone raised to 6.0 for note definition, plus the Tycoctavia octave voice in front of it (Fuzz 4.0, Level 5.0). RAT bypassed. Bigger, longer ambience: dotted-eighth delay at 34% mix (Feedback 45) and a 4.5-second Ganymede tail at 36% mix, Decay/Mod raised for swells. Gate held at -54 dB with a long 40 ms Decay so sustained notes and swells are not chopped. The octave voice is optional: bypass or remove that block first if it pops or tracks badly.",
+      "description": "Ambient lead. Triangle Fuzz with Tone raised to 6.0 for note definition and Level raised to 6.5, plus the Tycoctavia octave voice in front of it (Fuzz 4.0, Level 5.0). EQ Level raised to +3 dB. RAT bypassed. Fuzz Level and EQ Level were both raised after user feedback that this snapshot was much quieter than Clean Shimmer on hardware. Bigger, longer ambience: dotted-eighth delay at 34% mix (Feedback 45) and a 4.5-second Ganymede tail at 36% mix, Decay/Mod raised for swells. Gate held at -54 dB with a long 40 ms Decay so sustained notes and swells are not chopped. The octave voice is optional: bypass or remove that block first if it pops or tracks badly.",
       "pickup_position": "Bridge (or neck for swells)",
       "representative_songs": [
         "Growing Old Is Getting Old (textures)",
