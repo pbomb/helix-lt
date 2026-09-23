@@ -71,14 +71,14 @@
       "type": "delay",
       "model": "Vintage Swell",
       "based_on": "Line 6 Original (auto-swell delay)",
-      "notes": "Directly implements Rivers Cuomo's own confirmed quote: 'The only effects on guitar I think are on Only In Dreams – there's a little bit of delay on the swells but apart from that I was very anti-effects.' The auto-swell Threshold/Attack params let a pick attack fade in rather than needing a volume pedal, matching that description. Bit Depth and Sample Rate are discrete selectors (per Vintage Digital's corrected params, which this model shares) — FIXED at 16-bit/44.1kHz throughout, the cleanest/most transparent settings, since this preset wants a subtle swell effect, not lo-fi degradation. Mix and Level kept at zero everywhere except Snapshot 4, where it does its confirmed job.",
+      "notes": "Directly implements Rivers Cuomo's own confirmed quote: 'The only effects on guitar I think are on Only In Dreams – there's a little bit of delay on the swells but apart from that I was very anti-effects.' The auto-swell Threshold/Attack params let a pick attack fade in rather than needing a volume pedal, matching that description. Attack is in milliseconds, ranging 100ms-5000ms (confirmed on hardware) — NOT a 0-10 scale. Snapshot 4 uses 1800ms for a slow, deliberate swell; the other snapshots hold a neutral 400ms since the block is bypassed there anyway. Bit Depth and Sample Rate are discrete selectors (per Vintage Digital's corrected params, which this model shares) — FIXED at 16-bit/44.1kHz throughout, the cleanest/most transparent settings, since this preset wants a subtle swell effect, not lo-fi degradation. Mix and Level kept at zero everywhere except Snapshot 4, where it does its confirmed job.",
       "bit_depth_fixed": 16,
       "sample_rate_fixed": 44.1,
       "snapshots": {
-        "1_clean": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 3.0, "Trails": true },
-        "2_crunch": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 3.0, "Trails": true },
-        "3_garage_fuzz": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 3.0, "Trails": true },
-        "4_ambient_swell": { "active": true, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 5.5, "Trails": true }
+        "1_clean": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 400, "Trails": true },
+        "2_crunch": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 400, "Trails": true },
+        "3_garage_fuzz": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 400, "Trails": true },
+        "4_ambient_swell": { "active": true, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 1800, "Trails": true }
       }
     },
     {

@@ -91,6 +91,7 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Vintage Digital | Sample Rate | Assumed continuous | **Discrete 8-way select: 8, 11.025, 12, 16, 22.05, 24, 44.1, 48 kHz.** Treat as a FIXED value per preset, same reason as Bit Depth. |
 | Vintage Digital | Rate / Depth / Headroom | Unknown | Rate **0.1–8.0 Hz** (1 decimal); Depth **0.0–10.0**; Headroom **-12.0 to +12.0 dB**. |
 | Tycoctavia Fuzz | Fuzz | Unknown | **0–10** (confirmed on hardware). Only two params: Fuzz, Level. |
+| Vintage Swell | Attack | Assumed 0–10 scale | **Milliseconds, 100ms–5000ms** (confirmed on hardware) — not a 0-10 knob. Low values (~100-400ms) are a near-instant swell; use ~1500-2000ms for a slow, deliberate volume-swell effect. Likely applies to Adriatic Swell's Attack too (same auto-swell Threshold/Attack pair), though not yet confirmed on that model specifically. |
 | Poly Wham / Poly Pitch (any) | (whole block) | Assumed cheap like other pitch blocks | **Extremely DSP-heavy** — polyphonic pitch tracking is one of the costliest block types on Helix. Stacking it with a preamp + multiple drive blocks can exhaust DSP for everything downstream, graying out most blocks after that point on hardware. If the part only needs single-note tracking, prefer the much lighter **Pitch Wham** (params: Position, Heel Pitch, Toe Pitch, Mix, Level — no Tracking/Auto EQ, since those are specific to Poly Wham's polyphonic engine). |
 
 ### Snapshot-switch pop
