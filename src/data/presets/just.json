@@ -76,13 +76,13 @@
           "active": false,
           "Gain": 8.0,
           "Filter": 5.0,
-          "Level": 6.0
+          "Level": 4.5
         },
         "2_crunch": {
           "active": false,
           "Gain": 8.0,
           "Filter": 5.0,
-          "Level": 6.0
+          "Level": 4.5
         },
         "3_heavy_riff": {
           "active": true,

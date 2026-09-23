@@ -140,14 +140,14 @@
       "snapshots": {
         "1_clean": {
           "active": false,
-          "Gain": 2.0,
-          "Tone": 5.0,
+          "Gain": 2.5,
+          "Tone": 5.5,
           "Level": 8.0
         },
         "2_dirty": {
           "active": false,
-          "Gain": 2.0,
-          "Tone": 5.0,
+          "Gain": 2.5,
+          "Tone": 5.5,
           "Level": 8.0
         },
         "3_solo": {

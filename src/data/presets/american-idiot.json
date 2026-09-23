@@ -48,9 +48,9 @@
       "snapshots": {
         "1_clean_intro": {
           "active": false,
-          "Drive": 2.0,
-          "Tone": 5.0,
-          "Level": 6.0
+          "Drive": 4.5,
+          "Tone": 5.5,
+          "Level": 7.0
         },
         "2_verse_drive": {
           "active": true,

@@ -90,15 +90,15 @@
       "snapshots": {
         "1_rhythm": {
           "active": false,
-          "Gain": 2.0,
-          "Tone": 5.0,
-          "Level": 8.0
+          "Gain": 3.0,
+          "Tone": 5.5,
+          "Level": 8.5
         },
         "2_chorus": {
           "active": false,
-          "Gain": 2.0,
-          "Tone": 5.0,
-          "Level": 8.0
+          "Gain": 3.0,
+          "Tone": 5.5,
+          "Level": 8.5
         },
         "3_bridge_solo": {
           "active": true,

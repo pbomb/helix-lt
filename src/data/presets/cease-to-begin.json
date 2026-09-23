@@ -44,9 +44,9 @@
       "based_on": "EHX Big Muff Pi (Triangle) — genre-appropriate stand-in, not a confirmed Band of Horses pedal",
       "notes": "BYPASSED except S4. A classic Big Muff-style wall-of-fuzz for the album's biggest swells and outros. Sustain near max for a thick, singing wall; Tone left fairly neutral so it doesn't get too buzzy/thin next to the plate reverb.",
       "snapshots": {
-        "1_clean": { "active": false, "Sustain": 7.5, "Tone": 5.0, "Level": 6.5 },
-        "2_warm_drive": { "active": false, "Sustain": 7.5, "Tone": 5.0, "Level": 6.5 },
-        "3_atmosphere": { "active": false, "Sustain": 7.5, "Tone": 5.0, "Level": 6.5 },
+        "1_clean": { "active": false, "Sustain": 8.5, "Tone": 5.5, "Level": 7.0 },
+        "2_warm_drive": { "active": false, "Sustain": 8.5, "Tone": 5.5, "Level": 7.0 },
+        "3_atmosphere": { "active": false, "Sustain": 8.5, "Tone": 5.5, "Level": 7.0 },
         "4_fuzz": { "active": true, "Sustain": 8.5, "Tone": 5.5, "Level": 7.0 }
       }
     },

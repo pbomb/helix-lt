@@ -114,7 +114,7 @@
           "active": false,
           "Gain": 5.5,
           "Filter": 4.5,
-          "Level": 5.0
+          "Level": 7.0
         },
         "2_crunch": {
           "active": true,
@@ -126,13 +126,13 @@
           "active": false,
           "Gain": 5.5,
           "Filter": 4.5,
-          "Level": 5.0
+          "Level": 7.0
         },
         "4_ambient_lead": {
           "active": false,
           "Gain": 5.5,
           "Filter": 4.5,
-          "Level": 5.0
+          "Level": 7.0
         }
       }
     },
@@ -147,13 +147,13 @@
           "active": false,
           "Sustain": 7.0,
           "Tone": 5.0,
-          "Level": 5.5
+          "Level": 8.0
         },
         "2_crunch": {
           "active": false,
           "Sustain": 7.0,
           "Tone": 5.0,
-          "Level": 5.5
+          "Level": 8.0
         },
         "3_muff_wall": {
           "active": true,

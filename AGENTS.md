@@ -220,6 +220,15 @@ matters more than matching the raw internal Helix name.
   pedals in different sections, model each confirmed pedal as its own block and
   toggle `active: true/false` per snapshot rather than trying to make one block do
   double duty with wildly different settings.
+- **Bypassed snapshots of a block must reuse that block's active parameter values
+  verbatim — never invent separate "placeholder" numbers for a snapshot where the
+  block is off.** A bypassed block is silent, so its knob values don't affect the
+  sound at all; giving them different numbers per snapshot only implies (falsely)
+  that they need per-snapshot tuning. Pick one snapshot where the block is active
+  (if it's active in more than one, any one of them) and copy that exact parameter
+  set — unchanged — into every snapshot where the block is bypassed, only flipping
+  `active` to `false`. The one exception is a block's `variant`-disambiguated
+  identity, `type`, `model`, etc., which obviously aren't per-snapshot at all.
 - **Preamp-only blocks (no cab/power-amp), when used, go after overdrive/distortion/
   fuzz blocks and before modulation blocks** (chorus, phaser, vibe, etc.) and delay/
   reverb. Rationale: this mirrors a real pedals-into-amp-front-end signal path —
