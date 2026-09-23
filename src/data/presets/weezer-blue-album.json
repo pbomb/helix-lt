@@ -1,0 +1,130 @@
+{
+  "preset_name": "Weezer — Blue Album",
+  "artist": "Weezer",
+  "album": "Weezer (Blue Album, 1994)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d0000485199616c97aa8c411c94b7ba92",
+  "tuning": "E flat (half-step down) — confirmed via Weezerpedia (the Blue Album and Pinkerton are in E flat, which is why the band carries two guitar sets live for shows spanning both eras).",
+  "master_bpm": 120,
+  "notes": "Covers Rivers Cuomo's confirmed Blue Album rig: a Mesa/Boogie Mk. 1 (a rare, pre-'Boogie'-branding boutique amp from ~1977-78 with pull-out-knob mods) into a tall 1968 Marshall 8x10 cabinet, run at unusually low volume. No amp+cab blocks used, per rig policy — this Helix LT runs in front of a real Fender Super Champ XD tube amp. No Mesa Mk. 1 model exists on the Helix LT — the Mk. II and later Boogies moved the preamp gain stage after the tone stack, giving a brighter, more 'focused' sound than the Mk. 1's rolled-off, frothy character heard on this album — so the crunch is approximated with a pedal-based substitute (Deez One Vintage / Boss DS-1) rather than a preamp block, a deliberate compromise documented rather than silently substituted. Lace Sensor pickups are lower output than any of Cuomo's confirmed guitars for this album (a modified Strat with a Seymour Duncan JB bridge/DiMarzio Humbucker from Hell, and Ric Ocasek's Gibson Les Paul Juniors), so Drive values are raised roughly 1.0-2.0 above documented settings and Parametric EQ Level is pushed +2 to +4 dB throughout, per rig compensation strategy.",
+  "confirmed_sources": [
+    "Weezerpedia — Rivers Cuomo's equipment (derived from the original Weezer.com Equipment History by band tech Karl Koch) — Mesa Mk. 1 into the tall '68 Marshall 8x10, guitars used",
+    "Guitar.com — The Gear Used by Rivers Cuomo on Weezer's 'Blue Album'",
+    "Weezerpedia-quoted 2014 statement by recording engineer Chris Shaw — confirms Tele-into-Big-Muff-into-Fender-Twin for 'In The Garage' and Ric Ocasek's Jaguar for the clean rhythm on 'Say It Ain't So'",
+    "Rivers Cuomo's own quote (widely cited, incl. Weezerpedia/Guitar.com interviews): 'The only effects on guitar I think are on Only In Dreams – there's a little bit of delay on the swells but apart from that I was very anti-effects.'"
+  ],
+  "songs_that_inspired_each_snapshot": {
+    "1_clean": ["Say It Ain't So (intro/verses)", "Undone - The Sweater Song (verse)", "The World Has Turned and Left Me Here (intro)", "Susanne"],
+    "2_crunch": ["My Name Is Jonas", "Buddy Holly", "Undone - The Sweater Song (chorus)", "No One Else", "Surf Wax America", "Holiday", "In the Garage (rhythm, non-fuzz sections)"],
+    "3_garage_fuzz": ["In the Garage (the Tele-through-Big-Muff overdub)"],
+    "4_ambient_swell": ["Only in Dreams"]
+  },
+  "signal_chain": [
+    {
+      "type": "input",
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "Standard gain-to-threshold curve — clean most open, fuzz snapshot tightest, ambient swell kept open so it doesn't choke sustained volume swells.",
+      "snapshots": {
+        "1_clean": { "Threshold": -70, "Decay": 30, "Level": 0 },
+        "2_crunch": { "Threshold": -60, "Decay": 25, "Level": 0 },
+        "3_garage_fuzz": { "Threshold": -50, "Decay": 18, "Level": 0 },
+        "4_ambient_swell": { "Threshold": -68, "Decay": 28, "Level": 0 }
+      }
+    },
+    {
+      "type": "distortion",
+      "model": "Deez One Vintage",
+      "based_on": "Mesa/Boogie Mk. 1 (pedal substitute — no exact model exists on Helix LT)",
+      "notes": "No Mesa Mk. 1 model exists on the Helix LT — the Mk. II and later Boogies moved the preamp gain stage after the tone stack, giving a brighter, more 'focused' sound than the Mk. 1's rolled-off, frothy character on the Blue Album. Deez One Vintage (Boss DS-1 MIJ) is used here as a practical stand-in for that rounded, mid-forward vintage crunch. Active at low Drive even in the clean snapshot per rig compensation strategy — simulates the natural amp breakup the real Mesa/Marshall rig would give for free that the Super Champ XD's higher headroom doesn't. Bypassed in the fuzz snapshot since the real session ran the Big Muff into a clean Fender Twin, not this crunch.",
+      "snapshots": {
+        "1_clean": { "active": true, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
+        "2_crunch": { "active": true, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
+        "3_garage_fuzz": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
+        "4_ambient_swell": { "active": true, "Drive": 1.0, "Tone": 5.0, "Level": 6.0 }
+      }
+    },
+    {
+      "type": "distortion",
+      "model": "Triangle Fuzz",
+      "based_on": "Electro-Harmonix Big Muff Pi",
+      "notes": "Confirmed by Blue Album engineer Chris Shaw: 'I believe we used a Tele through a Big Muff using Electric Lady's Fender Twin for that tone' for 'In The Garage'. The specific Big Muff version used isn't documented — Triangle Fuzz (original circuit) is chosen as the more period-plausible default for a 1993 Electric Lady session over the later Op-Amp/Ram's Head-era circuits. ACTIVE only in Snapshot 3. Fed with Deez One Vintage bypassed — the real session ran this into a clean Fender Twin, not a cranked amp, so this snapshot should sound like fuzz-on-clean, not fuzz-on-crunch.",
+      "snapshots": {
+        "1_clean": { "active": false, "Sustain": 5.0, "Tone": 5.0, "Level": 6.0 },
+        "2_crunch": { "active": false, "Sustain": 5.0, "Tone": 5.0, "Level": 6.0 },
+        "3_garage_fuzz": { "active": true, "Sustain": 6.5, "Tone": 4.5, "Level": 6.5 },
+        "4_ambient_swell": { "active": false, "Sustain": 5.0, "Tone": 5.0, "Level": 6.0 }
+      }
+    },
+    {
+      "type": "eq",
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Rig compensation: Level raised +2 to +4 dB throughout to push the real Super Champ XD's input stage harder, offsetting the Lace Sensors' lower output vs. Cuomo's confirmed guitars for this album. Warm, rounded, mid-forward voicing rather than a scooped one, matching the Mesa Mk. 1's frothy low-gain character.",
+      "snapshots": {
+        "1_clean": { "Low Freq": 120, "Low Q": 0.7, "Low Gain": 0, "Mid Freq": 700, "Mid Q": 1.2, "Mid Gain": 1, "High Freq": 4000, "High Q": 0.7, "High Gain": 1, "Low Cut": 90, "High Cut": 10000, "Level": 2 },
+        "2_crunch": { "Low Freq": 120, "Low Q": 0.7, "Low Gain": -1, "Mid Freq": 750, "Mid Q": 1.5, "Mid Gain": 3, "High Freq": 3800, "High Q": 0.7, "High Gain": 0, "Low Cut": 100, "High Cut": 8500, "Level": 3 },
+        "3_garage_fuzz": { "Low Freq": 120, "Low Q": 0.7, "Low Gain": -1, "Mid Freq": 700, "Mid Q": 1.5, "Mid Gain": 3, "High Freq": 3500, "High Q": 0.7, "High Gain": -1, "Low Cut": 100, "High Cut": 8000, "Level": 3 },
+        "4_ambient_swell": { "Low Freq": 120, "Low Q": 0.7, "Low Gain": 0, "Mid Freq": 700, "Mid Q": 1.0, "Mid Gain": 0, "High Freq": 4000, "High Q": 0.7, "High Gain": 1, "Low Cut": 80, "High Cut": 10500, "Level": 2 }
+      }
+    },
+    {
+      "type": "delay",
+      "model": "Vintage Swell",
+      "based_on": "Line 6 Original (auto-swell delay)",
+      "notes": "Directly implements Rivers Cuomo's own confirmed quote: 'The only effects on guitar I think are on Only In Dreams – there's a little bit of delay on the swells but apart from that I was very anti-effects.' The auto-swell Threshold/Attack params let a pick attack fade in rather than needing a volume pedal, matching that description. Bit Depth and Sample Rate are discrete selectors (per Vintage Digital's corrected params, which this model shares) — FIXED at 16-bit/44.1kHz throughout, the cleanest/most transparent settings, since this preset wants a subtle swell effect, not lo-fi degradation. Mix and Level kept at zero everywhere except Snapshot 4, where it does its confirmed job.",
+      "bit_depth_fixed": 16,
+      "sample_rate_fixed": 44.1,
+      "snapshots": {
+        "1_clean": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 3.0, "Trails": true },
+        "2_crunch": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 3.0, "Trails": true },
+        "3_garage_fuzz": { "active": false, "TempoSync1": false, "Time": "0ms", "Feedback": 10, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 0, "Level": 0, "Rate": 0.5, "Depth": 0, "Headroom": 0, "Threshold": -30, "Attack": 3.0, "Trails": true },
+        "4_ambient_swell": { "active": true, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 5.5, "Trails": true }
+      }
+    },
+    {
+      "type": "reverb",
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 10m (the smallest of the three selectable sizes) across every snapshot — Weezer's studio production here is close-mic'd and fairly dry, not cavernous, so the tightest hall option is used throughout and only Mix/Decay vary. Snapshot 4 (Only in Dreams) opens up the most since that song's ambience is the one place a wash of reverb is stylistically appropriate alongside the swell delay.",
+      "room_size_fixed": 10,
+      "snapshots": {
+        "1_clean": { "Decay": 1.0, "Predelay": 8, "Room Size": 10, "Diffusion": 40, "Damping": 5500, "Mix": 14, "Motion": 1.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 100, "High Cut": 7000, "Level": 0, "Trails": true },
+        "2_crunch": { "Decay": 0.7, "Predelay": 5, "Room Size": 10, "Diffusion": 35, "Damping": 5000, "Mix": 9, "Motion": 1.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 110, "High Cut": 6000, "Level": 0, "Trails": true },
+        "3_garage_fuzz": { "Decay": 0.8, "Predelay": 6, "Room Size": 10, "Diffusion": 40, "Damping": 5000, "Mix": 12, "Motion": 1.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 100, "High Cut": 6500, "Level": 0, "Trails": true },
+        "4_ambient_swell": { "Decay": 2.2, "Predelay": 14, "Room Size": 10, "Diffusion": 55, "Damping": 6500, "Mix": 32, "Motion": 2.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 80, "High Cut": 8500, "Level": 0, "Trails": true }
+      }
+    }
+  ],
+  "signal_chain_notes": "5 of 8 available Path 1A blocks used (Deez One Vintage, Triangle Fuzz, Parametric EQ, Vintage Swell, Dynamic Hall). Noise Gate does not count toward the limit. Deez One Vintage and Triangle Fuzz are mutually exclusive (the crunch pedal is bypassed whenever the fuzz is on, and vice versa), except for Deez One Vintage's low-level rig-compensation role in the clean and ambient-swell snapshots.",
+  "snapshots": {
+    "1_clean": {
+      "footswitch": "FS1",
+      "description": "Clean/lightly-driven foundation tone. Deez One Vintage barely engaged (Drive 1.5) for rig-compensation warmth only. Moderate EQ, short hall.",
+      "pickup_position": "Neck or middle — approximates Ric Ocasek's Jaguar (bridge, per Chris Shaw's account for 'Say It Ain't So'), cleaner-voiced than Cuomo's humbucker-loaded main guitars"
+    },
+    "2_crunch": {
+      "footswitch": "FS2",
+      "description": "Main Blue Album rhythm tone — the Mesa Mk. 1-into-tall-Marshall crunch, approximated via Deez One Vintage since no Mk. 1 model exists on Helix LT. Warm, rounded, mid-forward, not scooped.",
+      "pickup_position": "Bridge"
+    },
+    "3_garage_fuzz": {
+      "footswitch": "FS3",
+      "description": "'In The Garage' — Tele-through-Big-Muff-through-clean-Twin, per Chris Shaw's confirmed account. Triangle Fuzz active, the crunch pedal bypassed so the fuzz sits on a clean foundation rather than an already-crunching amp.",
+      "pickup_position": "Bridge or middle"
+    },
+    "4_ambient_swell": {
+      "footswitch": "FS4",
+      "description": "'Only in Dreams' — the one song Cuomo himself confirmed uses effects: volume swells with a little delay. Vintage Swell's auto-swell (Threshold/Attack) fades notes in on pick attack; the widest hall reverb in this preset for the song's atmospheric build.",
+      "pickup_position": "Neck",
+      "technique_note": "Pick softly and let the auto-swell do the fade-in work, or use a physical volume pedal/knob swell alongside it for tighter control over the attack shape."
+    }
+  },
+  "playing_notes": {
+    "tuning": "E flat (half-step down) throughout, per Weezerpedia.",
+    "pickup_notes": "Bridge pickup for the crunch and fuzz snapshots, matching Cuomo's confirmed humbucker-loaded guitars (modified Strat with Duncan JB/DiMarzio Humbucker from Hell, Gibson Les Paul Juniors). Neck or middle for the clean and ambient-swell snapshots.",
+    "rig_compensation": "Lace Sensors are notably lower-output single coils vs. every confirmed Cuomo guitar for this album (all humbucker-loaded). Deez One Vintage's Drive values are raised roughly 1.0-2.0 above what a plausible real-world equivalent setting would be, and Parametric EQ Level is pushed +2 to +4 dB throughout, to compensate and push the real Super Champ XD's input stage appropriately.",
+    "mesa_mk1_caveat": "No Mesa/Boogie Mk. 1 model exists on the Helix LT — it's a rare, pre-Boogie-branding boutique amp from the mid-70s with pull-out-knob mods that predate even Mesa's own Mk. 1 reissues. Deez One Vintage is a practical substitute for its warm, low-gain crunch character, not a faithful recreation. If a future Helix firmware or model pack adds a Mesa Mk. 1, this preset's crunch snapshot should be revisited.",
+    "tap_tempo": "Master BPM defaults to 120 (neutral for the album's tempo range). Only Snapshot 4 (Only in Dreams) uses the delay meaningfully — tap tempo to that song's actual BPM (~145) before using it for a real performance; the quarter-note division scales automatically.",
+    "technique": "Weezer's power-chord rhythm playing is fairly straight-ahead — palm-muted low-string chugging on verses, full open chords on choruses. The Noise Gate thresholds in this preset assume moderately controlled picking; loosen (more negative) the Threshold values if unwanted string noise appears with a lighter touch."
+  }
+}

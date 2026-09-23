@@ -1,0 +1,142 @@
+{
+  "preset_name": "Weezer — Green Album",
+  "artist": "Weezer",
+  "album": "Weezer (Green Album, 2001)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d0000485149052c8767d68e177fb704a0",
+  "tuning": "Standard E — confirmed via Weezerpedia (the Green Album marked the switch to standard tuning, whereas the Blue Album and Pinkerton are in E flat).",
+  "master_bpm": 120,
+  "notes": "Covers Rivers Cuomo's confirmed Green Album rig: Weezerpedia's own song-by-song gear breakdown lists two constant rhythm-guitar chains used across the album — 'Rhythm track 1' (Ric Ocasek's 1960 Gibson Les Paul Jr into a Mesa/Boogie Dual Rectifier, Marshall 4x12 with Celestion Greenbacks) and 'Rhythm track 2' (the same guitar into a modified 100W Marshall formerly owned by Warren DeMartini of Ratt, same cab) — plus a documented Ibanez TS808 boost for the Hash Pipe and Knock-Down Drag-Out solos, and a Z-Vex Fuzz Factory (with the exact knob settings used) for the Photograph solo. No amp+cab blocks used, per rig policy — this Helix LT runs in front of a real Fender Super Champ XD tube amp. The confirmed Mesa Dual Rectifier IS modeled directly via the Cali Rectifire preamp block — Helix's Dual Rectifier model is itself based on a 2001 unit, the same year the Green Album was tracked (Dec 2000), an unusually tight match. The modified Marshall (Rhythm track 2) isn't separately modeled since Helix LT allows only one Preamp model per preset; Cali Rectifire stands in for either confirmed amp. Lace Sensor pickups are lower output than Cuomo's confirmed guitars for this album (Les Paul Jr/Classic, humbucker-loaded), so Drive values are raised roughly 1.0-2.0 above documented settings and Parametric EQ Level is pushed +2 to +4 dB throughout, per rig compensation strategy.",
+  "confirmed_sources": [
+    "Weezerpedia — Rivers Cuomo's equipment (derived from the original Weezer.com Equipment History by band tech Karl Koch) — full Green Album song-by-song gear breakdown, including exact Fuzz Factory knob positions for 'Photograph'",
+    "Equipboard — Weezer (Green Album) gear page — Z-Vex Super Hard-On / Vox AC30 for 'Island in the Sun'"
+  ],
+  "songs_that_inspired_each_snapshot": {
+    "1_clean": ["Island in the Sun (rhythm)"],
+    "2_crunch": ["Hash Pipe (rhythm)", "Photograph (rhythm)", "Don't Let Go", "Crab", "Smile", "Glorious Day", "O Girlfriend", "Simple Pages (rhythm)", "Knock-Down Drag-Out (rhythm)"],
+    "3_photograph_fuzz": ["Photograph (solo / intro noise freakout)"],
+    "4_lead_boost": ["Hash Pipe (guitar solo)", "Knock-Down Drag-Out (guitar solo)", "Simple Pages (guitar solo — see EQ mid-boost note)"]
+  },
+  "signal_chain": [
+    {
+      "type": "input",
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "Snapshot 3 (Photograph fuzz) is deliberately left far more open than its gain level would suggest — the Z-Vex Fuzz Factory's self-oscillation is the entire point of that snapshot, and a tight gate chokes the oscillation before it can speak. Everywhere else follows the standard gain-to-threshold curve.",
+      "snapshots": {
+        "1_clean": { "Threshold": -70, "Decay": 30, "Level": 0 },
+        "2_crunch": { "Threshold": -55, "Decay": 20, "Level": 0 },
+        "3_photograph_fuzz": { "Threshold": -72, "Decay": 15, "Level": 0 },
+        "4_lead_boost": { "Threshold": -55, "Decay": 20, "Level": 0 }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "rig compensation",
+      "model": "Deez One Vintage",
+      "based_on": "Line 6 Original — mild always-on OD, not a confirmed Green Album pedal",
+      "notes": "Not confirmed for this album — added per rig compensation strategy to simulate the natural amp breakup Cuomo's real cranked amps would give for free that the Super Champ XD's higher headroom doesn't. Active only at low Drive in the clean snapshot. Bypassed everywhere else — Weezerpedia's rhythm-track breakdown for this album doesn't mention a drive pedal on the main rhythm chains, just cranked amps, so the crunch and solo snapshots get their gain entirely from Cali Rectifire and Scream 808 instead.",
+      "snapshots": {
+        "1_clean": { "active": true, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
+        "2_crunch": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
+        "3_photograph_fuzz": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
+        "4_lead_boost": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "Fuzz Factory (Photograph solo)",
+      "model": "Industrial Fuzz",
+      "based_on": "Z.Vex Fuzz Factory",
+      "notes": "Exact model match. Weezerpedia documents the literal knob settings used for the Photograph solo: Volume 2:00, Gate 2:00, Compression 7:00, Stab 2:00, Drive 1:30 (clock positions on the physical pedal, min at 7:00 / max at 5:00). Converted to the Helix's 0-10 params: Level 7.0 (Volume), Gate 7.0, Compress 0.0 (fully counter-clockwise), Stability 7.0 (Stab), Drive 6.5. Oscillator is ON — Weezerpedia notes the session's 'weird radio noises' came from manipulating the Stab knob live, the Fuzz Factory's signature self-oscillation trick, which requires the oscillator engaged. ACTIVE only in Snapshot 3.",
+      "snapshots": {
+        "1_clean": { "active": false, "Compress": 3.0, "Gate": 3.0, "Drive": 5.0, "Stability": 7.0, "Oscillator": false, "Level": 6.0 },
+        "2_crunch": { "active": false, "Compress": 3.0, "Gate": 3.0, "Drive": 5.0, "Stability": 7.0, "Oscillator": false, "Level": 6.0 },
+        "3_photograph_fuzz": { "active": true, "Compress": 0.0, "Gate": 7.0, "Drive": 6.5, "Stability": 7.0, "Oscillator": true, "Level": 7.0 },
+        "4_lead_boost": { "active": false, "Compress": 3.0, "Gate": 3.0, "Drive": 5.0, "Stability": 7.0, "Oscillator": false, "Level": 6.0 }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "TS808 boost (solos)",
+      "model": "Scream 808",
+      "based_on": "Ibanez TS808 Tube Screamer (vintage original, Bobby Schneck's)",
+      "notes": "Confirmed for both the Hash Pipe and Knock-Down Drag-Out solos, boosting into the rhythm-track amp. Also stands in for the Ibanez PQ401 parametric EQ pedal confirmed for the Simple Pages solo (midrange boost at 500 Hz) — when using Snapshot 4 for that song specifically, nudge the Parametric EQ block's Mid Freq toward 500 Hz to match. ACTIVE only in Snapshot 4, feeding the Cali Rectifire preamp.",
+      "snapshots": {
+        "1_clean": { "active": false, "Gain": 4.0, "Tone": 5.5, "Level": 7.0 },
+        "2_crunch": { "active": false, "Gain": 4.0, "Tone": 5.5, "Level": 7.0 },
+        "3_photograph_fuzz": { "active": false, "Gain": 4.0, "Tone": 5.5, "Level": 7.0 },
+        "4_lead_boost": { "active": true, "Gain": 5.0, "Tone": 6.0, "Level": 7.5 }
+      }
+    },
+    {
+      "type": "preamp",
+      "model": "Cali Rectifire",
+      "based_on": "Mesa/Boogie Dual Rectifier",
+      "notes": "Directly confirmed: Weezerpedia's Green Album gear breakdown lists 'Rhythm track 1: Mesa Boogie Dual Rectifier amp' as one of the two constant rhythm-guitar signal chains used across the album, with a modified 100W Marshall (ex-Warren DeMartini/Ratt) as the alternate ('Rhythm track 2'). Helix's Cali Rectifire model is itself based on a 2001 unit — the same year the Green Album was tracked (Dec 2000) — an unusually tight match. Since Helix LT allows only one Preamp model per preset, this single block stands in for either confirmed amp, active in the crunch and lead-boost snapshots and bypassed for clean and fuzz. Kept out of the Modern mode's danger zone on Master per the model's own warning (real Rectos flub out fast if pushed) — Sag and Master both held moderate.",
+      "snapshots": {
+        "1_clean": { "active": false, "Drive": 3.0, "Bass": 5, "Mid": 6, "Treble": 5, "Presence": 4, "Ch Vol": 5, "Master": 4, "Sag": 3, "Hum": 1 },
+        "2_crunch": { "active": true, "Drive": 5.5, "Bass": 4.5, "Mid": 6.5, "Treble": 5.5, "Presence": 5, "Ch Vol": 6, "Master": 4.5, "Sag": 3, "Hum": 1 },
+        "3_photograph_fuzz": { "active": false, "Drive": 3.0, "Bass": 5, "Mid": 6, "Treble": 5, "Presence": 4, "Ch Vol": 5, "Master": 4, "Sag": 3, "Hum": 1 },
+        "4_lead_boost": { "active": true, "Drive": 5.0, "Bass": 4.5, "Mid": 7, "Treble": 6, "Presence": 5.5, "Ch Vol": 6.5, "Master": 5, "Sag": 3, "Hum": 1 }
+      }
+    },
+    {
+      "type": "eq",
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Rig compensation: Level raised +2 to +4 dB throughout to push the real Super Champ XD's input stage harder, offsetting the Lace Sensors' lower output vs. Cuomo's confirmed guitars for this album. Mid Freq/Gain pushes harder in the crunch and lead-boost snapshots to fill in the mid-scoop the Mesa Dual Rectifier's Modern-mode voicing tends toward at higher gain (per the model's own synopsis) — the Green Album's guitars are famously thick and mid-present, not scooped-metal, so this compensates back toward that. For Snapshot 4 on 'Simple Pages' specifically, move Mid Freq to ~500 Hz to approximate the confirmed Ibanez PQ401 boost (see Scream 808 notes).",
+      "snapshots": {
+        "1_clean": { "Low Freq": 120, "Low Q": 0.7, "Low Gain": 0, "Mid Freq": 700, "Mid Q": 1.2, "Mid Gain": 1, "High Freq": 4000, "High Q": 0.7, "High Gain": 1, "Low Cut": 90, "High Cut": 10000, "Level": 2 },
+        "2_crunch": { "Low Freq": 110, "Low Q": 0.7, "Low Gain": 0, "Mid Freq": 800, "Mid Q": 1.5, "Mid Gain": 4, "High Freq": 4000, "High Q": 0.7, "High Gain": 1, "Low Cut": 90, "High Cut": 9000, "Level": 4 },
+        "3_photograph_fuzz": { "Low Freq": 120, "Low Q": 0.7, "Low Gain": -1, "Mid Freq": 650, "Mid Q": 1.2, "Mid Gain": 2, "High Freq": 4200, "High Q": 0.7, "High Gain": 2, "Low Cut": 100, "High Cut": 10000, "Level": 3 },
+        "4_lead_boost": { "Low Freq": 110, "Low Q": 0.7, "Low Gain": -1, "Mid Freq": 850, "Mid Q": 1.5, "Mid Gain": 4, "High Freq": 4500, "High Q": 0.7, "High Gain": 2, "Low Cut": 100, "High Cut": 9500, "Level": 4 }
+      }
+    },
+    {
+      "type": "reverb",
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 10m (the smallest of the three selectable sizes) across every snapshot — Weezer's studio production here is close-mic'd and fairly dry, not cavernous, so the tightest hall option is used throughout and only Mix/Decay vary.",
+      "room_size_fixed": 10,
+      "snapshots": {
+        "1_clean": { "Decay": 1.0, "Predelay": 8, "Room Size": 10, "Diffusion": 40, "Damping": 5500, "Mix": 14, "Motion": 1.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 100, "High Cut": 7000, "Level": 0, "Trails": true },
+        "2_crunch": { "Decay": 0.6, "Predelay": 4, "Room Size": 10, "Diffusion": 30, "Damping": 4500, "Mix": 8, "Motion": 1.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 110, "High Cut": 5500, "Level": 0, "Trails": true },
+        "3_photograph_fuzz": { "Decay": 1.0, "Predelay": 8, "Room Size": 10, "Diffusion": 45, "Damping": 5500, "Mix": 15, "Motion": 2.0, "Low Freq": 200, "Low Gain": 0, "Low Cut": 90, "High Cut": 7500, "Level": 0, "Trails": true },
+        "4_lead_boost": { "Decay": 1.1, "Predelay": 9, "Room Size": 10, "Diffusion": 45, "Damping": 5500, "Mix": 18, "Motion": 1.5, "Low Freq": 200, "Low Gain": 0, "Low Cut": 100, "High Cut": 7500, "Level": 0, "Trails": true }
+      }
+    }
+  ],
+  "signal_chain_notes": "6 of 8 available Path 1A blocks used (Deez One Vintage, Industrial Fuzz, Scream 808, Cali Rectifire, Parametric EQ, Dynamic Hall). Noise Gate does not count toward the limit. The three distortion blocks are mutually exclusive per snapshot — only one of Deez One Vintage/Industrial Fuzz/Scream 808 does meaningful work in any given snapshot.",
+  "snapshots": {
+    "1_clean": {
+      "footswitch": "FS1",
+      "description": "Clean/lightly-driven foundation tone. Deez One Vintage barely engaged (Drive 1.5) for rig-compensation warmth only — not a confirmed pedal for this album. Industrial Fuzz, Scream 808, and Cali Rectifire all bypassed. Moderate EQ, short hall.",
+      "pickup_position": "Bridge — approximates Bobby Schneck's 1979 Gibson ES-335TD bridge pickup through a Z-Vex Super Hard-On into a Vox AC30, confirmed for 'Island in the Sun'. No dedicated Super Hard-On model exists on Helix LT, so this snapshot relies on the low-gain EQ/OD settings rather than a specific boost pedal block."
+    },
+    "2_crunch": {
+      "footswitch": "FS2",
+      "description": "Main Green Album rhythm tone — Cali Rectifire (Mesa Dual Rectifier) active, directly confirmed as 'Rhythm track 1' for the album. Deez One Vintage bypassed since Weezerpedia's breakdown shows no drive pedal on the confirmed rhythm chains, just cranked amps. Thick, tight, mid-present.",
+      "pickup_position": "Bridge"
+    },
+    "3_photograph_fuzz": {
+      "footswitch": "FS3",
+      "description": "'Photograph' solo — Z-Vex Fuzz Factory (Industrial Fuzz) set to the exact documented knob positions, oscillator engaged for the confirmed self-oscillating 'weird radio noises'. Noise Gate deliberately left very open so it doesn't choke the oscillation.",
+      "pickup_position": "Bridge",
+      "technique_note": "Try manually riding the Drive/Stability values live (or the real pedal's Stab-equivalent) mid-note for the chaotic pitch-bending noise Weezerpedia describes — that's a performance technique on the real pedal, not a fixed setting."
+    },
+    "4_lead_boost": {
+      "footswitch": "FS4",
+      "description": "TS808-boosted solo tone, confirmed for 'Hash Pipe' and 'Knock-Down Drag-Out'. Scream 808 pushes into the Cali Rectifire preamp for a hotter, more present lead voice than the crunch snapshot.",
+      "pickup_position": "Bridge",
+      "note": "For 'Simple Pages', whose solo used an Ibanez PQ401 parametric boost at 500 Hz instead of the TS808, retune the Parametric EQ block's Mid Freq toward 500 Hz while in this snapshot."
+    }
+  },
+  "playing_notes": {
+    "tuning": "Standard E throughout, per Weezerpedia.",
+    "pickup_notes": "Bridge pickup for the crunch, fuzz, and lead-boost snapshots, matching Cuomo's confirmed humbucker-loaded guitars (Les Paul Jr, Les Paul Classic). Bridge pickup on a single-coil-equipped guitar for the clean snapshot as well, approximating the confirmed ES-335's bridge position.",
+    "rig_compensation": "Lace Sensors are notably lower-output single coils vs. every confirmed Cuomo guitar for this album (all humbucker-loaded). Cali Rectifire's Drive values are raised roughly 1.0-2.0 above what a plausible real-world equivalent setting would be, and Parametric EQ Level is pushed +2 to +4 dB throughout, to compensate and push the real Super Champ XD's input stage appropriately.",
+    "green_album_amp_note": "Weezerpedia documents TWO confirmed Green Album rhythm chains used interchangeably by song ('Rhythm track 1': Mesa Dual Rectifier; 'Rhythm track 2': modified 100W Marshall ex-Warren DeMartini/Ratt) plus a Vox AC30 used specifically for clean parts on 'Island in the Sun' and the 'Knock-Down Drag-Out' solo. This preset models only the Dual Rectifier via Cali Rectifire (Helix's only Preamp slot) since Helix LT allows just one Preamp model per preset — treat Snapshot 2/4's amp character as a reasonable stand-in for either confirmed rhythm amp, not a precise match for song-specific amp choices.",
+    "tap_tempo": "Master BPM defaults to 120 (neutral for the album's tempo range) — no delay block in this preset, so tap tempo has no effect here; use it if you add one for a specific song.",
+    "technique": "Weezer's power-chord rhythm playing is fairly straight-ahead — palm-muted low-string chugging on verses, full open chords on choruses. The Noise Gate thresholds in this preset assume moderately controlled picking; loosen (more negative) the Threshold values if unwanted string noise appears with a lighter touch."
+  }
+}
