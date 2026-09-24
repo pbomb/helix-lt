@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d0000485199616c97aa8c411c94b7ba92",
   "tuning": "E flat (half-step down) — confirmed via Weezerpedia (the Blue Album and Pinkerton are in E flat, which is why the band carries two guitar sets live for shows spanning both eras).",
   "master_bpm": 120,
-  "notes": "Covers Rivers Cuomo's confirmed Blue Album rig: a Mesa/Boogie Mk. 1 (a rare, pre-'Boogie'-branding boutique amp from ~1977-78 with pull-out-knob mods) into a tall 1968 Marshall 8x10 cabinet, run at unusually low volume. No amp+cab blocks used, per rig policy — this Helix LT runs in front of a real Fender Super Champ XD tube amp. No Mesa Mk. 1 model exists on the Helix LT — the Mk. II and later Boogies moved the preamp gain stage after the tone stack, giving a brighter, more 'focused' sound than the Mk. 1's rolled-off, frothy character heard on this album — so the crunch is approximated with a pedal-based substitute (Deez One Vintage / Boss DS-1) rather than a preamp block, a deliberate compromise documented rather than silently substituted. Lace Sensor pickups are lower output than any of Cuomo's confirmed guitars for this album (a modified Strat with a Seymour Duncan JB bridge/DiMarzio Humbucker from Hell, and Ric Ocasek's Gibson Les Paul Juniors), so Drive values are raised roughly 1.0-2.0 above documented settings and Parametric EQ Level is pushed +2 to +4 dB throughout, per rig compensation strategy.",
+  "notes": "Covers Rivers Cuomo's confirmed Blue Album rig: a Mesa/Boogie Mk. 1 (a rare, pre-'Boogie'-branding boutique amp from ~1977-78 with pull-out-knob mods) into a tall 1968 Marshall 8x10 cabinet, run at unusually low volume. No amp+cab blocks used, per rig policy — this Helix LT runs in front of a real Fender Super Champ XD tube amp. No Mesa Mk. 1 model exists on the Helix LT — the Mk. II and later Boogies moved the preamp gain stage after the tone stack, giving a brighter, more 'focused' sound than the Mk. 1's rolled-off, frothy character heard on this album — so the crunch is approximated with a pedal-based substitute (Deez One Vintage / Boss DS-1) rather than a preamp block, a deliberate compromise documented rather than silently substituted. Lace Sensor pickups are lower output than any of Cuomo's confirmed guitars for this album (a modified Strat with a Seymour Duncan JB bridge/DiMarzio Humbucker from Hell, and Ric Ocasek's Gibson Les Paul Juniors), so Drive/Gain values are raised roughly 1.0-2.0 above documented settings and Parametric EQ Level is pushed +2 to +4 dB throughout, per rig compensation strategy. The rig-compensation 'push the amp while staying clean' role is handled by a separate Minotaur (Klon-style transparent boost) block rather than by backing off Deez One Vintage's Drive — confirmed on hardware that the DS-1-style hard clipping in Deez One Vintage doesn't clean up at any Drive/Level setting, so it's now dedicated solely to the Crunch snapshot's dirt.",
   "confirmed_sources": [
     "Weezerpedia — Rivers Cuomo's equipment (derived from the original Weezer.com Equipment History by band tech Karl Koch) — Mesa Mk. 1 into the tall '68 Marshall 8x10, guitars used",
     "Guitar.com — The Gear Used by Rivers Cuomo on Weezer's 'Blue Album'",
@@ -33,14 +33,27 @@
     },
     {
       "type": "distortion",
+      "variant": "rig compensation",
+      "model": "Minotaur",
+      "based_on": "Klon Centaur — mild always-on transparent boost, not a confirmed Blue Album pedal",
+      "notes": "Not confirmed for this album — added per rig compensation strategy to simulate the natural amp saturation Cuomo's real Mesa Mk. 1 would give for free that the Super Champ XD's higher headroom doesn't. A Klon-style transparent boost is used here instead of Deez One Vintage for this role: confirmed on hardware that Deez One Vintage (Boss DS-1) doesn't clean up no matter how low its Drive/Level are set, while Minotaur stays clean at low Gain and just pushes the front end, per the Kinky Boost model's own synopsis recommending Minotaur for a variable-level clean boost role. ACTIVE in Clean and Ambient Swell (gentle push behind an otherwise-clean tone). BYPASSED in Crunch and Garage Fuzz, where Deez One Vintage/Triangle Fuzz already provide plenty of gain.",
+      "snapshots": {
+        "1_clean": { "active": true, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "2_crunch": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "3_garage_fuzz": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "4_ambient_swell": { "active": true, "Gain": 1.0, "Tone": 5.0, "Level": 6.0 }
+      }
+    },
+    {
+      "type": "distortion",
       "model": "Deez One Vintage",
       "based_on": "Mesa/Boogie Mk. 1 (pedal substitute — no exact model exists on Helix LT)",
-      "notes": "No Mesa Mk. 1 model exists on the Helix LT — the Mk. II and later Boogies moved the preamp gain stage after the tone stack, giving a brighter, more 'focused' sound than the Mk. 1's rolled-off, frothy character on the Blue Album. Deez One Vintage (Boss DS-1 MIJ) is used here as a practical stand-in for that rounded, mid-forward vintage crunch. Active at low Drive even in the clean snapshot per rig compensation strategy — simulates the natural amp breakup the real Mesa/Marshall rig would give for free that the Super Champ XD's higher headroom doesn't. Bypassed in the fuzz snapshot since the real session ran the Big Muff into a clean Fender Twin, not this crunch.",
+      "notes": "No Mesa Mk. 1 model exists on the Helix LT — the Mk. II and later Boogies moved the preamp gain stage after the tone stack, giving a brighter, more 'focused' sound than the Mk. 1's rolled-off, frothy character on the Blue Album. Deez One Vintage (Boss DS-1 MIJ) is used here as a practical stand-in for that rounded, mid-forward vintage crunch. ACTIVE only in Crunch — confirmed on hardware that this model doesn't clean up at low Drive/Level, so the Minotaur block above now carries the clean-snapshot rig-compensation role instead of stacking it onto this pedal. Bypassed in the fuzz snapshot since the real session ran the Big Muff into a clean Fender Twin, not this crunch.",
       "snapshots": {
-        "1_clean": { "active": true, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
+        "1_clean": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
         "2_crunch": { "active": true, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
-        "3_garage_fuzz": { "active": false, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
-        "4_ambient_swell": { "active": true, "Drive": 1.0, "Tone": 5.0, "Level": 6.0 }
+        "3_garage_fuzz": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 },
+        "4_ambient_swell": { "active": false, "Drive": 5.5, "Tone": 5.5, "Level": 7.0 }
       }
     },
     {
@@ -71,14 +84,14 @@
       "type": "delay",
       "model": "Vintage Swell",
       "based_on": "Line 6 Original (auto-swell delay)",
-      "notes": "Directly implements Rivers Cuomo's own confirmed quote: 'The only effects on guitar I think are on Only In Dreams – there's a little bit of delay on the swells but apart from that I was very anti-effects.' The auto-swell Threshold/Attack params let a pick attack fade in rather than needing a volume pedal, matching that description. Attack is in milliseconds, ranging 100ms-5000ms (confirmed on hardware) — NOT a 0-10 scale. Snapshot 4 uses 1800ms for a slow, deliberate swell. The other snapshots carry the same full parameter set (just bypassed) rather than a separate placeholder, per the convention that a bypassed block's values shouldn't imply they need independent tuning. Bit Depth and Sample Rate are discrete selectors (per Vintage Digital's corrected params, which this model shares) — FIXED at 16-bit/44.1kHz throughout, the cleanest/most transparent settings, since this preset wants a subtle swell effect, not lo-fi degradation.",
+      "notes": "Directly implements Rivers Cuomo's own confirmed quote: 'The only effects on guitar I think are on Only In Dreams – there's a little bit of delay on the swells but apart from that I was very anti-effects.' The auto-swell Threshold/Attack params let a pick attack fade in rather than needing a volume pedal, matching that description. Attack is in milliseconds, ranging 100ms-5000ms (confirmed on hardware) — NOT a 0-10 scale. Snapshot 4 uses 1800ms for a slow, deliberate swell. Threshold is set to -60 dB — confirmed on hardware that this needs to be much lower than it looks like it should be (-24/-30 dB never triggered the swell at all; the auto-swell only fires once the input drops below Threshold between notes). The other snapshots carry the same full parameter set (just bypassed) rather than a separate placeholder, per the convention that a bypassed block's values shouldn't imply they need independent tuning. Bit Depth and Sample Rate are discrete selectors (per Vintage Digital's corrected params, which this model shares) — FIXED at 16-bit/44.1kHz throughout, the cleanest/most transparent settings, since this preset wants a subtle swell effect, not lo-fi degradation.",
       "bit_depth_fixed": 16,
       "sample_rate_fixed": 44.1,
       "snapshots": {
-        "1_clean": { "active": false, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 1800, "Trails": true },
-        "2_crunch": { "active": false, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 1800, "Trails": true },
-        "3_garage_fuzz": { "active": false, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 1800, "Trails": true },
-        "4_ambient_swell": { "active": true, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -24, "Attack": 1800, "Trails": true }
+        "1_clean": { "active": false, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -60, "Attack": 1800, "Trails": true },
+        "2_crunch": { "active": false, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -60, "Attack": 1800, "Trails": true },
+        "3_garage_fuzz": { "active": false, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -60, "Attack": 1800, "Trails": true },
+        "4_ambient_swell": { "active": true, "TempoSync1": true, "Note Sync": "1/4", "Time": "500ms (1/4 at 120 BPM — adjust via tap tempo)", "Feedback": 22, "Bit Depth": 16, "Sample Rate": 44.1, "Mix": 28, "Level": 0, "Rate": 0.3, "Depth": 1.0, "Headroom": 0, "Threshold": -60, "Attack": 1800, "Trails": true }
       }
     },
     {
@@ -95,11 +108,11 @@
       }
     }
   ],
-  "signal_chain_notes": "5 of 8 available Path 1A blocks used (Deez One Vintage, Triangle Fuzz, Parametric EQ, Vintage Swell, Dynamic Hall). Noise Gate does not count toward the limit. Deez One Vintage and Triangle Fuzz are mutually exclusive (the crunch pedal is bypassed whenever the fuzz is on, and vice versa), except for Deez One Vintage's low-level rig-compensation role in the clean and ambient-swell snapshots.",
+  "signal_chain_notes": "6 of 8 available Path 1A blocks used (Minotaur, Deez One Vintage, Triangle Fuzz, Parametric EQ, Vintage Swell, Dynamic Hall). Noise Gate does not count toward the limit. Deez One Vintage and Triangle Fuzz are mutually exclusive (the crunch pedal is bypassed whenever the fuzz is on, and vice versa). Minotaur carries the low-level rig-compensation role in the clean and ambient-swell snapshots instead, bypassed whenever Deez One Vintage or Triangle Fuzz is doing the real work.",
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",
-      "description": "Clean/lightly-driven foundation tone. Deez One Vintage barely engaged (Drive 1.5) for rig-compensation warmth only. Moderate EQ, short hall.",
+      "description": "Clean/lightly-driven foundation tone. Minotaur barely engaged (Gain 1.5) for rig-compensation warmth only — Deez One Vintage is fully bypassed here since it can't be made clean at any setting. Moderate EQ, short hall.",
       "pickup_position": "Neck or middle — approximates Ric Ocasek's Jaguar (bridge, per Chris Shaw's account for 'Say It Ain't So'), cleaner-voiced than Cuomo's humbucker-loaded main guitars"
     },
     "2_crunch": {
@@ -122,7 +135,7 @@
   "playing_notes": {
     "tuning": "E flat (half-step down) throughout, per Weezerpedia.",
     "pickup_notes": "Bridge pickup for the crunch and fuzz snapshots, matching Cuomo's confirmed humbucker-loaded guitars (modified Strat with Duncan JB/DiMarzio Humbucker from Hell, Gibson Les Paul Juniors). Neck or middle for the clean and ambient-swell snapshots.",
-    "rig_compensation": "Lace Sensors are notably lower-output single coils vs. every confirmed Cuomo guitar for this album (all humbucker-loaded). Deez One Vintage's Drive values are raised roughly 1.0-2.0 above what a plausible real-world equivalent setting would be, and Parametric EQ Level is pushed +2 to +4 dB throughout, to compensate and push the real Super Champ XD's input stage appropriately.",
+    "rig_compensation": "Lace Sensors are notably lower-output single coils vs. every confirmed Cuomo guitar for this album (all humbucker-loaded). Deez One Vintage's Drive values (Crunch only) are raised roughly 1.0-2.0 above what a plausible real-world equivalent setting would be, Minotaur adds a gentle always-on transparent push in Clean/Ambient Swell, and Parametric EQ Level is pushed +2 to +4 dB throughout, to compensate and push the real Super Champ XD's input stage appropriately.",
     "mesa_mk1_caveat": "No Mesa/Boogie Mk. 1 model exists on the Helix LT — it's a rare, pre-Boogie-branding boutique amp from the mid-70s with pull-out-knob mods that predate even Mesa's own Mk. 1 reissues. Deez One Vintage is a practical substitute for its warm, low-gain crunch character, not a faithful recreation. If a future Helix firmware or model pack adds a Mesa Mk. 1, this preset's crunch snapshot should be revisited.",
     "tap_tempo": "Master BPM defaults to 120 (neutral for the album's tempo range). Only Snapshot 4 (Only in Dreams) uses the delay meaningfully — tap tempo to that song's actual BPM (~145) before using it for a real performance; the quarter-note division scales automatically.",
     "technique": "Weezer's power-chord rhythm playing is fairly straight-ahead — palm-muted low-string chugging on verses, full open chords on choruses. The Noise Gate thresholds in this preset assume moderately controlled picking; loosen (more negative) the Threshold values if unwanted string noise appears with a lighter touch."

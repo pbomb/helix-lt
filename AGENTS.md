@@ -20,8 +20,16 @@ research or parameter mistakes.
 Lace Sensors are lower output than most artists' confirmed pickups (humbuckers, hot
 singles). The Super Champ XD has higher clean headroom than most confirmed studio/live
 amps (Vox AC30, Marshall JCM800, Selmer, Diezel VH4). To compensate:
-1. Add a mild always-on overdrive (e.g. Stupor OD at low Drive) even where not
-   originally confirmed, to simulate natural amp saturation the real rig would have had for free.
+1. Add a mild always-on overdrive/boost even where not originally confirmed, to
+   simulate natural amp saturation the real rig would have had for free. **Use a
+   genuinely transparent, soft-clipping pedal for this role — Minotaur (Klon
+   Centaur) at low Gain is confirmed to work well.** A hard-clipping distortion
+   model (Deez One Vintage/Boss DS-1, Ratatouille/RAT, etc.) does NOT clean up
+   no matter how low its Drive/Level is set — confirmed on hardware, it stays
+   audibly dirty at any setting. Reserve those models for snapshots that actually
+   want crunch, and give the "keep it clean but push the front end" role its own
+   separate block using a transparent pedal instead of reusing the crunch pedal
+   at a low setting.
 2. Raise the confirmed pedal's Drive/Gain by roughly 1.0–2.0 above documented settings.
 3. Raise Parametric EQ **Level** by +2 to +4 dB to push the tube amp's input stage harder.
 4. If still too clean: raise the physical amp volume so the power tubes work harder.
@@ -92,6 +100,8 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Vintage Digital | Rate / Depth / Headroom | Unknown | Rate **0.1–8.0 Hz** (1 decimal); Depth **0.0–10.0**; Headroom **-12.0 to +12.0 dB**. |
 | Tycoctavia Fuzz | Fuzz | Unknown | **0–10** (confirmed on hardware). Only two params: Fuzz, Level. |
 | Vintage Swell | Attack | Assumed 0–10 scale | **Milliseconds, 100ms–5000ms** (confirmed on hardware) — not a 0-10 knob. Low values (~100-400ms) are a near-instant swell; use ~1500-2000ms for a slow, deliberate volume-swell effect. Likely applies to Adriatic Swell's Attack too (same auto-swell Threshold/Attack pair), though not yet confirmed on that model specifically. |
+| Vintage Swell | Threshold | Assumed usable around -24 to -30 dB | **Needs to be much lower to reliably trigger — confirmed ~-60 dB on hardware.** The auto-swell only fires once the input drops below this level between notes; -24/-30 never triggered it at all (no sound). Likely applies to Adriatic Swell's Threshold too, not yet confirmed there specifically. |
+| Deez One Vintage (Boss DS-1) | Drive / Level at minimum | Assumed it cleans up like a boost pedal at low settings | **Does NOT get clean no matter how low Drive/Level are set** — confirmed on hardware, the DS-1's hard-clipping stage stays audibly dirty at any setting. Never use this model (or other hard-clipping distortion/fuzz models) for a "mild always-on rig-compensation" role that's supposed to sound clean — use a transparent pedal instead (Minotaur at low Gain is confirmed to work). See rig compensation strategy above. |
 | Poly Wham / Poly Pitch (any) | (whole block) | Assumed cheap like other pitch blocks | **Extremely DSP-heavy** — polyphonic pitch tracking is one of the costliest block types on Helix. Stacking it with a preamp + multiple drive blocks can exhaust DSP for everything downstream, graying out most blocks after that point on hardware. If the part only needs single-note tracking, prefer the much lighter **Pitch Wham** (params: Position, Heel Pitch, Toe Pitch, Mix, Level — no Tracking/Auto EQ, since those are specific to Poly Wham's polyphonic engine). |
 
 ### Snapshot-switch pop

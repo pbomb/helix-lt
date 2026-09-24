@@ -32,14 +32,14 @@
     {
       "type": "distortion",
       "variant": "rig compensation",
-      "model": "Deez One Vintage",
-      "based_on": "Line 6 Original — mild always-on OD, not a confirmed Green Album pedal",
-      "notes": "Not confirmed for this album — added per rig compensation strategy to simulate the natural amp breakup Cuomo's real cranked amps would give for free that the Super Champ XD's higher headroom doesn't. Active only at low Drive in the clean snapshot. Bypassed everywhere else — Weezerpedia's rhythm-track breakdown for this album doesn't mention a drive pedal on the main rhythm chains, just cranked amps, so the crunch and solo snapshots get their gain entirely from Cali Rectifire and Scream 808 instead.",
+      "model": "Minotaur",
+      "based_on": "Klon Centaur — mild always-on transparent boost, not a confirmed Green Album pedal",
+      "notes": "Not confirmed for this album — added per rig compensation strategy to simulate the natural amp breakup Cuomo's real cranked amps would give for free that the Super Champ XD's higher headroom doesn't. A Klon-style transparent boost is used here rather than a hard-clipping distortion model: confirmed on hardware that Deez One Vintage-style pedals (Boss DS-1) don't clean up no matter how low Drive/Level are set, while Minotaur stays clean at low Gain, per the Kinky Boost model's own synopsis recommending Minotaur for a variable-level clean boost role. Active only at low Gain in the clean snapshot. Bypassed everywhere else — Weezerpedia's rhythm-track breakdown for this album doesn't mention a drive pedal on the main rhythm chains, just cranked amps, so the crunch and solo snapshots get their gain entirely from Cali Rectifire and Scream 808 instead.",
       "snapshots": {
-        "1_clean": { "active": true, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
-        "2_crunch": { "active": false, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
-        "3_photograph_fuzz": { "active": false, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 },
-        "4_lead_boost": { "active": false, "Drive": 1.5, "Tone": 5.0, "Level": 6.0 }
+        "1_clean": { "active": true, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "2_crunch": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "3_photograph_fuzz": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "4_lead_boost": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 }
       }
     },
     {
@@ -106,16 +106,16 @@
       }
     }
   ],
-  "signal_chain_notes": "6 of 8 available Path 1A blocks used (Deez One Vintage, Industrial Fuzz, Scream 808, Cali Rectifire, Parametric EQ, Dynamic Hall). Noise Gate does not count toward the limit. The three distortion blocks are mutually exclusive per snapshot — only one of Deez One Vintage/Industrial Fuzz/Scream 808 does meaningful work in any given snapshot.",
+  "signal_chain_notes": "6 of 8 available Path 1A blocks used (Minotaur, Industrial Fuzz, Scream 808, Cali Rectifire, Parametric EQ, Dynamic Hall). Noise Gate does not count toward the limit. The three distortion blocks are mutually exclusive per snapshot — only one of Minotaur/Industrial Fuzz/Scream 808 does meaningful work in any given snapshot.",
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",
-      "description": "Clean/lightly-driven foundation tone. Deez One Vintage barely engaged (Drive 1.5) for rig-compensation warmth only — not a confirmed pedal for this album. Industrial Fuzz, Scream 808, and Cali Rectifire all bypassed. Moderate EQ, short hall.",
+      "description": "Clean/lightly-driven foundation tone. Minotaur barely engaged (Gain 1.5) for rig-compensation warmth only — not a confirmed pedal for this album, and chosen over a hard-clipping distortion model specifically because it stays clean at this setting. Industrial Fuzz, Scream 808, and Cali Rectifire all bypassed. Moderate EQ, short hall.",
       "pickup_position": "Bridge — approximates Bobby Schneck's 1979 Gibson ES-335TD bridge pickup through a Z-Vex Super Hard-On into a Vox AC30, confirmed for 'Island in the Sun'. No dedicated Super Hard-On model exists on Helix LT, so this snapshot relies on the low-gain EQ/OD settings rather than a specific boost pedal block."
     },
     "2_crunch": {
       "footswitch": "FS2",
-      "description": "Main Green Album rhythm tone — Cali Rectifire (Mesa Dual Rectifier) active, directly confirmed as 'Rhythm track 1' for the album. Deez One Vintage bypassed since Weezerpedia's breakdown shows no drive pedal on the confirmed rhythm chains, just cranked amps. Thick, tight, mid-present.",
+      "description": "Main Green Album rhythm tone — Cali Rectifire (Mesa Dual Rectifier) active, directly confirmed as 'Rhythm track 1' for the album. Minotaur bypassed since Weezerpedia's breakdown shows no drive pedal on the confirmed rhythm chains, just cranked amps. Thick, tight, mid-present.",
       "pickup_position": "Bridge"
     },
     "3_photograph_fuzz": {
