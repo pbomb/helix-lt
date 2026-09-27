@@ -36,11 +36,11 @@
       "variant": "rig compensation",
       "model": "Minotaur",
       "based_on": "Klon Centaur — mild always-on transparent boost, not a confirmed Blue Album pedal",
-      "notes": "Not confirmed for this album — added per rig compensation strategy to simulate the natural amp saturation Cuomo's real Mesa Mk. 1 would give for free that the Super Champ XD's higher headroom doesn't. A Klon-style transparent boost is used here instead of Deez One Vintage for this role: confirmed on hardware that Deez One Vintage (Boss DS-1) doesn't clean up no matter how low its Drive/Level are set, while Minotaur stays clean at low Gain and just pushes the front end, per the Kinky Boost model's own synopsis recommending Minotaur for a variable-level clean boost role. ACTIVE in Clean and Ambient Swell (gentle push behind an otherwise-clean tone). BYPASSED in Crunch and Garage Fuzz, where Deez One Vintage/Triangle Fuzz already provide plenty of gain.",
+      "notes": "Not confirmed for this album — added per rig compensation strategy to simulate the natural amp saturation Cuomo's real Mesa Mk. 1 would give for free that the Super Champ XD's higher headroom doesn't. A Klon-style transparent boost is used here instead of Deez One Vintage for this role: confirmed on hardware that Deez One Vintage (Boss DS-1) doesn't clean up no matter how low its Drive/Level are set, while Minotaur stays clean at low Gain and just pushes the front end, per the Kinky Boost model's own synopsis recommending Minotaur for a variable-level clean boost role. ACTIVE in Clean and Ambient Swell (gentle push behind an otherwise-clean tone). Clean's Level was lowered from 6.5 to 6.0 after hardware tuning because it was too loud. BYPASSED in Crunch and Garage Fuzz, where Deez One Vintage/Triangle Fuzz already provide plenty of gain.",
       "snapshots": {
-        "1_clean": { "active": true, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
-        "2_crunch": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
-        "3_garage_fuzz": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.5 },
+        "1_clean": { "active": true, "Gain": 1.5, "Tone": 5.0, "Level": 6.0 },
+        "2_crunch": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.0 },
+        "3_garage_fuzz": { "active": false, "Gain": 1.5, "Tone": 5.0, "Level": 6.0 },
         "4_ambient_swell": { "active": true, "Gain": 1.0, "Tone": 5.0, "Level": 6.0 }
       }
     },
@@ -60,12 +60,12 @@
       "type": "distortion",
       "model": "Triangle Fuzz",
       "based_on": "Electro-Harmonix Big Muff Pi",
-      "notes": "Confirmed by Blue Album engineer Chris Shaw: 'I believe we used a Tele through a Big Muff using Electric Lady's Fender Twin for that tone' for 'In The Garage'. The specific Big Muff version used isn't documented — Triangle Fuzz (original circuit) is chosen as the more period-plausible default for a 1993 Electric Lady session over the later Op-Amp/Ram's Head-era circuits. ACTIVE only in Snapshot 3. Fed with Deez One Vintage bypassed — the real session ran this into a clean Fender Twin, not a cranked amp, so this snapshot should sound like fuzz-on-clean, not fuzz-on-crunch.",
+      "notes": "Confirmed by Blue Album engineer Chris Shaw: 'I believe we used a Tele through a Big Muff using Electric Lady's Fender Twin for that tone' for 'In The Garage'. The specific Big Muff version used isn't documented — Triangle Fuzz (original circuit) is chosen as the more period-plausible default for a 1993 Electric Lady session over the later Op-Amp/Ram's Head-era circuits. ACTIVE only in Snapshot 3. Tone raised from 4.5 to 5.0 and Level from 6.5 to 8.0 after hardware tuning — the original settings were too bassy and quiet. Sustain (the fuzz character) untouched. Fed with Deez One Vintage bypassed — the real session ran this into a clean Fender Twin, not a cranked amp, so this snapshot should sound like fuzz-on-clean, not fuzz-on-crunch.",
       "snapshots": {
-        "1_clean": { "active": false, "Sustain": 6.5, "Tone": 4.5, "Level": 6.5 },
-        "2_crunch": { "active": false, "Sustain": 6.5, "Tone": 4.5, "Level": 6.5 },
-        "3_garage_fuzz": { "active": true, "Sustain": 6.5, "Tone": 4.5, "Level": 6.5 },
-        "4_ambient_swell": { "active": false, "Sustain": 6.5, "Tone": 4.5, "Level": 6.5 }
+        "1_clean": { "active": false, "Sustain": 6.5, "Tone": 5.0, "Level": 8.0 },
+        "2_crunch": { "active": false, "Sustain": 6.5, "Tone": 5.0, "Level": 8.0 },
+        "3_garage_fuzz": { "active": true, "Sustain": 6.5, "Tone": 5.0, "Level": 8.0 },
+        "4_ambient_swell": { "active": false, "Sustain": 6.5, "Tone": 5.0, "Level": 8.0 }
       }
     },
     {
