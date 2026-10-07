@@ -1,0 +1,772 @@
+{
+  "preset_name": "Mellon Collie and the Infinite Sadness",
+  "artist": "Smashing Pumpkins",
+  "album": "Mellon Collie and the Infinite Sadness (1995)",
+  "thumbnail": "https://i.scdn.co/image/ab67616d000048517c97cac15be277c0def9eca4",
+  "tuning": "Eb (half-step down); Porcelina needs the low string at Db",
+  "master_bpm": 110,
+  "notes": "No cab block — running into tube amp. Covers four Mellon Collie songs (Bullet With Butterfly Wings, Porcelina of the Vast Oceans, Zero, Here Is No Why) as ONE preset across six snapshots, ordered so each song's different sounds sit next to each other. CONFIRMED RIG (same core as Siamese Dream): 1984 Marshall JCM800 100W with KT88s (Brit 2203 preamp-only), original op-amp Electro-Harmonix Big Muff Pi (Bighorn Fuzz — closest available), MXR Phase 100 (Script Mod Phase), Electric Mistress (Courtesan Flange). Mellon Collie extras per sources: a Marshall JMP-1 rack preamp plus Alesis compressor for rhythm sounds (modeled by Red Squeeze), and a Boss FZ-2, Boss NS-2 and Moog ring modulator on the board (not modeled — no per-song confirmation for these four). Top Secret OD in the lead snapshot is carried over from Siamese Dream and is NOT confirmed for these songs. Iha's Digitech Whammy solo on Zero is confirmed but intentionally skipped (rhythm tones only). The 2025 'Here Is No Why' single is a live recording of this same Mellon Collie song; its Equipboard page lists only a Sustain Punch Creamy Dreamer fuzz that is not documented as used on recordings, so it is not modeled. Corgan layered guitars heavily (Zero has six rhythm guitars plus two line-in 12-strings), so one guitar will sound thinner than the record regardless of settings.",
+  "confirmed_sources": [
+    "Reverb News — The Gear of The Smashing Pumpkins (JCM800/KT88, 4x12, op-amp Big Muff, Phase 100, Moog ring mod, Boss NS-2/FZ-2 on the Mellon Collie-era board)",
+    "Guitar World — Smashing Pumpkins Mellon Collie 1995 interview (JMP-1 rack + Alesis compressor for rhythm; 'low-fi kind of sound', Bullet verse/chorus/breakdown approach)",
+    "Starla.org — 'Orange Crunch' (Iha used a Digitech Whammy for the Zero solo; Orange OR120 used as a boost on tour)",
+    "Wikipedia — Zero (The Smashing Pumpkins song): six rhythm guitars plus two line-in 12-string acoustics",
+    "Guitar tab sites (Guitar Tabs Explorer / Ultimate Guitar / e-chords) — tunings: Zero, Bullet, Here Is No Why in Eb; Porcelina in Eb dropped D (Db Ab Db Gb Bb Eb)",
+    "Equipboard — Here Is No Why / Geek U.S.A. (Live) 2025 single (only listed gear: Sustain Punch Creamy Dreamer, not documented on recordings; not used)"
+  ],
+  "tuning_strategy": "Play Zero, Here Is No Why and Bullet With Butterfly Wings in Eb (half-step down: Eb Ab Db Gb Bb Eb). Porcelina of the Vast Oceans uses the same tuning with only the low string dropped one more whole step to Db (Db Ab Db Gb Bb Eb) — retune that one string between songs. If that retune is a hassle, Porcelina is the song to move to its own preset.",
+  "note_on_block_limit": "9 processing blocks, so the chain is split across both signal paths (the Noise Gate is the Input block's gate and does not count toward the 8-per-path limit). Path 1 (5 blocks): Red Squeeze, Top Secret OD, Bighorn Fuzz, Brit 2203, Parametric EQ — all mono and ahead of/including the mono preamp. Path 1's output block routes into Path 2 (4 blocks): Script Mod Phase, Courtesan Flange, Cosmos Echo, Dynamic Hall — stereo modulation/delay/reverb after the amp, with the DSP-heavy reverb on its own DSP engine. Trade-off: using Path 2 means True Preset Spillover cannot be enabled (it sacrifices Path 2).",
+  "signal_chain": [
+    {
+      "type": "input",
+      "model": "Noise Gate",
+      "based_on": "Line 6 Original",
+      "notes": "Input-block gate (does not count toward the 8-block path limit). Open for the clean snapshots (1 and 3), moderate for the Bullet chorus (2), tightest for the fuzz snapshots (4-6) where the Big Muff into the JCM800 generates significant noise.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "Threshold": -70,
+          "Decay": 40,
+          "Level": 0
+        },
+        "2_bullet_chorus": {
+          "Threshold": -58,
+          "Decay": 30,
+          "Level": 0
+        },
+        "3_porcelina_clean": {
+          "Threshold": -70,
+          "Decay": 40,
+          "Level": 0
+        },
+        "4_porcelina_heavy": {
+          "Threshold": -52,
+          "Decay": 25,
+          "Level": 0
+        },
+        "5_zero_hinw_riff": {
+          "Threshold": -52,
+          "Decay": 25,
+          "Level": 0
+        },
+        "6_zero_hinw_lead": {
+          "Threshold": -52,
+          "Decay": 22,
+          "Level": 0
+        }
+      }
+    },
+    {
+      "type": "dynamics",
+      "variant": "Path 1",
+      "model": "Red Squeeze",
+      "based_on": "MXR Dyna Comp",
+      "notes": "Stands in for the Alesis compressor Corgan ran on his rhythm sounds (Guitar World 1995 — Marshall JMP-1 rack preamp into an Alesis compressor for rhythm). Always on with constant values across all snapshots, as a rig-level characteristic rather than a per-song choice. Red Squeeze was chosen over Deluxe Comp because Red Squeeze's Sensitivity/Mix/Level scales are already known-good from other presets, while Deluxe Comp's Threshold/Ratio/Attack/Release ranges are unconfirmed on hardware (see AGENTS.md: don't guess scales). First block after the gate and mono, ahead of the drive blocks.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "2_bullet_chorus": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "3_porcelina_clean": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "4_porcelina_heavy": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "5_zero_hinw_riff": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        },
+        "6_zero_hinw_lead": {
+          "active": true,
+          "Sensitivity": 6.0,
+          "Mix": 70,
+          "Level": 5.5
+        }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "Path 1",
+      "model": "Top Secret OD",
+      "based_on": "DOD OD-250 / MXR Distortion+",
+      "notes": "OPTIONAL lead boost — NOT confirmed for these four songs. Carried over from the Siamese Dream preset, where Corgan confirmed the MXR Distortion+ stacked before the Big Muff for leads. Active only in 6_zero_hinw_lead; bypassed everywhere else reusing that snapshot's values verbatim. Delete the block (and flip nothing else) if you want only confirmed gear.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "active": false,
+          "Gain": 6.0,
+          "Level": 6.5
+        },
+        "2_bullet_chorus": {
+          "active": false,
+          "Gain": 6.0,
+          "Level": 6.5
+        },
+        "3_porcelina_clean": {
+          "active": false,
+          "Gain": 6.0,
+          "Level": 6.5
+        },
+        "4_porcelina_heavy": {
+          "active": false,
+          "Gain": 6.0,
+          "Level": 6.5
+        },
+        "5_zero_hinw_riff": {
+          "active": false,
+          "Gain": 6.0,
+          "Level": 6.5
+        },
+        "6_zero_hinw_lead": {
+          "active": true,
+          "Gain": 6.0,
+          "Level": 6.5
+        }
+      }
+    },
+    {
+      "type": "distortion",
+      "variant": "Path 1",
+      "model": "Bighorn Fuzz",
+      "based_on": "1973 Electro-Harmonix Ram's Head Big Muff Pi",
+      "notes": "Closest available approximation of Corgan's confirmed original op-amp Big Muff Pi (not identical — the op-amp version is harsher). BYPASSED in 1_bullet_verse and 3_porcelina_clean (clean sections). Bullet chorus (2) uses a low Sustain 5.0 to approximate the lo-fi Marshall-rack 'chunk' Corgan described rather than a full wall of fuzz. Zero/Here Is No Why riff (5) and lead (6) run high Sustain (Zero: max distortion, Big Muff on). Level held constant at 7.0 across snapshots; EQ Level carries the loudness differences. Bypassed snapshots reuse snapshot 5's values verbatim.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "active": false,
+          "Sustain": 9.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "2_bullet_chorus": {
+          "active": true,
+          "Sustain": 5.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "3_porcelina_clean": {
+          "active": false,
+          "Sustain": 9.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "4_porcelina_heavy": {
+          "active": true,
+          "Sustain": 8.0,
+          "Tone": 4.5,
+          "Level": 7.0
+        },
+        "5_zero_hinw_riff": {
+          "active": true,
+          "Sustain": 9.0,
+          "Tone": 5.0,
+          "Level": 7.0
+        },
+        "6_zero_hinw_lead": {
+          "active": true,
+          "Sustain": 9.5,
+          "Tone": 6.0,
+          "Level": 7.0
+        }
+      }
+    },
+    {
+      "type": "preamp",
+      "variant": "Path 1",
+      "model": "Brit 2203",
+      "based_on": "1984 Marshall JCM800 100W (KT88 mod)",
+      "notes": "Confirmed amp across Gish, Siamese Dream and Mellon Collie. Preamp-only (no power amp/cab) per AGENTS.md. Input fixed at Low (Corgan plugged the Big Muff into the low-sensitivity input) and ALL values held constant across snapshots — selectors must never vary, and the amp setting reflects Corgan's fixed physical setup (Drive low, Master/Ch Vol high), with the dirt coming from the pedals ahead of it. The Brit 2203 is mono, so only mono blocks precede it. Last block on Path 1 together with the EQ.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "Low"
+        },
+        "2_bullet_chorus": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "Low"
+        },
+        "3_porcelina_clean": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "Low"
+        },
+        "4_porcelina_heavy": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "Low"
+        },
+        "5_zero_hinw_riff": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "Low"
+        },
+        "6_zero_hinw_lead": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1,
+          "Input": "Low"
+        }
+      }
+    },
+    {
+      "type": "eq",
+      "variant": "Path 1",
+      "model": "Parametric EQ",
+      "based_on": "Line 6 Original",
+      "notes": "Stands in for the unmodeled Marshall 4x12 voicing and carries the loudness differences between snapshots. Level +2 to +4 dB throughout to push the Super Champ XD harder (Lace Sensors are lower output than Corgan's rig). Clean snapshots (1, 3) are open with minimal sculpting; fuzz snapshots (4, 5) are mid-scooped with a rolled-back top; 2 (Bullet chorus) is lightly scooped; 6 (lead) boosts upper mids for cut. Last block on Path 1 — Path 1's output block routes into Path 2.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 2,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 1,
+          "Low Cut": 80,
+          "High Cut": 11000,
+          "Level": 2
+        },
+        "2_bullet_chorus": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 750,
+          "Mid Q": 1.5,
+          "Mid Gain": -1,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 90,
+          "High Cut": 9500,
+          "Level": 3
+        },
+        "3_porcelina_clean": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -1,
+          "Mid Freq": 800,
+          "Mid Q": 2.0,
+          "Mid Gain": 1,
+          "High Freq": 4500,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 80,
+          "High Cut": 11000,
+          "Level": 2
+        },
+        "4_porcelina_heavy": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -3,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -2,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 100,
+          "High Cut": 9000,
+          "Level": 3
+        },
+        "5_zero_hinw_riff": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -3,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -2,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 3,
+          "Low Cut": 110,
+          "High Cut": 9000,
+          "Level": 3
+        },
+        "6_zero_hinw_lead": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -2,
+          "Mid Freq": 900,
+          "Mid Q": 2.0,
+          "Mid Gain": 3,
+          "High Freq": 4000,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 90,
+          "High Cut": 10000,
+          "Level": 4
+        }
+      }
+    },
+    {
+      "type": "modulation",
+      "variant": "Path 2",
+      "model": "Script Mod Phase",
+      "based_on": "MXR Phase 90 (stand-in for Phase 100)",
+      "notes": "Approximates the MXR Phase 100 on Corgan's Mellon Collie board. His own instruction: pick a mode and 'turn the speed all the way down' — Rate 0.3. Active in 3_porcelina_clean, 4_porcelina_heavy and 6_zero_hinw_lead; bypassed elsewhere reusing snapshot 3's values verbatim. Per-song phaser use on these tracks is NOT confirmed; it is used here as the album-wide texture/lead layer.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "active": false,
+          "Rate": 0.3,
+          "Mix": 4.0,
+          "Level": 0
+        },
+        "2_bullet_chorus": {
+          "active": false,
+          "Rate": 0.3,
+          "Mix": 4.0,
+          "Level": 0
+        },
+        "3_porcelina_clean": {
+          "active": true,
+          "Rate": 0.3,
+          "Mix": 4.0,
+          "Level": 0
+        },
+        "4_porcelina_heavy": {
+          "active": true,
+          "Rate": 0.3,
+          "Mix": 5.0,
+          "Level": 0
+        },
+        "5_zero_hinw_riff": {
+          "active": false,
+          "Rate": 0.3,
+          "Mix": 4.0,
+          "Level": 0
+        },
+        "6_zero_hinw_lead": {
+          "active": true,
+          "Rate": 0.3,
+          "Mix": 4.0,
+          "Level": 0
+        }
+      }
+    },
+    {
+      "type": "modulation",
+      "variant": "Path 2",
+      "model": "Courtesan Flange",
+      "based_on": "Electro-Harmonix Deluxe Electric Mistress",
+      "notes": "Corgan used the Electric Mistress for flange/chorus layers in this era. Active only in 3_porcelina_clean at a low Mix for dreamy clean arpeggio shimmer (use on Porcelina is not confirmed from a source). Bypassed elsewhere reusing the same values verbatim. Stereo block, so it sits after the mono preamp.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "active": false,
+          "Rate": 0.4,
+          "Range": 5.0,
+          "Color": 5.0,
+          "Freeze LFO": false,
+          "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "2_bullet_chorus": {
+          "active": false,
+          "Rate": 0.4,
+          "Range": 5.0,
+          "Color": 5.0,
+          "Freeze LFO": false,
+          "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "3_porcelina_clean": {
+          "active": true,
+          "Rate": 0.4,
+          "Range": 5.0,
+          "Color": 5.0,
+          "Freeze LFO": false,
+          "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "4_porcelina_heavy": {
+          "active": false,
+          "Rate": 0.4,
+          "Range": 5.0,
+          "Color": 5.0,
+          "Freeze LFO": false,
+          "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "5_zero_hinw_riff": {
+          "active": false,
+          "Rate": 0.4,
+          "Range": 5.0,
+          "Color": 5.0,
+          "Freeze LFO": false,
+          "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "6_zero_hinw_lead": {
+          "active": false,
+          "Rate": 0.4,
+          "Range": 5.0,
+          "Color": 5.0,
+          "Freeze LFO": false,
+          "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        }
+      }
+    },
+    {
+      "type": "delay",
+      "variant": "Path 2",
+      "model": "Cosmos Echo",
+      "based_on": "Roland RE-201 Space Echo",
+      "notes": "Tempo-synced to Master BPM 110 (tap tempo per song). Dotted eighth (409ms) in the atmospheric/lead snapshots (3, 4, 6), plain eighth (273ms) elsewhere, at low Mix for the tight riff and Bullet snapshots. Ramp 0 (tempo-synced, never swept). Dry Thru on.",
+      "snapshots": {
+        "1_bullet_verse": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "273ms (1/8 at 110 BPM)",
+          "Ramp": 0,
+          "Feedback": 12,
+          "Wow/Flutter": 1.5,
+          "Mix": 12,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 5.0,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "2_bullet_chorus": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "273ms (1/8 at 110 BPM)",
+          "Ramp": 0,
+          "Feedback": 10,
+          "Wow/Flutter": 1.5,
+          "Mix": 10,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "3_porcelina_clean": {
+          "TempoSync1": true,
+          "Note Sync": "1/8 dot",
+          "Time": "409ms (d1/8 at 110 BPM)",
+          "Ramp": 0,
+          "Feedback": 28,
+          "Wow/Flutter": 2.5,
+          "Mix": 35,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 5.0,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "4_porcelina_heavy": {
+          "TempoSync1": true,
+          "Note Sync": "1/8 dot",
+          "Time": "409ms (d1/8 at 110 BPM)",
+          "Ramp": 0,
+          "Feedback": 15,
+          "Wow/Flutter": 2.0,
+          "Mix": 18,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "5_zero_hinw_riff": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "273ms (1/8 at 110 BPM)",
+          "Ramp": 0,
+          "Feedback": 8,
+          "Wow/Flutter": 1.5,
+          "Mix": 10,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        },
+        "6_zero_hinw_lead": {
+          "TempoSync1": true,
+          "Note Sync": "1/8 dot",
+          "Time": "409ms (d1/8 at 110 BPM)",
+          "Ramp": 0,
+          "Feedback": 28,
+          "Wow/Flutter": 2.5,
+          "Mix": 36,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
+        }
+      }
+    },
+    {
+      "type": "reverb",
+      "variant": "Path 2",
+      "model": "Dynamic Hall",
+      "based_on": "Line 6 Original",
+      "notes": "Room Size FIXED at 20m in every snapshot — a 3-way selector (10/20/30) that causes an audible algorithm bump if it changes on a snapshot switch. Longest in Porcelina clean (3), short and tight for the fuzz riff and Bullet chorus. Last block; stereo and DSP-heavy, which is part of why it lives on Path 2.",
+      "room_size_fixed": 20,
+      "snapshots": {
+        "1_bullet_verse": {
+          "Decay": 1.6,
+          "Predelay": 10,
+          "Room Size": 20,
+          "Diffusion": 60,
+          "Damping": 6500,
+          "Mix": 22,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 90,
+          "High Cut": 7500,
+          "Level": 0,
+          "Trails": true
+        },
+        "2_bullet_chorus": {
+          "Decay": 0.7,
+          "Predelay": 5,
+          "Room Size": 20,
+          "Diffusion": 50,
+          "Damping": 5000,
+          "Mix": 12,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 5500,
+          "Level": 0,
+          "Trails": true
+        },
+        "3_porcelina_clean": {
+          "Decay": 2.8,
+          "Predelay": 15,
+          "Room Size": 20,
+          "Diffusion": 70,
+          "Damping": 7000,
+          "Mix": 42,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 80,
+          "High Cut": 8000,
+          "Level": 0,
+          "Trails": true
+        },
+        "4_porcelina_heavy": {
+          "Decay": 1.4,
+          "Predelay": 10,
+          "Room Size": 20,
+          "Diffusion": 60,
+          "Damping": 6000,
+          "Mix": 26,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 6500,
+          "Level": 0,
+          "Trails": true
+        },
+        "5_zero_hinw_riff": {
+          "Decay": 0.6,
+          "Predelay": 5,
+          "Room Size": 20,
+          "Diffusion": 50,
+          "Damping": 5000,
+          "Mix": 12,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 5500,
+          "Level": 0,
+          "Trails": true
+        },
+        "6_zero_hinw_lead": {
+          "Decay": 1.8,
+          "Predelay": 12,
+          "Room Size": 20,
+          "Diffusion": 60,
+          "Damping": 6500,
+          "Mix": 28,
+          "Motion": 3.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 90,
+          "High Cut": 7000,
+          "Level": 0,
+          "Trails": true
+        }
+      }
+    }
+  ],
+  "snapshots": {
+    "1_bullet_verse": {
+      "footswitch": "FS1",
+      "description": "Bullet With Butterfly Wings intro and verse: compressed, droney clean. Bighorn Fuzz, Top Secret OD, phaser and flange bypassed. Brit 2203 at its fixed low-Drive setting. Open EQ (Level +2). Eighth-note delay at 12% mix, short-to-medium reverb (1.6 sec, 22% mix). Corgan: verse built on a droney chord shape; Marshall rack for 'low-fi' chunk.",
+      "representative_songs": [
+        "Bullet With Butterfly Wings (intro/verse)"
+      ],
+      "pickup_position": "Neck",
+      "tuning_note": "Eb (half-step down)"
+    },
+    "2_bullet_chorus": {
+      "footswitch": "FS2",
+      "description": "Bullet With Butterfly Wings chorus and breakdown: Bighorn Fuzz at low Sustain 5.0 for a crunchy 'rack distortion' chunk rather than a full fuzz wall. Phaser/flange bypassed. Lightly scooped EQ (Level +3). Short reverb (0.7 sec, 12% mix), tight delay.",
+      "representative_songs": [
+        "Bullet With Butterfly Wings (chorus/breakdown)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning_note": "Eb (half-step down)"
+    },
+    "3_porcelina_clean": {
+      "footswitch": "FS3",
+      "description": "Porcelina of the Vast Oceans clean intro/arpeggio: no fuzz. Script Mod Phase (Rate 0.3, Mix 4.0) and Courtesan Flange (Mix 3.0) both on for dreamy movement. Dotted-eighth delay (409ms, 35% mix), long reverb (2.8 sec, 42% mix).",
+      "representative_songs": [
+        "Porcelina of the Vast Oceans (clean intro/verses)"
+      ],
+      "pickup_position": "Neck",
+      "tuning_note": "Eb with low string dropped to Db (Db Ab Db Gb Bb Eb)"
+    },
+    "4_porcelina_heavy": {
+      "footswitch": "FS4",
+      "description": "Porcelina of the Vast Oceans heavy sections: Bighorn Fuzz at Sustain 8.0, Tone 4.5 with the slow phaser (Mix 5.0) still engaged. Mid-scooped EQ. Dotted-eighth delay at 18% mix, medium reverb (1.4 sec, 26% mix).",
+      "representative_songs": [
+        "Porcelina of the Vast Oceans (heavy sections)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning_note": "Eb with low string dropped to Db (Db Ab Db Gb Bb Eb)"
+    },
+    "5_zero_hinw_riff": {
+      "footswitch": "FS5",
+      "description": "Zero and Here Is No Why main riffs: Bighorn Fuzz at Sustain 9.0, Tone 5.0 into the Brit 2203 — max distortion with extra presence (High Gain +3). Mid-scooped EQ, tight eighth delay (10% mix), tight reverb (0.6 sec, 12% mix). Phaser and flange bypassed. Gate tightest.",
+      "representative_songs": [
+        "Zero (riff)",
+        "Here Is No Why (riff)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning_note": "Eb (half-step down)"
+    },
+    "6_zero_hinw_lead": {
+      "footswitch": "FS6",
+      "description": "Zero and Here Is No Why leads: Top Secret OD on (OPTIONAL, unconfirmed) stacked before Bighorn Fuzz at Sustain 9.5, Tone 6.0, plus the slow phaser. Upper-mid boosted EQ (Level +4). Dotted-eighth delay (409ms, 36% mix), moderate reverb (1.8 sec, 28% mix).",
+      "representative_songs": [
+        "Zero (lead)",
+        "Here Is No Why (lead)"
+      ],
+      "pickup_position": "Bridge",
+      "tuning_note": "Eb (half-step down)"
+    }
+  },
+  "playing_notes": {
+    "tuning": "Eb (half-step down) for Zero, Here Is No Why and Bullet. Porcelina: low string to Db (Db Ab Db Gb Bb Eb).",
+    "pickup_notes": "Neck for the clean snapshots (1, 3), bridge for the rest. Corgan used Strats with Lace Sensors — your Lace Sensor Strat Plus Deluxe is a genuine rig match.",
+    "tap_tempo": "Master BPM 110 is a neutral default. Use tap tempo per song; the Cosmos Echo is tempo-synced.",
+    "bighorn_fuzz_note": "Bighorn Fuzz (Ram's Head) approximates the original op-amp Big Muff Pi but isn't identical — the op-amp version is harsher.",
+    "jcm800_technique": "As on Siamese Dream: Big Muff into the LOW sensitivity input with Master high and preamp Drive low. The Brit 2203 block's Input is fixed at Low and every value is constant across snapshots; the pedals supply the dirt.",
+    "phase_technique": "Slow phaser at Rate 0.3 follows Corgan's 'turn the speed all the way down' instruction; reduce toward 0.1 if it sounds too obvious.",
+    "skipped": "Not modeled: Iha's Digitech Whammy solo on Zero (skipped by choice — Pitch Wham fits if you want it later), Boss FZ-2 and Moog ring modulator (no per-song confirmation), the 2025 live single's Creamy Dreamer fuzz.",
+    "further_listening": {
+      "S1_S2_reference_tracks": [
+        "Bullet With Butterfly Wings"
+      ],
+      "S3_S4_reference_tracks": [
+        "Porcelina of the Vast Oceans"
+      ],
+      "S5_S6_reference_tracks": [
+        "Zero",
+        "Here Is No Why"
+      ]
+    }
+  }
+}
