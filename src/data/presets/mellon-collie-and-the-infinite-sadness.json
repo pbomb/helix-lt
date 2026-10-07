@@ -213,7 +213,7 @@
       "variant": "Path 1",
       "model": "Brit 2204",
       "based_on": "Marshall JCM800 2204 (closest Helix model to Corgan's 1984 JCM800; his is a 100W 2203)",
-      "notes": "Heavy rhythm comes from this preamp's own gain, pushed by the Red Squeeze boost — NOT from the Big Muff. Eddie Clark: the Marshall JMP-1 plus the Alesis 3630 together make the main Mellon Collie rhythm sound, and Here Is No Why has two rhythm sounds, a crunch (the song's opening) and a much heavier one (the chorus). JMP-1 settings from his video description: OD1, Bass Shift on, Bass 4, Mid -2, Treble 6, Presence 6, Gain 20; for the crunch lower the gain to 15 and Mid to -1. His no-JMP-1 alternative on a real JCM800: high-gain input, preamp gain 10, master around 6-7, treble 7, mid about 4, bass 10, presence 9. There is no JMP-1 model on the Helix, so the Brit 2204 stands in and the values are STARTING POINTS, not a verified conversion: heavy = Drive 7.0, Bass 6.0 (low end is key; Bass Shift/deep-extend stand-in), Mid 3.5, Treble 6.0; crunch = Drive 4.5, Bass 5.5, Mid 4.0; clean and lead = Drive 1.5 (the lead uses the Siamese Dream rig, which got its dirt from pedals into a low-gain amp). Presence has no preamp-block equivalent, so High Gain on the EQ stands in. Drive/Bass/Mid/Treble are continuous and vary per snapshot; Master 7.0, Ch Vol 6.5, Sag and Hum stay constant. HARDWARE FINDING: the Brit 2203 sounded too clean and quiet at Input Low and, at Input High, much louder but still way too bright and trebly — not dark and distorted like the album; simply swapping it for the Brit 2204 (the Helix's JCM800 2204, the 50W master-volume model) made almost all the difference, so the 2204 is used instead. Corgan's own amp is a 100W 2203, but the 2204 is the closer-sounding model on this rig. The 2204 preamp has no Input selector (the 2203 has a Low/High jack select), so there is nothing to keep fixed for that. The Brit 2204 is mono, so only mono blocks precede it. Last block on Path 1 together with the EQ.",
+      "notes": "Heavy rhythm comes from this preamp's own gain, pushed by the Red Squeeze boost — NOT from the Big Muff. Eddie Clark: the Marshall JMP-1 plus the Alesis 3630 together make the main Mellon Collie rhythm sound, and Here Is No Why has two rhythm sounds, a crunch (the song's opening) and a much heavier one (the chorus). JMP-1 settings from his video description: OD1, Bass Shift on, Bass 4, Mid -2, Treble 6, Presence 6, Gain 20; for the crunch lower the gain to 15 and Mid to -1. His no-JMP-1 alternative on a real JCM800: high-gain input, preamp gain 10, master around 6-7, treble 7, mid about 4, bass 10, presence 9. There is no JMP-1 model on the Helix, so the Brit 2204 stands in and the values are STARTING POINTS, not a verified conversion: heavy = Drive 7.0, Bass 6.0 (low end is key; Bass Shift/deep-extend stand-in), Mid 3.5, Treble 6.0; crunch = Drive 4.5, Bass 5.5, Mid 4.0; clean and lead = Drive 1.5 (the lead uses the Siamese Dream rig, which got its dirt from pedals into a low-gain amp). Presence has no preamp-block equivalent, so High Gain on the EQ stands in. Drive/Bass/Mid/Treble are continuous and vary per snapshot; Master 8.0 (raised on hardware — the Brit 2204 was a touch quiet at 7.0), Ch Vol 6.5, Sag and Hum stay constant. HARDWARE FINDING: the Brit 2203 sounded too clean and quiet at Input Low and, at Input High, much louder but still way too bright and trebly — not dark and distorted like the album; simply swapping it for the Brit 2204 (the Helix's JCM800 2204, the 50W master-volume model) made almost all the difference, so the 2204 is used instead. Corgan's own amp is a 100W 2203, but the 2204 is the closer-sounding model on this rig. The 2204 preamp has no Input selector (the 2203 has a Low/High jack select), so there is nothing to keep fixed for that. The Brit 2204 is mono, so only mono blocks precede it. Last block on Path 1 together with the EQ.",
       "snapshots": {
         "1_bullet_verse": {
           "active": true,
@@ -221,7 +221,7 @@
           "Bass": 5.0,
           "Mid": 4.0,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
@@ -232,7 +232,7 @@
           "Bass": 5.5,
           "Mid": 4.0,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
@@ -243,7 +243,7 @@
           "Bass": 5.0,
           "Mid": 4.0,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
@@ -254,7 +254,7 @@
           "Bass": 6.0,
           "Mid": 3.5,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
@@ -265,7 +265,7 @@
           "Bass": 5.5,
           "Mid": 4.0,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
@@ -276,7 +276,7 @@
           "Bass": 6.0,
           "Mid": 3.5,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
@@ -287,7 +287,7 @@
           "Bass": 5.0,
           "Mid": 4.0,
           "Treble": 6.0,
-          "Master": 7.0,
+          "Master": 8.0,
           "Ch Vol": 6.5,
           "Sag": 3,
           "Hum": 1
