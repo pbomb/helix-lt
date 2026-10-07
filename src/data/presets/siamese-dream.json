@@ -61,7 +61,7 @@
       "snapshots": {
         "1_clean": {
           "active": false,
-          "Gain": 1.0,
+          "Gain": 7.0,
           "Level": 6.5
         },
         "2_heavy_rhythm": {
@@ -287,7 +287,7 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Works alongside the Brit 2203 preamp and Marshall 4x12 cab voicing that's still not modeled — the JCM800 into a 4x12 has a naturally scooped low-mid and prominent upper-mid presence, which the preamp block now handles directly; this EQ block adds finer per-snapshot sculpting on top. S1 clean: warm and open, minimal sculpting. S2 heavy rhythm: mid-scooped character matching the Big Muff's natural mid scoop through a Marshall. S3 lead: upper-mid presence boosted for lead definition and cut. S4 wall-of-fuzz: aggressive low cut to prevent muddiness from maximum Sustain Big Muff. Level raised in S2-S4 to push Super Champ XD harder and compensate for Lace Sensor lower output vs Corgan's hot Lace Sensor Red/Silver/Blue set. S5 (Rocket): S2 mid-scoop eased to -1 dB Mid Gain so the phased lead cuts through slightly more.",
+      "notes": "Works alongside the Brit 2203 preamp and Marshall 4x12 cab voicing that's still not modeled — the JCM800 into a 4x12 has a naturally scooped low-mid and prominent upper-mid presence, which the preamp block now handles directly; this EQ block adds finer per-snapshot sculpting on top. S1 clean: warm and open, minimal sculpting. S2 heavy rhythm: mid-scooped character matching the Big Muff's natural mid scoop through a Marshall. S3 lead: upper-mid presence boosted for lead definition and cut. S4 wall-of-fuzz: aggressive low cut to prevent muddiness from maximum Sustain Big Muff. Level raised in S2-S4 to push Super Champ XD harder and compensate for Lace Sensor lower output vs Corgan's hot Lace Sensor Red/Silver/Blue set. S5 (Rocket): S2 mid-scoop eased to -1 dB Mid Gain so the phased lead cuts through slightly more. S1 clean Level is +5 dB to make up the volume lost when the Brit 2203 Drive/Master/Ch Vol were lowered, without adding any clipping (tuned on hardware) — Top Secret OD stays bypassed in S1 because it is a hard-clipping stage that cannot stay clean at any setting, and a Minotaur boost was tried and found unnecessary.",
       "snapshots": {
         "1_clean": {
           "Low Freq": 150,
@@ -301,7 +301,7 @@
           "High Gain": 1,
           "Low Cut": 80,
           "High Cut": 11000,
-          "Level": 0
+          "Level": 5
         },
         "2_heavy_rhythm": {
           "Low Freq": 150,
