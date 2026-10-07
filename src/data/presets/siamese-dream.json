@@ -5,14 +5,16 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048512d6d46ea0c000c11083f2158",
   "tuning": "Standard / Eb (see snapshot notes)",
   "master_bpm": 120,
-  "notes": "No cab block — running into tube amp. General album preset covering the four main tonal moods of Siamese Dream across four snapshots. CONFIRMED RIG from multiple primary sources including Billy Corgan's own TikTok gear tour: 1984 Marshall JCM800 100W (Brit 2203, preamp-only), Electro-Harmonix V4/V5 Op-Amp Big Muff Pi (Bighorn Fuzz — closest available), MXR Distortion+ for leads (Top Secret OD — same LM741 circuit), MXR Phase 100 / Mu-Tron Bi-Phase for modulation (Script Mod Phase), Electro-Harmonix Electric Mistress for flange/chorus layers (Courtesan Flange). Since the JCM800 is a specific confirmed amp (not generic rig compensation) it's modeled as a Brit 2203 preamp block per AGENTS.md's rule — see note_on_block_limit for how it's routed given the 8-block serial-path limit. IMPORTANT LAYERING NOTE: The definitive Siamese Dream tone was created by Corgan and Iha recording guitar parts 4 to 6 times rather than double-tracking. A single guitar through this preset will not replicate the full wall-of-sound — it captures the tonal character. Master BPM set to 120 as neutral default — use tap tempo for specific songs. Many Siamese Dream songs use Eb tuning (half step down).",
+  "notes": "No cab block — running into tube amp. General album preset covering the four main tonal moods of Siamese Dream across four snapshots, plus a fifth Rocket-specific snapshot. CONFIRMED RIG from multiple primary sources including Billy Corgan's own TikTok gear tour: 1984 Marshall JCM800 100W (Brit 2203, preamp-only), Electro-Harmonix V4/V5 Op-Amp Big Muff Pi (Bighorn Fuzz — closest available), MXR Distortion+ for leads (Top Secret OD — same LM741 circuit), MXR Phase 100 / Mu-Tron Bi-Phase for modulation (Script Mod Phase), Electro-Harmonix Electric Mistress for flange/chorus layers (Courtesan Flange). Since the JCM800 is a specific confirmed amp (not generic rig compensation) it's modeled as a Brit 2203 preamp block per AGENTS.md's rule — see note_on_block_limit for how it's routed given the 8-block serial-path limit. IMPORTANT LAYERING NOTE: The definitive Siamese Dream tone was created by Corgan and Iha recording guitar parts 4 to 6 times rather than double-tracking. A single guitar through this preset will not replicate the full wall-of-sound — it captures the tonal character. Master BPM set to 120 as neutral default — use tap tempo for specific songs. Many Siamese Dream songs use Eb tuning (half step down). ROCKET (S5): Rocket is described as thick, very fuzzy guitars with the lead lifted by a slightly engaged phaser, so S5 is S2's Big Muff rhythm with the phaser on at low Mix and no flanger/Distortion+. An octave effect on Rocket is claimed on forums but unconfirmed (other sources say the octave/harmony parts were multitracked guitars); Corgan's Digitech DHP-55 Rocket preset dates from the 1995-97 Mellon Collie tour, not the recording. A Boctaver block was therefore considered and skipped, which also keeps Path 1A at its 8-block limit.",
   "confirmed_sources": [
     "Billy Corgan TikTok gear tour — personal confirmation of Big Muff, MXR Distortion+, MXR Phase 100 settings",
     "Reverb News — The Gear of The Smashing Pumpkins",
     "Andertons Sound Like Smashing Pumpkins — JCM800 signal chain confirmed",
     "Fractal Audio Forum — Butch Vig Q&A details on recording technique",
     "Rock Guitar Universe — Corgan gear and tone guide",
-    "Louder Sound — Billy Corgan's guide to Siamese Dream sound"
+    "Louder Sound — Billy Corgan's guide to Siamese Dream sound",
+    "Wikipedia — Rocket (The Smashing Pumpkins song): fuzzy guitars, lead via slightly engaged phaser",
+    "Forum discussions (PedalPCB 'How did they make that sound', Gearspace harmonizer thread) — octaver / DHP-55 claims for Rocket, UNCONFIRMED and not adopted"
   ],
   "tuning_note": "Several Siamese Dream songs use Eb tuning (half step down): Soma, Mayonaise, Luna, Spaceboy, Hummer, Silverfuck. Standard tuning songs include Cherub Rock, Today, Rocket, Geek USA, Quiet, Thru the Eyes of Ruby. Check the specific song before playing.",
   "layering_note": "Corgan's technique was to track rhythm guitars 4-6 times, panning them across the stereo field. A single guitar will sound thinner than the record regardless of settings — this is inherent to the recording technique, not a preset limitation.",
@@ -22,7 +24,7 @@
       "type": "input",
       "model": "Noise Gate",
       "based_on": "Line 6 Original",
-      "notes": "S1 clean most open. S2 heavy rhythm tightens significantly — Big Muff into JCM800 generates significant noise. S3 lead same as S2. S4 wall-of-fuzz tightest — maximum gain scenario.",
+      "notes": "S1 clean most open. S2 heavy rhythm tightens significantly — Big Muff into JCM800 generates significant noise. S3 lead same as S2. S4 wall-of-fuzz tightest — maximum gain scenario. S5 Rocket matches S2 (Big Muff rhythm gating).",
       "snapshots": {
         "1_clean": {
           "Threshold": -70,
@@ -43,6 +45,11 @@
           "Threshold": -48,
           "Decay": 20,
           "Level": 0
+        },
+        "5_rocket": {
+          "Threshold": -52,
+          "Decay": 25,
+          "Level": 0
         }
       }
     },
@@ -50,7 +57,7 @@
       "type": "distortion",
       "model": "Top Secret OD",
       "based_on": "DOD OD-250",
-      "notes": "Approximates MXR Distortion+ — both use the same LM741 op-amp circuit (confirmed in Bodysnatchers research). Corgan confirmed: 'I used the MXR Distortion+ to play leads on Siamese Dream — we'd run that through a Big Muff.' BYPASSED in S1 (clean) and S2 (pure Big Muff rhythm). ACTIVE in S3 (lead) and S4 (wall-of-fuzz) — stacked before the Bighorn Fuzz per Corgan's confirmed signal chain order. Two parameters only: Gain and Level.",
+      "notes": "Approximates MXR Distortion+ — both use the same LM741 op-amp circuit (confirmed in Bodysnatchers research). Corgan confirmed: 'I used the MXR Distortion+ to play leads on Siamese Dream — we'd run that through a Big Muff.' BYPASSED in S1 (clean) and S2 (pure Big Muff rhythm). ACTIVE in S3 (lead) and S4 (wall-of-fuzz) — stacked before the Bighorn Fuzz per Corgan's confirmed signal chain order. Two parameters only: Gain and Level. BYPASSED in S5 (Rocket) — Rocket is pure Big Muff fuzz, no Distortion+ stack.",
       "snapshots": {
         "1_clean": {
           "active": false,
@@ -71,6 +78,11 @@
           "active": true,
           "Gain": 8.0,
           "Level": 7.0
+        },
+        "5_rocket": {
+          "active": false,
+          "Gain": 7.0,
+          "Level": 6.5
         }
       }
     },
@@ -78,7 +90,7 @@
       "type": "distortion",
       "model": "Bighorn Fuzz",
       "based_on": "1973 Electro-Harmonix Ram's Head Big Muff Pi",
-      "notes": "Closest available approximation to Corgan's confirmed V4/V5 Op-Amp Big Muff Pi. The Op-Amp version uses operational amplifiers instead of transistors giving a harsher, more aggressive distortion than transistor Big Muffs. The Ram's Head (Bighorn) is the most aggressive transistor Big Muff available on the Helix — not identical to the Op-Amp version but the closest. BYPASSED in S1 (clean). ACTIVE in S2, S3, S4. Sustain at maximum throughout — Corgan ran the Big Muff wide open. Tone varies per snapshot: S2 neutral, S3 slightly brighter for lead definition, S4 rolled back for maximum wall-of-fuzz thickness.",
+      "notes": "Closest available approximation to Corgan's confirmed V4/V5 Op-Amp Big Muff Pi. The Op-Amp version uses operational amplifiers instead of transistors giving a harsher, more aggressive distortion than transistor Big Muffs. The Ram's Head (Bighorn) is the most aggressive transistor Big Muff available on the Helix — not identical to the Op-Amp version but the closest. BYPASSED in S1 (clean). ACTIVE in S2, S3, S4. Sustain at maximum throughout — Corgan ran the Big Muff wide open. Tone varies per snapshot: S2 neutral, S3 slightly brighter for lead definition, S4 rolled back for maximum wall-of-fuzz thickness. S5 (Rocket): same Sustain/Level as S2 (no loudness jump on switch), Tone nudged to 5.5 so the fuzz stays articulate under the phaser.",
       "snapshots": {
         "1_clean": {
           "active": false,
@@ -103,6 +115,12 @@
           "Sustain": 10.0,
           "Tone": 4.0,
           "Level": 7.5
+        },
+        "5_rocket": {
+          "active": true,
+          "Sustain": 9.0,
+          "Tone": 5.5,
+          "Level": 7.0
         }
       }
     },
@@ -110,7 +128,7 @@
       "type": "modulation",
       "model": "Script Mod Phase",
       "based_on": "MXR Phase 90",
-      "notes": "Approximates MXR Phase 100 and Mu-Tron Bi-Phase — both confirmed for Siamese Dream. Corgan's direct quote: 'MXR Phase 100, for those of you looking for the Siamese Dream lead sound — pick one of these and turn the speed all the way down. It gives you a little bit of movement there.' Butch Vig: 'The Mu-Tron Bi-Phase — we run everything through it, everything.' Rate at very low value approximating Corgan's 'all the way down' instruction. BYPASSED in S1 and S2 — phaser is primarily a lead and texture effect on the album. ACTIVE in S3 (lead) and S4 (wall-of-fuzz texture layer).",
+      "notes": "Approximates MXR Phase 100 and Mu-Tron Bi-Phase — both confirmed for Siamese Dream. Corgan's direct quote: 'MXR Phase 100, for those of you looking for the Siamese Dream lead sound — pick one of these and turn the speed all the way down. It gives you a little bit of movement there.' Butch Vig: 'The Mu-Tron Bi-Phase — we run everything through it, everything.' Rate at very low value approximating Corgan's 'all the way down' instruction. BYPASSED in S1 and S2 — phaser is primarily a lead and texture effect on the album. ACTIVE in S3 (lead) and S4 (wall-of-fuzz texture layer). ACTIVE in S5 (Rocket) at Rate 0.3 / Mix 4.0 — Rocket's lead is described as a slightly engaged phaser lifting the lead above the fuzz, so Mix is kept a little lower than S3.",
       "snapshots": {
         "1_clean": {
           "active": false,
@@ -135,6 +153,12 @@
           "Rate": 0.5,
           "Mix": 4.0,
           "Level": 0
+        },
+        "5_rocket": {
+          "active": true,
+          "Rate": 0.3,
+          "Mix": 4.0,
+          "Level": 0
         }
       }
     },
@@ -142,7 +166,7 @@
       "type": "modulation",
       "model": "Courtesan Flange",
       "based_on": "Electro-Harmonix Deluxe Electric Mistress",
-      "notes": "Confirmed: Corgan used the Electric Mistress for flanger and chorus layers on Siamese Dream. The Courtesan Flange is based on the Deluxe EM. ACTIVE in S1 (clean — adds dreamy shimmer to clean tones like Today intro) at very low mix. BYPASSED in S2 (pure heavy rhythm — no modulation needed). ACTIVE in S3 at moderate mix for the atmospheric lead character. BYPASSED in S4 — wall-of-fuzz is too dense for flanger to be useful. Parameters: Rate, Range, Color, Freeze LFO, Mix, Level, Headroom.",
+      "notes": "Confirmed: Corgan used the Electric Mistress for flanger and chorus layers on Siamese Dream. The Courtesan Flange is based on the Deluxe EM. ACTIVE in S1 (clean — adds dreamy shimmer to clean tones like Today intro) at very low mix. BYPASSED in S2 (pure heavy rhythm — no modulation needed). ACTIVE in S3 at moderate mix for the atmospheric lead character. BYPASSED in S4 — wall-of-fuzz is too dense for flanger to be useful. Parameters: Rate, Range, Color, Freeze LFO, Mix, Level, Headroom. BYPASSED in S5 (Rocket) — S3 values reused verbatim per bypass convention.",
       "snapshots": {
         "1_clean": {
           "active": true,
@@ -181,6 +205,16 @@
           "Color": 5.0,
           "Freeze LFO": false,
           "Mix": 3.0,
+          "Level": 0,
+          "Headroom": 0
+        },
+        "5_rocket": {
+          "active": false,
+          "Rate": 0.5,
+          "Range": 5.0,
+          "Color": 6.0,
+          "Freeze LFO": false,
+          "Mix": 4.0,
           "Level": 0,
           "Headroom": 0
         }
@@ -236,6 +270,17 @@
           "Ch Vol": 7,
           "Sag": 3,
           "Hum": 1
+        },
+        "5_rocket": {
+          "active": true,
+          "Drive": 2.5,
+          "Bass": 5,
+          "Mid": 4,
+          "Treble": 6,
+          "Master": 8,
+          "Ch Vol": 7,
+          "Sag": 3,
+          "Hum": 1
         }
       }
     },
@@ -243,7 +288,7 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Works alongside the Brit 2203 preamp (Path 1B) and Marshall 4x12 cab voicing that's still not modeled — the JCM800 into a 4x12 has a naturally scooped low-mid and prominent upper-mid presence, which the preamp block now handles directly; this EQ block adds finer per-snapshot sculpting on top. S1 clean: warm and open, minimal sculpting. S2 heavy rhythm: mid-scooped character matching the Big Muff's natural mid scoop through a Marshall. S3 lead: upper-mid presence boosted for lead definition and cut. S4 wall-of-fuzz: aggressive low cut to prevent muddiness from maximum Sustain Big Muff. Level raised in S2-S4 to push Super Champ XD harder and compensate for Lace Sensor lower output vs Corgan's hot Lace Sensor Red/Silver/Blue set.",
+      "notes": "Works alongside the Brit 2203 preamp (Path 1B) and Marshall 4x12 cab voicing that's still not modeled — the JCM800 into a 4x12 has a naturally scooped low-mid and prominent upper-mid presence, which the preamp block now handles directly; this EQ block adds finer per-snapshot sculpting on top. S1 clean: warm and open, minimal sculpting. S2 heavy rhythm: mid-scooped character matching the Big Muff's natural mid scoop through a Marshall. S3 lead: upper-mid presence boosted for lead definition and cut. S4 wall-of-fuzz: aggressive low cut to prevent muddiness from maximum Sustain Big Muff. Level raised in S2-S4 to push Super Champ XD harder and compensate for Lace Sensor lower output vs Corgan's hot Lace Sensor Red/Silver/Blue set. S5 (Rocket): S2 mid-scoop eased to -1 dB Mid Gain so the phased lead cuts through slightly more.",
       "snapshots": {
         "1_clean": {
           "Low Freq": 150,
@@ -300,6 +345,20 @@
           "Low Cut": 120,
           "High Cut": 8000,
           "Level": 4
+        },
+        "5_rocket": {
+          "Low Freq": 150,
+          "Low Q": 0.7,
+          "Low Gain": -3,
+          "Mid Freq": 700,
+          "Mid Q": 1.5,
+          "Mid Gain": -1,
+          "High Freq": 3500,
+          "High Q": 0.7,
+          "High Gain": 2,
+          "Low Cut": 100,
+          "High Cut": 9000,
+          "Level": 3
         }
       }
     },
@@ -307,7 +366,7 @@
       "type": "delay",
       "model": "Cosmos Echo",
       "based_on": "Roland RE-201 Space Echo",
-      "notes": "Tempo-synced to Master BPM (default 120). Use tap tempo for specific songs. S1 clean: dotted eighth (375ms) at moderate mix — adds shimmer to clean passages like Today, Disarm, Luna. S2 heavy rhythm: eighth note (250ms) at low mix — tight, supportive. S3 lead: dotted eighth (375ms) at higher mix — lead lines bloom and sustain. S4 wall-of-fuzz: short eighth note (250ms) at minimal mix — wall-of-fuzz fills all space, delay must not add wash. Ramp: 0 throughout. Wow/Flutter adds slight tape character. Dry Thru: On.",
+      "notes": "Tempo-synced to Master BPM (default 120). Use tap tempo for specific songs. S1 clean: dotted eighth (375ms) at moderate mix — adds shimmer to clean passages like Today, Disarm, Luna. S2 heavy rhythm: eighth note (250ms) at low mix — tight, supportive. S3 lead: dotted eighth (375ms) at higher mix — lead lines bloom and sustain. S4 wall-of-fuzz: short eighth note (250ms) at minimal mix — wall-of-fuzz fills all space, delay must not add wash. Ramp: 0 throughout. Wow/Flutter adds slight tape character. Dry Thru: On. S5 (Rocket): tight eighth like S2 at 16% mix.",
       "snapshots": {
         "1_clean": {
           "TempoSync1": true,
@@ -380,6 +439,24 @@
           "Splice": 0,
           "Dry Thru": true,
           "Trails": true
+        },
+        "5_rocket": {
+          "TempoSync1": true,
+          "Note Sync": "1/8",
+          "Time": "250ms (1/8 at 120 BPM)",
+          "Ramp": 0,
+          "Feedback": 12,
+          "Wow/Flutter": 1.5,
+          "Mix": 16,
+          "Level": 0,
+          "Headroom": 0,
+          "Mode": 1,
+          "Bass": 5.0,
+          "Treble": 4.5,
+          "FBTone": 5.0,
+          "Splice": 0,
+          "Dry Thru": true,
+          "Trails": true
         }
       }
     },
@@ -387,7 +464,7 @@
       "type": "reverb",
       "model": "Dynamic Hall",
       "based_on": "Line 6 Original",
-      "notes": "Room Size FIXED at 20m — do NOT make snapshot-variable, causes audible algorithm bump. S1 clean: long and atmospheric — the clean passages of Siamese Dream have significant ambient reverb. S2 heavy rhythm: tight and punchy. S3 lead: moderate — gives lead lines space without washing the phaser character. S4 wall-of-fuzz: very short and tight — the massive fuzz texture fills all space.",
+      "notes": "Room Size FIXED at 20m — do NOT make snapshot-variable, causes audible algorithm bump. S1 clean: long and atmospheric — the clean passages of Siamese Dream have significant ambient reverb. S2 heavy rhythm: tight and punchy. S3 lead: moderate — gives lead lines space without washing the phaser character. S4 wall-of-fuzz: very short and tight — the massive fuzz texture fills all space. S5 (Rocket): Decay 0.8 / Mix 14, Room Size still fixed at 20.",
       "room_size_fixed": 20,
       "snapshots": {
         "1_clean": {
@@ -449,6 +526,21 @@
           "High Cut": 5000,
           "Level": 0,
           "Trails": true
+        },
+        "5_rocket": {
+          "Decay": 0.8,
+          "Predelay": 5,
+          "Room Size": 20,
+          "Diffusion": 50,
+          "Damping": 5000,
+          "Mix": 14,
+          "Motion": 2.0,
+          "Low Freq": 200,
+          "Low Gain": 0,
+          "Low Cut": 100,
+          "High Cut": 5500,
+          "Level": 0,
+          "Trails": true
         }
       }
     }
@@ -469,11 +561,10 @@
     },
     "2_heavy_rhythm": {
       "footswitch": "FS2",
-      "description": "Heavy rhythm / wall-of-sound rhythm. Top Secret OD bypassed — Big Muff alone into the Brit 2203 preamp (Path 1B) for rhythm. Bighorn Fuzz active at Sustain 9.0, Tone 5.0. Phaser and Flanger bypassed. Mid-scooped EQ matching Big Muff's natural character through the Marshall front end. Tight eighth note delay (250ms, 15% mix). Tight reverb (0.6 sec, 12% mix). Represents: Cherub Rock main riff, Geek USA, Rocket, Quiet.",
+      "description": "Heavy rhythm / wall-of-sound rhythm. Top Secret OD bypassed — Big Muff alone into the Brit 2203 preamp (Path 1B) for rhythm. Bighorn Fuzz active at Sustain 9.0, Tone 5.0. Phaser and Flanger bypassed. Mid-scooped EQ matching Big Muff's natural character through the Marshall front end. Tight eighth note delay (250ms, 15% mix). Tight reverb (0.6 sec, 12% mix). Represents: Cherub Rock main riff, Geek USA, Quiet.",
       "representative_songs": [
         "Cherub Rock (main riff)",
         "Geek USA (rhythm)",
-        "Rocket (heavy sections)",
         "Quiet",
         "Thru the Eyes of Ruby (heavy rhythm)"
       ],
@@ -499,11 +590,19 @@
       "representative_songs": [
         "Geek USA (heaviest sections)",
         "Thru the Eyes of Ruby (heavy passages)",
-        "Cherub Rock (heaviest chorus hits)",
-        "Rocket (maximum heavy moments)"
+        "Cherub Rock (heaviest chorus hits)"
       ],
       "pickup_position": "Bridge",
       "tuning_note": "Standard for most"
+    },
+    "5_rocket": {
+      "footswitch": "FS5",
+      "description": "Rocket. Top Secret OD bypassed — Big Muff alone (Sustain 9.0, Tone 5.5) into the Brit 2203 preamp (Path 1B). Script Mod Phase active at Rate 0.3 / Mix 4.0 for the slightly engaged phaser lead character. Courtesan Flange bypassed. S2-style mid-scooped EQ eased slightly (Mid Gain -1). Tight eighth delay (16% mix), short reverb (0.8 sec, 14% mix). No octave block — see notes.",
+      "representative_songs": [
+        "Rocket"
+      ],
+      "pickup_position": "Bridge",
+      "tuning_note": "Standard"
     }
   },
   "playing_notes": {
@@ -523,8 +622,7 @@
       ],
       "S2_reference_tracks": [
         "Cherub Rock",
-        "Geek USA",
-        "Rocket"
+        "Geek USA"
       ],
       "S3_reference_tracks": [
         "Today solo",
@@ -534,7 +632,11 @@
       "S4_reference_tracks": [
         "Geek USA heavy sections",
         "Thru the Eyes of Ruby"
+      ],
+      "S5_reference_tracks": [
+        "Rocket"
       ]
-    }
+    },
+    "rocket_note": "Rocket (S5) is the Big Muff rhythm tone with a slow, low-Mix phaser engaged — no Distortion+ stack. The octave/harmony layers on the record were most likely multitracked guitars, so a single guitar will sound thinner; no octave block is modeled."
   }
 }
