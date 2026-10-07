@@ -368,37 +368,37 @@
         "1_bullet_verse": {
           "active": false,
           "Rate": 0.3,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         },
         "2_bullet_chorus": {
           "active": false,
           "Rate": 0.3,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         },
         "3_porcelina_clean": {
           "active": true,
           "Rate": 0.3,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         },
         "4_porcelina_heavy": {
           "active": true,
           "Rate": 0.3,
-          "Mix": 5.0,
+          "Mix": 50,
           "Level": 0
         },
         "5_zero_hinw_riff": {
           "active": false,
           "Rate": 0.3,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         },
         "6_zero_hinw_lead": {
           "active": true,
           "Rate": 0.3,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         }
       }
@@ -416,7 +416,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -426,7 +426,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -436,7 +436,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -446,7 +446,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -456,7 +456,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -466,7 +466,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         }
@@ -711,7 +711,7 @@
     },
     "3_porcelina_clean": {
       "footswitch": "FS3",
-      "description": "Porcelina of the Vast Oceans clean intro/arpeggio: no fuzz. Script Mod Phase (Rate 0.3, Mix 4.0) and Courtesan Flange (Mix 3.0) both on for dreamy movement. Dotted-eighth delay (409ms, 35% mix), long reverb (2.8 sec, 42% mix).",
+      "description": "Porcelina of the Vast Oceans clean intro/arpeggio: no fuzz. Script Mod Phase (Rate 0.3, Mix 40%) and Courtesan Flange (Mix 30%) both on for dreamy movement. Dotted-eighth delay (409ms, 35% mix), long reverb (2.8 sec, 42% mix).",
       "representative_songs": [
         "Porcelina of the Vast Oceans (clean intro/verses)"
       ],
@@ -720,7 +720,7 @@
     },
     "4_porcelina_heavy": {
       "footswitch": "FS4",
-      "description": "Porcelina of the Vast Oceans heavy sections: Bighorn Fuzz at Sustain 8.0, Tone 4.5 with the slow phaser (Mix 5.0) still engaged. Mid-scooped EQ. Dotted-eighth delay at 18% mix, medium reverb (1.4 sec, 26% mix).",
+      "description": "Porcelina of the Vast Oceans heavy sections: Bighorn Fuzz at Sustain 8.0, Tone 4.5 with the slow phaser (Mix 50%) still engaged. Mid-scooped EQ. Dotted-eighth delay at 18% mix, medium reverb (1.4 sec, 26% mix).",
       "representative_songs": [
         "Porcelina of the Vast Oceans (heavy sections)"
       ],

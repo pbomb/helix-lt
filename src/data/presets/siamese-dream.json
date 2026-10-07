@@ -128,36 +128,36 @@
       "type": "modulation",
       "model": "Script Mod Phase",
       "based_on": "MXR Phase 90",
-      "notes": "Approximates MXR Phase 100 and Mu-Tron Bi-Phase — both confirmed for Siamese Dream. Corgan's direct quote: 'MXR Phase 100, for those of you looking for the Siamese Dream lead sound — pick one of these and turn the speed all the way down. It gives you a little bit of movement there.' Butch Vig: 'The Mu-Tron Bi-Phase — we run everything through it, everything.' Rate at very low value approximating Corgan's 'all the way down' instruction. BYPASSED in S1 and S2 — phaser is primarily a lead and texture effect on the album. ACTIVE in S3 (lead) and S4 (wall-of-fuzz texture layer). ACTIVE in S5 (Rocket) at Rate 0.3 / Mix 4.0 — Rocket's lead is described as a slightly engaged phaser lifting the lead above the fuzz, so Mix is kept a little lower than S3.",
+      "notes": "Approximates MXR Phase 100 and Mu-Tron Bi-Phase — both confirmed for Siamese Dream. Corgan's direct quote: 'MXR Phase 100, for those of you looking for the Siamese Dream lead sound — pick one of these and turn the speed all the way down. It gives you a little bit of movement there.' Butch Vig: 'The Mu-Tron Bi-Phase — we run everything through it, everything.' Rate at very low value approximating Corgan's 'all the way down' instruction. BYPASSED in S1 and S2 — phaser is primarily a lead and texture effect on the album. ACTIVE in S3 (lead) and S4 (wall-of-fuzz texture layer). ACTIVE in S5 (Rocket) at Rate 0.3 / Mix 40% — Rocket's lead is described as a slightly engaged phaser lifting the lead above the fuzz, so Mix is kept a little lower than S3.",
       "snapshots": {
         "1_clean": {
           "active": false,
           "Rate": 0.3,
-          "Mix": 5.0,
+          "Mix": 50,
           "Level": 0
         },
         "2_heavy_rhythm": {
           "active": false,
           "Rate": 0.3,
-          "Mix": 5.0,
+          "Mix": 50,
           "Level": 0
         },
         "3_lead_phase": {
           "active": true,
           "Rate": 0.3,
-          "Mix": 5.0,
+          "Mix": 50,
           "Level": 0
         },
         "4_wall_of_fuzz": {
           "active": true,
           "Rate": 0.5,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         },
         "5_rocket": {
           "active": true,
           "Rate": 0.3,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0
         }
       }
@@ -174,7 +174,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -184,7 +184,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -194,7 +194,7 @@
           "Range": 5.0,
           "Color": 6.0,
           "Freeze LFO": false,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0,
           "Headroom": 0
         },
@@ -204,7 +204,7 @@
           "Range": 5.0,
           "Color": 5.0,
           "Freeze LFO": false,
-          "Mix": 3.0,
+          "Mix": 30,
           "Level": 0,
           "Headroom": 0
         },
@@ -214,7 +214,7 @@
           "Range": 5.0,
           "Color": 6.0,
           "Freeze LFO": false,
-          "Mix": 4.0,
+          "Mix": 40,
           "Level": 0,
           "Headroom": 0
         }
@@ -547,7 +547,7 @@
   "snapshots": {
     "1_clean": {
       "footswitch": "FS1",
-      "description": "Clean / gentle tone. Top Secret OD and Bighorn Fuzz both bypassed. Courtesan Flange active at very low Mix (3.0) — adds dreamy shimmer. Script Mod Phase bypassed. Brit 2203 preamp active at its fixed low-Drive setting for JCM800 front-end character. Open EQ. Dotted eighth delay (375ms) at 32% mix. Long atmospheric reverb (2.5 sec, 40% mix). Represents: Today intro clean arpeggio, Disarm, Luna, Spaceboy clean sections.",
+      "description": "Clean / gentle tone. Top Secret OD and Bighorn Fuzz both bypassed. Courtesan Flange active at low Mix (30%) — adds dreamy shimmer. Script Mod Phase bypassed. Brit 2203 preamp active at its fixed low-Drive setting for JCM800 front-end character. Open EQ. Dotted eighth delay (375ms) at 32% mix. Long atmospheric reverb (2.5 sec, 40% mix). Represents: Today intro clean arpeggio, Disarm, Luna, Spaceboy clean sections.",
       "representative_songs": [
         "Today (clean intro arpeggios)",
         "Disarm",
@@ -572,7 +572,7 @@
     },
     "3_lead_phase": {
       "footswitch": "FS3",
-      "description": "Lead / solo with phase. Top Secret OD active (Gain 7.0) — Distortion+ stacked before Big Muff per Corgan's confirmed lead signal chain, both feeding the Brit 2203 preamp. Bighorn Fuzz active at Sustain 9.5, Tone 6.0 (brighter for lead definition). Script Mod Phase active at Rate 0.3 (very slow, per Corgan's instruction). Courtesan Flange active at Mix 4.0. Upper-mid boosted EQ for lead cut. Dotted eighth delay (375ms, 38% mix). Moderate reverb (1.8 sec, 28% mix). Represents: Today solo, Silverfuck lead, Soma solo, Mayonaise lead.",
+      "description": "Lead / solo with phase. Top Secret OD active (Gain 7.0) — Distortion+ stacked before Big Muff per Corgan's confirmed lead signal chain, both feeding the Brit 2203 preamp. Bighorn Fuzz active at Sustain 9.5, Tone 6.0 (brighter for lead definition). Script Mod Phase active at Rate 0.3 (very slow, per Corgan's instruction). Courtesan Flange active at Mix 40%. Upper-mid boosted EQ for lead cut. Dotted eighth delay (375ms, 38% mix). Moderate reverb (1.8 sec, 28% mix). Represents: Today solo, Silverfuck lead, Soma solo, Mayonaise lead.",
       "representative_songs": [
         "Today (lead solo)",
         "Silverfuck (lead passages)",
@@ -596,7 +596,7 @@
     },
     "5_rocket": {
       "footswitch": "FS5",
-      "description": "Rocket. Top Secret OD bypassed — Big Muff alone (Sustain 9.0, Tone 5.5) into the Brit 2203 preamp. Script Mod Phase active at Rate 0.3 / Mix 4.0 for the slightly engaged phaser lead character. Courtesan Flange bypassed. S2-style mid-scooped EQ eased slightly (Mid Gain -1). Tight eighth delay (16% mix), short reverb (0.8 sec, 14% mix). No octave block — see notes.",
+      "description": "Rocket. Top Secret OD bypassed — Big Muff alone (Sustain 9.0, Tone 5.5) into the Brit 2203 preamp. Script Mod Phase active at Rate 0.3 / Mix 40% for the slightly engaged phaser lead character. Courtesan Flange bypassed. S2-style mid-scooped EQ eased slightly (Mid Gain -1). Tight eighth delay (16% mix), short reverb (0.8 sec, 14% mix). No octave block — see notes.",
       "representative_songs": [
         "Rocket"
       ],
