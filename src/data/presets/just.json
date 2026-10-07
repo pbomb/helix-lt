@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048519293c743fa542094336c5e12",
   "tuning": "Standard",
   "master_bpm": 102,
-  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). Since the JCM800 2203 is a specific confirmed amp (not just generic rig compensation), it's modeled as a Preamp-only block (Brit 2203, no cab/power amp) active across all four snapshots, per AGENTS.md's rule that preamp blocks are warranted when a real amp is confirmed for the part. DigiTech Whammy WH-1 confirmed for solo — Pitch Wham at +12 semitones (octave up) at 50% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Four snapshots: verse clean, crunch, heavy riff, Whammy solo. Verse was split into two snapshots (clean Verse + Crunch) after confirming via research that Jonny Greenwood's actual approach on 'Just' alternates a genuinely clean tone for verses with the distorted ShredMaster tone for riff/chorus — the original single 'verse' snapshot (moderate SD-1 drive) was really a crunch tone, not clean, and is preserved as the 'Crunch' snapshot. Brit 2203's Input is fixed at Low across all four snapshots (see preamp notes) rather than varying High/Low — a loud pop was reported switching Verse<->Crunch, and Line 6's own community reports point to switching a discrete/selector amp parameter at the same instant a block bypasses (Stupor OD) as a known cause, since Helix applies bypass states before ramping continuous parameters.",
+  "notes": "No amp+cab block — running into tube amp. Confirmed rig: Marshall ShredMaster (Ratatouille Dist approximation — both use similar op-amp/diode hard-clipping topology, ShredMaster Contour approximated by Filter parameter) into Marshall JCM800 2203 with Boss SD-1 (Stupor OD — confirmed key ingredient in Jonny's Bends-era tone). Since the JCM800 2203 is a specific confirmed amp (not just generic rig compensation), it's modeled as a Preamp-only block (Brit 2204, no cab/power amp — switched from the Brit 2203 after hardware testing) active across all four snapshots, per AGENTS.md's rule that preamp blocks are warranted when a real amp is confirmed for the part. DigiTech Whammy WH-1 confirmed for solo — Pitch Wham at +12 semitones (octave up) at 50% mix. Confirmed live: Jonny kicks on Whammy at 2:17 for squealing sustain of solo. Four snapshots: verse clean, crunch, heavy riff, Whammy solo. Verse was split into two snapshots (clean Verse + Crunch) after confirming via research that Jonny Greenwood's actual approach on 'Just' alternates a genuinely clean tone for verses with the distorted ShredMaster tone for riff/chorus — the original single 'verse' snapshot (moderate SD-1 drive) was really a crunch tone, not clean, and is preserved as the 'Crunch' snapshot. The preamp block was switched from Brit 2203 to Brit 2204 after hardware testing on other presets showed it sounds closer; the 2204 has no Input selector, which also removes the Input-switching pop cause this preset previously worked around (see the Brit 2204 block notes). Its settings (Bass -1, Treble +2, Master +1.0 vs the 2203 values) are untested starting values.",
   "signal_chain": [
     {
       "type": "input",
@@ -140,57 +140,53 @@
     },
     {
       "type": "preamp",
-      "model": "Brit 2203",
-      "based_on": "Marshall JCM800 2203",
-      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Pitch Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all four snapshots since this is the amp for the whole song, not a per-section coloration choice. Verse (clean): Drive dropped to 1.5 (just a touch of amp character, no pedals in front). Crunch: moderate Drive for the semi-clean/mid-forward SD-1 tone. Heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. Whammy solo: Drive between Crunch and Heavy Riff, Sag raised slightly for looser compression under sustained bent notes. Input FIXED at Low across all four snapshots (see input_fixed) — do NOT make it snapshot-variable, same rule as Dynamic Hall's Room Size. It was originally High on Verse (clean, no pedal boosting the signal there) and Low elsewhere, but per Line 6's own community reports, switching a discrete/selector-type amp parameter like Input at the same instant a block bypasses (Stupor OD engaging) and several other params change is exactly the recipe for a loud pop on snapshot switch — Helix applies bypass states first, then ramps continuous params, so if a discrete switch also flips at that instant there's an audible discontinuity before things settle. Verse's slightly reduced sensitivity from the fixed Low input is made up on the amp itself — Master raised to 8.5 and Ch Vol to 5.0 (both continuous, ramped parameters, same fix category as Input being fixed). User confirmed on hardware this reads better than compensating via the EQ block's Level, which left it too quiet.",
+      "model": "Brit 2204",
+      "based_on": "Marshall JCM800 2203 (Jonny's amp), modeled by the Helix Brit 2204 — closer-sounding on hardware",
+      "notes": "Confirmed amp for Jonny's Bends-era aggressive tones (per YAML notable_users). Preamp-only (no cab/power amp) — sits after the drive pedals and Pitch Wham, before the EQ/delay/reverb, mirroring pedals-into-amp-front-end signal path. ACTIVE across all four snapshots since this is the amp for the whole song, not a per-section coloration choice. Verse (clean): Drive dropped to 1.5 (just a touch of amp character, no pedals in front). Crunch: moderate Drive for the semi-clean/mid-forward SD-1 tone. Heavy riff: Drive raised to match the stacked SD-1 into Ratatouille push. Whammy solo: Drive between Crunch and Heavy Riff, Sag raised slightly for looser compression under sustained bent notes. HARDWARE-DRIVEN SWAP TO BRIT 2204: this block originally used the Brit 2203 (Jonny's real amp is a 2203) with its Input fixed at Low across all four snapshots — a selector that was kept constant because varying it on a snapshot switch, at the same instant Stupor OD bypassed, was a likely cause of a loud pop (Helix applies bypass states before ramping continuous params; see AGENTS.md snapshot-switch pop). Hardware testing on the Mellon Collie and Siamese Dream presets showed the Brit 2204 sounds much closer than the 2203 on this rig (see AGENTS.md), so it replaces the 2203 here too. The 2204 preamp has no Input selector, so that pop cause is gone and the Input-Low loudness loss that the Verse Master/Ch Vol bump was compensating for no longer applies. Settings were adjusted the same way as on the other presets, since the 2204 is darker and quieter than the 2203 at identical settings: Bass lowered by 1, Treble raised by 2 and Master raised by 1.0 in every snapshot (Verse 8.5 -> 9.5, Crunch 5 -> 6, Heavy 6 -> 7, Whammy 6 -> 7); Drive, Ch Vol, Sag, Hum and Mid unchanged. These are UNTESTED starting values for the 2204 — tune Master/Treble on hardware (the 2204 may now sound too bright with Treble 7-8; lower it first).",
       "snapshots": {
         "1_verse": {
           "active": true,
           "Drive": 1.5,
-          "Bass": 5,
+          "Bass": 4,
           "Mid": 5,
-          "Treble": 6,
-          "Master": 8.5,
+          "Treble": 8,
+          "Master": 9.5,
           "Ch Vol": 5.0,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "2_crunch": {
           "active": true,
           "Drive": 4.0,
-          "Bass": 5,
+          "Bass": 4,
           "Mid": 6,
-          "Treble": 5,
-          "Master": 5,
+          "Treble": 7,
+          "Master": 6.0,
           "Ch Vol": 5,
           "Sag": 4,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "3_heavy_riff": {
           "active": true,
           "Drive": 6.5,
-          "Bass": 5,
+          "Bass": 4,
           "Mid": 6,
-          "Treble": 5,
-          "Master": 6,
+          "Treble": 7,
+          "Master": 7.0,
           "Ch Vol": 6,
           "Sag": 4,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "4_whammy_solo": {
           "active": true,
           "Drive": 5.5,
-          "Bass": 5,
+          "Bass": 4,
           "Mid": 6,
-          "Treble": 5,
-          "Master": 6,
+          "Treble": 7,
+          "Master": 7.0,
           "Ch Vol": 6,
           "Sag": 5,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         }
       },
       "input_fixed": "Low"
@@ -199,7 +195,7 @@
       "type": "eq",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Verse (clean) is bright and wide open (High Cut 10kHz, small High Gain sparkle, no Mid boost) since there's no distortion to tame; Level left at 0 — user found compensating the fixed-Low-input loudness loss via the amp's own Master/Ch Vol (see Brit 2203 notes) worked better on hardware than an EQ Level bump, which left Verse too quiet. Crunch (formerly the sole 'verse' snapshot) is gentle and open — not heavily sculpted. Heavy Riff tightens high cut to control JCM800 brightness under heavy distortion. Whammy Solo's mid boost pulled back down to 900Hz/Q2.0/+1 (from an original 1.0kHz/Q1.5/+2 'support the octave voice' boost) after user reported the solo was still too trebly even after the Mix and first High Cut cut — that boost was specifically brightening the octave-up voice, which is exactly what needed taming, not reinforcing. High Cut also dropped 6kHz->5kHz for the same reason. Level trimmed per snapshot to level-match loudness after user feedback on hardware: Crunch was too quiet (raised to +2), Heavy Riff too loud (cut), Solo too loud (cut) — these are pure output trims, no other tone parameters changed for loudness. Heavy Riff eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of its excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry.",
+      "notes": "Verse (clean) is bright and wide open (High Cut 10kHz, small High Gain sparkle, no Mid boost) since there's no distortion to tame; Level left at 0 — user found compensating the loudness via the amp's own Master/Ch Vol (see Brit 2204 notes) worked better on hardware than an EQ Level bump, which left Verse too quiet (this was found with the Brit 2203 at Input Low; recheck with the 2204). Crunch (formerly the sole 'verse' snapshot) is gentle and open — not heavily sculpted. Heavy Riff tightens high cut to control JCM800 brightness under heavy distortion. Whammy Solo's mid boost pulled back down to 900Hz/Q2.0/+1 (from an original 1.0kHz/Q1.5/+2 'support the octave voice' boost) after user reported the solo was still too trebly even after the Mix and first High Cut cut — that boost was specifically brightening the octave-up voice, which is exactly what needed taming, not reinforcing. High Cut also dropped 6kHz->5kHz for the same reason. Level trimmed per snapshot to level-match loudness after user feedback on hardware: Crunch was too quiet (raised to +2), Heavy Riff too loud (cut), Solo too loud (cut) — these are pure output trims, no other tone parameters changed for loudness. Heavy Riff eased back from -2 to -1 once the Ratatouille block's own output Level was also trimmed — most of its excess loudness was the two stacked drive pedals' output gain, not something the EQ trim alone should carry.",
       "snapshots": {
         "1_verse": {
           "Low Freq": 150,
@@ -412,22 +408,22 @@
   "snapshots": {
     "1_verse": {
       "footswitch": "FS1",
-      "description": "Verse / clean. Both drive pedals bypassed, Pitch Wham bypassed. Brit 2203 preamp active at very low Drive 1.5, Input fixed at Low across the whole preset (see preamp notes — a snapshot-varying Input was a likely cause of the pop heard switching Verse<->Crunch, per Line 6's own community reports on discrete amp-parameter switching combined with a simultaneous bypass); Master raised to 8.5 and Ch Vol to 5.0 to make up the loudness that fixing Input at Low costs this snapshot (user confirmed on hardware this works better than an EQ Level bump, which left it too quiet). Bright, open EQ (High Cut fully open at 10kHz, small High Gain sparkle). Slightly more delay/reverb mix than Crunch for a spacious clean ambience. Confirmed by research: Jonny Greenwood's actual approach on 'Just' switches between a genuinely clean tone for verses and the distorted ShredMaster tone for the riff/chorus — the old all-purpose 'verse' snapshot was really a crunch tone, not a clean one.",
+      "description": "Verse / clean. Both drive pedals bypassed, Pitch Wham bypassed. Brit 2204 preamp active at very low Drive 1.5 with Master 9.5 and Ch Vol 5.0 (Master raised from the old Brit 2203 value of 8.5 because the 2204 is quieter; the Brit 2203 Input-Low trick is gone since the 2204 has no Input selector). Bright, open EQ (High Cut fully open at 10kHz, small High Gain sparkle). Slightly more delay/reverb mix than Crunch for a spacious clean ambience. Confirmed by research: Jonny Greenwood's actual approach on 'Just' switches between a genuinely clean tone for verses and the distorted ShredMaster tone for the riff/chorus — the old all-purpose 'verse' snapshot was really a crunch tone, not a clean one.",
       "pickup_position": "Bridge"
     },
     "2_crunch": {
       "footswitch": "FS2",
-      "description": "Crunch (formerly \"Verse\"). Semi-clean/mid-forward drive for distorted chord work. SD-1 only — no Ratatouille. Pitch Wham bypassed. Brit 2203 preamp active at moderate Drive 4.0 for JCM800 front-end push. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
+      "description": "Crunch (formerly \"Verse\"). Semi-clean/mid-forward drive for distorted chord work. SD-1 only — no Ratatouille. Pitch Wham bypassed. Brit 2204 preamp active at moderate Drive 4.0 for JCM800 front-end push. Gentle EQ, eighth note delay at 30% mix, moderate reverb. Not completely clean — controlled mid-forward OD character.",
       "pickup_position": "Bridge"
     },
     "3_heavy_riff": {
       "footswitch": "FS3",
-      "description": "Heavy riff. SD-1 boosting into Ratatouille (output Level trimmed to 4.5 to tame stacked-pedal loudness) — stacked ShredMaster approximation, both pushing the Brit 2203 preamp (Drive 6.5) hard. Pitch Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
+      "description": "Heavy riff. SD-1 boosting into Ratatouille (output Level trimmed to 4.5 to tame stacked-pedal loudness) — stacked ShredMaster approximation, both pushing the Brit 2204 preamp (Drive 6.5) hard. Pitch Wham bypassed. Very short sixteenth note delay (147ms) at 12% mix. Very dry reverb (0.6 sec, 10% mix). Maximum punch.",
       "pickup_position": "Bridge"
     },
     "4_whammy_solo": {
       "footswitch": "FS4",
-      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5, into Brit 2203 preamp (Drive 5.5, Sag 5 for looser sustain). Pitch Wham active — Position 100, Toe Pitch +12, Mix 50%. Octave-up voice prominent but less bright/loud after hardware feedback. EQ mid pulled back to 900Hz/Q2.0/+1 and High Cut down to 5kHz after repeated hardware feedback that the solo was still too trebly. Eighth note delay at 35% mix. Confirm Stupor OD is bypassed on this snapshot — leaving it active here stacks it with Ratatouille and made the tone unlistenable in testing.",
+      "description": "Whammy solo. SD-1 bypassed — Ratatouille alone at Gain 7.0, Filter 6.5, into Brit 2204 preamp (Drive 5.5, Sag 5 for looser sustain). Pitch Wham active — Position 100, Toe Pitch +12, Mix 50%. Octave-up voice prominent but less bright/loud after hardware feedback. EQ mid pulled back to 900Hz/Q2.0/+1 and High Cut down to 5kHz after repeated hardware feedback that the solo was still too trebly. Eighth note delay at 35% mix. Confirm Stupor OD is bypassed on this snapshot — leaving it active here stacks it with Ratatouille and made the tone unlistenable in testing.",
       "pickup_position": "Bridge"
     }
   },
