@@ -5,7 +5,7 @@
   "thumbnail": "https://i.scdn.co/image/ab67616d000048517c97cac15be277c0def9eca4",
   "tuning": "Eb (half-step down); Porcelina needs the low string at Db",
   "master_bpm": 110,
-  "notes": "No cab block — running into tube amp. Covers four Mellon Collie songs (Bullet With Butterfly Wings, Porcelina of the Vast Oceans, Zero, Here Is No Why) as ONE preset across seven snapshots, ordered so each song's different sounds sit next to each other. CONFIRMED RIG (same core as Siamese Dream): 1984 Marshall JCM800 100W with KT88s (Brit 2203 preamp-only), original op-amp Electro-Harmonix Big Muff Pi (Bighorn Fuzz — closest available), MXR Phase 100 (Script Mod Phase), Electric Mistress (Courtesan Flange). Mellon Collie extras per sources: a Marshall JMP-1 rack preamp plus an Alesis 3630 for rhythm sounds (the JMP-1 voicing is approximated by the Brit 2203's own gain; the 3630, used as a boost pushing the preamp harder rather than as a compressor, is modeled by Red Squeeze's Level), and a Boss FZ-2, Boss NS-2 and Moog ring modulator on the board (not modeled — no per-song confirmation for these four). Top Secret OD in the lead snapshot is carried over from Siamese Dream and is NOT confirmed for these songs. Iha's Digitech Whammy solo on Zero is confirmed but intentionally skipped (rhythm tones only). The 2025 'Here Is No Why' single is a live recording of this same Mellon Collie song; its Equipboard page lists only a Sustain Punch Creamy Dreamer fuzz that is not documented as used on recordings, so it is not modeled. Corgan layered guitars heavily (Zero has six rhythm guitars plus two line-in 12-strings), so one guitar will sound thinner than the record regardless of settings. HEAVY-RHYTHM APPROACH (from Eddie Clark's JMP-1 and 'Hidden Big Muff' video transcripts): the JMP-1 plus the Alesis 3630 used as a boost (not a compressor) is the main Mellon Collie rhythm sound and most of the gain; the Big Muff is layered in from the Siamese Dream rig for thickness, with its Tone pulled back dark (about 10 o'clock). So the heavy snapshots (4, 6) get their gain from the Brit 2203 preamp (Drive 7.0) pushed by the Red Squeeze boost near max, with the Bighorn Fuzz blended underneath; the crunch snapshots (2, 5) are JMP-1 crunch only; and the lead (7) is the Siamese Dream lead rig (Distortion+ into a full Big Muff, low-gain amp). Low end matters on this album (3630 boost, Strategy 500 deep extend), so the EQ no longer cuts the lows. Silverfuck is a useful reference: JMP-1 into the Strategy on one side, Big Muff into the Marshall on the other. All values are untuned starting points — tune Drive and the Red Squeeze Level on hardware, and expect the preset may now be louder, so trim EQ Level first.",
+  "notes": "No cab block — running into tube amp. Covers four Mellon Collie songs (Bullet With Butterfly Wings, Porcelina of the Vast Oceans, Zero, Here Is No Why) as ONE preset across seven snapshots, ordered so each song's different sounds sit next to each other. CONFIRMED RIG (same core as Siamese Dream): 1984 Marshall JCM800 100W with KT88s (Brit 2204 preamp-only — the 2204 sounded much closer than the 2203 on hardware; see the Brit block notes), original op-amp Electro-Harmonix Big Muff Pi (Bighorn Fuzz — closest available), MXR Phase 100 (Script Mod Phase), Electric Mistress (Courtesan Flange). Mellon Collie extras per sources: a Marshall JMP-1 rack preamp plus an Alesis 3630 for rhythm sounds (the JMP-1 voicing is approximated by the Brit 2204's own gain; the 3630, used as a boost pushing the preamp harder rather than as a compressor, is modeled by Red Squeeze's Level), and a Boss FZ-2, Boss NS-2 and Moog ring modulator on the board (not modeled — no per-song confirmation for these four). Top Secret OD in the lead snapshot is carried over from Siamese Dream and is NOT confirmed for these songs. Iha's Digitech Whammy solo on Zero is confirmed but intentionally skipped (rhythm tones only). The 2025 'Here Is No Why' single is a live recording of this same Mellon Collie song; its Equipboard page lists only a Sustain Punch Creamy Dreamer fuzz that is not documented as used on recordings, so it is not modeled. Corgan layered guitars heavily (Zero has six rhythm guitars plus two line-in 12-strings), so one guitar will sound thinner than the record regardless of settings. HEAVY-RHYTHM APPROACH (from Eddie Clark's JMP-1 and 'Hidden Big Muff' video transcripts): the JMP-1 plus the Alesis 3630 used as a boost (not a compressor) is the main Mellon Collie rhythm sound and most of the gain; the Big Muff is layered in from the Siamese Dream rig for thickness, with its Tone pulled back dark (about 10 o'clock). So the heavy snapshots (4, 6) get their gain from the Brit 2204 preamp (Drive 7.0) pushed by the Red Squeeze boost near max, with the Bighorn Fuzz blended underneath; the crunch snapshots (2, 5) are JMP-1 crunch only; and the lead (7) is the Siamese Dream lead rig (Distortion+ into a full Big Muff, low-gain amp). Low end matters on this album (3630 boost, Strategy 500 deep extend), so the EQ no longer cuts the lows. Silverfuck is a useful reference: JMP-1 into the Strategy on one side, Big Muff into the Marshall on the other. All values are untuned starting points — tune Drive and the Red Squeeze Level on hardware, and expect the preset may now be louder, so trim EQ Level first.",
   "confirmed_sources": [
     "Reverb News — The Gear of The Smashing Pumpkins (JCM800/KT88, 4x12, op-amp Big Muff, Phase 100, Moog ring mod, Boss NS-2/FZ-2 on the Mellon Collie-era board)",
     "Guitar World — Smashing Pumpkins Mellon Collie 1995 interview (JMP-1 rack + Alesis compressor for rhythm; 'low-fi kind of sound', Bullet verse/chorus/breakdown approach)",
@@ -17,7 +17,7 @@
     "Eddie Clark (YouTube) — 'The Hidden Big Muff on Mellon Collie: You've Been Hearing It Wrong' (Apr 2026, transcript + description): JMP-1 is the main tracking device and source of most gain; the Big Muff is layered in from the Siamese Dream rig with Tone pulled back darker (buzzy and unblendable otherwise) for thickness/density; leads/overdubs on the Siamese Dream rig; Flood's darker, denser approach"
   ],
   "tuning_strategy": "Play Zero, Here Is No Why and Bullet With Butterfly Wings in Eb (half-step down: Eb Ab Db Gb Bb Eb). Porcelina of the Vast Oceans uses the same tuning with only the low string dropped one more whole step to Db (Db Ab Db Gb Bb Eb) — retune that one string between songs. If that retune is a hassle, Porcelina is the song to move to its own preset.",
-  "note_on_block_limit": "9 processing blocks, so the chain is split across both signal paths (the Noise Gate is the Input block's gate and does not count toward the 8-per-path limit). Path 1 (5 blocks): Red Squeeze, Top Secret OD, Bighorn Fuzz, Brit 2203, Parametric EQ — all mono and ahead of/including the mono preamp. Path 1's output block routes into Path 2 (4 blocks): Script Mod Phase, Courtesan Flange, Cosmos Echo, Dynamic Hall — stereo modulation/delay/reverb after the amp, with the DSP-heavy reverb on its own DSP engine. Trade-off: using Path 2 means True Preset Spillover cannot be enabled (it sacrifices Path 2).",
+  "note_on_block_limit": "9 processing blocks, so the chain is split across both signal paths (the Noise Gate is the Input block's gate and does not count toward the 8-per-path limit). Path 1 (5 blocks): Red Squeeze, Top Secret OD, Bighorn Fuzz, Brit 2204, Parametric EQ — all mono and ahead of/including the mono preamp. Path 1's output block routes into Path 2 (4 blocks): Script Mod Phase, Courtesan Flange, Cosmos Echo, Dynamic Hall — stereo modulation/delay/reverb after the amp, with the DSP-heavy reverb on its own DSP engine. Trade-off: using Path 2 means True Preset Spillover cannot be enabled (it sacrifices Path 2).",
   "signal_chain": [
     {
       "type": "input",
@@ -67,7 +67,7 @@
       "variant": "Path 1",
       "model": "Red Squeeze",
       "based_on": "MXR Dyna Comp",
-      "notes": "Stands in for the Alesis 3630 on Corgan's Mellon Collie rhythm sounds. Per Eddie Clark's JMP-1 video, Billy used the 3630 as a BOOST, not a compressor (his settings on a Reverb listing show essentially no compression): output level not all the way up but very close, pushing whatever follows; it also boosts a lot of low end, which is a big key to the album, and a Klon-style boost couldn't match it. JMP-1 + 3630 together are the main Mellon Collie rhythm sound — an extremely heavy sound with an almost muff-like rumble in the bottom. So this block's Level is the boost: 5.5 (unity-ish) for clean and for the lead (the lead/overdub rig is the Siamese Dream rig, no 3630), 7.0 for the crunch snapshots, 8.0 for the heavy snapshots. Sensitivity 6.0 and Mix 70 are constant (always on). Red Squeeze was chosen over Deluxe Comp because its scales are known-good from other presets (see AGENTS.md: don't guess scales). It has no low-end emphasis of its own, so that is approximated with Brit 2203 Bass and EQ Low Gain. First block after the gate and mono, ahead of the drive blocks.",
+      "notes": "Stands in for the Alesis 3630 on Corgan's Mellon Collie rhythm sounds. Per Eddie Clark's JMP-1 video, Billy used the 3630 as a BOOST, not a compressor (his settings on a Reverb listing show essentially no compression): output level not all the way up but very close, pushing whatever follows; it also boosts a lot of low end, which is a big key to the album, and a Klon-style boost couldn't match it. JMP-1 + 3630 together are the main Mellon Collie rhythm sound — an extremely heavy sound with an almost muff-like rumble in the bottom. So this block's Level is the boost: 5.5 (unity-ish) for clean and for the lead (the lead/overdub rig is the Siamese Dream rig, no 3630), 7.0 for the crunch snapshots, 8.0 for the heavy snapshots. Sensitivity 6.0 and Mix 70 are constant (always on). Red Squeeze was chosen over Deluxe Comp because its scales are known-good from other presets (see AGENTS.md: don't guess scales). It has no low-end emphasis of its own, so that is approximated with Brit 2204 Bass and EQ Low Gain. First block after the gate and mono, ahead of the drive blocks.",
       "snapshots": {
         "1_bullet_verse": {
           "active": true,
@@ -211,9 +211,9 @@
     {
       "type": "preamp",
       "variant": "Path 1",
-      "model": "Brit 2203",
-      "based_on": "1984 Marshall JCM800 100W (KT88 mod)",
-      "notes": "Heavy rhythm comes from this preamp's own gain, pushed by the Red Squeeze boost — NOT from the Big Muff. Eddie Clark: the Marshall JMP-1 plus the Alesis 3630 together make the main Mellon Collie rhythm sound, and Here Is No Why has two rhythm sounds, a crunch (the song's opening) and a much heavier one (the chorus). JMP-1 settings from his video description: OD1, Bass Shift on, Bass 4, Mid -2, Treble 6, Presence 6, Gain 20; for the crunch lower the gain to 15 and Mid to -1. His no-JMP-1 alternative on a real JCM800: high-gain input, preamp gain 10, master around 6-7, treble 7, mid about 4, bass 10, presence 9. There is no JMP-1 model on the Helix, so the Brit 2203 stands in and the values are STARTING POINTS, not a verified conversion: heavy = Drive 7.0, Bass 6.0 (low end is key; Bass Shift/deep-extend stand-in), Mid 3.5, Treble 6.0; crunch = Drive 4.5, Bass 5.5, Mid 4.0; clean and lead = Drive 1.5 (the lead uses the Siamese Dream rig, which got its dirt from pedals into a low-gain amp). Presence has no preamp-block equivalent, so High Gain on the EQ stands in. Drive/Bass/Mid/Treble are continuous and vary per snapshot; Input stays FIXED at Low (a selector — changing it would change the loudness of every snapshot, and the real JCM800 alternative's high-gain input is NOT used here because the preset was already too loud), as do Master 7.0, Ch Vol 6.5, Sag and Hum. The Brit 2203 is mono, so only mono blocks precede it. Last block on Path 1 together with the EQ.",
+      "model": "Brit 2204",
+      "based_on": "Marshall JCM800 2204 (closest Helix model to Corgan's 1984 JCM800; his is a 100W 2203)",
+      "notes": "Heavy rhythm comes from this preamp's own gain, pushed by the Red Squeeze boost — NOT from the Big Muff. Eddie Clark: the Marshall JMP-1 plus the Alesis 3630 together make the main Mellon Collie rhythm sound, and Here Is No Why has two rhythm sounds, a crunch (the song's opening) and a much heavier one (the chorus). JMP-1 settings from his video description: OD1, Bass Shift on, Bass 4, Mid -2, Treble 6, Presence 6, Gain 20; for the crunch lower the gain to 15 and Mid to -1. His no-JMP-1 alternative on a real JCM800: high-gain input, preamp gain 10, master around 6-7, treble 7, mid about 4, bass 10, presence 9. There is no JMP-1 model on the Helix, so the Brit 2204 stands in and the values are STARTING POINTS, not a verified conversion: heavy = Drive 7.0, Bass 6.0 (low end is key; Bass Shift/deep-extend stand-in), Mid 3.5, Treble 6.0; crunch = Drive 4.5, Bass 5.5, Mid 4.0; clean and lead = Drive 1.5 (the lead uses the Siamese Dream rig, which got its dirt from pedals into a low-gain amp). Presence has no preamp-block equivalent, so High Gain on the EQ stands in. Drive/Bass/Mid/Treble are continuous and vary per snapshot; Master 7.0, Ch Vol 6.5, Sag and Hum stay constant. HARDWARE FINDING: the Brit 2203 sounded too clean and quiet at Input Low and, at Input High, much louder but still way too bright and trebly — not dark and distorted like the album; simply swapping it for the Brit 2204 (the Helix's JCM800 2204, the 50W master-volume model) made almost all the difference, so the 2204 is used instead. Corgan's own amp is a 100W 2203, but the 2204 is the closer-sounding model on this rig. The 2204 preamp has no Input selector (the 2203 has a Low/High jack select), so there is nothing to keep fixed for that. The Brit 2204 is mono, so only mono blocks precede it. Last block on Path 1 together with the EQ.",
       "snapshots": {
         "1_bullet_verse": {
           "active": true,
@@ -224,8 +224,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "2_bullet_chorus": {
           "active": true,
@@ -236,8 +235,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "3_porcelina_clean": {
           "active": true,
@@ -248,8 +246,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "4_porcelina_heavy": {
           "active": true,
@@ -260,8 +257,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "5_hinw_crunch": {
           "active": true,
@@ -272,8 +268,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "6_zero_hinw_heavy": {
           "active": true,
@@ -284,8 +279,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         },
         "7_zero_hinw_lead": {
           "active": true,
@@ -296,8 +290,7 @@
           "Master": 7.0,
           "Ch Vol": 6.5,
           "Sag": 3,
-          "Hum": 1,
-          "Input": "Low"
+          "Hum": 1
         }
       }
     },
@@ -306,7 +299,7 @@
       "variant": "Path 1",
       "model": "Parametric EQ",
       "based_on": "Line 6 Original",
-      "notes": "Stands in for the unmodeled 4x12 voicing and carries the loudness differences between snapshots. Level +2 to +5 dB to push the Super Champ XD harder (Lace Sensors are lower output than Corgan's rig). Eddie Clark stresses that low end is a big key to the Mellon Collie sound, helped by the Mesa Strategy 500 power amp's 'deep extend' function, which he says has to be simulated with EQ — so the crunch and heavy snapshots (2, 4, 5, 6) no longer cut the lows: Low Freq 120 Hz, Low Gain 0, Low Cut 80-90 Hz (previously -2 to -3 dB and 100-110 Hz). Mids are only lightly pulled back (0 to -1 dB) because the Brit 2203's own Mid is already scooped; High Gain stands in for the JMP-1's Presence. Clean snapshots (1, 3) are open with minimal sculpting; the lead (7) boosts upper mids for cut. Mellon Collie used a blend of G12T-75 and G12M-70 speakers (Siamese Dream was all G12M-70), which isn't modeled. Last block on Path 1 — Path 1's output block routes into Path 2.",
+      "notes": "Stands in for the unmodeled 4x12 voicing and carries the loudness differences between snapshots. Level +2 to +5 dB to push the Super Champ XD harder (Lace Sensors are lower output than Corgan's rig). Eddie Clark stresses that low end is a big key to the Mellon Collie sound, helped by the Mesa Strategy 500 power amp's 'deep extend' function, which he says has to be simulated with EQ — so the crunch and heavy snapshots (2, 4, 5, 6) no longer cut the lows: Low Freq 120 Hz, Low Gain 0, Low Cut 80-90 Hz (previously -2 to -3 dB and 100-110 Hz). Mids are only lightly pulled back (0 to -1 dB) because the Brit 2204's own Mid is already scooped; High Gain stands in for the JMP-1's Presence. Clean snapshots (1, 3) are open with minimal sculpting; the lead (7) boosts upper mids for cut. Mellon Collie used a blend of G12T-75 and G12M-70 speakers (Siamese Dream was all G12M-70), which isn't modeled. Last block on Path 1 — Path 1's output block routes into Path 2.",
       "snapshots": {
         "1_bullet_verse": {
           "Low Freq": 150,
@@ -792,7 +785,7 @@
   "snapshots": {
     "1_bullet_verse": {
       "footswitch": "FS1",
-      "description": "Bullet With Butterfly Wings intro and verse: compressed, droney clean. Bighorn Fuzz, Top Secret OD, phaser and flange bypassed. Brit 2203 at a low Drive of 1.5. Open EQ (Level +2). Eighth-note delay at 12% mix, short-to-medium reverb (1.6 sec, 22% mix). Corgan: verse built on a droney chord shape; Marshall rack for 'low-fi' chunk.",
+      "description": "Bullet With Butterfly Wings intro and verse: compressed, droney clean. Bighorn Fuzz, Top Secret OD, phaser and flange bypassed. Brit 2204 at a low Drive of 1.5. Open EQ (Level +2). Eighth-note delay at 12% mix, short-to-medium reverb (1.6 sec, 22% mix). Corgan: verse built on a droney chord shape; Marshall rack for 'low-fi' chunk.",
       "representative_songs": [
         "Bullet With Butterfly Wings (intro/verse)"
       ],
@@ -801,7 +794,7 @@
     },
     "2_bullet_chorus": {
       "footswitch": "FS2",
-      "description": "Bullet With Butterfly Wings chorus and breakdown: JMP-1-style crunch from the Brit 2203 alone (Drive 4.5, Mid 4.0 — the video's Gain 15 / Mid -1 crunch) pushed by the Red Squeeze boost at Level 7.0. Bighorn Fuzz bypassed. Phaser/flange bypassed. Lows kept (EQ Low Gain 0, Low Cut 80), flat mids, Level +3. Short reverb (0.7 sec, 12% mix), tight delay.",
+      "description": "Bullet With Butterfly Wings chorus and breakdown: JMP-1-style crunch from the Brit 2204 alone (Drive 4.5, Mid 4.0 — the video's Gain 15 / Mid -1 crunch) pushed by the Red Squeeze boost at Level 7.0. Bighorn Fuzz bypassed. Phaser/flange bypassed. Lows kept (EQ Low Gain 0, Low Cut 80), flat mids, Level +3. Short reverb (0.7 sec, 12% mix), tight delay.",
       "representative_songs": [
         "Bullet With Butterfly Wings (chorus/breakdown)"
       ],
@@ -819,7 +812,7 @@
     },
     "4_porcelina_heavy": {
       "footswitch": "FS4",
-      "description": "Porcelina of the Vast Oceans heavy sections: Brit 2203 at JMP-1 OD1-style gain (Drive 7.0, Bass 6.0, Mid 3.5) with the Red Squeeze boost near max (Level 8.0), and a darker Bighorn Fuzz blended underneath (Sustain 6.0, Tone 3.5, Level 5.0). Slow phaser (Mix 50%) still engaged. Lows kept, light mid cut. Dotted-eighth delay at 18% mix, medium reverb (1.4 sec, 26% mix).",
+      "description": "Porcelina of the Vast Oceans heavy sections: Brit 2204 at JMP-1 OD1-style gain (Drive 7.0, Bass 6.0, Mid 3.5) with the Red Squeeze boost near max (Level 8.0), and a darker Bighorn Fuzz blended underneath (Sustain 6.0, Tone 3.5, Level 5.0). Slow phaser (Mix 50%) still engaged. Lows kept, light mid cut. Dotted-eighth delay at 18% mix, medium reverb (1.4 sec, 26% mix).",
       "representative_songs": [
         "Porcelina of the Vast Oceans (heavy sections)"
       ],
@@ -828,7 +821,7 @@
     },
     "5_hinw_crunch": {
       "footswitch": "FS5",
-      "description": "Here Is No Why opening crunch: the same JMP-1 crunch as the Bullet chorus (Brit 2203 Drive 4.5, Mid 4.0; Red Squeeze boost Level 7.0), Bighorn Fuzz, phaser and flange bypassed. Eddie Clark: the song opens on a crunch sound and moves to a much heavier one in the chorus — switch to snapshot 6 for that. Lows kept, tight eighth delay (10% mix), tight reverb (0.6 sec, 12% mix).",
+      "description": "Here Is No Why opening crunch: the same JMP-1 crunch as the Bullet chorus (Brit 2204 Drive 4.5, Mid 4.0; Red Squeeze boost Level 7.0), Bighorn Fuzz, phaser and flange bypassed. Eddie Clark: the song opens on a crunch sound and moves to a much heavier one in the chorus — switch to snapshot 6 for that. Lows kept, tight eighth delay (10% mix), tight reverb (0.6 sec, 12% mix).",
       "representative_songs": [
         "Here Is No Why (opening/verse crunch)"
       ],
@@ -837,7 +830,7 @@
     },
     "6_zero_hinw_heavy": {
       "footswitch": "FS6",
-      "description": "Zero and Here Is No Why heavy rhythm (Here Is No Why chorus): the JMP-1 + Alesis 3630 sound — Brit 2203 Drive 7.0, Bass 6.0, Mid 3.5, Treble 6.0 with the Red Squeeze boost near max (Level 8.0) for an extremely heavy, almost muff-like low-end rumble. Bighorn Fuzz blended underneath at Sustain 6.0, Tone 3.5 (about 10 o'clock), Level 5.0 as the layered Siamese-rig Big Muff. Extra presence from EQ High Gain +3, lows kept (Low Gain 0, Low Cut 90), light mid cut. Tight eighth delay (10% mix), tight reverb (0.6 sec, 12% mix). Phaser and flange bypassed. Gate tightest.",
+      "description": "Zero and Here Is No Why heavy rhythm (Here Is No Why chorus): the JMP-1 + Alesis 3630 sound — Brit 2204 Drive 7.0, Bass 6.0, Mid 3.5, Treble 6.0 with the Red Squeeze boost near max (Level 8.0) for an extremely heavy, almost muff-like low-end rumble. Bighorn Fuzz blended underneath at Sustain 6.0, Tone 3.5 (about 10 o'clock), Level 5.0 as the layered Siamese-rig Big Muff. Extra presence from EQ High Gain +3, lows kept (Low Gain 0, Low Cut 90), light mid cut. Tight eighth delay (10% mix), tight reverb (0.6 sec, 12% mix). Phaser and flange bypassed. Gate tightest.",
       "representative_songs": [
         "Zero (riff)",
         "Here Is No Why (chorus/heavy)"
@@ -847,7 +840,7 @@
     },
     "7_zero_hinw_lead": {
       "footswitch": "FS7",
-      "description": "Zero and Here Is No Why leads/overdubs on the Siamese Dream rig: Top Secret OD (Distortion+) into a full Bighorn Fuzz (Sustain 9.5, Tone 6.0, Level 7.0) with the Brit 2203 back at a low Drive of 1.5 (the dirt comes from the pedals) and no Red Squeeze boost (Level 5.5), plus the slow phaser. Upper-mid boosted EQ (Level +4). Dotted-eighth delay (409ms, 36% mix), moderate reverb (1.8 sec, 28% mix).",
+      "description": "Zero and Here Is No Why leads/overdubs on the Siamese Dream rig: Top Secret OD (Distortion+) into a full Bighorn Fuzz (Sustain 9.5, Tone 6.0, Level 7.0) with the Brit 2204 back at a low Drive of 1.5 (the dirt comes from the pedals) and no Red Squeeze boost (Level 5.5), plus the slow phaser. Upper-mid boosted EQ (Level +4). Dotted-eighth delay (409ms, 36% mix), moderate reverb (1.8 sec, 28% mix).",
       "representative_songs": [
         "Zero (lead)",
         "Here Is No Why (lead)"
@@ -861,7 +854,7 @@
     "pickup_notes": "Neck for the clean snapshots (1, 3), bridge for the rest. Eddie Clark's demo uses a Strat with a humbucker for James Iha's Les Paul parts — your Lace Sensors will be a bit thinner under heavy gain. Corgan used Strats with Lace Sensors — your Lace Sensor Strat Plus Deluxe is a genuine rig match.",
     "tap_tempo": "Master BPM 110 is a neutral default. Use tap tempo per song; the Cosmos Echo is tempo-synced.",
     "bighorn_fuzz_note": "Bighorn Fuzz (Ram's Head) approximates the Big Muff but isn't identical. On this album it is a layered, darker (Tone about 10 o'clock) ingredient under the JMP-1 gain in the heavy snapshots, and the full Siamese Dream lead fuzz only in snapshot 7.",
-    "jcm800_technique": "Heavy rhythm = Brit 2203 gain (standing in for the JMP-1 in OD1) pushed by the Red Squeeze boost (the Alesis 3630 role) with the Big Muff blended under it; here Is No Why has a crunch (snapshot 5) and a heavy chorus (snapshot 6). Eddie Clark's no-JMP-1 alternative on a real JCM800: high-gain input, gain 10, master 6-7, treble 7, mid about 4, bass 10, presence 9 plus a 3630 boost. The Brit 2203 Input stays fixed at Low here (changing it alters every snapshot's loudness); if the heavy sounds are too tame, try Input High as a whole-preset change. Master/Ch Vol/Sag/Hum are constant; Drive/Bass/Mid/Treble vary per snapshot.",
+    "jcm800_technique": "Heavy rhythm = Brit 2204 gain (standing in for the JMP-1 in OD1) pushed by the Red Squeeze boost (the Alesis 3630 role) with the Big Muff blended under it; here Is No Why has a crunch (snapshot 5) and a heavy chorus (snapshot 6). Eddie Clark's no-JMP-1 alternative on a real JCM800: high-gain input, gain 10, master 6-7, treble 7, mid about 4, bass 10, presence 9 plus a 3630 boost. Uses the Brit 2204 rather than the 2203: on hardware the 2203 was too clean/quiet (Input Low) or too bright (Input High), and the 2204 fixed almost all of that. The 2204 has no Input selector. Master/Ch Vol/Sag/Hum are constant; Drive/Bass/Mid/Treble vary per snapshot.",
     "phase_technique": "Slow phaser at Rate 0.3 follows Corgan's 'turn the speed all the way down' instruction; reduce toward 0.1 if it sounds too obvious.",
     "skipped": "Not modeled: Iha's Digitech Whammy solo on Zero (skipped by choice — Pitch Wham fits if you want it later), Boss FZ-2 and Moog ring modulator (no per-song confirmation), the 2025 live single's Creamy Dreamer fuzz.",
     "further_listening": {

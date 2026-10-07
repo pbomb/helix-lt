@@ -95,6 +95,7 @@ These were wrong in earlier presets and are now known-correct. Apply these every
 | Industrial Fuzz | Stability | — | **Counterintuitive: LOWER = more unstable/oscillating (chaos). HIGHER = stable fuzz.** |
 | Poly Wham | Auto EQ | Boolean true/false | **Range is 0.0–10.0.** Compensation EQ applied to the shifted signal — higher = more EQ correction at the shift endpoints, 0 = none. |
 | Brit 2203 | Input | Omitted / unset | **2-way select: "Low" or "High"** (mirrors the real 2203's two physical input jacks — High = full sensitivity, Low = ~6dB pad). Use Low when drive pedals precede the amp to avoid over-driving the input stage. **Treat as a FIXED value per preset, like Room Size below — do NOT vary it between snapshots** (see "Snapshot-switch pop" section). |
+| Brit 2203 vs Brit 2204 (JCM800 preamp) | Model choice | Assumed Brit 2203 (Corgan's real amp is a 2203) is the right JCM800 model | **Confirmed on hardware (Mellon Collie preset):** Brit 2203 was too clean/quiet at Input Low and, at Input High, much louder but still way too bright/trebly (preamp-only, no cab, into the Super Champ XD). Simply swapping to **Brit 2204** made almost all the difference. The 2204 preamp has no Input selector. Prefer Brit 2204 for dark, heavy JCM800-voiced presets; the Siamese Dream and Just presets still use the 2203 and have not been re-checked. |
 | Cosmos Echo | Splice | Boolean true/false | **Range is 0.0–10.0**, not a toggle. |
 | Vintage Digital | Bit Depth | Assumed continuous | **Discrete 8-way select: 6, 8, 10, 11, 12, 14, 16, 24.** Treat as a FIXED value per preset (selector — see "Snapshot-switch pop"). |
 | Vintage Digital | Sample Rate | Assumed continuous | **Discrete 8-way select: 8, 11.025, 12, 16, 22.05, 24, 44.1, 48 kHz.** Treat as a FIXED value per preset, same reason as Bit Depth. |
@@ -183,7 +184,7 @@ matters more than matching the raw internal Helix name.
 | Shin-ei Uni-Vibe | Ubiquitous Vibe | Mode: Chorus (keeps dry signal) or Vibrato (pure pitch mod) |
 | Vox AC30 (Top Boost) | Essex A30 | Has **Cut** not Mid — Cut works in reverse (higher = more cut) |
 | Fender Twin Reverb / "Hot Rod DeVille" substitute | US Double Nrm | No dedicated DeVille model exists; Twin Reverb is closest 6L6 Fender clean platform. **No Presence parameter.** |
-| Marshall JCM800 2203 | Brit 2203 | Has unique **Input** parameter (which jack) other Marshalls lack |
+| Marshall JCM800 2203 | Brit 2203 (or Brit 2204) | Brit 2203 has unique **Input** parameter (which jack) other Marshalls lack. **Brit 2204 sounded much closer on hardware for the Mellon Collie preset** — see corrections table |
 | Marshall Super Lead / Plexi | Brit Plexi Jump | Has separate **Bright Drive** and **Normal Drive** (two channels) |
 | Park 75 | Brit P75 Nrm (or Brit P75 Brt) | Nrm/Brt are two separate channel models, not one model with a channel switch. Preamp-only params: Drive, Bass, Mid, Treble, Master, Ch Vol, Sag, Hum (no Presence) |
 | Diezel VH4 | Das Benzin Lead / Das Benzin Mega | Has **Deep** parameter (bass depth), NOT Hum |
