@@ -135,6 +135,7 @@ signal chain summary. Consistency between `model` field and signal chain listing
 matters more than matching the raw internal Helix name.
 
 ### Still unconfirmed / open questions
+- The Just preset still uses Brit 2203 and has not been re-checked against the Brit 2204 on hardware.
 - Whether `Motion` on Dynamic Hall is 0–10 or percentage (asked, not yet answered).
 - Full parameter ranges for many modulation/pitch blocks not yet used in a preset.
 - No dedicated "Small Clone" (EHX) chorus model exists — best substitute found so
@@ -184,7 +185,7 @@ matters more than matching the raw internal Helix name.
 | Shin-ei Uni-Vibe | Ubiquitous Vibe | Mode: Chorus (keeps dry signal) or Vibrato (pure pitch mod) |
 | Vox AC30 (Top Boost) | Essex A30 | Has **Cut** not Mid — Cut works in reverse (higher = more cut) |
 | Fender Twin Reverb / "Hot Rod DeVille" substitute | US Double Nrm | No dedicated DeVille model exists; Twin Reverb is closest 6L6 Fender clean platform. **No Presence parameter.** |
-| Marshall JCM800 2203 | Brit 2203 (or Brit 2204) | Brit 2203 has unique **Input** parameter (which jack) other Marshalls lack. **Brit 2204 sounded much closer on hardware for the Mellon Collie preset** — see corrections table |
+| Marshall JCM800 (2203 or 2204) | **Brit 2204 (default)**; Brit 2203 only if you need its Input selector | **Confirmed on hardware: Brit 2204 sounds much closer on this rig** (Mellon Collie, Siamese Dream) even though Corgan's and Jonny's real amps are 2203s — see "Preamp model choice" under Signal Chain & Block Conventions and the 2203 vs 2204 corrections row. The 2203 has a unique **Input** parameter (which jack); the 2204 preamp has none. |
 | Marshall Super Lead / Plexi | Brit Plexi Jump | Has separate **Bright Drive** and **Normal Drive** (two channels) |
 | Park 75 | Brit P75 Nrm (or Brit P75 Brt) | Nrm/Brt are two separate channel models, not one model with a channel switch. Preamp-only params: Drive, Bass, Mid, Treble, Master, Ch Vol, Sag, Hum (no Presence) |
 | Diezel VH4 | Das Benzin Lead / Das Benzin Mega | Has **Deep** parameter (bass depth), NOT Hum |
@@ -251,6 +252,18 @@ matters more than matching the raw internal Helix name.
   EQ already cover — it's an optional coloration layer, not a required block, and
   Helix only allows one Preamp model per preset (snapshots can vary its parameters
   but not swap the model).
+- **Preamp model choice: default to Brit 2204 for any JCM800-voiced preamp-only block**
+  (Corgan's Siamese Dream/Mellon Collie amp, Jonny's 2203, general Marshall rock), not
+  Brit 2203 — even when the real amp is a 2203. Don't pick a preamp model purely by
+  matching the real amp's model number or a feature like the 2203's Input select: with no
+  cab into the Super Champ XD, the 2203 was far too clean/quiet at Input Low and, at
+  Input High, much louder but still too bright, and just swapping to the 2204 fixed almost
+  all of it (confirmed on hardware). The 2204 then needed its own tuning (Siamese Dream:
+  Bass 4, Treble 8, Master 8.5; Mellon Collie: Master 8.0) — treat all preamp
+  Drive/Bass/Treble/Master values as starting points to tune on the rig, and when adding a
+  preamp to a new preset, expect to A/B the 2204 against one alternative candidate before
+  settling. Master/Ch Vol are constant across snapshots; use EQ Level for per-snapshot
+  loudness.
 - **EQ block always compensates for the missing amp+cab voicing** — this is doing
   double duty: (1) recreating some of the omitted amp's tonal signature (e.g. mid
   scoop for Big Muff/Marshall combos, mid-forward "telephone filter" for Strokes/Fender
